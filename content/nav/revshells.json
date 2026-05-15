@@ -1,1 +1,239 @@
-[{"type": "section", "title": "REVERSE SHELLS", "items": [{"title": "Reverse Shells", "url": "/page/revshells/shells", "children": []}]}]
+[
+  {
+    "type": "section",
+    "title": "REVERSESHELLS",
+    "items": [
+      {
+        "title": "ReverseShells",
+        "url": "/page/revshells/shells",
+        "children": [
+          {
+            "title": "ListenerSetup",
+            "url": "/page/revshells/shells#listener-setup",
+            "children": []
+          },
+          {
+            "title": "TTYUpgrade",
+            "url": "/page/revshells/shells#tty-upgrade",
+            "children": []
+          },
+          {
+            "title": "Bash",
+            "url": "/page/revshells/shells#bash",
+            "children": []
+          },
+          {
+            "title": "Python",
+            "url": "/page/revshells/shells#python",
+            "children": []
+          },
+          {
+            "title": "PHP",
+            "url": "/page/revshells/shells#php",
+            "children": []
+          },
+          {
+            "title": "Perl",
+            "url": "/page/revshells/shells#perl",
+            "children": []
+          },
+          {
+            "title": "Ruby",
+            "url": "/page/revshells/shells#ruby",
+            "children": []
+          },
+          {
+            "title": "Java",
+            "url": "/page/revshells/shells#java",
+            "children": []
+          },
+          {
+            "title": "Golang",
+            "url": "/page/revshells/shells#golang",
+            "children": []
+          },
+          {
+            "title": "Groovy",
+            "url": "/page/revshells/shells#groovy",
+            "children": []
+          },
+          {
+            "title": "Netcat",
+            "url": "/page/revshells/shells#netcat",
+            "children": []
+          },
+          {
+            "title": "Socat",
+            "url": "/page/revshells/shells#socat",
+            "children": []
+          },
+          {
+            "title": "PowerShell",
+            "url": "/page/revshells/shells#powershell",
+            "children": []
+          },
+          {
+            "title": "PowerShell(Encoded)",
+            "url": "/page/revshells/shells#powershell-encoded",
+            "children": []
+          },
+          {
+            "title": "WindowsCMD",
+            "url": "/page/revshells/shells#windows-cmd",
+            "children": []
+          },
+          {
+            "title": "Awk",
+            "url": "/page/revshells/shells#awk",
+            "children": []
+          },
+          {
+            "title": "Lua",
+            "url": "/page/revshells/shells#lua",
+            "children": []
+          },
+          {
+            "title": "Node.js",
+            "url": "/page/revshells/shells#nodejs",
+            "children": []
+          },
+          {
+            "title": "Telnet",
+            "url": "/page/revshells/shells#telnet",
+            "children": []
+          },
+          {
+            "title": "Xterm",
+            "url": "/page/revshells/shells#xterm",
+            "children": []
+          },
+          {
+            "title": "OpenSSL(EncryptedShell)",
+            "url": "/page/revshells/shells#openssl-encrypted-shell",
+            "children": []
+          },
+          {
+            "title": "BindShells",
+            "url": "/page/revshells/shells#bind-shells",
+            "children": []
+          },
+          {
+            "title": "WebShells",
+            "url": "/page/revshells/shells#web-shells",
+            "children": []
+          },
+          {
+            "title": "MSFVenomPayloads",
+            "url": "/page/revshells/shells#msfvenom-payloads",
+            "children": []
+          },
+          {
+            "title": "HTA/VBScript/JScript",
+            "url": "/page/revshells/shells#hta--vbscript--jscript",
+            "children": []
+          },
+          {
+            "title": "C",
+            "url": "/page/revshells/shells#c",
+            "children": []
+          },
+          {
+            "title": "C#",
+            "url": "/page/revshells/shells#c-1",
+            "children": []
+          },
+          {
+            "title": "Rust",
+            "url": "/page/revshells/shells#rust",
+            "children": []
+          },
+          {
+            "title": "Kotlin",
+            "url": "/page/revshells/shells#kotlin",
+            "children": []
+          },
+          {
+            "title": "Dart",
+            "url": "/page/revshells/shells#dart",
+            "children": []
+          },
+          {
+            "title": "Vlang",
+            "url": "/page/revshells/shells#vlang",
+            "children": []
+          },
+          {
+            "title": "Crystal",
+            "url": "/page/revshells/shells#crystal",
+            "children": []
+          },
+          {
+            "title": "Elixir",
+            "url": "/page/revshells/shells#elixir",
+            "children": []
+          },
+          {
+            "title": "R",
+            "url": "/page/revshells/shells#r",
+            "children": []
+          },
+          {
+            "title": "Tcl",
+            "url": "/page/revshells/shells#tcl",
+            "children": []
+          },
+          {
+            "title": "Julia",
+            "url": "/page/revshells/shells#julia",
+            "children": []
+          },
+          {
+            "title": "NamedPipe/FIFO",
+            "url": "/page/revshells/shells#named-pipe--fifo",
+            "children": []
+          },
+          {
+            "title": "NcatBrokerMode",
+            "url": "/page/revshells/shells#ncat-broker-mode",
+            "children": []
+          },
+          {
+            "title": "DownloadandExecute",
+            "url": "/page/revshells/shells#download-and-execute",
+            "children": []
+          },
+          {
+            "title": "Filter/WAFEvasion",
+            "url": "/page/revshells/shells#filter--waf-evasion",
+            "children": []
+          },
+          {
+            "title": "ShellcodeExecution",
+            "url": "/page/revshells/shells#shellcode-execution",
+            "children": []
+          },
+          {
+            "title": "LD_PRELOADEscalation",
+            "url": "/page/revshells/shells#ld_preload-escalation",
+            "children": []
+          },
+          {
+            "title": "Miscellaneous/Esoteric",
+            "url": "/page/revshells/shells#miscellaneous--esoteric",
+            "children": []
+          },
+          {
+            "title": "CommonPortsReference",
+            "url": "/page/revshells/shells#common-ports-reference",
+            "children": []
+          },
+          {
+            "title": "QuickWorkflow",
+            "url": "/page/revshells/shells#quick-workflow",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -775,45 +775,55 @@ def _parse_revshells_app():
 # ---------------------------------------------------------------------------
 _wadcoms_cache = None
 
+_WADCOMS_PREBUILT = ROOT / "content" / "wadcoms_data.json"
+_WADCOMS_FM_RE    = re.compile(r'^---\s*\n(.*?)\n---', re.DOTALL)
+
 def _load_wadcoms() -> list:
     global _wadcoms_cache
     if _wadcoms_cache is not None:
         return _wadcoms_cache
+
     wad_dir = SOURCES / "wadcoms" / "_wadcoms"
-    entries = []
-    if not wad_dir.exists():
+
+    # Live sources available — build from markdown files
+    if wad_dir.exists():
+        entries = []
+        for md_file in sorted(wad_dir.glob("*.md")):
+            text = md_file.read_text(encoding="utf-8", errors="ignore")
+            m    = _WADCOMS_FM_RE.search(text)
+            if not m:
+                continue
+            try:
+                data = yaml.safe_load(m.group(1)) or {}
+            except Exception:
+                continue
+            slug = md_file.stem
+            cmd  = (data.get("command") or "").strip()
+            cmd  = re.sub(r'\b10\.10\.10\.1\b',      '<ip>',       cmd)
+            cmd  = re.sub(r'\b192\.168\.\d+\.\d+\b',  '<ip>',       cmd)
+            cmd  = re.sub(r'\bjohn\b',                '<username>', cmd)
+            cmd  = re.sub(r'\bpassword123\b',          '<password>', cmd)
+            cmd  = re.sub(r'\bdomain\.local\b',        '<domain>',   cmd)
+            entries.append({
+                "slug":         slug,
+                "title":        slug.replace("-", " ").replace("_", " "),
+                "description":  (data.get("description") or "").strip(),
+                "command":      cmd,
+                "have":         data.get("items") or [],
+                "os":           data.get("OS") or [],
+                "attack_types": data.get("attack_types") or [],
+                "services":     data.get("services") or [],
+                "references":   data.get("references") or [],
+            })
+        _wadcoms_cache = entries
         return entries
-    _FM_RE = re.compile(r'^---\s*\n(.*?)\n---', re.DOTALL)
-    for md_file in sorted(wad_dir.glob("*.md")):
-        text = md_file.read_text(encoding="utf-8", errors="ignore")
-        m = _FM_RE.search(text)
-        if not m:
-            continue
-        try:
-            data = yaml.safe_load(m.group(1)) or {}
-        except Exception:
-            continue
-        slug = md_file.stem
-        # Normalize command: replace common literal IPs/users with site variables
-        cmd = (data.get("command") or "").strip()
-        cmd = re.sub(r'\b10\.10\.10\.1\b', '<ip>', cmd)
-        cmd = re.sub(r'\b192\.168\.\d+\.\d+\b', '<ip>', cmd)
-        cmd = re.sub(r'\bjohn\b', '<username>', cmd)
-        cmd = re.sub(r'\bpassword123\b', '<password>', cmd)
-        cmd = re.sub(r'\bdomain\.local\b', '<domain>', cmd)
-        entries.append({
-            "slug":         slug,
-            "title":        slug.replace("-", " ").replace("_", " "),
-            "description":  (data.get("description") or "").strip(),
-            "command":      cmd,
-            "have":         data.get("items") or [],
-            "os":           data.get("OS") or [],
-            "attack_types": data.get("attack_types") or [],
-            "services":     data.get("services") or [],
-            "references":   data.get("references") or [],
-        })
-    _wadcoms_cache = entries
-    return entries
+
+    # Fallback: pre-built snapshot committed to git (used on Railway)
+    if _WADCOMS_PREBUILT.exists():
+        _wadcoms_cache = json.loads(_WADCOMS_PREBUILT.read_text(encoding="utf-8"))
+        return _wadcoms_cache
+
+    return []
 
 
 # ---------------------------------------------------------------------------
