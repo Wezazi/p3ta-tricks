@@ -1,0 +1,94 @@
+[
+  {
+    "type": "link",
+    "title": "Introduction",
+    "url": "/page/breaking-adcs/introduction",
+    "children": []
+  },
+  {
+    "type": "section",
+    "title": "ESC ATTACKS",
+    "items": [
+      {
+        "title": "ESC1: Misconfigured Certificate Templates",
+        "url": "/page/breaking-adcs/esc1",
+        "children": []
+      },
+      {
+        "title": "ESC2: Any Purpose EKU",
+        "url": "/page/breaking-adcs/esc2",
+        "children": []
+      },
+      {
+        "title": "ESC3: Enrollment Agent Templates",
+        "url": "/page/breaking-adcs/esc3",
+        "children": []
+      },
+      {
+        "title": "ESC4: Vulnerable Certificate Template ACL",
+        "url": "/page/breaking-adcs/esc4",
+        "children": []
+      },
+      {
+        "title": "ESC5: Vulnerable PKI Object ACL",
+        "url": "/page/breaking-adcs/esc5",
+        "children": []
+      },
+      {
+        "title": "ESC6: EDITF_ATTRIBUTESUBJECTALTNAME2",
+        "url": "/page/breaking-adcs/esc6",
+        "children": []
+      },
+      {
+        "title": "ESC7: Vulnerable CA ACL",
+        "url": "/page/breaking-adcs/esc7",
+        "children": []
+      },
+      {
+        "title": "ESC8: NTLM Relay to AD CS HTTP",
+        "url": "/page/breaking-adcs/esc8",
+        "children": []
+      },
+      {
+        "title": "ESC9: NO_SECURITY_EXTENSION",
+        "url": "/page/breaking-adcs/esc9",
+        "children": []
+      },
+      {
+        "title": "ESC10: Weak Certificate Mappings",
+        "url": "/page/breaking-adcs/esc10",
+        "children": []
+      },
+      {
+        "title": "ESC11: IF_ENFORCEENCRYPTICERTREQUEST",
+        "url": "/page/breaking-adcs/esc11",
+        "children": []
+      },
+      {
+        "title": "ESC12: Golden Certificate",
+        "url": "/page/breaking-adcs/esc12",
+        "children": []
+      },
+      {
+        "title": "ESC13: Issuance Policy OID Group Links",
+        "url": "/page/breaking-adcs/esc13",
+        "children": []
+      },
+      {
+        "title": "ESC14: Shadow Credentials",
+        "url": "/page/breaking-adcs/esc14",
+        "children": []
+      },
+      {
+        "title": "ESC15: V1 Template (CVE-2024-49019)",
+        "url": "/page/breaking-adcs/esc15",
+        "children": []
+      },
+      {
+        "title": "ESC16: CA-Wide Security Ext Removal",
+        "url": "/page/breaking-adcs/esc16",
+        "children": []
+      }
+    ]
+  }
+]

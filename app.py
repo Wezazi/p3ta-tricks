@@ -186,6 +186,7 @@ def inject_globals():
     return base
 
 SOURCE_META = {
+    "breaking-adcs":   {"label": "Breaking ADCS",        "color": "var(--red)",     "icon": "📜"},
     "bloodhound":      {"label": "BloodHound",          "color": "var(--red)",     "icon": "🩸"},
     "hacker-recipes":  {"label": "The Hacker Recipes", "color": "var(--cyan)",    "icon": "🍳"},
     "hacktricks":      {"label": "HackTricks",          "color": "var(--red)",     "icon": "🤖"},
@@ -217,6 +218,12 @@ SOURCE_META = {
 }
 
 _NAV_SOURCES = {
+    "breaking-adcs": {
+        "root":    SOURCES / "breaking-adcs",
+        "summary": None,
+        "skip_dirs":  set(),
+        "skip_files": set(),
+    },
     "hacker-recipes": {
         "root":    SOURCES / "hacker-recipes" / "docs" / "src",
         "summary": None,

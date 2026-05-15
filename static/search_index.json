@@ -28903,5 +28903,124 @@
     "url": "/page/hacker-recipes/web/recon/web-technologies",
     "path": "web/recon/web-technologies",
     "excerpt": "authors: KenjiEndo15, ShutdownRepo category: web Other technologies Theory A web application usually relies on multiple components which compose the attack surface among which the potential elements: "
+  },
+  {
+    "title": "Introduction & ADCS Fundamentals",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/introduction",
+    "path": "introduction",
+    "excerpt": "Active Directory Certificate Services (AD CS) is Microsoft's on-premises PKI solution. Certificates can be used as password-equivalent credentials, enabling authentication as any user — including Doma"
+  },
+  {
+    "title": "ESC1: Misconfigured Certificate Templates",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc1",
+    "path": "esc1",
+    "excerpt": "Conditions: CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT flag set on template + Client Auth EKU + Domain Users have enrollment rights + no manager approval required. Allows any domain user to request a certifica"
+  },
+  {
+    "title": "ESC2: Any Purpose EKU",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc2",
+    "path": "esc2",
+    "excerpt": "Conditions: Template has Any Purpose EKU (OID: 2.5.29.37.0) + Domain Users enrollment rights + no manager approval. Warning ESC2 alone does NOT allow direct user impersonation. It requires ESC6/9/10 c"
+  },
+  {
+    "title": "ESC3: Enrollment Agent Templates",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc3",
+    "path": "esc3",
+    "excerpt": "Attack flow: Request an Enrollment Agent certificate → use it to request a certificate on behalf of any user → authenticate as that user. Step 1 — Request Enrollment Agent Certificate Certify.exe requ"
+  },
+  {
+    "title": "ESC4: Vulnerable Certificate Template ACL",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc4",
+    "path": "esc4",
+    "excerpt": "Conditions: You have WriteProperty , WriteOwner , or WriteDacl on a certificate template object. Strategy: modify template to enable ESC1 conditions → exploit → clean up. Step 1 — Enumerate + Identify"
+  },
+  {
+    "title": "ESC5: Vulnerable PKI Object ACL",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc5",
+    "path": "esc5",
+    "excerpt": "Conditions: WriteProperty on the CA object itself, or GenericWrite on the Certificate Templates container. Allows modifying CA configuration or creating new templates. Check CA Object Permissions Get-"
+  },
+  {
+    "title": "ESC6: EDITF_ATTRIBUTESUBJECTALTNAME2",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc6",
+    "path": "esc6",
+    "excerpt": "Conditions: CA-wide flag EDITF_ATTRIBUTESUBJECTALTNAME2 is set, allowing SAN specification in ANY certificate request regardless of template settings. Warning Post-KB5014754 (May 2022), exploitation c"
+  },
+  {
+    "title": "ESC7: Vulnerable CA ACL",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc7",
+    "path": "esc7",
+    "excerpt": "Conditions: ManageCA or ManageCertificates permissions on the CA object itself (not a template). Enumerate CA Permissions Certify.exe find /vulnerable Certify.exe find /vulnerable CA Name : braavos.es"
+  },
+  {
+    "title": "ESC8: NTLM Relay to AD CS HTTP",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc8",
+    "path": "esc8",
+    "excerpt": "Conditions: AD CS web enrollment HTTP endpoint accessible at http://&lt;ca&gt;/certsrv/ , no Extended Protection for Authentication (EPA) or channel binding required. Verify HTTP Endpoint curl -I http"
+  },
+  {
+    "title": "ESC9: NO_SECURITY_EXTENSION",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc9",
+    "path": "esc9",
+    "excerpt": "Conditions: Template has NO_SECURITY_EXTENSION enrollment flag. Certificates issued from this template survive password changes — ideal for persistence backdoors. Enumerate + Check Flag Certify.exe fi"
+  },
+  {
+    "title": "ESC10: Weak Certificate Mappings",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc10",
+    "path": "esc10",
+    "excerpt": "ESC10A: Write access to altSecurityIdentities — map any certificate to any account. ESC10B: Weak CertificateMappingMethods registry settings allowing partial subject matching. ESC10A — Create Computer"
+  },
+  {
+    "title": "ESC11: IF_ENFORCEENCRYPTICERTREQUEST",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc11",
+    "path": "esc11",
+    "excerpt": "Conditions: CA has IF_ENFORCEENCRYPTICERTREQUEST flag cleared ( 0x0 ), enabling NTLM relay to the ICertRequestD DCOM/RPC interface (not just HTTP). Similar to ESC8 but targets the RPC interface. Check"
+  },
+  {
+    "title": "ESC12: Golden Certificate (CA Shell Access)",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc12",
+    "path": "esc12",
+    "excerpt": "Conditions: Shell access to the CA server. Extract the CA private key and forge a Golden Certificate for any user — the forged cert is valid and unrevocable until CA key rotation. Extract CA Certifica"
+  },
+  {
+    "title": "ESC13: Issuance Policy OID Group Links",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc13",
+    "path": "esc13",
+    "excerpt": "Conditions: Certificate template has issuance policies with msDS-OIDToGroupLink linking to a privileged AD group. When a user requests this certificate, their resulting Kerberos TGT contains membershi"
+  },
+  {
+    "title": "ESC14: Shadow Credentials & Certificate Mapping",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc14",
+    "path": "esc14",
+    "excerpt": "ESC14A: Write access to msDS-KeyCredentialLink (Shadow Credentials) — certificate-based auth without enrollment. ESC14B: Cross-domain altSecurityIdentities mapping abuse. ESC14A — Shadow Credentials v"
+  },
+  {
+    "title": "ESC15: Version 1 Template Application Policies (CVE-2024-49019)",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc15",
+    "path": "esc15",
+    "excerpt": "CVE-2024-49019 — Version 1 certificate templates where the enrollee can supply the subject allow injecting Application Policy OIDs that override EKU, enabling certificate request agent or client auth "
+  },
+  {
+    "title": "ESC16: CA-Wide Security Extension Removal",
+    "source": "breaking-adcs",
+    "url": "/page/breaking-adcs/esc16",
+    "path": "esc16",
+    "excerpt": "Conditions: CA configured to omit szOID_NTDS_CA_SECURITY_EXT (OID: 1.3.6.1.4.1.311.25.2) on ALL issued certificates. This breaks strong certificate-to-account binding (KB5014754). Unlike ESC9 (per-tem"
   }
 ]
