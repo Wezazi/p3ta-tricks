@@ -396,7 +396,8 @@ def _rewrite_images(html: str, source_id: str, page_path: str) -> str:
             return m.group(0)
 
         if source_id == "netexec":
-            new_src = f"/source-assets/netexec/{src}"
+            resolved = _resolve_rel(page_dir, src)
+            new_src = f"/source-assets/netexec/{resolved}"
 
         elif source_id == "hacktricks":
             # images live flat in src/images/ regardless of relative depth
