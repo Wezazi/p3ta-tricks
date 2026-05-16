@@ -213,6 +213,10 @@ async function buildAllSourcesNav() {
   btnRow.appendChild(collapseBtn);
   root.appendChild(btnRow);
 
+  const savedScroll   = sessionStorage.getItem('pt_nav_scroll');
+  const hasSavedScroll = !!savedScroll;
+  const expandPromises = [];
+
   for (const src of VISIBLE_SOURCES) {
     const srcKey = 'src_' + src.id;
     const isActive = src.id === _activeSource;
@@ -264,7 +268,8 @@ async function buildAllSourcesNav() {
 
     let loaded = false;
 
-    async function expand(s, b) {
+    // skipAutoScroll: true when we'll restore a saved position ourselves
+    async function expand(s, b, skipAutoScroll = false) {
       if (!loaded) {
         loaded = true;
         b.innerHTML = '<div class="nt-loading">Loading…</div>';
@@ -274,15 +279,17 @@ async function buildAllSourcesNav() {
             _navCache[s.id] = await r.json();
           }
           _renderNavTree(b, _navCache[s.id], s.id);
-          const activeRow = b.querySelector('.nt-active');
-          if (activeRow) activeRow.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          if (!skipAutoScroll) {
+            const activeRow = b.querySelector('.nt-active');
+            if (activeRow) activeRow.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+          }
         } catch(e) {
           b.innerHTML = '<div class="nt-loading">Failed to load</div>';
         }
       }
     }
 
-    if (open) expand(src, body);
+    if (open) expandPromises.push(expand(src, body, hasSavedScroll));
 
     tog.addEventListener('click', async () => {
       const nowOpen = body.style.display !== 'none';
@@ -303,9 +310,11 @@ async function buildAllSourcesNav() {
     root.appendChild(wrap);
   }
 
-  // Restore saved scroll position after tree is built
-  const savedScroll = sessionStorage.getItem('pt_nav_scroll');
-  if (savedScroll) root.scrollTop = parseInt(savedScroll, 10);
+  // Wait for all open trees to finish rendering, THEN restore scroll.
+  // This prevents scrollTop being set on an empty/loading container.
+  Promise.all(expandPromises).then(() => {
+    if (savedScroll) root.scrollTop = parseInt(savedScroll, 10);
+  });
 
   // Persist scroll position across navigations
   root.addEventListener('scroll', () => {
