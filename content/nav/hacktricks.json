@@ -748,6 +748,11 @@
             "children": []
           },
           {
+            "title": "CopyFailAfAlgSplicePageCacheOverwriteCve202631431",
+            "url": "/page/hacktricks/linux-hardening/privilege-escalation/linux-kernel-exploitation/copy-fail-af_alg-splice-page-cache-overwrite-cve-2026-31431",
+            "children": []
+          },
+          {
             "title": "PosixCpuTimersToctouCve202538352",
             "url": "/page/hacktricks/linux-hardening/privilege-escalation/linux-kernel-exploitation/posix-cpu-timers-toctou-cve-2025-38352",
             "children": []
@@ -1420,6 +1425,11 @@
           {
             "title": "LeakedHandleExploitation",
             "url": "/page/hacktricks/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation",
+            "children": []
+          },
+          {
+            "title": "LocalNTLMReflectionviaSMBArbitraryPort",
+            "url": "/page/hacktricks/windows-hardening/windows-local-privilege-escalation/local-ntlm-reflection-via-smb-arbitrary-port",
             "children": []
           },
           {

@@ -906,7 +906,7 @@
     "source": "netexec",
     "url": "/page/netexec/ldap-protocol/find-domain-sid",
     "path": "ldap-protocol/find-domain-sid",
-    "excerpt": "Find Domain SID You can find the domain SID using function --get-sid nxc ldap &lt;dc-ip&gt; -u &lt;username&gt; -p &lt;password&gt; -k --get-sid LDAP &lt;dc-ip&gt; 389 &lt;dc-ip&gt; [ * ] x64 ( name:&"
+    "excerpt": "Find Domain SID You can find the domain SID using function --get-sid nxc ldap &lt;dc-ip&gt; -u &lt;username&gt; -p &lt;password&gt; -k --get-sid nxc ldap &lt;dc-ip&gt; -u &lt;username&gt; -p &lt;passw"
   },
   {
     "title": "Kerberoasting",
@@ -920,7 +920,7 @@
     "source": "netexec",
     "url": "/page/netexec/ldap-protocol/find-misconfigured-delegation",
     "path": "ldap-protocol/find-misconfigured-delegation",
-    "excerpt": "🆕 Find Misconfigured Delegation NetExec allows you to retrieve the list of all misconfigured delegations nxc ldap &lt;target&gt; -u &lt;username&gt; -p &#39;&lt;password&gt;&#39; --find-delegation # E"
+    "excerpt": "🆕 Find Misconfigured Delegation NetExec allows you to retrieve the list of all misconfigured delegations nxc ldap &lt;target&gt; -u &lt;username&gt; -p '&lt;password&gt;' --find-delegation nxc ldap &l"
   },
   {
     "title": "Unconstrained Delegation",
@@ -1081,7 +1081,7 @@
     "source": "netexec",
     "url": "/page/netexec/winrm-protocol/command-execution",
     "path": "winrm-protocol/command-execution",
-    "excerpt": "Command execution Execute Command using WinRM nxc winrm &lt;target&gt; -u &lt;username&gt; -p &lt;password&gt; -X whoami WINRM &lt;target&gt; 5985 ROGER [ * ] http://&lt;target&gt;:5985/wsman WINRM &l"
+    "excerpt": "Command execution Execute Command using WinRM nxc winrm &lt;target&gt; -u &lt;username&gt; -p &lt;password&gt; -X whoami nxc winrm &lt;target&gt; -u &lt;username&gt; -p &lt;password&gt; -X whoami WINR"
   },
   {
     "title": "Defeating LAPS",
@@ -1158,7 +1158,7 @@
     "source": "netexec",
     "url": "/page/netexec/mssql-protocol/mssql-privesc",
     "path": "mssql-protocol/mssql-privesc",
-    "excerpt": "description: Module to privesc from standard user to DBA MSSQL Privesc Normal Authentication nxc mssql &lt;ip&gt; -u &lt;username&gt; -p &lt;password&gt; MSSQL &lt;ip&gt; 1433 FQDN [ * ] Windows 10 / "
+    "excerpt": "description: Module to privesc from standard user to DBA MSSQL Privesc Normal Authentication nxc mssql &lt;ip&gt; -u &lt;username&gt; -p &lt;password&gt; nxc mssql &lt;ip&gt; -u &lt;username&gt; -p &l"
   },
   {
     "title": "MSSQL Command Execution",
@@ -1214,7 +1214,7 @@
     "source": "netexec",
     "url": "/page/netexec/ssh-protocol/command-execution",
     "path": "ssh-protocol/command-execution",
-    "excerpt": "Command execution Execute Command This command is useless nxc ssh &lt;target&gt; -u &lt;username&gt; -p &lt;password&gt; -x whoami SSH &lt;target&gt; 22 &lt;target&gt; [ * ] SSH-2.0-OpenSSH_8.2p1 Debi"
+    "excerpt": "Command execution Execute Command This command is useless nxc ssh &lt;target&gt; -u &lt;username&gt; -p &lt;password&gt; -x whoami nxc ssh &lt;target&gt; -u &lt;username&gt; -p &lt;password&gt; -x who"
   },
   {
     "title": "Get and Put Files",
@@ -1235,7 +1235,7 @@
     "source": "netexec",
     "url": "/page/netexec/ftp-protocol/file-listing-etc",
     "path": "ftp-protocol/file-listing-etc",
-    "excerpt": "🆕 File Listing, etc Listing Files Do directory listings on valid authentication by using the --ls option: nxc ftp &lt;target&gt; -u &lt;username&gt; -p &#39;&lt;password&gt;&#39; --ls FTP &lt;target&g"
+    "excerpt": "🆕 File Listing, etc Listing Files Do directory listings on valid authentication by using the --ls option: nxc ftp &lt;target&gt; -u &lt;username&gt; -p '&lt;password&gt;' --ls nxc ftp &lt;target&gt; -"
   },
   {
     "title": "File Upload & Download",
@@ -1298,7 +1298,7 @@
     "source": "netexec",
     "url": "/page/netexec/nfs-protocol/Enumeration",
     "path": "nfs-protocol/Enumeration",
-    "excerpt": "🆕 Enumeration Enumerate NFS Servers Detect remote NFS server, enumerate available versions and check for the root escape (see escape to root file system ). nxc nfs &lt;ip&gt; # Example Output NFS &lt;"
+    "excerpt": "🆕 Enumeration Enumerate NFS Servers Detect remote NFS server, enumerate available versions and check for the root escape (see escape to root file system ). nxc nfs &lt;ip&gt; nxc nfs &lt;ip&gt; # Exam"
   },
   {
     "title": "Download and Upload Files",
@@ -1452,7 +1452,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/generic-methodologies-and-resources/pentesting-network/telecom-network-exploitation",
     "path": "generic-methodologies-and-resources/pentesting-network/telecom-network-exploitation",
-    "excerpt": "Telecom Network Exploitation (GTP / Roaming Environments) Note Mobile-core protocols (GPRS Tunnelling Protocol – GTP) often traverse semi-trusted GRX/IPX roaming backbones. Because they ride on plain "
+    "excerpt": "Telecom Network Exploitation (GTP / SS7 / Diameter / Roaming Environments) Note Mobile-core protocols (GPRS Tunnelling Protocol – GTP) often traverse semi-trusted GRX/IPX roaming backbones. Because th"
   },
   {
     "title": "WebRTC DoS",
@@ -1809,7 +1809,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/generic-methodologies-and-resources/basic-forensic-methodology/windows-forensics/interesting-windows-registry-keys",
     "path": "generic-methodologies-and-resources/basic-forensic-methodology/windows-forensics/interesting-windows-registry-keys",
-    "excerpt": "Interesting Windows Registry Keys Windows Version and Owner Info Located at Software\\Microsoft\\Windows NT\\CurrentVersion , you'll find the Windows version, Service Pack, installation time, and the reg"
+    "excerpt": "Interesting Windows Registry Keys Windows Registry hives are one of the fastest ways to pivot from what happened? to which user, when, and from where? . For live analysis prefer CurrentControlSet ; fo"
   },
   {
     "title": "Python Sandbox Escape & Pyscript",
@@ -1935,7 +1935,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/blockchain/blockchain-and-crypto-currencies/defi-amm-virtual-balance-cache-exploitation",
     "path": "blockchain/blockchain-and-crypto-currencies/defi-amm-virtual-balance-cache-exploitation",
-    "excerpt": "DeFi AMM Accounting Bugs &amp; Virtual Balance Cache Exploitation Overview Yearn Finance's yETH pool (Nov 2025) exposed how gas-saving caches inside complex AMMs can be weaponized when they are not re"
+    "excerpt": "DeFi AMM Accounting Bugs &amp; Virtual Balance Cache Exploitation Overview Yearn Finance's yETH pool (Nov 2025) showed that \"virtual balance cache exploitation\" is often a multi-bug chain , not just a"
   },
   {
     "title": "Mutation Testing With Slither",
@@ -2314,6 +2314,13 @@
     "url": "/page/hacktricks/linux-hardening/privilege-escalation/escaping-from-limited-bash",
     "path": "linux-hardening/privilege-escalation/escaping-from-limited-bash",
     "excerpt": "Escaping from Jails GTFOBins Search in https://gtfobins.github.io/ if you can execute any binary with \"Shell\" property Chroot Escapes From wikipedia : The chroot mechanism is not intended to defend ag"
+  },
+  {
+    "title": "Copy Fail Af Alg Splice Page Cache Overwrite Cve 2026 31431",
+    "source": "hacktricks",
+    "url": "/page/hacktricks/linux-hardening/privilege-escalation/linux-kernel-exploitation/copy-fail-af_alg-splice-page-cache-overwrite-cve-2026-31431",
+    "path": "linux-hardening/privilege-escalation/linux-kernel-exploitation/copy-fail-af_alg-splice-page-cache-overwrite-cve-2026-31431",
+    "excerpt": "Copy Fail: AF_ALG + splice page-cache overwrite (CVE-2026-31431) This page documents Copy Fail : a Linux kernel local privilege escalation where AF_ALG + splice() turns readable file page-cache pages "
   },
   {
     "title": "Posix Cpu Timers Toctou Cve 2025 38352",
@@ -3139,7 +3146,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/windows-hardening/windows-local-privilege-escalation/appenddata-addsubdirectory-permission-over-service-registry",
     "path": "windows-hardening/windows-local-privilege-escalation/appenddata-addsubdirectory-permission-over-service-registry",
-    "excerpt": "AppendData/AddSubdirectory Permission over Service Registry The original post is https://itm4n.github.io/windows-registry-rpceptmapper-eop/ Summary Two registry keys were found to be writable by the c"
+    "excerpt": "AppendData/AddSubdirectory Permission over Service Registry The original post is https://itm4n.github.io/windows-registry-rpceptmapper-eop/ Summary If you only have Create Subkey / AppendData/AddSubdi"
   },
   {
     "title": "Create MSI with WIX",
@@ -3210,6 +3217,13 @@
     "url": "/page/hacktricks/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation",
     "path": "windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation",
     "excerpt": "Leaked Handle Exploitation Introduction Handles in a process allow to access different Windows resources : There have been already several privilege escalation cases where a privileged process with op"
+  },
+  {
+    "title": "Local NTLM Reflection via SMB Arbitrary Port",
+    "source": "hacktricks",
+    "url": "/page/hacktricks/windows-hardening/windows-local-privilege-escalation/local-ntlm-reflection-via-smb-arbitrary-port",
+    "path": "windows-hardening/windows-local-privilege-escalation/local-ntlm-reflection-via-smb-arbitrary-port",
+    "excerpt": "Local NTLM Reflection via SMB Arbitrary Port Recent Windows builds introduced SMB client support for alternative TCP ports . That feature can be abused to turn local NTLM authentication into a SYSTEM "
   },
   {
     "title": "MSI Wrapper",
@@ -3314,7 +3328,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/windows-hardening/active-directory-methodology/acl-persistence-abuse/BadSuccessor",
     "path": "windows-hardening/active-directory-methodology/acl-persistence-abuse/BadSuccessor",
-    "excerpt": "Abusing Active Directory ACLs/ACEs Overview Delegated Managed Service Accounts ( dMSAs ) are a brand‑new AD principal type introduced with Windows Server 2025 . They are designed to replace legacy ser"
+    "excerpt": "BadSuccessor Overview BadSuccessor abuses the delegated Managed Service Account ( dMSA ) migration workflow introduced in Windows Server 2025 . A dMSA can be linked to a legacy account through msDS-Ma"
   },
   {
     "title": "Shadow Credentials",
@@ -3482,7 +3496,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/windows-hardening/active-directory-methodology/golden-ticket",
     "path": "windows-hardening/active-directory-methodology/golden-ticket",
-    "excerpt": "Golden Ticket Golden ticket A Golden Ticket attack consist on the creation of a legitimate Ticket Granting Ticket (TGT) impersonating any user through the use of the NTLM hash of the Active Directory "
+    "excerpt": "Golden Ticket Golden ticket A Golden Ticket attack consists of the creation of a legitimate Ticket Granting Ticket (TGT) impersonating any user through the use of the NTLM hash of the Active Directory"
   },
   {
     "title": "Kerberoast",
@@ -3797,7 +3811,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/windows-hardening/mythic",
     "path": "windows-hardening/mythic",
-    "excerpt": "Mythic What is Mythic? Mythic is an open-source, modular command and control (C2) framework designed for red teaming . It allows security professionals to manage and deploy various agents (payloads) a"
+    "excerpt": "Mythic What is Mythic? Mythic is an open-source, modular, collaborative command and control (C2) framework designed for red teaming. It allows operators to manage and deploy agents (payloads) across d"
   },
   {
     "title": "Protocol Handler Shell Execute Abuse",
@@ -3965,7 +3979,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/mobile-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2",
     "path": "mobile-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2",
-    "excerpt": "Frida Tutorial 2 This is a summary of the post : https://11x256.github.io/Frida-hooking-android-part-2/ (Parts 2, 3 &amp; 4)\\ APKs and Source code : https://github.com/11x256/frida-android-examples Th"
+    "excerpt": "Frida Tutorial 2 This is a summary of the post : https://11x256.github.io/Frida-hooking-android-part-2/ (Parts 2, 3 and 4)\\ APKs and Source code : https://github.com/11x256/frida-android-examples This"
   },
   {
     "title": "Frida Tutorial 3",
@@ -4098,7 +4112,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/mobile-pentesting/ios-pentesting-checklist",
     "path": "mobile-pentesting/ios-pentesting-checklist",
-    "excerpt": "iOS Pentesting Checklist Preparation [ ] Read iOS Basics [ ] Prepare your environment reading iOS Testing Environment [ ] Read all the sections of iOS Initial Analysis to learn common actions to pente"
+    "excerpt": "iOS Pentesting Checklist Preparation [ ] Read iOS Basics [ ] Read iOS Basic Testing Operations to learn current extraction, installation, and filesystem access workflows [ ] Prepare your environment r"
   },
   {
     "title": "iOS Pentesting",
@@ -4182,7 +4196,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/mobile-pentesting/ios-pentesting/ios-protocol-handlers",
     "path": "mobile-pentesting/ios-pentesting/ios-protocol-handlers",
-    "excerpt": "WebView Protocol Handlers"
+    "excerpt": "WebView Protocol Handlers Basic Information In this page, protocol handlers are the URL schemes or URL-like handoffs that make iOS leave the current web context or resolve content through a non-standa"
   },
   {
     "title": "iOS Serialisation and Encoding",
@@ -4322,7 +4336,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/network-services-pentesting/pentesting-ftp/ftp-bounce-attack",
     "path": "network-services-pentesting/pentesting-ftp/ftp-bounce-attack",
-    "excerpt": "FTP Bounce attack - Scan FTP Bounce - Scanning Manual Connect to vulnerable FTP Use PORT or EPRT (but only 1 of them) to make it establish a connection with the \\ you want to scan: PORT 172,32,80,80,0"
+    "excerpt": "FTP Bounce attack - Scan FTP Bounce - Scanning Manual Connect to the vulnerable FTP server. Use PORT (classic IPv4 active mode) or EPRT (extended syntax, supports IPv4/IPv6) to make it establish a con"
   },
   {
     "title": "FTP Bounce - Download 2ºFTP file",
@@ -4469,7 +4483,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/network-services-pentesting/pentesting-web/cgi",
     "path": "network-services-pentesting/pentesting-web/cgi",
-    "excerpt": "CGI Pentesting Information The CGI scripts are perl scripts , so, if you have compromised a server that can execute .cgi scripts you can upload a perl reverse shell ( /usr/share/webshells/perl/perl-re"
+    "excerpt": "CGI Pentesting Information CGI is an interface, not a language : on real targets you'll find legacy Perl , sh , Python , and sometimes compiled binaries behind *.cgi . If you compromise a server that "
   },
   {
     "title": "Custom Protocols",
@@ -4602,7 +4616,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/network-services-pentesting/pentesting-web/imagemagick-security",
     "path": "network-services-pentesting/pentesting-web/imagemagick-security",
-    "excerpt": "ImageMagick Security Check further details in https://blog.doyensec.com/2023/01/10/imagemagick-security-policy-evaluator.html ImageMagick, a versatile image processing library, presents a challenge in"
+    "excerpt": "ImageMagick Security Check further details in https://blog.doyensec.com/2023/01/10/imagemagick-security-policy-evaluator.html ImageMagick is commonly used behind upload, thumbnailing, document-convers"
   },
   {
     "title": "Ispconfig",
@@ -4861,7 +4875,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/network-services-pentesting/pentesting-web/code-review-tools",
     "path": "network-services-pentesting/pentesting-web/code-review-tools",
-    "excerpt": "Source code Review / SAST Tools Guidance and &amp; Lists of tools https://owasp.org/www-community/Source_Code_Analysis_Tools https://github.com/analysis-tools-dev/static-analysis Multi-Language Tools "
+    "excerpt": "Source code Review / SAST Tools Guidance and &amp; Lists of tools https://owasp.org/www-community/Source_Code_Analysis_Tools https://github.com/analysis-tools-dev/static-analysis C/C++ Manual Review G"
   },
   {
     "title": "Special Http Headers",
@@ -5680,7 +5694,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/cache-deception/cache-poisoning-to-dos",
     "path": "pentesting-web/cache-deception/cache-poisoning-to-dos",
-    "excerpt": "Cache Poisoning to DoS Caution In this page you can find different variations to try to make the web server respond with errors to requests that are valid for the cache servers HTTP Header Oversize (H"
+    "excerpt": "Cache Poisoning to DoS Caution These techniques try to make the origin return an error, a blank body, or a broken redirect for a request that the cache still considers valid/cacheable . Once stored, t"
   },
   {
     "title": "Clickjacking",
@@ -5743,7 +5757,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/hacking-with-cookies/cookie-jar-overflow",
     "path": "pentesting-web/hacking-with-cookies/cookie-jar-overflow",
-    "excerpt": "Cookie Jar Overflow The browsers have a limit on the number of cookies that they can store for a page. Then, if for some reason you need to make a cookie disappear , you can overflow the cookie jar as"
+    "excerpt": "Cookie Jar Overflow Cookie jar overflow abuses the fact that browsers cap how many cookies they keep for one site/jar. If you can run JavaScript in the victim origin (typically via XSS), you can keep "
   },
   {
     "title": "Cookie Bomb",
@@ -6205,7 +6219,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/postmessage-vulnerabilities/blocking-main-page-to-steal-postmessage",
     "path": "pentesting-web/postmessage-vulnerabilities/blocking-main-page-to-steal-postmessage",
-    "excerpt": "Blocking main page to steal postmessage Winning RCs with Iframes According to this Terjanq writeup blob documents created from null origins are isolated for security benefits, which means that if you "
+    "excerpt": "Blocking main page to steal postmessage Winning RCs with Iframes According to this Terjanq writeup , blob documents created from null origins can end up process-isolated from the parent page. This mak"
   },
   {
     "title": "Bypassing SOP with Iframes - 1",
@@ -7472,7 +7486,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/binary-exploitation/vmware-workstation-pvscsi-lfh-escape",
     "path": "binary-exploitation/vmware-workstation-pvscsi-lfh-escape",
-    "excerpt": "VMware Workstation PVSCSI LFH Escape (VMware-vmx on Windows 11) Bug anatomy: fixed-size realloc + scattered OOB writes PVSCSI_FillSGI copies guest scatter/gather entries into an internal array. It sta"
+    "excerpt": "VMware Workstation PVSCSI LFH Escape (VMware-vmx on Windows 11) This is the public Workstation-on-Windows 11 variant of CVE-2025-41238 . Broadcom later fixed it in Workstation 17.6.4 and Fusion 13.6.4"
   },
   {
     "title": "Windows Exploiting (Basic Guide - OSCP lvl)",
@@ -11819,7 +11833,7 @@
     "source": "hacktricks-cloud",
     "url": "/page/hacktricks-cloud/pentesting-cloud/azure-security/az-privilege-escalation/az-authorization-privesc",
     "path": "pentesting-cloud/azure-security/az-privilege-escalation/az-authorization-privesc",
-    "excerpt": "Az - Azure IAM Privesc (Authorization) Azure IAM Fore more information check: ../az-services/az-azuread.md Microsoft.Authorization/roleAssignments/write This permission allows to assign roles to princ"
+    "excerpt": "Az - Azure IAM Privesc (Authorization) Azure IAM Fore more information check: ../az-services/az-azuread.md Permissions that let a principal change authorization itself are usually privesc primitives ."
   },
   {
     "title": "Az - AI Foundry Privesc",
@@ -14962,7 +14976,7 @@
     "source": "internal-att",
     "url": "/page/internal-att/cloud/aws/aws-enumeration",
     "path": "cloud/aws/aws-enumeration",
-    "excerpt": "AWS - Enumerate Collectors nccgroup/ScoutSuite - Multi-Cloud Security Auditing Tool $ python scout . py PROVIDER - -help # The --session-token is optional and only used for temporary credentials (i.e."
+    "excerpt": "AWS - Enumerate Collectors nccgroup/ScoutSuite - Multi-Cloud Security Auditing Tool python scout.py PROVIDER --help python scout.py aws --access-keys --access-key-id &lt;AKIAIOSFODNN7EXAMPLE&gt; --sec"
   },
   {
     "title": "Aws Iam",
@@ -22138,6 +22152,20 @@
     "url": "/page/lolbas/msaccess",
     "path": "msaccess",
     "excerpt": "MSAccess.exe Microsoft Office component Paths C:\\Program Files (x86)\\Microsoft Office 16\\ClientX86\\Root\\Office16\\MSAccess.exe C:\\Program Files\\Microsoft Office 16\\ClientX64\\Root\\Office16\\MSAccess.exe "
+  },
+  {
+    "title": "Mscopilot.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/mscopilot",
+    "path": "mscopilot",
+    "excerpt": "Mscopilot.exe Microsoft Copilot app Paths C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\mscopilot.exe Commands Execute `mscopilot.exe` will spawn the provided command. Parent `mscopilot.exe` pr"
+  },
+  {
+    "title": "Mscopilot_proxy.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/mscopilot_proxy",
+    "path": "mscopilot_proxy",
+    "excerpt": "Mscopilot_proxy.exe Microsoft Copilot proxy launcher Paths C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\mscopilot_proxy.exe Commands Execute `mscopilot_proxy.exe` will spawn the provided comma"
   },
   {
     "title": "Msdeploy.exe",

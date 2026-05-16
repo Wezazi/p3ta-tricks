@@ -615,6 +615,16 @@
         "children": []
       },
       {
+        "title": "Mscopilot.exe",
+        "url": "/page/lolbas/mscopilot",
+        "children": []
+      },
+      {
+        "title": "Mscopilot_proxy.exe",
+        "url": "/page/lolbas/mscopilot_proxy",
+        "children": []
+      },
+      {
         "title": "Msdeploy.exe",
         "url": "/page/lolbas/msdeploy",
         "children": []
