@@ -17,6 +17,7 @@ const SOURCES = [
   { id: 'gtfobins',         label: 'GTFOBins',             icon: '🐚', color: '#ff9e64', noNav: true },
   { id: 'lolbas',           label: 'LOLBAS',               icon: '🪟', color: '#e0af68', noNav: true },
   { id: 'wadcoms',          label: 'WADComs',              icon: '🏴', color: '#7aa2f7', noNav: true },
+  { id: 'exploitdb',        label: 'Exploit-DB',           icon: '💥', color: '#f7768e', noNav: true },
   // ── Reference sources (alphabetical) ────────────────────────────────────
   { id: 'active-directory', label: 'Active Directory',     icon: '🎓', color: '#9ece6a' },
   { id: 'bloodhound',       label: 'BloodHound',           icon: '🩸', color: '#f7768e' },

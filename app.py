@@ -181,7 +181,12 @@ def inject_globals():
         return base
     available = {name: True for name in set(TOOL_MAP.values())
                  if (TOOLS_DIR / name).exists()}
-    cfg = {"offline": True, "tools": available, "tool_map": TOOL_MAP}
+    cfg = {
+        "offline": True,
+        "tools": available,
+        "tool_map": TOOL_MAP,
+        "exploitdb_clone": _EXPLOITDB_SRC.exists(),
+    }
     base.update({"offline_mode": True, "offline_config_json": json.dumps(cfg)})
     return base
 
@@ -215,6 +220,7 @@ SOURCE_META = {
     "jwt-decoder":     {"label": "JWT Decoder",            "color": "var(--yellow)",  "icon": "🎫"},
     "bug-bounty":      {"label": "Bug Bounty",            "color": "var(--yellow)",  "icon": "🐛"},
     "active-directory": {"label": "Active Directory",           "color": "var(--green)",   "icon": "🎓"},
+    "exploitdb":        {"label": "Exploit-DB",               "color": "var(--red)",     "icon": "💥"},
 }
 
 _NAV_SOURCES = {
@@ -771,6 +777,23 @@ def _parse_revshells_app():
 
 
 # ---------------------------------------------------------------------------
+# Exploit-DB
+# ---------------------------------------------------------------------------
+_EXPLOITDB_INDEX = ROOT / "content" / "exploitdb_index.json"
+_EXPLOITDB_SRC   = SOURCES / "exploitdb"
+_exploitdb_cache = None
+
+def _load_exploitdb():
+    global _exploitdb_cache
+    if _exploitdb_cache is not None:
+        return _exploitdb_cache
+    if _EXPLOITDB_INDEX.exists():
+        _exploitdb_cache = json.loads(_EXPLOITDB_INDEX.read_text(encoding="utf-8"))
+    else:
+        _exploitdb_cache = []
+    return _exploitdb_cache
+
+
 # WADComs parser
 # ---------------------------------------------------------------------------
 _wadcoms_cache = None
@@ -904,6 +927,10 @@ def source_index(source_id):
         return render_template("wadcoms_source.html", source_id=source_id, meta=meta,
                                entries=wadcoms_entries, source_meta=SOURCE_META)
 
+    if source_id == "exploitdb":
+        return render_template("exploitdb_source.html", source_id=source_id, meta=meta,
+                               source_meta=SOURCE_META)
+
     return render_template("source.html", source_id=source_id, meta=meta,
                            entries=entries, source_meta=SOURCE_META)
 
@@ -933,6 +960,33 @@ def payload_encoder():
 @app.route("/jwt-decoder/")
 def jwt_decoder():
     return render_template("jwt_decoder.html", source_meta=SOURCE_META)
+
+
+@app.route("/api/exploitdb/index")
+def api_exploitdb_index():
+    data = _load_exploitdb()
+    resp = app.response_class(
+        json.dumps(data, separators=(",", ":")),
+        mimetype="application/json",
+    )
+    resp.headers["Cache-Control"] = "public, max-age=3600"
+    return resp
+
+
+@app.route("/api/exploitdb/code/<int:exploit_id>")
+def api_exploitdb_code(exploit_id):
+    entries = _load_exploitdb()
+    entry = next((e for e in entries if e.get("id") == exploit_id), None)
+    if not entry:
+        return jsonify({"error": "Not found"}), 404
+    code_path = _EXPLOITDB_SRC / entry["path"]
+    if not code_path.exists():
+        return jsonify({"error": "Source not available in this deployment"}), 404
+    try:
+        code = code_path.read_text(encoding="utf-8", errors="replace")
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+    return jsonify({"id": exploit_id, "path": entry["path"], "code": code})
 
 
 @app.route("/api/index")
@@ -1034,7 +1088,12 @@ def offline_config():
         return jsonify({"offline": False})
     available = {name: True for name in TOOL_MAP.values()
                  if (TOOLS_DIR / name).exists()}
-    return jsonify({"offline": True, "tools": available, "tool_map": TOOL_MAP})
+    return jsonify({
+        "offline": True,
+        "tools": available,
+        "tool_map": TOOL_MAP,
+        "exploitdb_clone": _EXPLOITDB_SRC.exists(),
+    })
 
 
 @app.route("/tools/")
