@@ -1,0 +1,16 @@
+{
+  "kerbrute": "v1.0.3",
+  "chisel": "v1.11.5",
+  "pspy": "v1.2.1",
+  "reverse-ssh": "v1.2.0",
+  "PEASS-ng": "20260510-cd4bd619",
+  "linux-smart-enumeration": "4.14nw",
+  "PrivescCheck": "2026.04.29-1",
+  "PrintSpoofer": "v1.0",
+  "GodPotato": "V1.20",
+  "LaZagne": "v2.4.7",
+  "mimikatz-tool": "2.2.0-20220919",
+  "kekeo": "2.2.0-20211214",
+  "bettercap": "v2.41.7",
+  "remote-method-guesser": "v5.1.0"
+}
