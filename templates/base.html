@@ -41,7 +41,7 @@
     <div class="header-search" role="search">
       <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input type="search" id="search-input" placeholder="Search across all sources…" autocomplete="off" aria-label="Search">
-      <kbd class="search-kbd">Ctrl+K</kbd>
+      <kbd class="search-kbd" id="search-kbd">Ctrl+K</kbd>
       <button class="search-filter-btn" id="search-filter-btn" aria-label="Filter sources" title="Filter sources">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
         <span id="search-filter-label">All Sources</span>
@@ -195,7 +195,7 @@
     <div class="search-help-body">
       <div class="sh-section">
         <div class="sh-title">Search</div>
-        <div class="sh-row"><kbd>Ctrl+K</kbd><span>Open search from anywhere on the page</span></div>
+        <div class="sh-row"><kbd id="sh-kbd-shortcut">Ctrl+K</kbd><span>Open search from anywhere on the page</span></div>
         <div class="sh-row"><kbd>↑ ↓</kbd><span>Move through results</span></div>
         <div class="sh-row"><kbd>Enter</kbd><span>Open the highlighted result</span></div>
         <div class="sh-row"><kbd>Esc</kbd><span>Close search</span></div>
@@ -252,6 +252,8 @@
 <script src="/static/js/prism-perl.min.js"></script>
 <script src="/static/js/prism-php.min.js"></script>
 <script src="/static/js/prism-nasm.min.js"></script>
+<script src="/static/js/prism-yaml.min.js"></script>
+<script src="/static/js/prism-armasm.min.js"></script>
 <script src="/static/js/fuse.min.js"></script>
 <script src="/static/js/app.js"></script>
 </body>

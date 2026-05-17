@@ -1,13 +1,57 @@
 {% extends "base.html" %}
 {% block title %}{% if q %}{{ q }} — {% endif %}Search — p3ta-tricks{% endblock %}
 {% block content %}
+<style>
+.search-page { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem; }
+.search-page-header { margin-bottom: 1.5rem; }
+.search-form { margin-bottom: .75rem; }
+.search-form-row { display: flex; gap: .5rem; flex-wrap: wrap; }
+.search-page-input {
+  flex: 1; min-width: 220px; padding: .5rem .8rem;
+  background: var(--bg1); border: 1px solid var(--border); border-radius: 6px;
+  color: var(--fg); font-size: .92rem; outline: none;
+}
+.search-page-input:focus { border-color: var(--purple); }
+.source-filter-select {
+  padding: .4rem .6rem; background: var(--bg1); border: 1px solid var(--border);
+  border-radius: 6px; color: var(--fg); font-size: .82rem; outline: none;
+}
+.search-submit-btn {
+  padding: .4rem 1rem; background: var(--purple); color: #1a1b26; border: none;
+  border-radius: 6px; font-weight: 700; font-size: .82rem; cursor: pointer;
+}
+.search-meta { font-size: .82rem; color: var(--fg-muted); }
+.search-meta strong { color: var(--fg); }
+.search-results { display: flex; flex-direction: column; gap: .4rem; }
+.search-result-item {
+  display: block; padding: .7rem .9rem; background: var(--bg1);
+  border: 1px solid var(--border); border-radius: 6px;
+  text-decoration: none; color: inherit; transition: border-color .12s;
+}
+.search-result-item:hover { border-color: var(--purple); }
+.result-source-badge { font-size: .72rem; font-weight: 700; margin-bottom: .2rem; }
+.result-title { font-size: .9rem; font-weight: 600; color: var(--fg); }
+.result-excerpt { font-size: .78rem; color: var(--fg-muted); margin-top: .25rem; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.search-empty { text-align: center; padding: 3rem 1rem; color: var(--fg-muted); }
+.search-empty svg { margin: 0 auto 1rem; display: block; opacity: .35; }
+.search-empty-hint { font-size: .82rem; margin-top: .5rem; }
+.search-load-more {
+  display: block; width: 100%; margin-top: .75rem; padding: .55rem;
+  background: none; border: 1px solid var(--border); border-radius: 6px;
+  color: var(--fg-dim); font-size: .82rem; cursor: pointer; text-align: center;
+  transition: border-color .12s;
+}
+.search-load-more:hover { border-color: var(--purple); color: var(--fg); }
+.search-status { font-size: .78rem; color: var(--fg-muted); text-align: center; padding: .5rem; }
+</style>
+
 <div class="search-page">
   <div class="search-page-header">
-    <form action="/search" method="get" class="search-form">
+    <form action="/search" method="get" class="search-form" id="sp-form">
       <div class="search-form-row">
-        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="search" name="q" value="{{ q }}" class="search-page-input" placeholder="Search all sources…" autofocus>
-        <select name="source" class="source-filter-select">
+        <svg style="position:absolute;pointer-events:none;display:none" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" name="q" id="sp-q" value="{{ q|e }}" class="search-page-input" placeholder="Search all sources…" autocomplete="off" autofocus>
+        <select name="source" class="source-filter-select" id="sp-source">
           <option value="" {% if not source_filter %}selected{% endif %}>All sources</option>
           {% for sid, smeta in source_meta.items() %}
           <option value="{{ sid }}" {% if source_filter == sid %}selected{% endif %}>{{ smeta.label }}</option>
@@ -16,32 +60,103 @@
         <button type="submit" class="search-submit-btn">Search</button>
       </div>
     </form>
-    {% if q %}
-    <div class="search-meta">{{ results|length }} result{% if results|length != 1 %}s{% endif %} for <strong>{{ q }}</strong>{% if source_filter %} in <strong>{{ source_meta[source_filter].label }}</strong>{% endif %}</div>
-    {% endif %}
+    <div id="sp-meta" class="search-meta"></div>
   </div>
-
-  {% if results %}
-  <div class="search-results">
-    {% for r in results %}
-    {% set smeta = source_meta.get(r.source, {}) %}
-    <a href="{{ r.url }}" class="search-result-item">
-      <div class="result-source-badge" style="color:{{ smeta.get('color','var(--fg)') }}">
-        {{ smeta.get('icon','') }} {{ smeta.get('label', r.source) }}
-      </div>
-      <div class="result-title">{{ r.title }}</div>
-      {% if r.excerpt %}
-      <div class="result-excerpt">{{ r.excerpt[:200] }}</div>
-      {% endif %}
-    </a>
-    {% endfor %}
-  </div>
-  {% elif q %}
-  <div class="search-empty">
-    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <p>No results found for <strong>{{ q }}</strong></p>
-    <p class="search-empty-hint">Try a shorter term or check the spelling</p>
-  </div>
-  {% endif %}
+  <div id="sp-results"></div>
+  <button id="sp-more" class="search-load-more" style="display:none">Load more results</button>
 </div>
+
+<script>
+(function(){
+const PAGE = 30;
+let _fuse = null, _all = [], _filtered = [], _shown = 0;
+const META = {{ source_meta | tojson }};
+const INIT_Q = {{ q | tojson }};
+const INIT_SRC = {{ source_filter | tojson }};
+
+const qEl   = document.getElementById('sp-q');
+const srcEl = document.getElementById('sp-source');
+const metaEl = document.getElementById('sp-meta');
+const resEl  = document.getElementById('sp-results');
+const moreEl = document.getElementById('sp-more');
+
+async function _load() {
+  if (_fuse) return;
+  metaEl.textContent = 'Loading index…';
+  try {
+    const r = await fetch('/api/index');
+    const idx = await r.json();
+    _fuse = new Fuse(idx, { keys: ['title','excerpt'], threshold: 0.35, minMatchCharLength: 2, includeScore: true });
+    metaEl.textContent = '';
+    if (INIT_Q) _runSearch(INIT_Q, INIT_SRC);
+  } catch(e) {
+    metaEl.textContent = 'Failed to load search index.';
+  }
+}
+
+function _runSearch(q, src) {
+  if (!_fuse || !q || q.length < 2) { _render([], q); return; }
+  let hits = _fuse.search(q).map(h => h.item);
+  if (src) hits = hits.filter(h => h.source === src);
+  _all = hits;
+  _filtered = hits;
+  _shown = 0;
+  resEl.innerHTML = '';
+  _renderPage();
+  const n = _filtered.length;
+  metaEl.innerHTML = `<strong>${n}</strong> result${n !== 1 ? 's' : ''} for <strong>${q.replace(/</g,'&lt;')}</strong>${src && META[src] ? ` in <strong>${META[src].label}</strong>` : ''}`;
+}
+
+function _render(hits, q) {
+  if (!q || q.length < 2) { resEl.innerHTML = ''; metaEl.textContent = ''; moreEl.style.display = 'none'; return; }
+  resEl.innerHTML = `<div class="search-empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><p>No results for <strong>${q.replace(/</g,'&lt;')}</strong></p><p class="search-empty-hint">Try a shorter term or check spelling</p></div>`;
+  moreEl.style.display = 'none';
+  metaEl.innerHTML = `<strong>0</strong> results for <strong>${q.replace(/</g,'&lt;')}</strong>`;
+}
+
+function _renderPage() {
+  const chunk = _filtered.slice(_shown, _shown + PAGE);
+  if (!chunk.length && _shown === 0) { _render([], qEl.value.trim()); return; }
+  chunk.forEach(r => {
+    const sm = META[r.source] || {};
+    const a = document.createElement('a');
+    a.href = r.url;
+    a.className = 'search-result-item';
+    a.innerHTML = `<div class="result-source-badge" style="color:${sm.color||'var(--fg)'}">${sm.icon||''} ${sm.label||r.source}</div><div class="result-title">${r.title.replace(/</g,'&lt;')}</div>${r.excerpt ? `<div class="result-excerpt">${r.excerpt.slice(0,200).replace(/</g,'&lt;')}</div>` : ''}`;
+    resEl.appendChild(a);
+  });
+  _shown += chunk.length;
+  moreEl.style.display = _shown < _filtered.length ? 'block' : 'none';
+}
+
+moreEl.addEventListener('click', _renderPage);
+
+let _dbt;
+qEl.addEventListener('input', () => {
+  clearTimeout(_dbt);
+  _dbt = setTimeout(() => {
+    const q = qEl.value.trim();
+    const src = srcEl.value;
+    _runSearch(q, src);
+    // Keep URL in sync without reloading
+    const url = new URL(window.location);
+    url.searchParams.set('q', q);
+    if (src) url.searchParams.set('source', src); else url.searchParams.delete('source');
+    history.replaceState({}, '', url);
+  }, 250);
+});
+
+srcEl.addEventListener('change', () => {
+  const q = qEl.value.trim();
+  _runSearch(q, srcEl.value);
+});
+
+document.getElementById('sp-form').addEventListener('submit', e => {
+  e.preventDefault();
+  _runSearch(qEl.value.trim(), srcEl.value);
+});
+
+_load();
+})();
+</script>
 {% endblock %}

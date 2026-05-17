@@ -428,14 +428,20 @@ function renderDropdown(results) {
     searchDrop.innerHTML = '<div class="sd-empty">No results</div>';
     searchDrop.classList.add('open'); _activeIdx = -1; return;
   }
-  searchDrop.innerHTML = results.slice(0, 12).map((r, i) => {
+  const visible = results.slice(0, 12);
+  const extra   = results.length - visible.length;
+  const q       = searchInput ? searchInput.value.trim() : '';
+  const allLink = extra > 0
+    ? `<a class="sd-see-all" href="/search?q=${encodeURIComponent(q)}">See all ${results.length} results →</a>`
+    : '';
+  searchDrop.innerHTML = visible.map((r, i) => {
     const src = SOURCES.find(s => s.id === r.source) || {};
     return `<a class="sd-item" href="${r.url}">
       <div class="sd-source" style="color:${src.color||'#c0caf5'}">${src.icon||''} ${src.label||r.source}</div>
       <div class="sd-title">${r.title}</div>
       ${r.excerpt ? `<div class="sd-excerpt">${r.excerpt.slice(0,100)}</div>` : ''}
     </a>`;
-  }).join('');
+  }).join('') + allLink;
   searchDrop.classList.add('open'); _activeIdx = -1;
 }
 
@@ -1398,7 +1404,33 @@ function _initPalette() {
   });
 }
 
+function _initKbdShortcutLabel() {
+  const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+  if (!isMac) return;
+  const label = '⌘K';
+  ['search-kbd', 'sh-kbd-shortcut'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = label;
+  });
+}
+
+function _initCrossSourceSearch() {
+  const body = document.querySelector('.page-body');
+  if (!body) return;
+  const h1 = body.querySelector('h1');
+  if (!h1 || !h1.textContent.trim()) return;
+  const term = h1.textContent.trim().replace(/[#⁠-⁯﻿​-‏]+/g, '').trim();
+  if (!term || term.length < 2) return;
+  const link = document.createElement('a');
+  link.href = `/search?q=${encodeURIComponent(term)}`;
+  link.className = 'cross-source-search-link';
+  link.title = `Search "${term}" across all sources`;
+  link.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Find in all sources`;
+  h1.appendChild(link);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  _initKbdShortcutLabel();
   _renderAdmonitions(); // Must run before addCopyButtons (replaces blockquotes)
   _initMermaid();       // Must run before addCopyButtons (replaces mermaid pre blocks)
   addCopyButtons();
@@ -1410,4 +1442,5 @@ document.addEventListener('DOMContentLoaded', () => {
   _initSearchHelp();
   _initOfflineBadges();
   _initPalette();
+  _initCrossSourceSearch();
 });
