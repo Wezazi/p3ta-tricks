@@ -156,7 +156,12 @@ document.getElementById('sp-form').addEventListener('submit', e => {
   _runSearch(qEl.value.trim(), srcEl.value);
 });
 
-_load();
+// Fuse.js loads at bottom of base.html body — wait for DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _load);
+} else {
+  _load();
+}
 })();
 </script>
 {% endblock %}

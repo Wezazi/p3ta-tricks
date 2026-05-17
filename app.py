@@ -221,6 +221,7 @@ SOURCE_META = {
     "bug-bounty":      {"label": "Bug Bounty",            "color": "var(--yellow)",  "icon": "🐛"},
     "active-directory": {"label": "Active Directory",           "color": "var(--green)",   "icon": "🎓"},
     "exploitdb":        {"label": "Exploit-DB",               "color": "var(--red)",     "icon": "💥"},
+    "cyberchef":        {"label": "CyberChef",                "color": "var(--green)",   "icon": "🍳"},
 }
 
 _NAV_SOURCES = {
@@ -870,7 +871,7 @@ def search():
     q       = request.args.get("q", "").strip()
     source  = request.args.get("source", "")
     fmt     = request.args.get("format", "")
-    results = _search(q)
+    results = _search(q, limit=500)
     if not OFFLINE_MODE:
         _hidden = {sid for sid, m in SOURCE_META.items() if m.get("offline_only")}
         results = [r for r in results if r.get("source") not in _hidden]
@@ -1036,7 +1037,9 @@ def api_index():
     idx    = _load_index()
     if source:
         idx = [e for e in idx if e.get("source") == source]
-    return jsonify(idx)
+    resp = jsonify(idx)
+    resp.headers["Cache-Control"] = "public, max-age=3600"
+    return resp
 
 
 @app.route("/api/nav/<source_id>")

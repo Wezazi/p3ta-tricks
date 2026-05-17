@@ -20,6 +20,7 @@ const SOURCES = [
   { id: 'exploitdb',        label: 'Exploit-DB',           icon: '💥', color: '#f7768e', noNav: true },
   // ── Reference sources (alphabetical) ────────────────────────────────────
   { id: 'active-directory', label: 'Active Directory',     icon: '🎓', color: '#9ece6a' },
+  { id: 'breaking-adcs',   label: 'Breaking ADCS',        icon: '📜', color: '#f7768e' },
   { id: 'bloodhound',       label: 'BloodHound',           icon: '🩸', color: '#f7768e' },
   { id: 'bloodyad',         label: 'bloodyAD',             icon: '🩸', color: '#db4b4b' },
   { id: 'bug-bounty',       label: 'Bug Bounty',           icon: '🐛', color: '#e0af68' },
