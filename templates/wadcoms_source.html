@@ -60,15 +60,15 @@
            data-types="{{ e.attack_types | join(' ') }}"
            data-text="{{ (e.title + ' ' + e.description + ' ' + e.command) | lower | e }}">
         <div class="wad-entry-header">
-          <span class="wad-entry-title">{{ e.title }}</span>
+          <span class="wad-entry-title">{{ e.title | e }}</span>
           <div class="wad-entry-tags">
-            {% for os in e.os %}<span class="wad-tag wad-tag-os">{{ os }}</span>{% endfor %}
-            {% for t in e.attack_types %}<span class="wad-tag wad-tag-type">{{ t }}</span>{% endfor %}
-            {% for i in e.have %}<span class="wad-tag wad-tag-have">{{ i.replace('_',' ') }}</span>{% endfor %}
+            {% for os in e.os %}<span class="wad-tag wad-tag-os">{{ os | e }}</span>{% endfor %}
+            {% for t in e.attack_types %}<span class="wad-tag wad-tag-type">{{ t | e }}</span>{% endfor %}
+            {% for i in e.have %}<span class="wad-tag wad-tag-have">{{ i.replace('_',' ') | e }}</span>{% endfor %}
           </div>
         </div>
         {% if e.description %}
-        <p class="wad-entry-desc">{{ e.description }}</p>
+        <p class="wad-entry-desc">{{ e.description | e }}</p>
         {% endif %}
         <div class="wad-cmd-wrap">
           <pre class="language-bash wad-pre"><code class="language-bash">{{ e.command | e }}</code></pre>

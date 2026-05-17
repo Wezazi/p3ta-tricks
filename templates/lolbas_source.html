@@ -15,7 +15,7 @@
     <div class="gtfo-filter-head">Categories</div>
     <div class="gtfo-pills" id="cat-pills">
       {% for tag in all_tags %}
-      <button class="gtfo-pill" data-filter-val="{{ tag }}">{{ tag }}</button>
+      <button class="gtfo-pill" data-filter-val="{{ tag | e }}">{{ tag | e }}</button>
       {% endfor %}
     </div>
   </div>
@@ -31,8 +31,8 @@
   <ul class="gtfo-list" id="gtfo-list">
     {% for entry in entries|sort(attribute='title') %}
     <li class="gtfo-entry"
-        data-name="{{ entry.title|lower }}"
-        data-tags="{{ entry.tags|join('|') }}">
+        data-name="{{ entry.title|lower|e }}"
+        data-tags="{{ entry.tags|join('|')|e }}">
       <a href="{{ entry.url }}">{{ entry.title }}</a>
       <span class="gtfo-entry-badges">
         {% for tag in entry.tags %}
