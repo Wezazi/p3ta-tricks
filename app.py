@@ -983,13 +983,17 @@ def api_exploitdb_code(exploit_id):
         return jsonify({"error": "Not found"}), 404
 
     # Local clone takes priority (offline mode)
-    code_path = _EXPLOITDB_SRC / entry["path"]
+    code_path = (_EXPLOITDB_SRC / entry["path"]).resolve()
+    try:
+        code_path.relative_to(_EXPLOITDB_SRC.resolve())
+    except ValueError:
+        return jsonify({"error": "Not found"}), 404
     if code_path.exists():
         try:
             code = code_path.read_text(encoding="utf-8", errors="replace")
             return jsonify({"id": exploit_id, "path": entry["path"], "code": code, "source": "local"})
-        except Exception as exc:
-            return jsonify({"error": str(exc)}), 500
+        except Exception:
+            return jsonify({"error": "Failed to load code"}), 500
 
     # Online fallback: proxy raw file from exploit-db.com
     try:
@@ -1013,7 +1017,11 @@ def api_exploitdb_download(exploit_id):
     filename = Path(entry["path"]).name
 
     # Local clone: serve as file download
-    code_path = _EXPLOITDB_SRC / entry["path"]
+    code_path = (_EXPLOITDB_SRC / entry["path"]).resolve()
+    try:
+        code_path.relative_to(_EXPLOITDB_SRC.resolve())
+    except ValueError:
+        abort(404)
     if code_path.exists():
         try:
             data = code_path.read_bytes()
@@ -1158,7 +1166,11 @@ def serve_tool_file(tool_name, filepath=""):
     tool_path = TOOLS_DIR / tool_name
     if not tool_path.exists():
         abort(404)
-    target = tool_path / filepath if filepath else tool_path
+    target = (tool_path / filepath).resolve() if filepath else tool_path.resolve()
+    try:
+        target.relative_to(tool_path.resolve())
+    except ValueError:
+        abort(404)
     if not target.exists():
         abort(404)
     if target.is_file():
