@@ -412,7 +412,13 @@ async function loadIndex() {
   try {
     const r = await fetch('/api/index');
     _index = await r.json();
-    _fuse = new Fuse(_index, { keys: ['title','excerpt'], threshold: 0.35, minMatchCharLength: 2, includeScore: true });
+    _fuse = new Fuse(_index, {
+      keys: [{ name: 'title', weight: 3 }, { name: 'excerpt', weight: 1 }],
+      threshold: 0.2,
+      ignoreLocation: true,
+      minMatchCharLength: 3,
+      includeScore: true,
+    });
   } catch(e) {}
 }
 

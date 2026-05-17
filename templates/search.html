@@ -86,7 +86,13 @@ async function _load() {
   try {
     const r = await fetch('/api/index');
     const idx = await r.json();
-    _fuse = new Fuse(idx, { keys: ['title','excerpt'], threshold: 0.35, minMatchCharLength: 2, includeScore: true });
+    _fuse = new Fuse(idx, {
+      keys: [{ name: 'title', weight: 3 }, { name: 'excerpt', weight: 1 }],
+      threshold: 0.2,
+      ignoreLocation: true,
+      minMatchCharLength: 3,
+      includeScore: true,
+    });
     metaEl.textContent = '';
     if (INIT_Q) _runSearch(INIT_Q, INIT_SRC);
   } catch(e) {
