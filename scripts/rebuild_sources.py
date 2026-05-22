@@ -187,6 +187,9 @@ _HINT_KIND = {'info': 'info', 'warning': 'warning', 'danger': 'danger',
                'success': 'success', 'tip': 'tip'}
 
 def _strip_gitbook_tags(text: str) -> str:
+    # Strip YAML front matter (--- ... ---)
+    text = re.sub(r'^---\s*\n.*?\n---\s*\n', '', text, count=1, flags=re.DOTALL)
+
     # {% hint style="..." %} ... {% endhint %} → admonition
     def _hint(m):
         kind = _HINT_KIND.get(m.group(1).lower(), 'info')

@@ -230,1105 +230,6 @@
     "id": 2376
   },
   {
-    "title": "Welcome",
-    "source": "netexec",
-    "url": "/page/netexec/README",
-    "path": "README",
-    "excerpt": "cover: .gitbook/assets/NetExec-Logo-Color.png coverY: 10.04061416542843 Welcome NetExec NetExec (a.k.a nxc) is a network service exploitation tool that helps automate assessing the security of large n"
-  },
-  {
-    "title": "News",
-    "source": "netexec",
-    "url": "/page/netexec/news",
-    "path": "news",
-    "excerpt": "News"
-  },
-  {
-    "title": "v1.0.0 Release!",
-    "source": "netexec",
-    "url": "/page/netexec/news/v1.0.0-release",
-    "path": "news/v1.0.0-release",
-    "excerpt": "description: A New Beginning 🕷️ v1.0.0 Release! The Release of Version 1.0.0! Hello everyone! \\ Today will be our first release of NetExec version 1.0.0 🎉\\ If you are reading this you have already fou"
-  },
-  {
-    "title": "v1.1.0 - nxc4u",
-    "source": "netexec",
-    "url": "/page/netexec/news/v1.1.0-nxc4u",
-    "path": "news/v1.1.0-nxc4u",
-    "excerpt": "description: NetExec v1.1.0 feature rundown cover: ../.gitbook/assets/IMG_4087.png coverY: 0 🔧 v1.1.0 - nxc4u A new release of NetExec has been released! In this blog post we will give an overview of "
-  },
-  {
-    "title": "v1.2.0 - ItsAlwaysDNS",
-    "source": "netexec",
-    "url": "/page/netexec/news/v1.2.0-ItsAlwaysDNS",
-    "path": "news/v1.2.0-ItsAlwaysDNS",
-    "excerpt": "description: NetExec v1.2.0 feature rundown cover: ../.gitbook/assets/IMG_4087.png coverY: 0 📡 v1.2.0 - ItsAlwaysDNS Hello everyone! It has been quite a while since the last release. We now have so ma"
-  },
-  {
-    "title": "v1.3.0 - NeedForSpeed",
-    "source": "netexec",
-    "url": "/page/netexec/news/v1.3.0-NeedForSpeed",
-    "path": "news/v1.3.0-NeedForSpeed",
-    "excerpt": "🏎️ v1.3.0 - NeedForSpeed Hello everyone! Recently, a lot of incredible Pull Requests have been submitted. Over 22 PRs in 2 weeks! This community activity is incredible, so be prepared for a lot of upc"
-  },
-  {
-    "title": "v1.4.0 - SmoothOperator",
-    "source": "netexec",
-    "url": "/page/netexec/news/v1.4.0-SmoothOperator",
-    "path": "news/v1.4.0-SmoothOperator",
-    "excerpt": "🧈 v1.4.0 - SmoothOperator Hello everyone! It has been almost half a year since the last release and a lot of new features have been added since then. Besides the most dominant protocol, SMB, other pro"
-  },
-  {
-    "title": "NetExec Lab",
-    "source": "netexec",
-    "url": "/page/netexec/netexec-lab",
-    "path": "netexec-lab",
-    "excerpt": "description: Lab build for CTF and Workshop icon: flask-vial NetExec Lab With NetExec, you get more than just the tool, you get three complete labs built to accelerate your mastery of NetExec for real"
-  },
-  {
-    "title": "Installation",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation",
-    "path": "getting-started/installation",
-    "excerpt": "description: NetExec installation Installation"
-  },
-  {
-    "title": "Installation for Unix",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation/installation-on-unix",
-    "path": "getting-started/installation/installation-on-unix",
-    "excerpt": "🐧 Installation for Unix Installing NetExec with pipx :saxophone: Info We do recommend to install rust before to make sure everything will work properly curl --proto &#39;=https&#39; --tlsv1.2 -sSf htt"
-  },
-  {
-    "title": "Installation for Windows",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation/installation-on-windows",
-    "path": "getting-started/installation/installation-on-windows",
-    "excerpt": "🪟 Installation for Windows Using Python and pipx Success If Python is available it is recommended to install NetExec with pipx Warning For Windows, git and Rust are required for installation. If you c"
-  },
-  {
-    "title": "Installation for Mac",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation/installation-for-mac",
-    "path": "getting-started/installation/installation-for-mac",
-    "excerpt": "🍎 Installation for Mac Warning For Mac, Homebrew and Rust are required for installation. If you can't install these, see below for a standalone executable. Setup Rust with Homebrew Ensure Homebrew is "
-  },
-  {
-    "title": "Using Docker",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation/using-docker",
-    "path": "getting-started/installation/using-docker",
-    "excerpt": "🐋 Using Docker Installing Docker for Windows/Mac Success If Python is available it is recommended to install NetExec with pipx Warning For Windows and Mac (x86_64/arm64) we recommend installing Docker"
-  },
-  {
-    "title": "Manually building the binary",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation/manually-building-the-binary",
-    "path": "getting-started/installation/manually-building-the-binary",
-    "excerpt": "description: &gt;- If you want to build the standalone binary yourself, here is a tutorial for you 🛠️ Manually building the binary Warning This process can vary from time to time as dependencies chang"
-  },
-  {
-    "title": "Post Installation Setup",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/installation/setting-up-tab-completion",
-    "path": "getting-started/installation/setting-up-tab-completion",
-    "excerpt": "➡️ Post Installation Setup Setting up Tab Completion Currently, we use argcomplete to automatically do tab completion through argparse. Once you've installed nxc globally, do the following: Info Insta"
-  },
-  {
-    "title": "Selecting & Using a Protocol",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/selecting-and-using-a-protocol",
-    "path": "getting-started/selecting-and-using-a-protocol",
-    "excerpt": "description: Selecting &amp; Using a Protocol on NetExec Selecting &amp; Using a Protocol Available Protocols smb ssh ldap ftp wmi winrm rdp vnc mssql nfs Note that not all protocols support the same "
-  },
-  {
-    "title": "Target Formats",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/target-formats",
-    "path": "getting-started/target-formats",
-    "excerpt": "description: NetExec target formats Target Formats Target Formats Every protocol supports targets by CIDR notation(s), IP address(s), IP range(s), hostname(s), a file containing a list of targets or c"
-  },
-  {
-    "title": "Using Credentials",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/using-credentials",
-    "path": "getting-started/using-credentials",
-    "excerpt": "description: Using credentials with NetExec Using Credentials Using Credentials Every protocol supports using credentials in one form or another. For details on using credentials with a specific proto"
-  },
-  {
-    "title": "Using Kerberos",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/using-kerberos",
-    "path": "getting-started/using-kerberos",
-    "excerpt": "description: Using Kerberos authentication with NetExec Using Kerberos Using Kerberos NetExec does support Kerberos authentication. There are two options:&#x20; Using password/hash which automatically"
-  },
-  {
-    "title": "Using Certificates",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/using-certificates",
-    "path": "getting-started/using-certificates",
-    "excerpt": "description: Using Certificates authentication with NetExec Using Certificates nxc smb &lt;TARGET&gt; --pfx-cert user.pfx -u &lt;USERNAME&gt; nxc smb &lt;TARGET&gt; --pfx-cert user.pfx --pfx-pass pass"
-  },
-  {
-    "title": "Using Modules",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/using-modules",
-    "path": "getting-started/using-modules",
-    "excerpt": "description: Using Module with NetExec Using Modules Using Modules Viewing Available Modules for a Protocol Run nxc &lt;protocol&gt; -L to view available modules for the specified protocol. For exampl"
-  },
-  {
-    "title": "DNS options",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/dns-options",
-    "path": "getting-started/dns-options",
-    "excerpt": "description: Configuring DNS DNS options There are several options that can be set to configure the DNS server that is used.\\ Besides forcing NetExec to use ipv6 there is an option to set the dns serv"
-  },
-  {
-    "title": "Database General Usage",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/database-general-usage",
-    "path": "getting-started/database-general-usage",
-    "excerpt": "Database General Usage Database General Usage nxc automatically stores all used/dumped credentials (along with other information) in its database which is setup on first run. Each protocol has its own"
-  },
-  {
-    "title": "BloodHound Integration",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/bloodhound-integration",
-    "path": "getting-started/bloodhound-integration",
-    "excerpt": "BloodHound Integration NetExec will set user as 'owned' on BloodHound when an account is found! Very useful when lsassy finds 20 credentials in one dump :) First you need to configure your config file"
-  },
-  {
-    "title": "Audit Mode",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/audit-mode",
-    "path": "getting-started/audit-mode",
-    "excerpt": "Audit Mode Audit Mode is a configuration-based feature in NetExec that redacts credentials from console output. In the config file located at ~/.nxc/nxc.conf add the character of your choice on the li"
-  },
-  {
-    "title": "Ignore OpSec Warnings",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/ignore-opsec-warnings",
-    "path": "getting-started/ignore-opsec-warnings",
-    "excerpt": "Ignore OpSec Warnings In the config file located at ~/.nxc/nxc.conf , there is an option to ignore the opsec warnings that may be annoying or cause issues in parsing output. The line responsible is ig"
-  },
-  {
-    "title": "Logging",
-    "source": "netexec",
-    "url": "/page/netexec/getting-started/log-your-results",
-    "path": "getting-started/log-your-results",
-    "excerpt": "description: Log every output and command into a file Logging There are two ways to log results: Using the nxc.conf file Set \"log_mode = True\" This will log everything Using the option --log file This"
-  },
-  {
-    "title": "Generate hosts file",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/generate-hosts-file",
-    "path": "smb-protocol/generate-hosts-file",
-    "excerpt": "Generate hosts file If you are in a lab with no dns resolution you can use option --generate-hosts-file to generate a host file for you and avoid DNS problem when using LDAP or Kerberos protocols."
-  },
-  {
-    "title": "Generate krb5.conf file",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/generate-krb5.conf-file",
-    "path": "smb-protocol/generate-krb5.conf-file",
-    "excerpt": "Generate krb5.conf file netexec smb ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --generate-krb5-file /path export KRB5_CONFIG=/path"
-  },
-  {
-    "title": "Generate TGT",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/generate-tgt",
-    "path": "smb-protocol/generate-tgt",
-    "excerpt": "Generate TGT netexec smb ip -u user -p password --generate-tgt /path export KRB5CCNAME=/path netexec smb ip -u user -k --use-kcache"
-  },
-  {
-    "title": "Scan for Vulnerabilities",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/scan-for-vulnerabilities",
-    "path": "smb-protocol/scan-for-vulnerabilities",
-    "excerpt": "description: Check if host is vulnerable Scan for Vulnerabilities Scan for Vulnerabilities When you start your internal pentest, these are the first modules you should try: ZeroLogon nxc smb &lt;ip&gt"
-  },
-  {
-    "title": "Enumeration",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration",
-    "path": "smb-protocol/enumeration",
-    "excerpt": "description: Enumeration on NetExec Enumeration The following use cases assume you have a Kali Linux host connected to an internal network. For the examples it is also assumed hosts are within a 192.1"
-  },
-  {
-    "title": "Enumerate Hosts",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-hosts",
-    "path": "smb-protocol/enumeration/enumerate-hosts",
-    "excerpt": "Enumerate Hosts Map Network Hosts Returns a list of live hosts nxc smb &lt;CIDR&gt; Expected Results: SMB 192 .168.1.101 445 DC2012A [ * ] Windows Server 2012 R2 Standard 9600 x64 ( name:DC2012A ) ( d"
-  },
-  {
-    "title": "Enumerate Null Sessions",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-null-sessions",
-    "path": "smb-protocol/enumeration/enumerate-null-sessions",
-    "excerpt": "Enumerate Null Sessions Check if Null Session , also known as Anonymous session, is enabled on the network. Can be very useful on a Domain Controller to enumerate users, groups, password policies, etc"
-  },
-  {
-    "title": "Enumerate Guest Logon",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-guest-logon",
-    "path": "smb-protocol/enumeration/enumerate-guest-logon",
-    "excerpt": "Enumerate Guest Logon Using a random username and password you can check if the target accepts guest logon. If so, it means that either the domain guest account or the local guest account of the serve"
-  },
-  {
-    "title": "Enumerate Hosts with SMB Signing Not Required",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/smb-signing-not-required",
-    "path": "smb-protocol/enumeration/smb-signing-not-required",
-    "excerpt": "Enumerate Hosts with SMB Signing Not Required Maps the network of live hosts and saves a list of only the hosts that don't require SMB signing.\\ List format is one IP per line nxc smb &lt;CIDR&gt; --g"
-  },
-  {
-    "title": "Enumerate Active Windows Sessions",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-active-windows-sessions",
-    "path": "smb-protocol/enumeration/enumerate-active-windows-sessions",
-    "excerpt": "🆕 Enumerate Active Windows Sessions When connecting to a Windows server via GUI interface (local connection or RDP) a windows session will be created. These session can be listed using the following o"
-  },
-  {
-    "title": "Enumerate Logged-On Users with the Remote Registry Service",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-logged-on-users-winreg",
-    "path": "smb-protocol/enumeration/enumerate-logged-on-users-winreg",
-    "excerpt": "🆕 Enumerate Logged-On Users with the Remote Registry Service This option uses the Remote Registry Service through the \\\\winreg pipe to check which user profiles are currently loaded in the user regist"
-  },
-  {
-    "title": "Enumerate Logged-On Users with the Workstation Service",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-logged-on-users-wkssvc",
-    "path": "smb-protocol/enumeration/enumerate-logged-on-users-wkssvc",
-    "excerpt": "Enumerate Logged-On Users with the Workstation Service To enumerate logged on users on a remote target, the following option can be used: nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -"
-  },
-  {
-    "title": "Enumerate Shares and Access",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-shares-and-access",
-    "path": "smb-protocol/enumeration/enumerate-shares-and-access",
-    "excerpt": "Enumerate Shares and Access Enumerate permissions on all shares nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --shares Info By far one of the most useful feature of nxc If you want to f"
-  },
-  {
-    "title": "Enumerate Network Interfaces",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-network-interfaces",
-    "path": "smb-protocol/enumeration/enumerate-network-interfaces",
-    "excerpt": "🆕 Enumerate Network Interfaces Enumerate network interfaces on a host: nxc smb &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --interfaces Example output of the interface enumeration"
-  },
-  {
-    "title": "Enumerate NTLMv1",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-ntlmv1",
-    "path": "smb-protocol/enumeration/enumerate-ntlmv1",
-    "excerpt": "Enumerate NTLMv1 Enumerate the LmCompatibilityLevel on the remote target via the remote registry: nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M ntlmv1 nxc smb &lt;ip&gt; -u &lt;USERNAM"
-  },
-  {
-    "title": "Enumerate Disks",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-disks",
-    "path": "smb-protocol/enumeration/enumerate-disks",
-    "excerpt": "Enumerate Disks Enumerate disks on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --disks"
-  },
-  {
-    "title": "Enumerate Bitlocker",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-bitlocker",
-    "path": "smb-protocol/enumeration/enumerate-bitlocker",
-    "excerpt": "Enumerate Bitlocker Enumerate BitLocker Status on the remote target nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M bitlocker"
-  },
-  {
-    "title": "Enumerate Domain Users",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-users",
-    "path": "smb-protocol/enumeration/enumerate-domain-users",
-    "excerpt": "Enumerate Domain Users Enumerate domain users on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --users Export domain users on the remote target nxc smb &lt;ip&gt; -u &"
-  },
-  {
-    "title": "Enumerate Users by Bruteforcing RID",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-users-by-bruteforcing-rid",
-    "path": "smb-protocol/enumeration/enumerate-users-by-bruteforcing-rid",
-    "excerpt": "Enumerate Users by Bruteforcing RID Enumerate users by bruteforcing the RID on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --rid-brute"
-  },
-  {
-    "title": "Enumerate Domain Groups",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-groups",
-    "path": "smb-protocol/enumeration/enumerate-domain-groups",
-    "excerpt": "Enumerate Domain Groups Danger This arg was moved to the LDAP protocol, see here ."
-  },
-  {
-    "title": "Enumerate Local Groups",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-local-groups",
-    "path": "smb-protocol/enumeration/enumerate-local-groups",
-    "excerpt": "Enumerate Local Groups Enumerate local groups on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --local-group"
-  },
-  {
-    "title": "Enumerate Domain Password Policy",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-password-policy-1",
-    "path": "smb-protocol/enumeration/enumerate-domain-password-policy-1",
-    "excerpt": "Enumerate Domain Password Policy Using the option --pass-pol you can get the password policy of the domain nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --pass-pol"
-  },
-  {
-    "title": "Enumerate Anti-Virus & EDR",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-antivirus-edr",
-    "path": "smb-protocol/enumeration/enumerate-antivirus-edr",
-    "excerpt": "description: Enumerate antivirus installed using NetExec Enumerate Anti-Virus &amp; EDR You don't need to be a privileged user to do this action nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&"
-  },
-  {
-    "title": "Enumerate remote processes",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-remote-processes",
-    "path": "smb-protocol/enumeration/enumerate-remote-processes",
-    "excerpt": "Enumerate remote processes One thing that's to know when pentesting is whether or not a specific process is being run on the server you are targeting. This can now be done via the following option: nx"
-  },
-  {
-    "title": "Enumerate changed lockscreen executables",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-lockscreen-backdoors",
-    "path": "smb-protocol/enumeration/enumerate-lockscreen-backdoors",
-    "excerpt": "description: &gt;- Detect Windows lock screen backdoors by checking FileDescriptions of accessibility binaries. 🆕 Enumerate changed lockscreen executables Attackers can replace accessibility executabl"
-  },
-  {
-    "title": "Enumerate Primary Site Server and Distribution Point via recon6",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/enumeration/enumerate-sccm-primarysiteserver-and-distributionpoint",
-    "path": "smb-protocol/enumeration/enumerate-sccm-primarysiteserver-and-distributionpoint",
-    "excerpt": "🆕 Enumerate Primary Site Server and Distribution Point via recon6 This module extracts information from Primary Site Servers and Distribution Points of an SCCM infrastructure via the registry hive HKL"
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/password-spraying",
-    "path": "smb-protocol/password-spraying",
-    "excerpt": "description: Using NetExec for password spraying Password Spraying Using Username/Password Lists You can use multiple usernames or passwords by separating the names/passwords with a space. nxc smb &lt"
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/authentication",
-    "path": "smb-protocol/authentication",
-    "excerpt": "description: Authentication on NetExec Authentication You can authenticate on the remote target using a domain account or a local user When authentication fail =&gt; COLOR RED When authentication succ"
-  },
-  {
-    "title": "Checking Credentials (Domain)",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/authentication/checking-credentials-domain",
-    "path": "smb-protocol/authentication/checking-credentials-domain",
-    "excerpt": "Checking Credentials (Domain) Authentication Failed logins result in a [-] Successful logins result in a [+] Domain\\Username:Password Info Code execution results in a (Pwn3d!) added after the login co"
-  },
-  {
-    "title": "Checking Credentials (Local)",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/authentication/checking-credentials-local",
-    "path": "smb-protocol/authentication/checking-credentials-local",
-    "excerpt": "Checking credentials (Local) User/Password/Hashes Adding --local-auth to any of the authentication commands with attempt to logon locally. nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; "
-  },
-  {
-    "title": "Delegation",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/authentication/delegation",
-    "path": "smb-protocol/authentication/delegation",
-    "excerpt": "description: Resource Based Constrained Delegation (RBCD) and 🆕 Delegation RBCD If you have an object with the msDS-AllowedToActOnBehalfOfOtherIdentity attribute set to an account you control you can "
-  },
-  {
-    "title": "Command Execution",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/command-execution",
-    "path": "smb-protocol/command-execution",
-    "excerpt": "description: Command execution on NetExec Command Execution"
-  },
-  {
-    "title": "Executing Remote Commands",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/command-execution/execute-remote-command",
-    "path": "smb-protocol/command-execution/execute-remote-command",
-    "excerpt": "Executing Remote Commands Command Execution Executing commands on a windows system requires Administrator credentials. nxc automatically tells you if the credential set you're using has admin access t"
-  },
-  {
-    "title": "Process Injection (pi module)",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/command-execution/execute-remote-command/process-injection-pi-module",
-    "path": "smb-protocol/command-execution/execute-remote-command/process-injection-pi-module",
-    "excerpt": "Process Injection (pi module) Warning You need at least local admin privilege on the remote target The \"pi\" module accesses the process of a user with an active session on a Windows system using the P"
-  },
-  {
-    "title": "Getting Shells 101",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/command-execution/getting-shells-101",
-    "path": "smb-protocol/command-execution/getting-shells-101",
-    "excerpt": "Getting Shells 101 Getting Shells 101 We all love shells and that's why nxc makes it as easy as possible to get them! There really is something magical about shelling a /24 Empire Agent Info Use the n"
-  },
-  {
-    "title": "Spidering Shares",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/spidering-shares",
-    "path": "smb-protocol/spidering-shares",
-    "excerpt": "description: Spidering shares with NetExec Spidering Shares Using Default Option --spider Options for spidering shares of remote systems. Example, Spider the C drive for files with txt in the name (fi"
-  },
-  {
-    "title": "Get and Put Files",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/get-and-put-files",
-    "path": "smb-protocol/get-and-put-files",
-    "excerpt": "description: Get a remote file or send a remote file using NetExec Get and Put Files Send a File to the Remote Target Send a local file to the remote target nxc smb &lt;TARGET&gt; -u &lt;USERNAME&gt; "
-  },
-  {
-    "title": "Obtaining Credentials",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials",
-    "path": "smb-protocol/obtaining-credentials",
-    "excerpt": "Obtaining Credentials The following examples use a username and plaintext password, although user/hash combos work as well."
-  },
-  {
-    "title": "Dump SAM",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-sam",
-    "path": "smb-protocol/obtaining-credentials/dump-sam",
-    "excerpt": "Dump SAM Dump SAM hashes using methods from secretsdump.py Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &lt;CID"
-  },
-  {
-    "title": "Dump LSA",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-lsa",
-    "path": "smb-protocol/obtaining-credentials/dump-lsa",
-    "excerpt": "Dump LSA Dump LSA secrets using methods from secretsdump.py Danger Requires Domain Admin or Local Admin Priviledges on target Domain Controller nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD"
-  },
-  {
-    "title": "Dump NTDS.dit",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-ntds.dit",
-    "path": "smb-protocol/obtaining-credentials/dump-ntds.dit",
-    "excerpt": "Dump NTDS.dit Dump the NTDS.dit from target DC using methods from secretsdump.py Danger Requires Domain Admin or Local Admin Priviledges on target Domain Controller 2 methods are available: ( default "
-  },
-  {
-    "title": "Dump LSASS",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-lsass",
-    "path": "smb-protocol/obtaining-credentials/dump-lsass",
-    "excerpt": "Dump LSASS Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Using Lsassy Using the module Lsassy from @pixis , you can dump"
-  },
-  {
-    "title": "Dump DPAPI",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-dpapi",
-    "path": "smb-protocol/obtaining-credentials/dump-dpapi",
-    "excerpt": "description: Dump DPAPI credentials using NetExec Dump DPAPI You can dump DPAPI credentials using NetExec using the following option: --dpapi . It will get all secrets from Credential Manager, Chrome,"
-  },
-  {
-    "title": "Dump with BackupOperator Priv",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-backupop",
-    "path": "smb-protocol/obtaining-credentials/dump-backupop",
-    "excerpt": "🆕 Dump with BackupOperator Priv Success You don't need to local admin privilege on the remote target if you are in SeBackupPrivilege If the controlled user has the SeBackupPrivilege, it can dump SAM, "
-  },
-  {
-    "title": "Dump SCCM",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-sccm",
-    "path": "smb-protocol/obtaining-credentials/dump-sccm",
-    "excerpt": "🆕 Dump SCCM Dump the SCCM from target using methods from dploot Danger Requires Domain Admin or Local Admin Priviledges on target Domain Controller 2 methods are available: ( default ) wmi - TODO disk"
-  },
-  {
-    "title": "Dump Token Broker Cache",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-token-broker-cache",
-    "path": "smb-protocol/obtaining-credentials/dump-token-broker-cache",
-    "excerpt": "description: Dump access token for Azure and Microsoft 365 from Token Broker Cache. 🆕 Dump Token Broker Cache Warning You need at least local admin privilege on the remote target, use option --local-a"
-  },
-  {
-    "title": "Dump WIFI password",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-wifi-password",
-    "path": "smb-protocol/obtaining-credentials/dump-wifi-password",
-    "excerpt": "Dump WIFI password Get the WIFI password register in Windows Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &lt;i"
-  },
-  {
-    "title": "Dump KeePass",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-keepass",
-    "path": "smb-protocol/obtaining-credentials/dump-keepass",
-    "excerpt": "Dump KeePass You can check if keepass is installed on the target computer and then steal the master password and decrypt the database ! nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M ke"
-  },
-  {
-    "title": "Dump Veeam",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-veeam",
-    "path": "smb-protocol/obtaining-credentials/dump-veeam",
-    "excerpt": "description: Dump passwords used by Veeam for backup jobs Dump Veeam Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Veeam"
-  },
-  {
-    "title": "Dump WinSCP",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-winscp",
-    "path": "smb-protocol/obtaining-credentials/dump-winscp",
-    "excerpt": "description: Dump WinSCP Credentials stored in the registry or local files Dump WinSCP Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a l"
-  },
-  {
-    "title": "Dump PuTTY",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-putty",
-    "path": "smb-protocol/obtaining-credentials/dump-putty",
-    "excerpt": "description: Dump private Keys stored for authentication or stored proxy credentials 🆕 Dump PuTTY Warning You need at least local admin privilege on the remote target, use option --local-auth if your "
-  },
-  {
-    "title": "Dump VNC",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-vnc",
-    "path": "smb-protocol/obtaining-credentials/dump-vnc",
-    "excerpt": "description: Dump VNC password from RealVNC or TightVNC 🆕 Dump VNC password from RealVNC or TightVNC Warning You need at least local admin privilege on the remote target, use option --local-auth if yo"
-  },
-  {
-    "title": "Dump mRemoteNG",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-mremoteng",
-    "path": "smb-protocol/obtaining-credentials/dump-mremoteng",
-    "excerpt": "description: Dump mRemoteNG stored credentials 🆕 Dump mRemoteNG Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &l"
-  },
-  {
-    "title": "Dump Notepad",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-notepad",
-    "path": "smb-protocol/obtaining-credentials/dump-notepad",
-    "excerpt": "description: Dump unsaved Notepad documents 🆕 Dump Notepad Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Finding credent"
-  },
-  {
-    "title": "Dump Notepad++",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-notepad++",
-    "path": "smb-protocol/obtaining-credentials/dump-notepad++",
-    "excerpt": "description: Dump Notepad++ unsaved documents 🆕 Dump Notepad++ Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Finding cre"
-  },
-  {
-    "title": "Dump Remote Desktop Credential Manager",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-rdcman",
-    "path": "smb-protocol/obtaining-credentials/dump-rdcman",
-    "excerpt": "description: Dump Remote Desktop Connection Manager credentials 🆕 Dump Remote Desktop Connection Manager Warning You need at least local admin privilege on the remote target, use option --local-auth i"
-  },
-  {
-    "title": "Dump Event Log Creds(4688)",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/obtaining-credentials/eventlog-creds",
-    "path": "smb-protocol/obtaining-credentials/eventlog-creds",
-    "excerpt": "🆕 Dump Event Log Creds(4688) Parses Windows Event ID 4688 and Sysmon Logs Warning You need at least local admin privilege on the remote target This module parses Windows logs for Event ID 4688, as wel"
-  },
-  {
-    "title": "Defeating LAPS",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/defeating-laps",
-    "path": "smb-protocol/defeating-laps",
-    "excerpt": "description: NetExec vs LAPS Defeating LAPS Using NetExec When LAPS Installed on the Domain If LAPS is used inside the domain, it can be hard to use NetExec to execute a command on every computer on t"
-  },
-  {
-    "title": "Checking for Spooler & WebDav",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/spooler-webdav-running",
-    "path": "smb-protocol/spooler-webdav-running",
-    "excerpt": "Checking for Spooler &amp; WebDav Checking if the Spooler Service is Running nxc smb &lt;ip&gt; -u &#39;user&#39; -p &lt;PASSWORD&gt; -M spooler Checking if the WebDav Service is Running nxc smb &lt;i"
-  },
-  {
-    "title": "Steal Microsoft Teams Cookies",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/steal-microsoft-teams-cookies",
-    "path": "smb-protocol/steal-microsoft-teams-cookies",
-    "excerpt": "Steal Microsoft Teams Cookies Warning You need at least local admin privilege on the remote target New NetExec module to dump Microsoft Teams cookies thanks to @KuiilSec 's contribution.&#x20; You can"
-  },
-  {
-    "title": "Impersonate logged-on Users",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/impersonate-logged-on-users",
-    "path": "smb-protocol/impersonate-logged-on-users",
-    "excerpt": "description: &gt;- Use Sessions from logged-on Users to execute arbitrary commands using schtask_as Impersonate logged-on Users Warning You need at least local admin privilege on the remote target The"
-  },
-  {
-    "title": "Change User Password",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/change-user-password",
-    "path": "smb-protocol/change-user-password",
-    "excerpt": "Change User Password If you encounter an account with a correct password but either STATUS_PASSWORD_MUST_CHANGE or STATUS_PASSWORD_EXPIRED , you usually won't be able to use it.\\ However, with the cha"
-  },
-  {
-    "title": "Modify Group",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/modify-group",
-    "path": "smb-protocol/modify-group",
-    "excerpt": "🆕 Modify Group If a user has privileges such as AddMember, AddSelf, etc. over a group, this module can add or remove users from that group. Add User to Group Just specify the target user and target gr"
-  },
-  {
-    "title": "Dump User Local Security Questions",
-    "source": "netexec",
-    "url": "/page/netexec/smb-protocol/dump-user-local-security-questions",
-    "path": "smb-protocol/dump-user-local-security-questions",
-    "excerpt": "Dump User Local Security Questions Warning You need at least local admin privilege on the remote target New NetExec module to dump a local user's security questions if they have them. nxc smb &lt;ip&g"
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/authentication",
-    "path": "ldap-protocol/authentication",
-    "excerpt": "Authentication LDAP Authentication Testing if an account exists without kerberos protocol nxc ldap &lt;CIDR&gt; -u &lt;USERFILE&gt; -p &#39;&#39; -k Testing credentials nxc ldap &lt;CIDR&gt; -u &lt;US"
-  },
-  {
-    "title": "Enumerate Domain Users",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/enumerate-users",
-    "path": "ldap-protocol/enumerate-users",
-    "excerpt": "Enumerate Users To enumerate all users via LDAP: nxc ldap $ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --users To export all users to a file: nxc ldap $ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --user"
-  },
-  {
-    "title": "Enumerate Domain Groups",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/enumerate-group-members",
-    "path": "ldap-protocol/enumerate-group-members",
-    "excerpt": "Enumerate Domain Groups Enumerate all groups in the Domain: nxc ldap &lt;ip&gt; -u &lt;username&gt; -p &lt;password&gt; --groups To enumerate all members in specific group via LDAP: nxc ldap &lt;ip&gt"
-  },
-  {
-    "title": "Query LDAP",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/query-ldap",
-    "path": "ldap-protocol/query-ldap",
-    "excerpt": "description: An alternative to ldapsearch 🆕 Query LDAP If you need to query raw ldap values you can use the query option together with filters. The returned values are not parsed in any way and should"
-  },
-  {
-    "title": "ASREPRoast",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/asreproast",
-    "path": "ldap-protocol/asreproast",
-    "excerpt": "description: &gt;- Retrieve the Kerberos 5 AS-REP etype 23 hash of users without Kerberos pre-authentication required ASREPRoast Success You can retrieve the Kerberos 5 AS-REP etype 23 hash of users w"
-  },
-  {
-    "title": "Find Domain SID",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/find-domain-sid",
-    "path": "ldap-protocol/find-domain-sid",
-    "excerpt": "Find Domain SID You can find the domain SID using function --get-sid nxc ldap DC1.scrm.local -u sqlsvc -p Pegasus60 -k --get-sid nxc ldap DC1.scrm.local -u sqlsvc -p Pegasus60 -k --get-sid LDAP DC1.sc"
-  },
-  {
-    "title": "Kerberoasting",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/kerberoasting",
-    "path": "ldap-protocol/kerberoasting",
-    "excerpt": "description: Retrieve the Kerberos 5 TGS-REP etype 23 hash using Kerberoasting Kerberoasting Kerberoasting You can retrieve the Kerberos 5 TGS-REP etype 23 hash using Kerberoasting technique The goal "
-  },
-  {
-    "title": "Find Misconfigured Delegation",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/find-misconfigured-delegation",
-    "path": "ldap-protocol/find-misconfigured-delegation",
-    "excerpt": "🆕 Find Misconfigured Delegation NetExec allows you to retrieve the list of all misconfigured delegations nxc ldap &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --find-delegation nxc ldap &lt;"
-  },
-  {
-    "title": "Unconstrained Delegation",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/unconstrained-delegation",
-    "path": "ldap-protocol/unconstrained-delegation",
-    "excerpt": "Unconstrained Delegation NetExec allows you to retrieve the list of all computers and users with the flag TRUSTED_FOR_DELEGATION nxc ldap &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --trust"
-  },
-  {
-    "title": "Admin Count",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/admin-count",
-    "path": "ldap-protocol/admin-count",
-    "excerpt": "Admin Count adminCount Indicates that a given object has had its ACLs changed to a more secure value by the system because it was a member of one of the administrative groups (directly or transitively"
-  },
-  {
-    "title": "Machine Account Quota",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/machine-account-quota",
-    "path": "ldap-protocol/machine-account-quota",
-    "excerpt": "Machine Account Quota This module retrieves the MachineAccountQuota domain-level attribute. It's useful to check this value because by default it permits unprivileged users to attach up to 10 computer"
-  },
-  {
-    "title": "Get User Descriptions",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/get-user-descriptions",
-    "path": "ldap-protocol/get-user-descriptions",
-    "excerpt": "Get User Descriptions New LDAP module to look for password inside the user's description. nxc ldap &lt;hostname&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-desc-users Three options are available: FILTE"
-  },
-  {
-    "title": "Dump gMSA",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/dump-gmsa",
-    "path": "ldap-protocol/dump-gmsa",
-    "excerpt": "description: Extract gmsa credentials accounts Dump gMSA Using the protocol LDAP you can extract the password of a gMSA account if you have the right. Warning LDAPS is required to retrieve the passwor"
-  },
-  {
-    "title": "Pre2k Computer Account Abuse",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/pre2k",
-    "path": "ldap-protocol/pre2k",
-    "excerpt": "Pre2k Computer Account Abuse Identifies pre-created computer accounts in Active Directory and attempts to obtain Kerberos TGTs using their default machine password. Targets computer objects with: obje"
-  },
-  {
-    "title": "Exploit ESC8 (ADCS)",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/exploit-esc8-adcs",
-    "path": "ldap-protocol/exploit-esc8-adcs",
-    "excerpt": "Exploit ESC8 (ADCS) List All PKI Enrollment Servers nxc ldap &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M adcs List All Certificates Inside a PKI nxc ldap &lt;ip&gt; -u &lt;USERNAME&gt; -p &l"
-  },
-  {
-    "title": "Extract Subnet",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/extract-subnet",
-    "path": "ldap-protocol/extract-subnet",
-    "excerpt": "description: Extract subnet over an active directory environment Extract Subnet nxc ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-network nxc ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; -"
-  },
-  {
-    "title": "Check LDAP Signing",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/check-ldap-signing",
-    "path": "ldap-protocol/check-ldap-signing",
-    "excerpt": "Check LDAP Signing Danger REMOVED: Checking for signing and channel binding is now done on the host enumeration, see host banner Using the module ldap-checker you can verify if ldap require channel bi"
-  },
-  {
-    "title": "Read DACL Rights",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/read-dacl-right",
-    "path": "ldap-protocol/read-dacl-right",
-    "excerpt": "Read DACL Rights LDAP module that permits to read and export the DACLs of one or mulitple objects ! Read all the ACEs of the Administrator nxc ldap lab-dc.lab.local -k --kdcHost lab-dc.lab.local -M da"
-  },
-  {
-    "title": "Extract gMSA Secrets",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/extract-gmsa-secrets",
-    "path": "ldap-protocol/extract-gmsa-secrets",
-    "excerpt": "description: Convert gSAM id, convert gmsa lsa to ntlm ... Extract gMSA Secrets NetExec offer multiple choices when you found a gmsa account in the LSA nxc ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&"
-  },
-  {
-    "title": "Bloodhound Ingestor",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/bloodhound-ingestor",
-    "path": "ldap-protocol/bloodhound-ingestor",
-    "excerpt": "Bloodhound Ingestor NetExec has a build in bloodhound collector. To configure the name server, dns timeout or to use tcp for dns resolution take a look at the NetExec command line options for dns . nx"
-  },
-  {
-    "title": "List DC IP / Enum Trust",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/dc-list",
-    "path": "ldap-protocol/dc-list",
-    "excerpt": "description: List DC 🆕 List DC IP / Enum Trust ldap --dc-list flag listing Domain Controllers and finds IP Addresses (If accessible). Also enumerates domain trust and their Domain Controller. nxc ldap"
-  },
-  {
-    "title": "Abuse Domain Trust: Raisechild",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/raisechild",
-    "path": "ldap-protocol/raisechild",
-    "excerpt": "🆕 Abuse Domain Trust: Raisechild Abuses an intra-forest transitive trust (child ↔ parent) to forge a Golden Ticket containing an extra SID from the other domain (e.g. Enterprise Admins ). This allows "
-  },
-  {
-    "title": "Enumerate Domain Trusts",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/enumerate-trusts",
-    "path": "ldap-protocol/enumerate-trusts",
-    "excerpt": "Enumerate Domain Trusts Warning Moved to `--dc-list` argument"
-  },
-  {
-    "title": "Enumerate SCCM",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/enumerate-sccm",
-    "path": "ldap-protocol/enumerate-sccm",
-    "excerpt": "🆕 Enumerate SCCM System Center Configuration Manager (SCCM) or also called MECM nowadays is a managament infrastructure for inventor/endpoint management. As it contains a lot of different server or ap"
-  },
-  {
-    "title": "Enumerate Entra ID",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/enumerate-entra-id",
-    "path": "ldap-protocol/enumerate-entra-id",
-    "excerpt": "description: Find the Entra ID synchronization server 🆕 Enumerate Entra ID If Entra ID is deployed in Active Directory with cloud sync active, the MSOL account is a high value target, due to its defau"
-  },
-  {
-    "title": "Dump PSO",
-    "source": "netexec",
-    "url": "/page/netexec/dump-pso",
-    "path": "dump-pso",
-    "excerpt": "🆕 Dump PSO Dump PSO (Fine-Grained Password Policies (FGPPs) or Password Settings Objects (PSOs)) netexec ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; --pso"
-  },
-  {
-    "title": "Enumerate scriptPath",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/get-scriptpath",
-    "path": "ldap-protocol/get-scriptpath",
-    "excerpt": "🆕 Enumerate scriptPath LDAP module to enumerate the scriptPath attribute of Active Directory users. nxc ldap &lt;hostname&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-scriptpath Two options are availabl"
-  },
-  {
-    "title": "Enumerate Unsecure DNS Zones",
-    "source": "netexec",
-    "url": "/page/netexec/ldap-protocol/enumerate-unsecure-dns-zones",
-    "path": "ldap-protocol/enumerate-unsecure-dns-zones",
-    "excerpt": "🆕 Enumerate Unsecure DNS Zones This module enumerates DNS zones that are configured with the Nonsecure and secure setting for dynamic updates. This misconfiguration allows unauthenticated users to add"
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/password-spraying",
-    "path": "winrm-protocol/password-spraying",
-    "excerpt": "Password spraying Password spraying (without bruteforce) nxc winrm &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce Expected Results: WINRM 192 .168.255.131 5985 ROGER [ * ] http://192"
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/authentication",
-    "path": "winrm-protocol/authentication",
-    "excerpt": "Authentication WinRM Authentication Testing credentials nxc winrm &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; Expected Results: WINRM 192 .168.255.131 5985 ROGER [ * ] http://192.168.255.131:"
-  },
-  {
-    "title": "Command Execution",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/command-execution",
-    "path": "winrm-protocol/command-execution",
-    "excerpt": "Command execution Execute Command using WinRM nxc winrm &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -X whoami nxc winrm &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -X whoami WINR"
-  },
-  {
-    "title": "Defeating LAPS",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/defeating-laps",
-    "path": "winrm-protocol/defeating-laps",
-    "excerpt": "description: NetExec vs LAPS Defeating LAPS Using NetExec when LAPS installed on the domain If LAPS is used inside the domain, is can be hard to use NetExec to execute a command on every computer on t"
-  },
-  {
-    "title": "Obtaining Credentials",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/obtaining-credentials",
-    "path": "winrm-protocol/obtaining-credentials",
-    "excerpt": "Obtaining Credentials The following examples use a username and plaintext password, although user/hash combos work as well."
-  },
-  {
-    "title": "Dump SAM",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-sam",
-    "path": "winrm-protocol/obtaining-credentials/dump-sam",
-    "excerpt": "Dump SAM Dump SAM hashes Extracts and downloads SAM registry hive, and uses secretsdump.py methods locally to dump hashes nxc winrm &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --sam"
-  },
-  {
-    "title": "Dump LSA",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-lsa",
-    "path": "winrm-protocol/obtaining-credentials/dump-lsa",
-    "excerpt": "Dump LSA Dump LSA secrets Extracts and downloads SECURITY registry hive, and uses secretsdump.py methods locally to dump secrets nxc winrm &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --lsa"
-  },
-  {
-    "title": "Dump DPAPI",
-    "source": "netexec",
-    "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-dpapi",
-    "path": "winrm-protocol/obtaining-credentials/dump-dpapi",
-    "excerpt": "description: Dump DPAPI credentials using NetExec 🆕 Dump DPAPI You can dump Credential Manager secrets for the connecting user with the following option: --dpapi . No Admin privileges needed! nxc winr"
-  },
-  {
-    "title": "Enumeration",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/enumeration",
-    "path": "mssql-protocol/enumeration",
-    "excerpt": "Enumeration This section lists all kind of enumeration technique of the MSSQL protocol"
-  },
-  {
-    "title": "Enumerating encryption settings",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/enumeration/enumerating-encryption-settings",
-    "path": "mssql-protocol/enumeration/enumerating-encryption-settings",
-    "excerpt": "🆕 Enumerating encryption settings By default MSSQL databases do not enforce TLS ciphering which makes eavesdroping possible. There are two configurations values that can be set: Force encryption: that"
-  },
-  {
-    "title": "Enumerating Channel Binding configuration",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/enumeration/enumerating-channel-binding-configuration",
-    "path": "mssql-protocol/enumeration/enumerating-channel-binding-configuration",
-    "excerpt": "🆕 Enumerating Channel Binding configuration Having a valid account, it is possible to check whether CBT is required are not (and thus determine whether relay is possible or not) via the mssql_cbt modu"
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/mssql-passwordspray",
-    "path": "mssql-protocol/mssql-passwordspray",
-    "excerpt": "Password spraying Password spraying (without bruteforce) nxc mssql &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce Expected Results: MSSQL 10 .10.10.59 1433 None [ - ] ERROR ( TALLY )"
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/authentication",
-    "path": "mssql-protocol/authentication",
-    "excerpt": "Authentication Testing credentials You can use two methods to authenticate to MSSQL: windows or local (default: windows ). To use local auth, add the following flag --local-auth Windows auth With SMB "
-  },
-  {
-    "title": "MSSQL PrivEsc",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/mssql-privesc",
-    "path": "mssql-protocol/mssql-privesc",
-    "excerpt": "description: Module to privesc from standard user to DBA MSSQL Privesc Normal Authentication nxc mssql &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; nxc mssql &lt;ip&gt; -u &lt;USERNAME&gt; -p &l"
-  },
-  {
-    "title": "MSSQL Command Execution",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/mssql-command",
-    "path": "mssql-protocol/mssql-command",
-    "excerpt": "description: Execute MSSQL command using NetExec MSSQL command Execute MSSQL commands nxc mssql &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &#39;m$$ql_S@_P@ssW0rd!&#39; --local-auth -q &#39;SELECT name FROM"
-  },
-  {
-    "title": "MSSQL Upload & Download",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/mssql-upload-download",
-    "path": "mssql-protocol/mssql-upload-download",
-    "excerpt": "MSSQL upload/download Download / Upload MSSQL file nxc mssql &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &#39;m$$ql_S@_P@ssW0rd!&#39; --put-file /tmp/users C: \\\\ Windows \\\\ Temp \\\\ whoami.txt Expected Resul"
-  },
-  {
-    "title": "Execute via xp\\_cmdshell",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/windows-command",
-    "path": "mssql-protocol/windows-command",
-    "excerpt": "description: Execute Windows command using NetExec Windows command Execute Windows Command This option use xp_cmdshell to exec command on the remote host. nxc mssql &lt;TARGET&gt; -u sa -p 'GWE3V65#6K"
-  },
-  {
-    "title": "Enumerate Users by Bruteforcing RID",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/enumerate-users-by-bruteforcing-rid",
-    "path": "mssql-protocol/enumerate-users-by-bruteforcing-rid",
-    "excerpt": "🆕 Enumerate Users by Bruteforcing RID Enumerate users by bruteforcing the RID on the remote target nxc mssql &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --rid-brute"
-  },
-  {
-    "title": "MSSQL Linked Servers",
-    "source": "netexec",
-    "url": "/page/netexec/mssql-protocol/mssql-linked-servers",
-    "path": "mssql-protocol/mssql-linked-servers",
-    "excerpt": "description: Discover and execute MSSQL queries and system commands on linked MSSQL servers using NetExec MSSQL Linked Servers MSSQL linked servers allow a database instance to establish a trusted con"
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/ssh-protocol/password-spraying",
-    "path": "ssh-protocol/password-spraying",
-    "excerpt": "Password spraying Password spraying (without bruteforce) nxc ssh &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce Expected Results: SSH 127 .0.0.1 22 127 .0.0.1 [ * ] SSH-2.0-OpenSSH_8"
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/ssh-protocol/authentication",
-    "path": "ssh-protocol/authentication",
-    "excerpt": "Authentication Testing credentials nxc ssh &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; Expected Results: SSH 127 .0.0.1 22 127 .0.0.1 [ * ] SSH-2.0-OpenSSH_8.2p1 Debian-4 SSH 127 .0.0.1 22 12"
-  },
-  {
-    "title": "Command Execution",
-    "source": "netexec",
-    "url": "/page/netexec/ssh-protocol/command-execution",
-    "path": "ssh-protocol/command-execution",
-    "excerpt": "Command execution Execute Command This command is useless nxc ssh 127.0.0.1 -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami nxc ssh 127 .0.0.1 -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami SSH 1"
-  },
-  {
-    "title": "Get and Put Files",
-    "source": "netexec",
-    "url": "/page/netexec/ssh-protocol/get-and-put-files",
-    "path": "ssh-protocol/get-and-put-files",
-    "excerpt": "description: Get a remote file or send a remote file using NetExec Get and Put Files Send a File to the Remote Target Send a local file to the remote target nxc ssh &lt;TARGET&gt; -u &lt;USERNAME&gt; "
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/ftp-protocol/password-spraying",
-    "path": "ftp-protocol/password-spraying",
-    "excerpt": "Password spraying Password spraying (without bruteforce) nxc ftp &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce By default nxc will exit after a successful login is found. Using the "
-  },
-  {
-    "title": "File Listing, etc",
-    "source": "netexec",
-    "url": "/page/netexec/ftp-protocol/file-listing-etc",
-    "path": "ftp-protocol/file-listing-etc",
-    "excerpt": "🆕 File Listing, etc Listing Files Do directory listings on valid authentication by using the --ls option: nxc ftp &lt;TARGET&gt; -u 'marshall' -p 'badpassword' --ls nxc ftp &lt;TARGET&gt; -u &#39;mars"
-  },
-  {
-    "title": "File Upload & Download",
-    "source": "netexec",
-    "url": "/page/netexec/ftp-protocol/get-and-put-files",
-    "path": "ftp-protocol/get-and-put-files",
-    "excerpt": "description: &gt;- Instructions for using FTP commands to access and transfer files using NetExec. 🆕 File Upload &amp; Download List Files in a Directory List files in a specific directory using FTP. "
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/rdp-protocol/password-spraying",
-    "path": "rdp-protocol/password-spraying",
-    "excerpt": "description: RDP password spraying using NetExec Password spraying Password spraying nxc rdp &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; nxc rdp &lt;TARGET&gt; -u rubeus -p October2021 nxc rd"
-  },
-  {
-    "title": "Screenshot (connected)",
-    "source": "netexec",
-    "url": "/page/netexec/rdp-protocol/screenshot-connected",
-    "path": "rdp-protocol/screenshot-connected",
-    "excerpt": "Screenshot (connected) Using the protocol you can perform RDP screenshot ! nxc rdp &lt;ip&gt; -u &lt;user&gt; -p &lt;password&gt; --screenshot --screentime &lt;second&gt;"
-  },
-  {
-    "title": "Screenshot Without NLA (not connected)",
-    "source": "netexec",
-    "url": "/page/netexec/rdp-protocol/screenshot-without-nla-not-connected",
-    "path": "rdp-protocol/screenshot-without-nla-not-connected",
-    "excerpt": "Screenshot without NLA (not connected) You can perform a screenshot of the login page of the remote host using RDP with NetExec if NLA is disabled nxc rdp &lt;ip&gt; --nla-screenshot"
-  },
-  {
-    "title": "Command Execution",
-    "source": "netexec",
-    "url": "/page/netexec/rdp-protocol/command-execution",
-    "path": "rdp-protocol/command-execution",
-    "excerpt": "🆕 Command Execution Info This functionality is still in beta testing and was added in 2025 netexec rdp ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami You can also add the flag --cmd-delay and --"
-  },
-  {
-    "title": "Password Spraying",
-    "source": "netexec",
-    "url": "/page/netexec/wmi-protocol/password-spraying",
-    "path": "wmi-protocol/password-spraying",
-    "excerpt": "Password spraying Password spraying nxc wmi &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file By default, nxc will exit after a successful login is found. Password spraying (without bruteforce) nxc wmi"
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/wmi-protocol/authentication",
-    "path": "wmi-protocol/authentication",
-    "excerpt": "Authentication Testing credentials You can use two methods to authenticate to the WMI: windows or local (default: windows ). To use local auth, add the following flag --local-auth Windows auth With SM"
-  },
-  {
-    "title": "Command Execution",
-    "source": "netexec",
-    "url": "/page/netexec/wmi-protocol/command-execution",
-    "path": "wmi-protocol/command-execution",
-    "excerpt": "Command execution Execute Command using WMI nxc wmi &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami"
-  },
-  {
-    "title": "Enumeration",
-    "source": "netexec",
-    "url": "/page/netexec/nfs-protocol/Enumeration",
-    "path": "nfs-protocol/Enumeration",
-    "excerpt": "Enumeration Enumerate NFS Servers Detect remote NFS server, enumerate available versions and check for the root escape (see escape to root file system ). nxc nfs &lt;ip&gt; nxc nfs &lt;ip&gt; # Exampl"
-  },
-  {
-    "title": "Download and Upload Files",
-    "source": "netexec",
-    "url": "/page/netexec/nfs-protocol/Download-and-Upload-Files",
-    "path": "nfs-protocol/Download-and-Upload-Files",
-    "excerpt": "Download and Upload Files Example usage: nxc nfs &lt;ip&gt; --share /home/user/Desktop/NFSShare/ --get-file as.txt as.txt # Share name is &quot;/home/user/Desktop/NFSShare&quot; nxc nfs &lt;ip&gt; --s"
-  },
-  {
-    "title": "Chmod",
-    "source": "netexec",
-    "url": "/page/netexec/nfs-protocol/chmod",
-    "path": "nfs-protocol/chmod",
-    "excerpt": "🆕 Chmod"
-  },
-  {
-    "title": "Escape to root file system",
-    "source": "netexec",
-    "url": "/page/netexec/nfs-protocol/escape-to-root-file-system",
-    "path": "nfs-protocol/escape-to-root-file-system",
-    "excerpt": "🆕 Escape to root file system By default, NFS exports do not restrict access to files outside the exported directory. To access these files NFS needs the respective file handle. However, the root file "
-  },
-  {
-    "title": "Authentication",
-    "source": "netexec",
-    "url": "/page/netexec/vnc-protocol/authentication",
-    "path": "vnc-protocol/authentication",
-    "excerpt": "Authentication VNC Authentication Testing credentials Some VNC servers do not require a username. In such cases, the username field should be left empty, as illustrated in the results below. nxc vnc &"
-  },
-  {
     "title": "HackTricks",
     "source": "hacktricks",
     "url": "/page/hacktricks/README",
@@ -22593,5 +21494,1104 @@
     "url": "/page/breaking-adcs/esc16",
     "path": "esc16",
     "excerpt": "Conditions: CA configured to omit szOID_NTDS_CA_SECURITY_EXT (OID: 1.3.6.1.4.1.311.25.2) on ALL issued certificates. This breaks strong certificate-to-account binding (KB5014754). Unlike ESC9 (per-tem"
+  },
+  {
+    "title": "Welcome",
+    "source": "netexec",
+    "url": "/page/netexec/README",
+    "path": "README",
+    "excerpt": "Welcome NetExec NetExec (a.k.a nxc) is a network service exploitation tool that helps automate assessing the security of large networks. :discord: Discord Community Join our Discord community to post "
+  },
+  {
+    "title": "News",
+    "source": "netexec",
+    "url": "/page/netexec/news",
+    "path": "news",
+    "excerpt": "News"
+  },
+  {
+    "title": "v1.0.0 Release!",
+    "source": "netexec",
+    "url": "/page/netexec/news/v1.0.0-release",
+    "path": "news/v1.0.0-release",
+    "excerpt": "🕷️ v1.0.0 Release! The Release of Version 1.0.0! Hello everyone! \\ Today will be our first release of NetExec version 1.0.0 🎉\\ If you are reading this you have already found your way to the GitBook wi"
+  },
+  {
+    "title": "v1.1.0 - nxc4u",
+    "source": "netexec",
+    "url": "/page/netexec/news/v1.1.0-nxc4u",
+    "path": "news/v1.1.0-nxc4u",
+    "excerpt": "🔧 v1.1.0 - nxc4u A new release of NetExec has been released! In this blog post we will give an overview of what is new in the current release and what we have been working on over the last few weeks. "
+  },
+  {
+    "title": "v1.2.0 - ItsAlwaysDNS",
+    "source": "netexec",
+    "url": "/page/netexec/news/v1.2.0-ItsAlwaysDNS",
+    "path": "news/v1.2.0-ItsAlwaysDNS",
+    "excerpt": "📡 v1.2.0 - ItsAlwaysDNS Hello everyone! It has been quite a while since the last release. We now have so many great features that a new release was long overdue. But first of all, a big thank you to a"
+  },
+  {
+    "title": "v1.3.0 - NeedForSpeed",
+    "source": "netexec",
+    "url": "/page/netexec/news/v1.3.0-NeedForSpeed",
+    "path": "news/v1.3.0-NeedForSpeed",
+    "excerpt": "🏎️ v1.3.0 - NeedForSpeed Hello everyone! Recently, a lot of incredible Pull Requests have been submitted. Over 22 PRs in 2 weeks! This community activity is incredible, so be prepared for a lot of upc"
+  },
+  {
+    "title": "v1.4.0 - SmoothOperator",
+    "source": "netexec",
+    "url": "/page/netexec/news/v1.4.0-SmoothOperator",
+    "path": "news/v1.4.0-SmoothOperator",
+    "excerpt": "🧈 v1.4.0 - SmoothOperator Hello everyone! It has been almost half a year since the last release and a lot of new features have been added since then. Besides the most dominant protocol, SMB, other pro"
+  },
+  {
+    "title": "NetExec Lab",
+    "source": "netexec",
+    "url": "/page/netexec/netexec-lab",
+    "path": "netexec-lab",
+    "excerpt": "NetExec Lab With NetExec, you get more than just the tool, you get three complete labs built to accelerate your mastery of NetExec for real-world pentest engagements. Create the workshop setup you wan"
+  },
+  {
+    "title": "Installation",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation",
+    "path": "getting-started/installation",
+    "excerpt": "Installation"
+  },
+  {
+    "title": "Installation for Unix",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation/installation-on-unix",
+    "path": "getting-started/installation/installation-on-unix",
+    "excerpt": "🐧 Installation for Unix Installing NetExec with pipx :saxophone: Info We do recommend to install rust before to make sure everything will work properly curl --proto &#39;=https&#39; --tlsv1.2 -sSf htt"
+  },
+  {
+    "title": "Installation for Windows",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation/installation-on-windows",
+    "path": "getting-started/installation/installation-on-windows",
+    "excerpt": "🪟 Installation for Windows Using Python and pipx Success If Python is available it is recommended to install NetExec with pipx Warning For Windows, git and Rust are required for installation. If you c"
+  },
+  {
+    "title": "Installation for Mac",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation/installation-for-mac",
+    "path": "getting-started/installation/installation-for-mac",
+    "excerpt": "🍎 Installation for Mac Warning For Mac, Homebrew and Rust are required for installation. If you can't install these, see below for a standalone executable. Setup Rust with Homebrew Ensure Homebrew is "
+  },
+  {
+    "title": "Using Docker",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation/using-docker",
+    "path": "getting-started/installation/using-docker",
+    "excerpt": "🐋 Using Docker Installing Docker for Windows/Mac Success If Python is available it is recommended to install NetExec with pipx Warning For Windows and Mac (x86_64/arm64) we recommend installing Docker"
+  },
+  {
+    "title": "Manually building the binary",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation/manually-building-the-binary",
+    "path": "getting-started/installation/manually-building-the-binary",
+    "excerpt": "🛠️ Manually building the binary Warning This process can vary from time to time as dependencies change, resulting in potential errors. If you don't need to compile the binaries yourself for a specific"
+  },
+  {
+    "title": "Post Installation Setup",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/installation/setting-up-tab-completion",
+    "path": "getting-started/installation/setting-up-tab-completion",
+    "excerpt": "➡️ Post Installation Setup Setting up Tab Completion Currently, we use argcomplete to automatically do tab completion through argparse. Once you've installed nxc globally, do the following: Info Insta"
+  },
+  {
+    "title": "Selecting & Using a Protocol",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/selecting-and-using-a-protocol",
+    "path": "getting-started/selecting-and-using-a-protocol",
+    "excerpt": "Selecting &amp; Using a Protocol Available Protocols smb ssh ldap ftp wmi winrm rdp vnc mssql nfs Note that not all protocols support the same functionality, be sure to check each protocol's options U"
+  },
+  {
+    "title": "Target Formats",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/target-formats",
+    "path": "getting-started/target-formats",
+    "excerpt": "Target Formats Target Formats Every protocol supports targets by CIDR notation(s), IP address(s), IP range(s), hostname(s), a file containing a list of targets or combination of all of the latter: nxc"
+  },
+  {
+    "title": "Using Credentials",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/using-credentials",
+    "path": "getting-started/using-credentials",
+    "excerpt": "Using Credentials Using Credentials Every protocol supports using credentials in one form or another. For details on using credentials with a specific protocol, see the appropriate wiki section. Gener"
+  },
+  {
+    "title": "Using Kerberos",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/using-kerberos",
+    "path": "getting-started/using-kerberos",
+    "excerpt": "Using Kerberos Using Kerberos NetExec does support Kerberos authentication. There are two options:&#x20; Using password/hash which automatically takes care of handling the TGT/ST Using an existing tic"
+  },
+  {
+    "title": "Using Certificates",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/using-certificates",
+    "path": "getting-started/using-certificates",
+    "excerpt": "Using Certificates nxc smb &lt;TARGET&gt; --pfx-cert user.pfx -u &lt;USERNAME&gt; nxc smb &lt;TARGET&gt; --pfx-cert user.pfx --pfx-pass password -u &lt;USERNAME&gt; nxc smb &lt;TARGET&gt; --pfx-base64"
+  },
+  {
+    "title": "Using Modules",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/using-modules",
+    "path": "getting-started/using-modules",
+    "excerpt": "Using Modules Using Modules Viewing Available Modules for a Protocol Run nxc &lt;protocol&gt; -L to view available modules for the specified protocol. For example to view all modules for the SMB proto"
+  },
+  {
+    "title": "DNS options",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/dns-options",
+    "path": "getting-started/dns-options",
+    "excerpt": "DNS options There are several options that can be set to configure the DNS server that is used.\\ Besides forcing NetExec to use ipv6 there is an option to set the dns server manually, set a dns timeou"
+  },
+  {
+    "title": "Database General Usage",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/database-general-usage",
+    "path": "getting-started/database-general-usage",
+    "excerpt": "Database General Usage Database General Usage nxc automatically stores all used/dumped credentials (along with other information) in its database which is setup on first run. Each protocol has its own"
+  },
+  {
+    "title": "BloodHound Integration",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/bloodhound-integration",
+    "path": "getting-started/bloodhound-integration",
+    "excerpt": "BloodHound Integration NetExec will set user as 'owned' on BloodHound when an account is found! Very useful when lsassy finds 20 credentials in one dump :) First you need to configure your config file"
+  },
+  {
+    "title": "Audit Mode",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/audit-mode",
+    "path": "getting-started/audit-mode",
+    "excerpt": "Audit Mode Audit Mode is a configuration-based feature in NetExec that redacts credentials from console output. In the config file located at ~/.nxc/nxc.conf add the character of your choice on the li"
+  },
+  {
+    "title": "Ignore OpSec Warnings",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/ignore-opsec-warnings",
+    "path": "getting-started/ignore-opsec-warnings",
+    "excerpt": "Ignore OpSec Warnings In the config file located at ~/.nxc/nxc.conf , there is an option to ignore the opsec warnings that may be annoying or cause issues in parsing output. The line responsible is ig"
+  },
+  {
+    "title": "Logging",
+    "source": "netexec",
+    "url": "/page/netexec/getting-started/log-your-results",
+    "path": "getting-started/log-your-results",
+    "excerpt": "Logging There are two ways to log results: Using the nxc.conf file Set \"log_mode = True\" This will log everything Using the option --log file This will log only the current command You can use both at"
+  },
+  {
+    "title": "Generate hosts file",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/generate-hosts-file",
+    "path": "smb-protocol/generate-hosts-file",
+    "excerpt": "Generate hosts file If you are in a lab with no dns resolution you can use option --generate-hosts-file to generate a host file for you and avoid DNS problem when using LDAP or Kerberos protocols."
+  },
+  {
+    "title": "Generate krb5.conf file",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/generate-krb5.conf-file",
+    "path": "smb-protocol/generate-krb5.conf-file",
+    "excerpt": "Generate krb5.conf file netexec smb ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --generate-krb5-file /path export KRB5_CONFIG=/path"
+  },
+  {
+    "title": "Generate TGT",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/generate-tgt",
+    "path": "smb-protocol/generate-tgt",
+    "excerpt": "Generate TGT netexec smb ip -u user -p password --generate-tgt /path export KRB5CCNAME=/path netexec smb ip -u user -k --use-kcache"
+  },
+  {
+    "title": "Scan for Vulnerabilities",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/scan-for-vulnerabilities",
+    "path": "smb-protocol/scan-for-vulnerabilities",
+    "excerpt": "Scan for Vulnerabilities Scan for Vulnerabilities When you start your internal pentest, these are the first modules you should try: ZeroLogon nxc smb &lt;ip&gt; -u &#39;&#39; -p &#39;&#39; -M zerologo"
+  },
+  {
+    "title": "Enumeration",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration",
+    "path": "smb-protocol/enumeration",
+    "excerpt": "Enumeration The following use cases assume you have a Kali Linux host connected to an internal network. For the examples it is also assumed hosts are within a 192.168.1.0/24 IP space. If nxc isnt givi"
+  },
+  {
+    "title": "Enumerate Hosts",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-hosts",
+    "path": "smb-protocol/enumeration/enumerate-hosts",
+    "excerpt": "Enumerate Hosts Map Network Hosts Returns a list of live hosts nxc smb &lt;CIDR&gt; Expected Results: SMB 192 .168.1.101 445 DC2012A [ * ] Windows Server 2012 R2 Standard 9600 x64 ( name:DC2012A ) ( d"
+  },
+  {
+    "title": "Enumerate Null Sessions",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-null-sessions",
+    "path": "smb-protocol/enumeration/enumerate-null-sessions",
+    "excerpt": "Enumerate Null Sessions Check if Null Session , also known as Anonymous session, is enabled on the network. Can be very useful on a Domain Controller to enumerate users, groups, password policies, etc"
+  },
+  {
+    "title": "Enumerate Guest Logon",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-guest-logon",
+    "path": "smb-protocol/enumeration/enumerate-guest-logon",
+    "excerpt": "Enumerate Guest Logon Using a random username and password you can check if the target accepts guest logon. If so, it means that either the domain guest account or the local guest account of the serve"
+  },
+  {
+    "title": "Enumerate Hosts with SMB Signing Not Required",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/smb-signing-not-required",
+    "path": "smb-protocol/enumeration/smb-signing-not-required",
+    "excerpt": "Enumerate Hosts with SMB Signing Not Required Maps the network of live hosts and saves a list of only the hosts that don't require SMB signing.\\ List format is one IP per line nxc smb &lt;CIDR&gt; --g"
+  },
+  {
+    "title": "Enumerate Active Windows Sessions",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-active-windows-sessions",
+    "path": "smb-protocol/enumeration/enumerate-active-windows-sessions",
+    "excerpt": "🆕 Enumerate Active Windows Sessions When connecting to a Windows server via GUI interface (local connection or RDP) a windows session will be created. These session can be listed using the following o"
+  },
+  {
+    "title": "Enumerate Logged-On Users with the Remote Registry Service",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-logged-on-users-winreg",
+    "path": "smb-protocol/enumeration/enumerate-logged-on-users-winreg",
+    "excerpt": "🆕 Enumerate Logged-On Users with the Remote Registry Service This option uses the Remote Registry Service through the \\\\winreg pipe to check which user profiles are currently loaded in the user regist"
+  },
+  {
+    "title": "Enumerate Logged-On Users with the Workstation Service",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-logged-on-users-wkssvc",
+    "path": "smb-protocol/enumeration/enumerate-logged-on-users-wkssvc",
+    "excerpt": "Enumerate Logged-On Users with the Workstation Service To enumerate logged on users on a remote target, the following option can be used: nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -"
+  },
+  {
+    "title": "Enumerate Shares and Access",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-shares-and-access",
+    "path": "smb-protocol/enumeration/enumerate-shares-and-access",
+    "excerpt": "Enumerate Shares and Access Enumerate permissions on all shares nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --shares Info By far one of the most useful feature of nxc If you want to f"
+  },
+  {
+    "title": "Enumerate Network Interfaces",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-network-interfaces",
+    "path": "smb-protocol/enumeration/enumerate-network-interfaces",
+    "excerpt": "🆕 Enumerate Network Interfaces Enumerate network interfaces on a host: nxc smb &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --interfaces Example output of the interface enumeration"
+  },
+  {
+    "title": "Enumerate NTLMv1",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-ntlmv1",
+    "path": "smb-protocol/enumeration/enumerate-ntlmv1",
+    "excerpt": "Enumerate NTLMv1 Enumerate the LmCompatibilityLevel on the remote target via the remote registry: nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M ntlmv1 nxc smb &lt;ip&gt; -u &lt;USERNAM"
+  },
+  {
+    "title": "Enumerate Disks",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-disks",
+    "path": "smb-protocol/enumeration/enumerate-disks",
+    "excerpt": "Enumerate Disks Enumerate disks on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --disks"
+  },
+  {
+    "title": "Enumerate Bitlocker",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-bitlocker",
+    "path": "smb-protocol/enumeration/enumerate-bitlocker",
+    "excerpt": "Enumerate Bitlocker Enumerate BitLocker Status on the remote target nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M bitlocker"
+  },
+  {
+    "title": "Enumerate Domain Users",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-users",
+    "path": "smb-protocol/enumeration/enumerate-domain-users",
+    "excerpt": "Enumerate Domain Users Enumerate domain users on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --users Export domain users on the remote target nxc smb &lt;ip&gt; -u &"
+  },
+  {
+    "title": "Enumerate Users by Bruteforcing RID",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-users-by-bruteforcing-rid",
+    "path": "smb-protocol/enumeration/enumerate-users-by-bruteforcing-rid",
+    "excerpt": "Enumerate Users by Bruteforcing RID Enumerate users by bruteforcing the RID on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --rid-brute"
+  },
+  {
+    "title": "Enumerate Domain Groups",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-groups",
+    "path": "smb-protocol/enumeration/enumerate-domain-groups",
+    "excerpt": "Enumerate Domain Groups Danger This arg was moved to the LDAP protocol, see here ."
+  },
+  {
+    "title": "Enumerate Local Groups",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-local-groups",
+    "path": "smb-protocol/enumeration/enumerate-local-groups",
+    "excerpt": "Enumerate Local Groups Enumerate local groups on the remote target nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --local-group"
+  },
+  {
+    "title": "Enumerate Domain Password Policy",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-password-policy-1",
+    "path": "smb-protocol/enumeration/enumerate-domain-password-policy-1",
+    "excerpt": "Enumerate Domain Password Policy Using the option --pass-pol you can get the password policy of the domain nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --pass-pol"
+  },
+  {
+    "title": "Enumerate Anti-Virus & EDR",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-antivirus-edr",
+    "path": "smb-protocol/enumeration/enumerate-antivirus-edr",
+    "excerpt": "Enumerate Anti-Virus &amp; EDR You don't need to be a privileged user to do this action nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M enum_av"
+  },
+  {
+    "title": "Enumerate remote processes",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-remote-processes",
+    "path": "smb-protocol/enumeration/enumerate-remote-processes",
+    "excerpt": "Enumerate remote processes One thing that's to know when pentesting is whether or not a specific process is being run on the server you are targeting. This can now be done via the following option: nx"
+  },
+  {
+    "title": "Enumerate changed lockscreen executables",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-lockscreen-backdoors",
+    "path": "smb-protocol/enumeration/enumerate-lockscreen-backdoors",
+    "excerpt": "🆕 Enumerate changed lockscreen executables Attackers can replace accessibility executables in Windows (e.g. utilman.exe , sethc.exe ) with binaries like cmd.exe or powershell.exe to spawn a SYSTEM-lev"
+  },
+  {
+    "title": "Enumerate Primary Site Server and Distribution Point via recon6",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/enumeration/enumerate-sccm-primarysiteserver-and-distributionpoint",
+    "path": "smb-protocol/enumeration/enumerate-sccm-primarysiteserver-and-distributionpoint",
+    "excerpt": "🆕 Enumerate Primary Site Server and Distribution Point via recon6 This module extracts information from Primary Site Servers and Distribution Points of an SCCM infrastructure via the registry hive HKL"
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/password-spraying",
+    "path": "smb-protocol/password-spraying",
+    "excerpt": "Password Spraying Using Username/Password Lists You can use multiple usernames or passwords by separating the names/passwords with a space. nxc smb &lt;TARGET&gt; -u user1 user2 user3 -p &lt;PASSWORD&"
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/authentication",
+    "path": "smb-protocol/authentication",
+    "excerpt": "Authentication You can authenticate on the remote target using a domain account or a local user When authentication fail =&gt; COLOR RED When authentication success =&gt; COLOR GREEN When authenticati"
+  },
+  {
+    "title": "Checking Credentials (Domain)",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/authentication/checking-credentials-domain",
+    "path": "smb-protocol/authentication/checking-credentials-domain",
+    "excerpt": "Checking Credentials (Domain) Authentication Failed logins result in a [-] Successful logins result in a [+] Domain\\Username:Password Info Code execution results in a (Pwn3d!) added after the login co"
+  },
+  {
+    "title": "Checking Credentials (Local)",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/authentication/checking-credentials-local",
+    "path": "smb-protocol/authentication/checking-credentials-local",
+    "excerpt": "Checking credentials (Local) User/Password/Hashes Adding --local-auth to any of the authentication commands with attempt to logon locally. nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; "
+  },
+  {
+    "title": "Delegation",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/authentication/delegation",
+    "path": "smb-protocol/authentication/delegation",
+    "excerpt": "🆕 Delegation RBCD If you have an object with the msDS-AllowedToActOnBehalfOfOtherIdentity attribute set to an account you control you can use the impersonate flag inside NetExec to automatically execu"
+  },
+  {
+    "title": "Command Execution",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/command-execution",
+    "path": "smb-protocol/command-execution",
+    "excerpt": "Command Execution"
+  },
+  {
+    "title": "Executing Remote Commands",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/command-execution/execute-remote-command",
+    "path": "smb-protocol/command-execution/execute-remote-command",
+    "excerpt": "Executing Remote Commands Command Execution Executing commands on a windows system requires Administrator credentials. nxc automatically tells you if the credential set you're using has admin access t"
+  },
+  {
+    "title": "Process Injection (pi module)",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/command-execution/execute-remote-command/process-injection-pi-module",
+    "path": "smb-protocol/command-execution/execute-remote-command/process-injection-pi-module",
+    "excerpt": "Process Injection (pi module) Warning You need at least local admin privilege on the remote target The \"pi\" module accesses the process of a user with an active session on a Windows system using the P"
+  },
+  {
+    "title": "Getting Shells 101",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/command-execution/getting-shells-101",
+    "path": "smb-protocol/command-execution/getting-shells-101",
+    "excerpt": "Getting Shells 101 Getting Shells 101 We all love shells and that's why nxc makes it as easy as possible to get them! There really is something magical about shelling a /24 Empire Agent Info Use the n"
+  },
+  {
+    "title": "Spidering Shares",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/spidering-shares",
+    "path": "smb-protocol/spidering-shares",
+    "excerpt": "Spidering Shares Using Default Option --spider Options for spidering shares of remote systems. Example, Spider the C drive for files with txt in the name (finds both sometxtfile.html and somefile.txt)"
+  },
+  {
+    "title": "Get and Put Files",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/get-and-put-files",
+    "path": "smb-protocol/get-and-put-files",
+    "excerpt": "Get and Put Files Send a File to the Remote Target Send a local file to the remote target nxc smb &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --put-file /tmp/whoami.txt \\\\ Windows \\\\ Temp \\"
+  },
+  {
+    "title": "Obtaining Credentials",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials",
+    "path": "smb-protocol/obtaining-credentials",
+    "excerpt": "Obtaining Credentials The following examples use a username and plaintext password, although user/hash combos work as well."
+  },
+  {
+    "title": "Dump SAM",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-sam",
+    "path": "smb-protocol/obtaining-credentials/dump-sam",
+    "excerpt": "Dump SAM Dump SAM hashes using methods from secretsdump.py Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &lt;CID"
+  },
+  {
+    "title": "Dump LSA",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-lsa",
+    "path": "smb-protocol/obtaining-credentials/dump-lsa",
+    "excerpt": "Dump LSA Dump LSA secrets using methods from secretsdump.py Danger Requires Domain Admin or Local Admin Priviledges on target Domain Controller nxc smb &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD"
+  },
+  {
+    "title": "Dump NTDS.dit",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-ntds.dit",
+    "path": "smb-protocol/obtaining-credentials/dump-ntds.dit",
+    "excerpt": "Dump NTDS.dit Dump the NTDS.dit from target DC using methods from secretsdump.py Danger Requires Domain Admin or Local Admin Priviledges on target Domain Controller 2 methods are available: ( default "
+  },
+  {
+    "title": "Dump LSASS",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-lsass",
+    "path": "smb-protocol/obtaining-credentials/dump-lsass",
+    "excerpt": "Dump LSASS Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Using Lsassy Using the module Lsassy from @pixis , you can dump"
+  },
+  {
+    "title": "Dump DPAPI",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-dpapi",
+    "path": "smb-protocol/obtaining-credentials/dump-dpapi",
+    "excerpt": "Dump DPAPI You can dump DPAPI credentials using NetExec using the following option: --dpapi . It will get all secrets from Credential Manager, Chrome, Edge, Firefox. --dpapi supports the following opt"
+  },
+  {
+    "title": "Dump with BackupOperator Priv",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-backupop",
+    "path": "smb-protocol/obtaining-credentials/dump-backupop",
+    "excerpt": "🆕 Dump with BackupOperator Priv Success You don't need to local admin privilege on the remote target if you are in SeBackupPrivilege If the controlled user has the SeBackupPrivilege, it can dump SAM, "
+  },
+  {
+    "title": "Dump SCCM",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-sccm",
+    "path": "smb-protocol/obtaining-credentials/dump-sccm",
+    "excerpt": "🆕 Dump SCCM Dump the SCCM from target using methods from dploot Danger Requires Domain Admin or Local Admin Priviledges on target Domain Controller 2 methods are available: ( default ) wmi - TODO disk"
+  },
+  {
+    "title": "Dump Token Broker Cache",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-token-broker-cache",
+    "path": "smb-protocol/obtaining-credentials/dump-token-broker-cache",
+    "excerpt": "🆕 Dump Token Broker Cache Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Microsoft 365 and Azure applications on desktop "
+  },
+  {
+    "title": "Dump WIFI password",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-wifi-password",
+    "path": "smb-protocol/obtaining-credentials/dump-wifi-password",
+    "excerpt": "Dump WIFI password Get the WIFI password register in Windows Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &lt;i"
+  },
+  {
+    "title": "Dump KeePass",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-keepass",
+    "path": "smb-protocol/obtaining-credentials/dump-keepass",
+    "excerpt": "Dump KeePass You can check if keepass is installed on the target computer and then steal the master password and decrypt the database ! nxc smb &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M ke"
+  },
+  {
+    "title": "Dump Veeam",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-veeam",
+    "path": "smb-protocol/obtaining-credentials/dump-veeam",
+    "excerpt": "Dump Veeam Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Veeam stores credentials for server and client used for backup "
+  },
+  {
+    "title": "Dump WinSCP",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-winscp",
+    "path": "smb-protocol/obtaining-credentials/dump-winscp",
+    "excerpt": "Dump WinSCP Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account WinSCP allows to store credentials for connections in the foll"
+  },
+  {
+    "title": "Dump PuTTY",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-putty",
+    "path": "smb-protocol/obtaining-credentials/dump-putty",
+    "excerpt": "🆕 Dump PuTTY Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account PuTTY allows users to store private keys for connections. It "
+  },
+  {
+    "title": "Dump VNC",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-vnc",
+    "path": "smb-protocol/obtaining-credentials/dump-vnc",
+    "excerpt": "🆕 Dump VNC password from RealVNC or TightVNC Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account RealVNC or TightVNC allow use"
+  },
+  {
+    "title": "Dump mRemoteNG",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-mremoteng",
+    "path": "smb-protocol/obtaining-credentials/dump-mremoteng",
+    "excerpt": "🆕 Dump mRemoteNG Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWOR"
+  },
+  {
+    "title": "Dump Notepad",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-notepad",
+    "path": "smb-protocol/obtaining-credentials/dump-notepad",
+    "excerpt": "🆕 Dump Notepad Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Finding credentials in unsaved Notepad files. Sensible cont"
+  },
+  {
+    "title": "Dump Notepad++",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-notepad++",
+    "path": "smb-protocol/obtaining-credentials/dump-notepad++",
+    "excerpt": "🆕 Dump Notepad++ Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account Finding credentials in text files never happens, right? R"
+  },
+  {
+    "title": "Dump Remote Desktop Credential Manager",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-rdcman",
+    "path": "smb-protocol/obtaining-credentials/dump-rdcman",
+    "excerpt": "🆕 Dump Remote Desktop Connection Manager Warning You need at least local admin privilege on the remote target, use option --local-auth if your user is a local account nxc smb &lt;TARGET&gt; -u &lt;USE"
+  },
+  {
+    "title": "Dump Event Log Creds(4688)",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/obtaining-credentials/eventlog-creds",
+    "path": "smb-protocol/obtaining-credentials/eventlog-creds",
+    "excerpt": "🆕 Dump Event Log Creds(4688) Parses Windows Event ID 4688 and Sysmon Logs Warning You need at least local admin privilege on the remote target This module parses Windows logs for Event ID 4688, as wel"
+  },
+  {
+    "title": "Defeating LAPS",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/defeating-laps",
+    "path": "smb-protocol/defeating-laps",
+    "excerpt": "Defeating LAPS Using NetExec When LAPS Installed on the Domain If LAPS is used inside the domain, it can be hard to use NetExec to execute a command on every computer on the domain. Therefore, a new c"
+  },
+  {
+    "title": "Checking for Spooler & WebDav",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/spooler-webdav-running",
+    "path": "smb-protocol/spooler-webdav-running",
+    "excerpt": "Checking for Spooler &amp; WebDav Checking if the Spooler Service is Running nxc smb &lt;ip&gt; -u &#39;user&#39; -p &lt;PASSWORD&gt; -M spooler Checking if the WebDav Service is Running nxc smb &lt;i"
+  },
+  {
+    "title": "Steal Microsoft Teams Cookies",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/steal-microsoft-teams-cookies",
+    "path": "smb-protocol/steal-microsoft-teams-cookies",
+    "excerpt": "Steal Microsoft Teams Cookies Warning You need at least local admin privilege on the remote target New NetExec module to dump Microsoft Teams cookies thanks to @KuiilSec 's contribution.&#x20; You can"
+  },
+  {
+    "title": "Impersonate logged-on Users",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/impersonate-logged-on-users",
+    "path": "smb-protocol/impersonate-logged-on-users",
+    "excerpt": "Impersonate logged-on Users Warning You need at least local admin privilege on the remote target The Module schtask_as can execute commands on behalf of other users which have sessions on the target, "
+  },
+  {
+    "title": "Change User Password",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/change-user-password",
+    "path": "smb-protocol/change-user-password",
+    "excerpt": "Change User Password If you encounter an account with a correct password but either STATUS_PASSWORD_MUST_CHANGE or STATUS_PASSWORD_EXPIRED , you usually won't be able to use it.\\ However, with the cha"
+  },
+  {
+    "title": "Modify Group",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/modify-group",
+    "path": "smb-protocol/modify-group",
+    "excerpt": "🆕 Modify Group If a user has privileges such as AddMember, AddSelf, etc. over a group, this module can add or remove users from that group. Add User to Group Just specify the target user and target gr"
+  },
+  {
+    "title": "Dump User Local Security Questions",
+    "source": "netexec",
+    "url": "/page/netexec/smb-protocol/dump-user-local-security-questions",
+    "path": "smb-protocol/dump-user-local-security-questions",
+    "excerpt": "Dump User Local Security Questions Warning You need at least local admin privilege on the remote target New NetExec module to dump a local user's security questions if they have them. nxc smb &lt;ip&g"
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/authentication",
+    "path": "ldap-protocol/authentication",
+    "excerpt": "Authentication LDAP Authentication Testing if an account exists without kerberos protocol nxc ldap &lt;CIDR&gt; -u &lt;USERFILE&gt; -p &#39;&#39; -k Testing credentials nxc ldap &lt;CIDR&gt; -u &lt;US"
+  },
+  {
+    "title": "Enumerate Domain Users",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/enumerate-users",
+    "path": "ldap-protocol/enumerate-users",
+    "excerpt": "Enumerate Users To enumerate all users via LDAP: nxc ldap $ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --users To export all users to a file: nxc ldap $ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --user"
+  },
+  {
+    "title": "Enumerate Domain Groups",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/enumerate-group-members",
+    "path": "ldap-protocol/enumerate-group-members",
+    "excerpt": "Enumerate Domain Groups Enumerate all groups in the Domain: nxc ldap &lt;ip&gt; -u &lt;username&gt; -p &lt;password&gt; --groups To enumerate all members in specific group via LDAP: nxc ldap &lt;ip&gt"
+  },
+  {
+    "title": "Query LDAP",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/query-ldap",
+    "path": "ldap-protocol/query-ldap",
+    "excerpt": "🆕 Query LDAP If you need to query raw ldap values you can use the query option together with filters. The returned values are not parsed in any way and should return the exact same output as ldapsearc"
+  },
+  {
+    "title": "ASREPRoast",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/asreproast",
+    "path": "ldap-protocol/asreproast",
+    "excerpt": "ASREPRoast Success You can retrieve the Kerberos 5 AS-REP etype 23 hash of users without Kerberos pre-authentication required if you have a list of users on the domain Without authentication The ASREP"
+  },
+  {
+    "title": "Find Domain SID",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/find-domain-sid",
+    "path": "ldap-protocol/find-domain-sid",
+    "excerpt": "Find Domain SID You can find the domain SID using function --get-sid nxc ldap DC1.scrm.local -u sqlsvc -p Pegasus60 -k --get-sid nxc ldap DC1.scrm.local -u sqlsvc -p Pegasus60 -k --get-sid LDAP DC1.sc"
+  },
+  {
+    "title": "Kerberoasting",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/kerberoasting",
+    "path": "ldap-protocol/kerberoasting",
+    "excerpt": "Kerberoasting Kerberoasting You can retrieve the Kerberos 5 TGS-REP etype 23 hash using Kerberoasting technique The goal of Kerberoasting is to harvest TGS tickets for services that run on behalf of u"
+  },
+  {
+    "title": "Find Misconfigured Delegation",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/find-misconfigured-delegation",
+    "path": "ldap-protocol/find-misconfigured-delegation",
+    "excerpt": "🆕 Find Misconfigured Delegation NetExec allows you to retrieve the list of all misconfigured delegations nxc ldap &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --find-delegation nxc ldap &lt;"
+  },
+  {
+    "title": "Unconstrained Delegation",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/unconstrained-delegation",
+    "path": "ldap-protocol/unconstrained-delegation",
+    "excerpt": "Unconstrained Delegation NetExec allows you to retrieve the list of all computers and users with the flag TRUSTED_FOR_DELEGATION nxc ldap &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --trust"
+  },
+  {
+    "title": "Admin Count",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/admin-count",
+    "path": "ldap-protocol/admin-count",
+    "excerpt": "Admin Count adminCount Indicates that a given object has had its ACLs changed to a more secure value by the system because it was a member of one of the administrative groups (directly or transitively"
+  },
+  {
+    "title": "Machine Account Quota",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/machine-account-quota",
+    "path": "ldap-protocol/machine-account-quota",
+    "excerpt": "Machine Account Quota This module retrieves the MachineAccountQuota domain-level attribute. It's useful to check this value because by default it permits unprivileged users to attach up to 10 computer"
+  },
+  {
+    "title": "Get User Descriptions",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/get-user-descriptions",
+    "path": "ldap-protocol/get-user-descriptions",
+    "excerpt": "Get User Descriptions New LDAP module to look for password inside the user's description. nxc ldap &lt;hostname&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-desc-users Three options are available: FILTE"
+  },
+  {
+    "title": "Dump gMSA",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/dump-gmsa",
+    "path": "ldap-protocol/dump-gmsa",
+    "excerpt": "Dump gMSA Using the protocol LDAP you can extract the password of a gMSA account if you have the right. Warning LDAPS is required to retrieve the password, using the --gmsa LDAPS is automatically sele"
+  },
+  {
+    "title": "Pre2k Computer Account Abuse",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/pre2k",
+    "path": "ldap-protocol/pre2k",
+    "excerpt": "Pre2k Computer Account Abuse Identifies pre-created computer accounts in Active Directory and attempts to obtain Kerberos TGTs using their default machine password. Targets computer objects with: obje"
+  },
+  {
+    "title": "Exploit ESC8 (ADCS)",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/exploit-esc8-adcs",
+    "path": "ldap-protocol/exploit-esc8-adcs",
+    "excerpt": "Exploit ESC8 (ADCS) List All PKI Enrollment Servers nxc ldap &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -M adcs List All Certificates Inside a PKI nxc ldap &lt;ip&gt; -u &lt;USERNAME&gt; -p &l"
+  },
+  {
+    "title": "Extract Subnet",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/extract-subnet",
+    "path": "ldap-protocol/extract-subnet",
+    "excerpt": "Extract Subnet nxc ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-network nxc ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-network -o ONLY_HOSTS = true nxc ldap &lt;ip&gt; -u &lt;use"
+  },
+  {
+    "title": "Check LDAP Signing",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/check-ldap-signing",
+    "path": "ldap-protocol/check-ldap-signing",
+    "excerpt": "Check LDAP Signing Danger REMOVED: Checking for signing and channel binding is now done on the host enumeration, see host banner Using the module ldap-checker you can verify if ldap require channel bi"
+  },
+  {
+    "title": "Read DACL Rights",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/read-dacl-right",
+    "path": "ldap-protocol/read-dacl-right",
+    "excerpt": "Read DACL Rights LDAP module that permits to read and export the DACLs of one or mulitple objects ! Read all the ACEs of the Administrator nxc ldap lab-dc.lab.local -k --kdcHost lab-dc.lab.local -M da"
+  },
+  {
+    "title": "Extract gMSA Secrets",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/extract-gmsa-secrets",
+    "path": "ldap-protocol/extract-gmsa-secrets",
+    "excerpt": "Extract gMSA Secrets NetExec offer multiple choices when you found a gmsa account in the LSA nxc ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; --gmsa-convert-id 313e25a880eb773502f03ad5021f49c2eb5b5"
+  },
+  {
+    "title": "Bloodhound Ingestor",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/bloodhound-ingestor",
+    "path": "ldap-protocol/bloodhound-ingestor",
+    "excerpt": "Bloodhound Ingestor NetExec has a build in bloodhound collector. To configure the name server, dns timeout or to use tcp for dns resolution take a look at the NetExec command line options for dns . nx"
+  },
+  {
+    "title": "List DC IP / Enum Trust",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/dc-list",
+    "path": "ldap-protocol/dc-list",
+    "excerpt": "🆕 List DC IP / Enum Trust ldap --dc-list flag listing Domain Controllers and finds IP Addresses (If accessible). Also enumerates domain trust and their Domain Controller. nxc ldap &lt;ip&gt; -u &lt;US"
+  },
+  {
+    "title": "Abuse Domain Trust: Raisechild",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/raisechild",
+    "path": "ldap-protocol/raisechild",
+    "excerpt": "🆕 Abuse Domain Trust: Raisechild Abuses an intra-forest transitive trust (child ↔ parent) to forge a Golden Ticket containing an extra SID from the other domain (e.g. Enterprise Admins ). This allows "
+  },
+  {
+    "title": "Enumerate Domain Trusts",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/enumerate-trusts",
+    "path": "ldap-protocol/enumerate-trusts",
+    "excerpt": "Enumerate Domain Trusts Warning Moved to `--dc-list` argument"
+  },
+  {
+    "title": "Enumerate SCCM",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/enumerate-sccm",
+    "path": "ldap-protocol/enumerate-sccm",
+    "excerpt": "🆕 Enumerate SCCM System Center Configuration Manager (SCCM) or also called MECM nowadays is a managament infrastructure for inventor/endpoint management. As it contains a lot of different server or ap"
+  },
+  {
+    "title": "Enumerate Entra ID",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/enumerate-entra-id",
+    "path": "ldap-protocol/enumerate-entra-id",
+    "excerpt": "🆕 Enumerate Entra ID If Entra ID is deployed in Active Directory with cloud sync active, the MSOL account is a high value target, due to its default configuration of having DCSync privileges. This MSO"
+  },
+  {
+    "title": "Dump PSO",
+    "source": "netexec",
+    "url": "/page/netexec/dump-pso",
+    "path": "dump-pso",
+    "excerpt": "🆕 Dump PSO Dump PSO (Fine-Grained Password Policies (FGPPs) or Password Settings Objects (PSOs)) netexec ldap &lt;ip&gt; -u &lt;user&gt; -p &lt;pass&gt; --pso"
+  },
+  {
+    "title": "Enumerate scriptPath",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/get-scriptpath",
+    "path": "ldap-protocol/get-scriptpath",
+    "excerpt": "🆕 Enumerate scriptPath LDAP module to enumerate the scriptPath attribute of Active Directory users. nxc ldap &lt;hostname&gt; -u &lt;user&gt; -p &lt;pass&gt; -M get-scriptpath Two options are availabl"
+  },
+  {
+    "title": "Enumerate Unsecure DNS Zones",
+    "source": "netexec",
+    "url": "/page/netexec/ldap-protocol/enumerate-unsecure-dns-zones",
+    "path": "ldap-protocol/enumerate-unsecure-dns-zones",
+    "excerpt": "🆕 Enumerate Unsecure DNS Zones This module enumerates DNS zones that are configured with the Nonsecure and secure setting for dynamic updates. This misconfiguration allows unauthenticated users to add"
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/password-spraying",
+    "path": "winrm-protocol/password-spraying",
+    "excerpt": "Password spraying Password spraying (without bruteforce) nxc winrm &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce Expected Results: WINRM 192 .168.255.131 5985 ROGER [ * ] http://192"
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/authentication",
+    "path": "winrm-protocol/authentication",
+    "excerpt": "Authentication WinRM Authentication Testing credentials nxc winrm &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; Expected Results: WINRM 192 .168.255.131 5985 ROGER [ * ] http://192.168.255.131:"
+  },
+  {
+    "title": "Command Execution",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/command-execution",
+    "path": "winrm-protocol/command-execution",
+    "excerpt": "Command execution Execute Command using WinRM nxc winrm &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -X whoami nxc winrm &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -X whoami WINR"
+  },
+  {
+    "title": "Defeating LAPS",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/defeating-laps",
+    "path": "winrm-protocol/defeating-laps",
+    "excerpt": "Defeating LAPS Using NetExec when LAPS installed on the domain If LAPS is used inside the domain, is can be hard to use NetExec to execute a command on every computer on the domain. Therefore, a new c"
+  },
+  {
+    "title": "Obtaining Credentials",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/obtaining-credentials",
+    "path": "winrm-protocol/obtaining-credentials",
+    "excerpt": "Obtaining Credentials The following examples use a username and plaintext password, although user/hash combos work as well."
+  },
+  {
+    "title": "Dump SAM",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-sam",
+    "path": "winrm-protocol/obtaining-credentials/dump-sam",
+    "excerpt": "Dump SAM Dump SAM hashes Extracts and downloads SAM registry hive, and uses secretsdump.py methods locally to dump hashes nxc winrm &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --sam"
+  },
+  {
+    "title": "Dump LSA",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-lsa",
+    "path": "winrm-protocol/obtaining-credentials/dump-lsa",
+    "excerpt": "Dump LSA Dump LSA secrets Extracts and downloads SECURITY registry hive, and uses secretsdump.py methods locally to dump secrets nxc winrm &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --lsa"
+  },
+  {
+    "title": "Dump DPAPI",
+    "source": "netexec",
+    "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-dpapi",
+    "path": "winrm-protocol/obtaining-credentials/dump-dpapi",
+    "excerpt": "🆕 Dump DPAPI You can dump Credential Manager secrets for the connecting user with the following option: --dpapi . No Admin privileges needed! nxc winrm &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&g"
+  },
+  {
+    "title": "Enumeration",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/enumeration",
+    "path": "mssql-protocol/enumeration",
+    "excerpt": "Enumeration This section lists all kind of enumeration technique of the MSSQL protocol"
+  },
+  {
+    "title": "Enumerating encryption settings",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/enumeration/enumerating-encryption-settings",
+    "path": "mssql-protocol/enumeration/enumerating-encryption-settings",
+    "excerpt": "🆕 Enumerating encryption settings By default MSSQL databases do not enforce TLS ciphering which makes eavesdroping possible. There are two configurations values that can be set: Force encryption: that"
+  },
+  {
+    "title": "Enumerating Channel Binding configuration",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/enumeration/enumerating-channel-binding-configuration",
+    "path": "mssql-protocol/enumeration/enumerating-channel-binding-configuration",
+    "excerpt": "🆕 Enumerating Channel Binding configuration Having a valid account, it is possible to check whether CBT is required are not (and thus determine whether relay is possible or not) via the mssql_cbt modu"
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/mssql-passwordspray",
+    "path": "mssql-protocol/mssql-passwordspray",
+    "excerpt": "Password spraying Password spraying (without bruteforce) nxc mssql &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce Expected Results: MSSQL 10 .10.10.59 1433 None [ - ] ERROR ( TALLY )"
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/authentication",
+    "path": "mssql-protocol/authentication",
+    "excerpt": "Authentication Testing credentials You can use two methods to authenticate to MSSQL: windows or local (default: windows ). To use local auth, add the following flag --local-auth Windows auth With SMB "
+  },
+  {
+    "title": "MSSQL PrivEsc",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/mssql-privesc",
+    "path": "mssql-protocol/mssql-privesc",
+    "excerpt": "MSSQL Privesc Normal Authentication nxc mssql &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; nxc mssql &lt;ip&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; MSSQL &lt;ip&gt; 1433 FQDN [ * ] Windows 1"
+  },
+  {
+    "title": "MSSQL Command Execution",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/mssql-command",
+    "path": "mssql-protocol/mssql-command",
+    "excerpt": "MSSQL command Execute MSSQL commands nxc mssql &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &#39;m$$ql_S@_P@ssW0rd!&#39; --local-auth -q &#39;SELECT name FROM master.dbo.sysdatabases;&#39; Expected Results: "
+  },
+  {
+    "title": "MSSQL Upload & Download",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/mssql-upload-download",
+    "path": "mssql-protocol/mssql-upload-download",
+    "excerpt": "MSSQL upload/download Download / Upload MSSQL file nxc mssql &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &#39;m$$ql_S@_P@ssW0rd!&#39; --put-file /tmp/users C: \\\\ Windows \\\\ Temp \\\\ whoami.txt Expected Resul"
+  },
+  {
+    "title": "Execute via xp\\_cmdshell",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/windows-command",
+    "path": "mssql-protocol/windows-command",
+    "excerpt": "Windows command Execute Windows Command This option use xp_cmdshell to exec command on the remote host. nxc mssql &lt;TARGET&gt; -u sa -p 'GWE3V65#6KFH93@4GWTG2G' --local-auth -x whoami nxc mssql &lt;"
+  },
+  {
+    "title": "Enumerate Users by Bruteforcing RID",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/enumerate-users-by-bruteforcing-rid",
+    "path": "mssql-protocol/enumerate-users-by-bruteforcing-rid",
+    "excerpt": "🆕 Enumerate Users by Bruteforcing RID Enumerate users by bruteforcing the RID on the remote target nxc mssql &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --rid-brute"
+  },
+  {
+    "title": "MSSQL Linked Servers",
+    "source": "netexec",
+    "url": "/page/netexec/mssql-protocol/mssql-linked-servers",
+    "path": "mssql-protocol/mssql-linked-servers",
+    "excerpt": "MSSQL Linked Servers MSSQL linked servers allow a database instance to establish a trusted connection to another database across domain or forest trusts, allowing users to query data and execute comma"
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/ssh-protocol/password-spraying",
+    "path": "ssh-protocol/password-spraying",
+    "excerpt": "Password spraying Password spraying (without bruteforce) nxc ssh &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce Expected Results: SSH 127 .0.0.1 22 127 .0.0.1 [ * ] SSH-2.0-OpenSSH_8"
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/ssh-protocol/authentication",
+    "path": "ssh-protocol/authentication",
+    "excerpt": "Authentication Testing credentials nxc ssh &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; Expected Results: SSH 127 .0.0.1 22 127 .0.0.1 [ * ] SSH-2.0-OpenSSH_8.2p1 Debian-4 SSH 127 .0.0.1 22 12"
+  },
+  {
+    "title": "Command Execution",
+    "source": "netexec",
+    "url": "/page/netexec/ssh-protocol/command-execution",
+    "path": "ssh-protocol/command-execution",
+    "excerpt": "Command execution Execute Command This command is useless nxc ssh 127.0.0.1 -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami nxc ssh 127 .0.0.1 -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami SSH 1"
+  },
+  {
+    "title": "Get and Put Files",
+    "source": "netexec",
+    "url": "/page/netexec/ssh-protocol/get-and-put-files",
+    "path": "ssh-protocol/get-and-put-files",
+    "excerpt": "Get and Put Files Send a File to the Remote Target Send a local file to the remote target nxc ssh &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --put-file file.txt /tmp/file.txt Get a File Fr"
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/ftp-protocol/password-spraying",
+    "path": "ftp-protocol/password-spraying",
+    "excerpt": "Password spraying Password spraying (without bruteforce) nxc ftp &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file --no-bruteforce By default nxc will exit after a successful login is found. Using the "
+  },
+  {
+    "title": "File Listing, etc",
+    "source": "netexec",
+    "url": "/page/netexec/ftp-protocol/file-listing-etc",
+    "path": "ftp-protocol/file-listing-etc",
+    "excerpt": "🆕 File Listing, etc Listing Files Do directory listings on valid authentication by using the --ls option: nxc ftp &lt;TARGET&gt; -u 'marshall' -p 'badpassword' --ls nxc ftp &lt;TARGET&gt; -u &#39;mars"
+  },
+  {
+    "title": "File Upload & Download",
+    "source": "netexec",
+    "url": "/page/netexec/ftp-protocol/get-and-put-files",
+    "path": "ftp-protocol/get-and-put-files",
+    "excerpt": "🆕 File Upload &amp; Download List Files in a Directory List files in a specific directory using FTP. nxc ftp [ IP_ADDRESS ] -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --ls [ DIRECTORY ] Example: nxc ftp "
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/rdp-protocol/password-spraying",
+    "path": "rdp-protocol/password-spraying",
+    "excerpt": "Password spraying Password spraying nxc rdp &lt;CIDR&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; nxc rdp &lt;TARGET&gt; -u rubeus -p October2021 nxc rdp &lt;TARGET&gt; -u ron -p October2021 RDP 192 .1"
+  },
+  {
+    "title": "Screenshot (connected)",
+    "source": "netexec",
+    "url": "/page/netexec/rdp-protocol/screenshot-connected",
+    "path": "rdp-protocol/screenshot-connected",
+    "excerpt": "Screenshot (connected) Using the protocol you can perform RDP screenshot ! nxc rdp &lt;ip&gt; -u &lt;user&gt; -p &lt;password&gt; --screenshot --screentime &lt;second&gt;"
+  },
+  {
+    "title": "Screenshot Without NLA (not connected)",
+    "source": "netexec",
+    "url": "/page/netexec/rdp-protocol/screenshot-without-nla-not-connected",
+    "path": "rdp-protocol/screenshot-without-nla-not-connected",
+    "excerpt": "Screenshot without NLA (not connected) You can perform a screenshot of the login page of the remote host using RDP with NetExec if NLA is disabled nxc rdp &lt;ip&gt; --nla-screenshot"
+  },
+  {
+    "title": "Command Execution",
+    "source": "netexec",
+    "url": "/page/netexec/rdp-protocol/command-execution",
+    "path": "rdp-protocol/command-execution",
+    "excerpt": "🆕 Command Execution Info This functionality is still in beta testing and was added in 2025 netexec rdp ip -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami You can also add the flag --cmd-delay and --"
+  },
+  {
+    "title": "Password Spraying",
+    "source": "netexec",
+    "url": "/page/netexec/wmi-protocol/password-spraying",
+    "path": "wmi-protocol/password-spraying",
+    "excerpt": "Password spraying Password spraying nxc wmi &lt;CIDR&gt; -u userfile -p &lt;PASSWORD&gt;file By default, nxc will exit after a successful login is found. Password spraying (without bruteforce) nxc wmi"
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/wmi-protocol/authentication",
+    "path": "wmi-protocol/authentication",
+    "excerpt": "Authentication Testing credentials You can use two methods to authenticate to the WMI: windows or local (default: windows ). To use local auth, add the following flag --local-auth Windows auth With SM"
+  },
+  {
+    "title": "Command Execution",
+    "source": "netexec",
+    "url": "/page/netexec/wmi-protocol/command-execution",
+    "path": "wmi-protocol/command-execution",
+    "excerpt": "Command execution Execute Command using WMI nxc wmi &lt;TARGET&gt; -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; -x whoami"
+  },
+  {
+    "title": "Enumeration",
+    "source": "netexec",
+    "url": "/page/netexec/nfs-protocol/Enumeration",
+    "path": "nfs-protocol/Enumeration",
+    "excerpt": "Enumeration Enumerate NFS Servers Detect remote NFS server, enumerate available versions and check for the root escape (see escape to root file system ). nxc nfs &lt;ip&gt; nxc nfs &lt;ip&gt; # Exampl"
+  },
+  {
+    "title": "Download and Upload Files",
+    "source": "netexec",
+    "url": "/page/netexec/nfs-protocol/Download-and-Upload-Files",
+    "path": "nfs-protocol/Download-and-Upload-Files",
+    "excerpt": "Download and Upload Files Example usage: nxc nfs &lt;ip&gt; --share /home/user/Desktop/NFSShare/ --get-file as.txt as.txt # Share name is &quot;/home/user/Desktop/NFSShare&quot; nxc nfs &lt;ip&gt; --s"
+  },
+  {
+    "title": "Chmod",
+    "source": "netexec",
+    "url": "/page/netexec/nfs-protocol/chmod",
+    "path": "nfs-protocol/chmod",
+    "excerpt": "🆕 Chmod"
+  },
+  {
+    "title": "Escape to root file system",
+    "source": "netexec",
+    "url": "/page/netexec/nfs-protocol/escape-to-root-file-system",
+    "path": "nfs-protocol/escape-to-root-file-system",
+    "excerpt": "🆕 Escape to root file system By default, NFS exports do not restrict access to files outside the exported directory. To access these files NFS needs the respective file handle. However, the root file "
+  },
+  {
+    "title": "Authentication",
+    "source": "netexec",
+    "url": "/page/netexec/vnc-protocol/authentication",
+    "path": "vnc-protocol/authentication",
+    "excerpt": "Authentication VNC Authentication Testing credentials Some VNC servers do not require a username. In such cases, the username field should be left empty, as illustrated in the results below. nxc vnc &"
   }
 ]
