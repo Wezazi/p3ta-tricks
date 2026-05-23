@@ -27,6 +27,7 @@ SOURCE_IMG_DIRS = {
     "hacker-recipes":   SOURCES / "hacker-recipes" / "docs" / "src",
     "hardware-att":     SOURCES / "hardwareallthethings" / "docs",
     "sliver":           SOURCES / "sliver-docs",
+    "patt":             SOURCES / "payloadsallthethings",
 }
 
 # GitHub raw fallback URLs (used when sources/ not present on deployment)
@@ -36,6 +37,8 @@ SOURCE_GH_RAW = {
     "hacktricks-cloud": "https://raw.githubusercontent.com/HackTricks-wiki/hacktricks-cloud/master/src",
     "hacker-recipes":   "https://raw.githubusercontent.com/ShutdownRepo/The-Hacker-Recipes/main/docs/src",
     "hardware-att":     "https://raw.githubusercontent.com/swisskyrepo/HardwareAllTheThings/master/docs",
+    "sliver":           "https://raw.githubusercontent.com/BishopFox/sliver/master/docs/sliver-docs/public",
+    "patt":             "https://raw.githubusercontent.com/swisskyrepo/PayloadsAllTheThings/master",
 }
 
 # GitHub URL prefix → local tool directory name (for badge injection)
@@ -500,6 +503,12 @@ def _rewrite_images(html: str, source_id: str, page_path: str) -> str:
             resolved = _resolve_rel(page_dir, src)
         elif source_id == "sliver":
             resolved = src.lstrip("/")
+        elif source_id == "patt":
+            # PATT images: src like "Images/wcd.jpg" relative to the topic folder
+            # page_path is e.g. "Web-Cache-Deception"; folder on GitHub uses spaces
+            # resolved = "Web Cache Deception/Images/wcd.jpg"
+            topic_folder = page_path.replace("-", " ").replace("_", " ") if page_dir == "" else page_dir.replace("-", " ")
+            resolved = f"{topic_folder}/{src}"
         else:
             return m.group(0)
 
