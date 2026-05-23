@@ -488,7 +488,7 @@ def _rewrite_images(html: str, source_id: str, page_path: str) -> str:
 
     def fix(m):
         prefix, q, src = m.group(1), m.group(2), m.group(3)
-        if src.startswith(("http://", "https://", "data:", "/source-assets/", "#")):
+        if src.startswith(("http://", "https://", "data:", "/source-assets/", "/static/", "#")):
             return m.group(0)
 
         if source_id == "netexec":

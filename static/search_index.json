@@ -20894,534 +20894,6 @@
     "excerpt": "Openshift - SCC bypass The original author of this page is Guillaume Privileged Namespaces By default, SCC does not apply on following projects : default kube-system kube-public openshift-node openshi"
   },
   {
-    "title": "Version 0.1 -> 1.0",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0",
-    "excerpt": "Version 0.1 -&gt; 1.0",
-    "tags": []
-  },
-  {
-    "title": "v0.1 -> v0.2",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.1-greater-than-v0.2",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.1-greater-than-v0.2",
-    "excerpt": "v0.1 -&gt; v0.2 AdaptixC2 AdaptixC2 adds interface support for working with Socks4 and Socks5 proxy server versions (with support for authentication, TCP/UDP, IPv4 and DNS, but not IPv6). More... Adap",
-    "tags": []
-  },
-  {
-    "title": "v0.2 -> v0.3",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.2-greater-than-v0.3",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.2-greater-than-v0.3",
-    "excerpt": "v0.2 -&gt; v0.3 INFO If you previously used AdaptixClient , delete the ~/.adaptix/storage.db file. AdaptixC2 New: The session table now has agent markings: Terminated, Inactive, Unlink, No response. T",
-    "tags": []
-  },
-  {
-    "title": "v0.3 -> v0.4",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.3-greater-than-v0.4",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.3-greater-than-v0.4",
-    "excerpt": "v0.3 -&gt; v0.4 AdaptixC2 New: Added control over WorkingTime and KillDate parameters for agents. Added new agent marks \" Disconnect \" and \" No worktime \". Added screenshot storage. Unix support added",
-    "tags": []
-  },
-  {
-    "title": "v0.4 -> v0.5",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.4-greater-than-v0.5",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.4-greater-than-v0.5",
-    "excerpt": "v0.4 -&gt; v0.5 AdaptixC2 New: AdaptixClient now features a RemoteTerminal — a fully interactive console Tunnels can now be created from the context menu of the session table or the graph. It is now p",
-    "tags": []
-  },
-  {
-    "title": "v0.5 -> v0.6",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.5-greater-than-v0.6",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.5-greater-than-v0.6",
-    "excerpt": "v0.5 -&gt; v0.6 WARNING Go version has been updated from 1.23.1 to 1.24.4, so a full installation following the guide is required . AdaptixC2 New: Agent Console – Path Autocompletion &amp; File Select",
-    "tags": []
-  },
-  {
-    "title": "v0.6 -> v0.7",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.6-greater-than-v0.7",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.6-greater-than-v0.7",
-    "excerpt": "v0.6 -&gt; v0.7 WARNING Extension-Kit extensions need to be reinstalled AdaptixC2 New: Added Credential Manager Implemented the AxScript scripting engine . Added AxScript Console for testing AX script",
-    "tags": []
-  },
-  {
-    "title": "v0.7 -> v0.8",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.7-greater-than-v0.8",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.7-greater-than-v0.8",
-    "excerpt": "v0.7 -&gt; v0.8 AdaptixC2 New: Added Targets Manager Redesigned Listeners table and Listener creation dialogs Reworked task and tunnel queue mechanism. AxScript new functions: ids, isactive, format_si",
-    "tags": []
-  },
-  {
-    "title": "v0.8 -> v0.9",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.8-greater-than-v0.9",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.8-greater-than-v0.9",
-    "excerpt": "v0.8 -&gt; v0.9 AdaptixC2 New: Rewrote the client core — the client now uses a dock-based structure. AxScript new functions: agent_hide, agent_remove, hash, random_string, random_int. Added new API PO",
-    "tags": []
-  },
-  {
-    "title": "v0.9 -> v0.10",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.9-greater-than-v0.10",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.9-greater-than-v0.10",
-    "excerpt": "v0.9 -&gt; v0.10 AdaptixC2 New: Sessions Table data model updated. Eliminates small per-second UI stutters when many sessions are present. Tasks Manager data model updated. Server synchronization is n",
-    "tags": []
-  },
-  {
-    "title": "v0.10 -> v0.11",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.10-greater-than-v0.11",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.10-greater-than-v0.11",
-    "excerpt": "v0.10 -&gt; v0.11 WARNING Go version has been updated from 1.24.4 to 1.25.4, so a full installation following the guide is required . INFO Contributed to this update: shashinma , cr0eax , Xre0uS , M1n",
-    "tags": []
-  },
-  {
-    "title": "Version 1.0",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/version-1.0",
-    "path": "changelog-and-updates/version-0.1-greater-than-1.0/version-1.0",
-    "excerpt": "Version 1.0 WARNING The client and server database structures have been changed and are not backward compatible with previous versions. INFO Contributors to the GitHub update include: shashinma , P014",
-    "tags": []
-  },
-  {
-    "title": "v1.0 -> v1.1",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/v1.0-greater-than-v1.1",
-    "path": "changelog-and-updates/v1.0-greater-than-v1.1",
-    "excerpt": "v1.0 -&gt; v1.1 INFO Contributors to the GitHub update include: shashinma , AnvithLobo , LongWayHomie , nth347 , newBBnew , lesteratSOL , BlackMeerkat AdaptixC2 New: The data synchronization model has",
-    "tags": []
-  },
-  {
-    "title": "v1.1 -> v1.2",
-    "source": "adaptix",
-    "url": "/page/adaptix/changelog-and-updates/v1.1-greater-than-v1.2",
-    "path": "changelog-and-updates/v1.1-greater-than-v1.2",
-    "excerpt": "v1.1 -&gt; v1.2 INFO Contributors to the GitHub update include: Hesti4 , Sakura529 , LongWayHomie , BlackMeerkat , sagiol , shashinma AdaptixC2 WARNING Building the client now requires QT &gt; 6.8.0. ",
-    "tags": []
-  },
-  {
-    "title": "Getting Starting",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/getting-starting",
-    "path": "adaptix-c2/getting-starting",
-    "excerpt": "Getting Starting The Adaptix server is installed only on UNIX systems. The following operating systems have been tested for Adaptix Client compatibility: Ubuntu 25.04 Debian 11 Arch 2025.02.01 Kali Li",
-    "tags": []
-  },
-  {
-    "title": "Installation Server",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/getting-starting/installation-server",
-    "path": "adaptix-c2/getting-starting/installation-server",
-    "excerpt": "Installation Server The source code of AdaptixС2 is available on github. The main branch is a stable version and does not contain the latest changes. git clone https://github.com/Adaptix-Framework/Ada",
-    "tags": []
-  },
-  {
-    "title": "Installation Client",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/getting-starting/installation-client",
-    "path": "adaptix-c2/getting-starting/installation-client",
-    "excerpt": "Installation Client The source code of AdaptixС2 is available on github. The main branch is a stable version and does not contain the latest changes. git clone https://github.com/Adaptix-Framework/Ada",
-    "tags": []
-  },
-  {
-    "title": "Starting",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/getting-starting/starting",
-    "path": "adaptix-c2/getting-starting/starting",
-    "excerpt": "Starting AdaptixServer The necessary parameters for starting the AdaptixServer can be passed via command line parameters or via a configuration file. The configuration file is specified in the -profil",
-    "tags": []
-  },
-  {
-    "title": "User Interface",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/user-interface",
-    "path": "adaptix-c2/user-interface",
-    "excerpt": "User Interface The AdaptixClient user interface is divided into two main parts. The Session Table, Session Graph, and Tasks Manager widgets are initially docked in the upper part. The lower part conta",
-    "tags": []
-  },
-  {
-    "title": "Listeners and Agents",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/listeners-and-agents",
-    "path": "adaptix-c2/listeners-and-agents",
-    "excerpt": "Listeners and Agents Listeners are managed through the context menu of the listener tables. The parameters in the dialog boxes for the listener and agents are created dynamically, depending on the cor",
-    "tags": []
-  },
-  {
-    "title": "Agent Browsers",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/agent-browsers",
-    "path": "adaptix-c2/agent-browsers",
-    "excerpt": "Agent Browsers Agent browsers can be selected via the agent context menu in the sessions table.",
-    "tags": []
-  },
-  {
-    "title": "File Browser",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/agent-browsers/file-browser",
-    "path": "adaptix-c2/agent-browsers/file-browser",
-    "excerpt": "File Browser File Browser is an opportunity to explore the files on a compromised system. The left-hand side of the file browser is a tree which organizes the known drives and folders into one view. T",
-    "tags": []
-  },
-  {
-    "title": "Process Browser",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/agent-browsers/process-browser",
-    "path": "adaptix-c2/agent-browsers/process-browser",
-    "excerpt": "Process Browser The Process Browser displays information about processes. When the Process Browser is launched, no requests are made to the server . To send a request to the server, you must click the",
-    "tags": []
-  },
-  {
-    "title": "Remote Terminal / Shell",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/agent-browsers/remote-terminal-shell",
-    "path": "adaptix-c2/agent-browsers/remote-terminal-shell",
-    "excerpt": "Remote Terminal / Shell Remote Terminal The Remote Terminal allows you to launch an application or command shell in fully interactive mode. For each operating system, you can either select an appropri",
-    "tags": []
-  },
-  {
-    "title": "Data management",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/data-management",
-    "path": "adaptix-c2/data-management",
-    "excerpt": "Data management",
-    "tags": []
-  },
-  {
-    "title": "Tasks manager",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/data-management/tasks-manager",
-    "path": "adaptix-c2/data-management/tasks-manager",
-    "excerpt": "Tasks manager A task can be of two types: TASK — a fast task, executed in a single-threaded mode, delaying all other agent functions. JOB — a task executed in the background. As a rule, such a task is",
-    "tags": []
-  },
-  {
-    "title": "Downloads Manager",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/data-management/downloads-manager",
-    "path": "adaptix-c2/data-management/downloads-manager",
-    "excerpt": "Downloads Manager The Downloads Tab displays all current or completed downloads. The context menu provides options to cancel the download, as well as stop and resume the download. The downloaded files",
-    "tags": []
-  },
-  {
-    "title": "Targets Manager",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/data-management/targets-manager",
-    "path": "adaptix-c2/data-management/targets-manager",
-    "excerpt": "Targets Manager The Targets Tab displays all stored targets. The context menu provides the ability to create a new item, edit or delete an existing one. The Export menu allows you to export targets in",
-    "tags": []
-  },
-  {
-    "title": "Credentials Manager",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/data-management/credentials-manager",
-    "path": "adaptix-c2/data-management/credentials-manager",
-    "excerpt": "Credentials Manager The Credentials Tab displays all stored credentials. The context menu provides the ability to create a new item, edit or delete an existing one. The Export menu allows you to expor",
-    "tags": []
-  },
-  {
-    "title": "Screenshots Manager",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/data-management/screenshots-manager",
-    "path": "adaptix-c2/data-management/screenshots-manager",
-    "excerpt": "Screenshots Manager The Screenshots tab displays all your saved screenshots. The context menu provides the ability to add a note to the screenshot, download the image, or delete it from the database. ",
-    "tags": []
-  },
-  {
-    "title": "BOF and Extensions",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/bof-and-extensions",
-    "path": "adaptix-c2/bof-and-extensions",
-    "excerpt": "BOF and Extensions INFO Official extensions: https://github.com/Adaptix-Framework/Extension-Kit Beacon Object Files BOF is just a block of position-independent code that receives pointers to some Beac",
-    "tags": []
-  },
-  {
-    "title": "Tunnels and Forwarding",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/tunnels-and-forwarding",
-    "path": "adaptix-c2/tunnels-and-forwarding",
-    "excerpt": "Tunnels and Forwarding AdaptixC2 provides the ability to use several pivot options. For each of these options, you need to make sure that yours agent supports a specific feature and is in interactive ",
-    "tags": []
-  },
-  {
-    "title": "Linking Agents",
-    "source": "adaptix",
-    "url": "/page/adaptix/adaptix-c2/linking-agents",
-    "path": "adaptix-c2/linking-agents",
-    "excerpt": "Linking Agents AdaptixC2 supports agent chains (linking agents). These linked agents receive their commands and send their output through the parent agent in their chain. This type of chaining is usef",
-    "tags": []
-  },
-  {
-    "title": "Listeners",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/listeners",
-    "path": "extenders/listeners",
-    "excerpt": "Listeners",
-    "tags": []
-  },
-  {
-    "title": "Beacon HTTP",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/listeners/beacon-http",
-    "path": "extenders/listeners/beacon-http",
-    "excerpt": "Beacon HTTP \"Beacon HTTP\" listener starts a web server and registers a \"beacon\" agent. Beacon HTTP parameters",
-    "tags": []
-  },
-  {
-    "title": "Beacon DNS",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/listeners/beacon-dns",
-    "path": "extenders/listeners/beacon-dns",
-    "excerpt": "Beacon DNS Beacon supports DNS and DoH listeners. DNS/DoH mode is specified during agent generation.",
-    "tags": []
-  },
-  {
-    "title": "Beacon SMB",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/listeners/beacon-smb",
-    "path": "extenders/listeners/beacon-smb",
-    "excerpt": "Beacon SMB \"Beacon SMB\" is an internal listener used to communicate with the \"Beacon\" agent over SMB named pipes.",
-    "tags": []
-  },
-  {
-    "title": "Beacon TCP",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/listeners/beacon-tcp",
-    "path": "extenders/listeners/beacon-tcp",
-    "excerpt": "Beacon TCP The \"Beacon TCP\" uses a TCP socket to communicate through a parent Beacon agent. This peer-to- peer communication works with Beacons on the same host and across the network. Bind port — Def",
-    "tags": []
-  },
-  {
-    "title": "Gopher TCP",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/listeners/gopher-tcp",
-    "path": "extenders/listeners/gopher-tcp",
-    "excerpt": "Gopher TCP \"Gopher TCP\" listener starts a tcp/mtls server and registers a \"gopher\" agent. How to Generate Certificates and Keys for mTLS # CA cert openssl genrsa -out ca.key 2048 openssl req -x509 -ne",
-    "tags": []
-  },
-  {
-    "title": "Agents",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/agents",
-    "path": "extenders/agents",
-    "excerpt": "Agents",
-    "tags": []
-  },
-  {
-    "title": "Beacon",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/agents/beacon",
-    "path": "extenders/agents/beacon",
-    "excerpt": "Beacon DANGER This version of the Beacon agent is not designed for AV or EDR evasion and is therefore not OPSEC compliant. Beacon is primarily intended to test and demonstrate the capabilities of Adap",
-    "tags": []
-  },
-  {
-    "title": "Beacon BOFs",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/agents/beacon/beacon-bofs",
-    "path": "extenders/agents/beacon/beacon-bofs",
-    "excerpt": "Beacon BOFs AX BOF APIs: void AxAddScreenshot ( char * note , char * data , int len ); void AxDownloadMemory ( char * filename , char * data , int len ); Beacon currently supports the following BOF AP",
-    "tags": []
-  },
-  {
-    "title": "Gopher",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/agents/gopher",
-    "path": "extenders/agents/gopher",
-    "excerpt": "Gopher DANGER This version of the Gopher agent is not designed for AV or EDR evasion and is therefore not OPSEC compliant. Gopher is primarily intended to test and demonstrate the capabilities of Adap",
-    "tags": []
-  },
-  {
-    "title": "Gopher BOFs",
-    "source": "adaptix",
-    "url": "/page/adaptix/extenders/agents/gopher/gopher-bofs",
-    "path": "extenders/agents/gopher/gopher-bofs",
-    "excerpt": "Gopher BOFs AX BOF APIs: void AxAddScreenshot ( char * note , char * data , int len ); void AxDownloadMemory ( char * filename , char * data , int len ); Beacon currently supports the following BOF AP",
-    "tags": []
-  },
-  {
-    "title": "AxScript",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript",
-    "path": "development/axscript",
-    "excerpt": "AxScript AxScript is the scripting language built into AdaptixC2, version 0.7, and later. AxScript allows you to modify and extend the AdaptixClient to your needs. AxScript was designed with inspirati",
-    "tags": []
-  },
-  {
-    "title": "How to execute AxScript",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/how-to-execute-axscript",
-    "path": "development/axscript/how-to-execute-axscript",
-    "excerpt": "How to execute AxScript Server axscipt option The list of scripts must be specified in the server profile. Client AxScript Manager To permanent load a script, go to AxScript -&gt; Script Manager and s",
-    "tags": []
-  },
-  {
-    "title": "Introduction",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/introduction",
-    "path": "development/axscript/introduction",
-    "excerpt": "Introduction AxScript is built on top of the JavaScript engine from Qt's JSEngine framework. AxScript shares the same syntax as JavaScript: variable definition and basic operations let a = 5 + 23 ; //",
-    "tags": []
-  },
-  {
-    "title": "AxFunction",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axfunction",
-    "path": "development/axscript/axfunction",
-    "excerpt": "AxFunction Data Model agents Get information about all agents calling back to this Adaptix teamserver. AGENT [ id ] ax . agents (); // AGENT STRUCT string agent [ &quot;id&quot; ] string agent [ &quot",
-    "tags": []
-  },
-  {
-    "title": "AxCommand type",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axcommand-type",
-    "path": "development/axscript/axcommand-type",
-    "excerpt": "AxCommand type Command The ax.create_command function creates an AxCommand object that will be converted into a command for AdaptixC2 agents. AxCommand ax . create_command ( string name , string descr",
-    "tags": []
-  },
-  {
-    "title": "Commands and Hooks",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axcommand-type/commands-and-hooks",
-    "path": "development/axscript/axcommand-type/commands-and-hooks",
-    "excerpt": "Commands and Hooks Command data When a user enters a command in the agent console, it is passed to the Commander handler. This handler matches the entered command with the registered_ AxCommand _objec",
-    "tags": []
-  },
-  {
-    "title": "AxForm type",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axform-type",
-    "path": "development/axscript/axform-type",
-    "excerpt": "AxForm type Namespace Form The form namespace contains functions and objects for working with UI elements such as buttons, input fields, tables, and dialogs. All visual elements have the following met",
-    "tags": []
-  },
-  {
-    "title": "AxSelector type",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axselector-type",
-    "path": "development/axscript/axselector-type",
-    "excerpt": "AxSelector type Selector is a UI element for selecting Adaptix data. SelectorFile The selector_file element contains a file path input field and a button to invoke a file selection dialog. If the sele",
-    "tags": []
-  },
-  {
-    "title": "AxEvent type",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axevent-type",
-    "path": "development/axscript/axevent-type",
-    "excerpt": "AxEvent type AdaptixClient generates events for various situations. To register a handler for a specific event, there are functions from the event namespace. Several handlers can be connected to one e",
-    "tags": []
-  },
-  {
-    "title": "AxMenu type",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/axscript/axmenu-type",
-    "path": "development/axscript/axmenu-type",
-    "excerpt": "AxMenu type AxScripts can also complement the AdaptixClient menu structure. The menu namespace allows you to create a menu structure with actions and separators. AxItem AxItem create_menu(string text)",
-    "tags": []
-  },
-  {
-    "title": "Teamserver Interface",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/teamserver-interface",
-    "path": "development/teamserver-interface",
-    "excerpt": "Teamserver Interface Documentation for the Teamserver interface used in plugins (extenders) for interacting with the Adaptix C2 server. Architecture General Diagram ┌──────────────────────────────────",
-    "tags": []
-  },
-  {
-    "title": "Web API",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/teamserver-interface/web-api",
-    "path": "development/teamserver-interface/web-api",
-    "excerpt": "Web API INFO If authentication fails, the web server will respond with a 404 page by default. Auth Chat Agent Listener Download Screen Creds Targets Tunnel",
-    "tags": []
-  },
-  {
-    "title": "TS API",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/teamserver-interface/ts-api",
-    "path": "development/teamserver-interface/ts-api",
-    "excerpt": "TS API Agent Functions TsAgentIsExists Checks if an agent exists by ID. TsAgentIsExists ( agentId string ) bool Returns: bool — true if agent exists TsAgentCreate Creates a new agent on first connecti",
-    "tags": []
-  },
-  {
-    "title": "Events and Hooks",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/teamserver-interface/events-and-hooks",
-    "path": "development/teamserver-interface/events-and-hooks",
-    "excerpt": "Events and Hooks The AdaptixC2 TeamServer event system allows plugins to react to various actions in the system: agent connections, task execution, tunnel creation, etc. Architecture ┌────────────────",
-    "tags": []
-  },
-  {
-    "title": "Extenders",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders",
-    "path": "development/extenders",
-    "excerpt": "Extenders Guide for developing extenders for AdaptixC2: Listener, Agent, and Service Extender. ┌─────────────────────────────────────────────────────────────────────────────────┐ │ ADAPTIX SERVER │ ├─",
-    "tags": []
-  },
-  {
-    "title": "Register new extenders",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/register-new-extenders",
-    "path": "development/extenders/register-new-extenders",
-    "excerpt": "Register new extenders Templates for developing your own Extenders agents and listeners are located in THIS repository. Since Extenders uses goplugin technology, the core framework package versions an",
-    "tags": []
-  },
-  {
-    "title": "Listener extender",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/listener-extender",
-    "path": "development/extenders/listener-extender",
-    "excerpt": "Listener extender External Listener accepts connections from agents directly over the network (HTTP/HTTPS, DNS, etc.). Flow Diagram ┌───────────────────────────────────────────────────────────────────",
-    "tags": []
-  },
-  {
-    "title": "Internal listener",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/listener-extender/internal-listener",
-    "path": "development/extenders/listener-extender/internal-listener",
-    "excerpt": "Internal listener Internal Listener defines the protocol for pivot connections (SMB pipe, TCP). Does not open ports on the server. Flow Diagram ┌───────────────────────────────────────────────────────",
-    "tags": []
-  },
-  {
-    "title": "Agent plugin",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/agent-plugin",
-    "path": "development/extenders/agent-plugin",
-    "excerpt": "Agent plugin Agent Plugin is responsible for payload generation, data parsing, and command handling. Flow Diagram ┌──────────────────────────────────────────────────────────────────────────────────┐ │",
-    "tags": []
-  },
-  {
-    "title": "Tunnels",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/agent-plugin/tunnels",
-    "path": "development/extenders/agent-plugin/tunnels",
-    "excerpt": "Tunnels Tunnels allow proxying network traffic through an agent. SOCKS4/5, Local Port Forward, and Reverse Port Forward are supported. Tunnel Types Flow (SOCKS/Local Port Forward) ┌───────────────────",
-    "tags": []
-  },
-  {
-    "title": "Terminals",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/agent-plugin/terminals",
-    "path": "development/extenders/agent-plugin/terminals",
-    "excerpt": "Terminals Terminals provide an interactive shell on the target machine via WebSocket connection with the GUI. Flow ┌──────────────────────────────────────────────────────────────────────────────────┐ ",
-    "tags": []
-  },
-  {
-    "title": "Service Extender",
-    "source": "adaptix",
-    "url": "/page/adaptix/development/extenders/service-extender",
-    "path": "development/extenders/service-extender",
-    "excerpt": "Service Extender Service Extender — plugins for extending server functionality: notifications, integrations, automation. Flow ┌─────────────────────────────────────────────────────────────────────────",
-    "tags": []
-  },
-  {
     "title": "Chisel Tunneling",
     "source": "enum",
     "url": "/page/enum/chisel",
@@ -23548,6 +23020,534 @@
     "url": "/page/hacker-recipes/web/recon/web-technologies",
     "path": "web/recon/web-technologies",
     "excerpt": "Other technologies Theory A web application usually relies on multiple components which compose the attack surface among which the potential elements: the web server (e.g. Apache, Nginx, Microsoft IIS",
+    "tags": []
+  },
+  {
+    "title": "Version 0.1 -> 1.0",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0",
+    "excerpt": "Version 0.1 -&gt; 1.0",
+    "tags": []
+  },
+  {
+    "title": "v0.1 -> v0.2",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.1-greater-than-v0.2",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.1-greater-than-v0.2",
+    "excerpt": "v0.1 -&gt; v0.2 AdaptixC2 AdaptixC2 adds interface support for working with Socks4 and Socks5 proxy server versions (with support for authentication, TCP/UDP, IPv4 and DNS, but not IPv6). More... Adap",
+    "tags": []
+  },
+  {
+    "title": "v0.2 -> v0.3",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.2-greater-than-v0.3",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.2-greater-than-v0.3",
+    "excerpt": "v0.2 -&gt; v0.3 INFO If you previously used AdaptixClient , delete the ~/.adaptix/storage.db file. AdaptixC2 New: The session table now has agent markings: Terminated, Inactive, Unlink, No response. T",
+    "tags": []
+  },
+  {
+    "title": "v0.3 -> v0.4",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.3-greater-than-v0.4",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.3-greater-than-v0.4",
+    "excerpt": "v0.3 -&gt; v0.4 AdaptixC2 New: Added control over WorkingTime and KillDate parameters for agents. Added new agent marks \" Disconnect \" and \" No worktime \". Added screenshot storage. Unix support added",
+    "tags": []
+  },
+  {
+    "title": "v0.4 -> v0.5",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.4-greater-than-v0.5",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.4-greater-than-v0.5",
+    "excerpt": "v0.4 -&gt; v0.5 AdaptixC2 New: AdaptixClient now features a RemoteTerminal — a fully interactive console Tunnels can now be created from the context menu of the session table or the graph. It is now p",
+    "tags": []
+  },
+  {
+    "title": "v0.5 -> v0.6",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.5-greater-than-v0.6",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.5-greater-than-v0.6",
+    "excerpt": "v0.5 -&gt; v0.6 WARNING Go version has been updated from 1.23.1 to 1.24.4, so a full installation following the guide is required . AdaptixC2 New: Agent Console – Path Autocompletion &amp; File Select",
+    "tags": []
+  },
+  {
+    "title": "v0.6 -> v0.7",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.6-greater-than-v0.7",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.6-greater-than-v0.7",
+    "excerpt": "v0.6 -&gt; v0.7 WARNING Extension-Kit extensions need to be reinstalled AdaptixC2 New: Added Credential Manager Implemented the AxScript scripting engine . Added AxScript Console for testing AX script",
+    "tags": []
+  },
+  {
+    "title": "v0.7 -> v0.8",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.7-greater-than-v0.8",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.7-greater-than-v0.8",
+    "excerpt": "v0.7 -&gt; v0.8 AdaptixC2 New: Added Targets Manager Redesigned Listeners table and Listener creation dialogs Reworked task and tunnel queue mechanism. AxScript new functions: ids, isactive, format_si",
+    "tags": []
+  },
+  {
+    "title": "v0.8 -> v0.9",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.8-greater-than-v0.9",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.8-greater-than-v0.9",
+    "excerpt": "v0.8 -&gt; v0.9 AdaptixC2 New: Rewrote the client core — the client now uses a dock-based structure. AxScript new functions: agent_hide, agent_remove, hash, random_string, random_int. Added new API PO",
+    "tags": []
+  },
+  {
+    "title": "v0.9 -> v0.10",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.9-greater-than-v0.10",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.9-greater-than-v0.10",
+    "excerpt": "v0.9 -&gt; v0.10 AdaptixC2 New: Sessions Table data model updated. Eliminates small per-second UI stutters when many sessions are present. Tasks Manager data model updated. Server synchronization is n",
+    "tags": []
+  },
+  {
+    "title": "v0.10 -> v0.11",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.10-greater-than-v0.11",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/v0.10-greater-than-v0.11",
+    "excerpt": "v0.10 -&gt; v0.11 WARNING Go version has been updated from 1.24.4 to 1.25.4, so a full installation following the guide is required . INFO Contributed to this update: shashinma , cr0eax , Xre0uS , M1n",
+    "tags": []
+  },
+  {
+    "title": "Version 1.0",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/version-1.0",
+    "path": "changelog-and-updates/version-0.1-greater-than-1.0/version-1.0",
+    "excerpt": "Version 1.0 WARNING The client and server database structures have been changed and are not backward compatible with previous versions. INFO Contributors to the GitHub update include: shashinma , P014",
+    "tags": []
+  },
+  {
+    "title": "v1.0 -> v1.1",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/v1.0-greater-than-v1.1",
+    "path": "changelog-and-updates/v1.0-greater-than-v1.1",
+    "excerpt": "v1.0 -&gt; v1.1 INFO Contributors to the GitHub update include: shashinma , AnvithLobo , LongWayHomie , nth347 , newBBnew , lesteratSOL , BlackMeerkat AdaptixC2 New: The data synchronization model has",
+    "tags": []
+  },
+  {
+    "title": "v1.1 -> v1.2",
+    "source": "adaptix",
+    "url": "/page/adaptix/changelog-and-updates/v1.1-greater-than-v1.2",
+    "path": "changelog-and-updates/v1.1-greater-than-v1.2",
+    "excerpt": "v1.1 -&gt; v1.2 INFO Contributors to the GitHub update include: Hesti4 , Sakura529 , LongWayHomie , BlackMeerkat , sagiol , shashinma AdaptixC2 WARNING Building the client now requires QT &gt; 6.8.0. ",
+    "tags": []
+  },
+  {
+    "title": "Getting Starting",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/getting-starting",
+    "path": "adaptix-c2/getting-starting",
+    "excerpt": "Getting Starting The Adaptix server is installed only on UNIX systems. The following operating systems have been tested for Adaptix Client compatibility: Ubuntu 25.04 Debian 11 Arch 2025.02.01 Kali Li",
+    "tags": []
+  },
+  {
+    "title": "Installation Server",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/getting-starting/installation-server",
+    "path": "adaptix-c2/getting-starting/installation-server",
+    "excerpt": "Installation Server The source code of AdaptixС2 is available on github. The main branch is a stable version and does not contain the latest changes. git clone https://github.com/Adaptix-Framework/Ada",
+    "tags": []
+  },
+  {
+    "title": "Installation Client",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/getting-starting/installation-client",
+    "path": "adaptix-c2/getting-starting/installation-client",
+    "excerpt": "Installation Client The source code of AdaptixС2 is available on github. The main branch is a stable version and does not contain the latest changes. git clone https://github.com/Adaptix-Framework/Ada",
+    "tags": []
+  },
+  {
+    "title": "Starting",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/getting-starting/starting",
+    "path": "adaptix-c2/getting-starting/starting",
+    "excerpt": "Starting AdaptixServer The necessary parameters for starting the AdaptixServer can be passed via command line parameters or via a configuration file. The configuration file is specified in the -profil",
+    "tags": []
+  },
+  {
+    "title": "User Interface",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/user-interface",
+    "path": "adaptix-c2/user-interface",
+    "excerpt": "User Interface The AdaptixClient user interface is divided into two main parts. The Session Table, Session Graph, and Tasks Manager widgets are initially docked in the upper part. The lower part conta",
+    "tags": []
+  },
+  {
+    "title": "Listeners and Agents",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/listeners-and-agents",
+    "path": "adaptix-c2/listeners-and-agents",
+    "excerpt": "Listeners and Agents Listeners are managed through the context menu of the listener tables. The parameters in the dialog boxes for the listener and agents are created dynamically, depending on the cor",
+    "tags": []
+  },
+  {
+    "title": "Agent Browsers",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/agent-browsers",
+    "path": "adaptix-c2/agent-browsers",
+    "excerpt": "Agent Browsers Agent browsers can be selected via the agent context menu in the sessions table.",
+    "tags": []
+  },
+  {
+    "title": "File Browser",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/agent-browsers/file-browser",
+    "path": "adaptix-c2/agent-browsers/file-browser",
+    "excerpt": "File Browser File Browser is an opportunity to explore the files on a compromised system. The left-hand side of the file browser is a tree which organizes the known drives and folders into one view. T",
+    "tags": []
+  },
+  {
+    "title": "Process Browser",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/agent-browsers/process-browser",
+    "path": "adaptix-c2/agent-browsers/process-browser",
+    "excerpt": "Process Browser The Process Browser displays information about processes. When the Process Browser is launched, no requests are made to the server . To send a request to the server, you must click the",
+    "tags": []
+  },
+  {
+    "title": "Remote Terminal / Shell",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/agent-browsers/remote-terminal-shell",
+    "path": "adaptix-c2/agent-browsers/remote-terminal-shell",
+    "excerpt": "Remote Terminal / Shell Remote Terminal The Remote Terminal allows you to launch an application or command shell in fully interactive mode. For each operating system, you can either select an appropri",
+    "tags": []
+  },
+  {
+    "title": "Data management",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/data-management",
+    "path": "adaptix-c2/data-management",
+    "excerpt": "Data management",
+    "tags": []
+  },
+  {
+    "title": "Tasks manager",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/data-management/tasks-manager",
+    "path": "adaptix-c2/data-management/tasks-manager",
+    "excerpt": "Tasks manager A task can be of two types: TASK — a fast task, executed in a single-threaded mode, delaying all other agent functions. JOB — a task executed in the background. As a rule, such a task is",
+    "tags": []
+  },
+  {
+    "title": "Downloads Manager",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/data-management/downloads-manager",
+    "path": "adaptix-c2/data-management/downloads-manager",
+    "excerpt": "Downloads Manager The Downloads Tab displays all current or completed downloads. The context menu provides options to cancel the download, as well as stop and resume the download. The downloaded files",
+    "tags": []
+  },
+  {
+    "title": "Targets Manager",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/data-management/targets-manager",
+    "path": "adaptix-c2/data-management/targets-manager",
+    "excerpt": "Targets Manager The Targets Tab displays all stored targets. The context menu provides the ability to create a new item, edit or delete an existing one. The Export menu allows you to export targets in",
+    "tags": []
+  },
+  {
+    "title": "Credentials Manager",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/data-management/credentials-manager",
+    "path": "adaptix-c2/data-management/credentials-manager",
+    "excerpt": "Credentials Manager The Credentials Tab displays all stored credentials. The context menu provides the ability to create a new item, edit or delete an existing one. The Export menu allows you to expor",
+    "tags": []
+  },
+  {
+    "title": "Screenshots Manager",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/data-management/screenshots-manager",
+    "path": "adaptix-c2/data-management/screenshots-manager",
+    "excerpt": "Screenshots Manager The Screenshots tab displays all your saved screenshots. The context menu provides the ability to add a note to the screenshot, download the image, or delete it from the database. ",
+    "tags": []
+  },
+  {
+    "title": "BOF and Extensions",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/bof-and-extensions",
+    "path": "adaptix-c2/bof-and-extensions",
+    "excerpt": "BOF and Extensions INFO Official extensions: https://github.com/Adaptix-Framework/Extension-Kit Beacon Object Files BOF is just a block of position-independent code that receives pointers to some Beac",
+    "tags": []
+  },
+  {
+    "title": "Tunnels and Forwarding",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/tunnels-and-forwarding",
+    "path": "adaptix-c2/tunnels-and-forwarding",
+    "excerpt": "Tunnels and Forwarding AdaptixC2 provides the ability to use several pivot options. For each of these options, you need to make sure that yours agent supports a specific feature and is in interactive ",
+    "tags": []
+  },
+  {
+    "title": "Linking Agents",
+    "source": "adaptix",
+    "url": "/page/adaptix/adaptix-c2/linking-agents",
+    "path": "adaptix-c2/linking-agents",
+    "excerpt": "Linking Agents AdaptixC2 supports agent chains (linking agents). These linked agents receive their commands and send their output through the parent agent in their chain. This type of chaining is usef",
+    "tags": []
+  },
+  {
+    "title": "Listeners",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/listeners",
+    "path": "extenders/listeners",
+    "excerpt": "Listeners",
+    "tags": []
+  },
+  {
+    "title": "Beacon HTTP",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/listeners/beacon-http",
+    "path": "extenders/listeners/beacon-http",
+    "excerpt": "Beacon HTTP \"Beacon HTTP\" listener starts a web server and registers a \"beacon\" agent. Beacon HTTP parameters",
+    "tags": []
+  },
+  {
+    "title": "Beacon DNS",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/listeners/beacon-dns",
+    "path": "extenders/listeners/beacon-dns",
+    "excerpt": "Beacon DNS Beacon supports DNS and DoH listeners. DNS/DoH mode is specified during agent generation.",
+    "tags": []
+  },
+  {
+    "title": "Beacon SMB",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/listeners/beacon-smb",
+    "path": "extenders/listeners/beacon-smb",
+    "excerpt": "Beacon SMB \"Beacon SMB\" is an internal listener used to communicate with the \"Beacon\" agent over SMB named pipes.",
+    "tags": []
+  },
+  {
+    "title": "Beacon TCP",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/listeners/beacon-tcp",
+    "path": "extenders/listeners/beacon-tcp",
+    "excerpt": "Beacon TCP The \"Beacon TCP\" uses a TCP socket to communicate through a parent Beacon agent. This peer-to- peer communication works with Beacons on the same host and across the network. Bind port — Def",
+    "tags": []
+  },
+  {
+    "title": "Gopher TCP",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/listeners/gopher-tcp",
+    "path": "extenders/listeners/gopher-tcp",
+    "excerpt": "Gopher TCP \"Gopher TCP\" listener starts a tcp/mtls server and registers a \"gopher\" agent. How to Generate Certificates and Keys for mTLS # CA cert openssl genrsa -out ca.key 2048 openssl req -x509 -ne",
+    "tags": []
+  },
+  {
+    "title": "Agents",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/agents",
+    "path": "extenders/agents",
+    "excerpt": "Agents",
+    "tags": []
+  },
+  {
+    "title": "Beacon",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/agents/beacon",
+    "path": "extenders/agents/beacon",
+    "excerpt": "Beacon DANGER This version of the Beacon agent is not designed for AV or EDR evasion and is therefore not OPSEC compliant. Beacon is primarily intended to test and demonstrate the capabilities of Adap",
+    "tags": []
+  },
+  {
+    "title": "Beacon BOFs",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/agents/beacon/beacon-bofs",
+    "path": "extenders/agents/beacon/beacon-bofs",
+    "excerpt": "Beacon BOFs AX BOF APIs: void AxAddScreenshot ( char * note , char * data , int len ); void AxDownloadMemory ( char * filename , char * data , int len ); Beacon currently supports the following BOF AP",
+    "tags": []
+  },
+  {
+    "title": "Gopher",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/agents/gopher",
+    "path": "extenders/agents/gopher",
+    "excerpt": "Gopher DANGER This version of the Gopher agent is not designed for AV or EDR evasion and is therefore not OPSEC compliant. Gopher is primarily intended to test and demonstrate the capabilities of Adap",
+    "tags": []
+  },
+  {
+    "title": "Gopher BOFs",
+    "source": "adaptix",
+    "url": "/page/adaptix/extenders/agents/gopher/gopher-bofs",
+    "path": "extenders/agents/gopher/gopher-bofs",
+    "excerpt": "Gopher BOFs AX BOF APIs: void AxAddScreenshot ( char * note , char * data , int len ); void AxDownloadMemory ( char * filename , char * data , int len ); Beacon currently supports the following BOF AP",
+    "tags": []
+  },
+  {
+    "title": "AxScript",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript",
+    "path": "development/axscript",
+    "excerpt": "AxScript AxScript is the scripting language built into AdaptixC2, version 0.7, and later. AxScript allows you to modify and extend the AdaptixClient to your needs. AxScript was designed with inspirati",
+    "tags": []
+  },
+  {
+    "title": "How to execute AxScript",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/how-to-execute-axscript",
+    "path": "development/axscript/how-to-execute-axscript",
+    "excerpt": "How to execute AxScript Server axscipt option The list of scripts must be specified in the server profile. Client AxScript Manager To permanent load a script, go to AxScript -&gt; Script Manager and s",
+    "tags": []
+  },
+  {
+    "title": "Introduction",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/introduction",
+    "path": "development/axscript/introduction",
+    "excerpt": "Introduction AxScript is built on top of the JavaScript engine from Qt's JSEngine framework. AxScript shares the same syntax as JavaScript: variable definition and basic operations let a = 5 + 23 ; //",
+    "tags": []
+  },
+  {
+    "title": "AxFunction",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axfunction",
+    "path": "development/axscript/axfunction",
+    "excerpt": "AxFunction Data Model agents Get information about all agents calling back to this Adaptix teamserver. AGENT [ id ] ax . agents (); // AGENT STRUCT string agent [ &quot;id&quot; ] string agent [ &quot",
+    "tags": []
+  },
+  {
+    "title": "AxCommand type",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axcommand-type",
+    "path": "development/axscript/axcommand-type",
+    "excerpt": "AxCommand type Command The ax.create_command function creates an AxCommand object that will be converted into a command for AdaptixC2 agents. AxCommand ax . create_command ( string name , string descr",
+    "tags": []
+  },
+  {
+    "title": "Commands and Hooks",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axcommand-type/commands-and-hooks",
+    "path": "development/axscript/axcommand-type/commands-and-hooks",
+    "excerpt": "Commands and Hooks Command data When a user enters a command in the agent console, it is passed to the Commander handler. This handler matches the entered command with the registered_ AxCommand _objec",
+    "tags": []
+  },
+  {
+    "title": "AxForm type",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axform-type",
+    "path": "development/axscript/axform-type",
+    "excerpt": "AxForm type Namespace Form The form namespace contains functions and objects for working with UI elements such as buttons, input fields, tables, and dialogs. All visual elements have the following met",
+    "tags": []
+  },
+  {
+    "title": "AxSelector type",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axselector-type",
+    "path": "development/axscript/axselector-type",
+    "excerpt": "AxSelector type Selector is a UI element for selecting Adaptix data. SelectorFile The selector_file element contains a file path input field and a button to invoke a file selection dialog. If the sele",
+    "tags": []
+  },
+  {
+    "title": "AxEvent type",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axevent-type",
+    "path": "development/axscript/axevent-type",
+    "excerpt": "AxEvent type AdaptixClient generates events for various situations. To register a handler for a specific event, there are functions from the event namespace. Several handlers can be connected to one e",
+    "tags": []
+  },
+  {
+    "title": "AxMenu type",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/axscript/axmenu-type",
+    "path": "development/axscript/axmenu-type",
+    "excerpt": "AxMenu type AxScripts can also complement the AdaptixClient menu structure. The menu namespace allows you to create a menu structure with actions and separators. AxItem AxItem create_menu(string text)",
+    "tags": []
+  },
+  {
+    "title": "Teamserver Interface",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/teamserver-interface",
+    "path": "development/teamserver-interface",
+    "excerpt": "Teamserver Interface Documentation for the Teamserver interface used in plugins (extenders) for interacting with the Adaptix C2 server. Architecture General Diagram ┌──────────────────────────────────",
+    "tags": []
+  },
+  {
+    "title": "Web API",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/teamserver-interface/web-api",
+    "path": "development/teamserver-interface/web-api",
+    "excerpt": "Web API INFO If authentication fails, the web server will respond with a 404 page by default. Auth Chat Agent Listener Download Screen Creds Targets Tunnel",
+    "tags": []
+  },
+  {
+    "title": "TS API",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/teamserver-interface/ts-api",
+    "path": "development/teamserver-interface/ts-api",
+    "excerpt": "TS API Agent Functions TsAgentIsExists Checks if an agent exists by ID. TsAgentIsExists ( agentId string ) bool Returns: bool — true if agent exists TsAgentCreate Creates a new agent on first connecti",
+    "tags": []
+  },
+  {
+    "title": "Events and Hooks",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/teamserver-interface/events-and-hooks",
+    "path": "development/teamserver-interface/events-and-hooks",
+    "excerpt": "Events and Hooks The AdaptixC2 TeamServer event system allows plugins to react to various actions in the system: agent connections, task execution, tunnel creation, etc. Architecture ┌────────────────",
+    "tags": []
+  },
+  {
+    "title": "Extenders",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders",
+    "path": "development/extenders",
+    "excerpt": "Extenders Guide for developing extenders for AdaptixC2: Listener, Agent, and Service Extender. ┌─────────────────────────────────────────────────────────────────────────────────┐ │ ADAPTIX SERVER │ ├─",
+    "tags": []
+  },
+  {
+    "title": "Register new extenders",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/register-new-extenders",
+    "path": "development/extenders/register-new-extenders",
+    "excerpt": "Register new extenders Templates for developing your own Extenders agents and listeners are located in THIS repository. Since Extenders uses goplugin technology, the core framework package versions an",
+    "tags": []
+  },
+  {
+    "title": "Listener extender",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/listener-extender",
+    "path": "development/extenders/listener-extender",
+    "excerpt": "Listener extender External Listener accepts connections from agents directly over the network (HTTP/HTTPS, DNS, etc.). Flow Diagram ┌───────────────────────────────────────────────────────────────────",
+    "tags": []
+  },
+  {
+    "title": "Internal listener",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/listener-extender/internal-listener",
+    "path": "development/extenders/listener-extender/internal-listener",
+    "excerpt": "Internal listener Internal Listener defines the protocol for pivot connections (SMB pipe, TCP). Does not open ports on the server. Flow Diagram ┌───────────────────────────────────────────────────────",
+    "tags": []
+  },
+  {
+    "title": "Agent plugin",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/agent-plugin",
+    "path": "development/extenders/agent-plugin",
+    "excerpt": "Agent plugin Agent Plugin is responsible for payload generation, data parsing, and command handling. Flow Diagram ┌──────────────────────────────────────────────────────────────────────────────────┐ │",
+    "tags": []
+  },
+  {
+    "title": "Tunnels",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/agent-plugin/tunnels",
+    "path": "development/extenders/agent-plugin/tunnels",
+    "excerpt": "Tunnels Tunnels allow proxying network traffic through an agent. SOCKS4/5, Local Port Forward, and Reverse Port Forward are supported. Tunnel Types Flow (SOCKS/Local Port Forward) ┌───────────────────",
+    "tags": []
+  },
+  {
+    "title": "Terminals",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/agent-plugin/terminals",
+    "path": "development/extenders/agent-plugin/terminals",
+    "excerpt": "Terminals Terminals provide an interactive shell on the target machine via WebSocket connection with the GUI. Flow ┌──────────────────────────────────────────────────────────────────────────────────┐ ",
+    "tags": []
+  },
+  {
+    "title": "Service Extender",
+    "source": "adaptix",
+    "url": "/page/adaptix/development/extenders/service-extender",
+    "path": "development/extenders/service-extender",
+    "excerpt": "Service Extender Service Extender — plugins for extending server functionality: notifications, integrations, automation. Flow ┌─────────────────────────────────────────────────────────────────────────",
     "tags": []
   }
 ]
