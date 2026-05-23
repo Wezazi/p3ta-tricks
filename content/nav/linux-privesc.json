@@ -1,0 +1,44 @@
+[
+  {
+    "type": "link",
+    "title": "Enumeration",
+    "url": "/page/linux-privesc/01-Enumeration",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "SUID/SGID Abuse",
+    "url": "/page/linux-privesc/02-SUID-SGID",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Sudo Abuse",
+    "url": "/page/linux-privesc/03-Sudo-Abuse",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Capabilities",
+    "url": "/page/linux-privesc/04-Capabilities",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Cron Job Abuse",
+    "url": "/page/linux-privesc/05-Cron-Jobs",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Writable Files & PATH",
+    "url": "/page/linux-privesc/06-Writable-Paths",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Docker / LXD / Groups",
+    "url": "/page/linux-privesc/07-Docker-LXD-Groups",
+    "children": []
+  }
+]

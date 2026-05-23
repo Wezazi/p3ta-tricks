@@ -1,0 +1,26 @@
+[
+  {
+    "type": "link",
+    "title": "Enumeration",
+    "url": "/page/windows-privesc/01-Enumeration",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Token Privilege Abuse",
+    "url": "/page/windows-privesc/02-Token-Privileges",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Service Misconfigurations",
+    "url": "/page/windows-privesc/03-Service-Attacks",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Credential Hunting",
+    "url": "/page/windows-privesc/04-Credential-Hunting",
+    "children": []
+  }
+]

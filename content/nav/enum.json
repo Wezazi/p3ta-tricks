@@ -40,5 +40,29 @@
     "title": "SQLMap",
     "url": "/page/enum/sqlmap",
     "children": []
+  },
+  {
+    "type": "link",
+    "title": "Chisel",
+    "url": "/page/enum/chisel",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Evil-WinRM",
+    "url": "/page/enum/evil-winrm",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Responder",
+    "url": "/page/enum/responder",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Hashcat",
+    "url": "/page/enum/hashcat",
+    "children": []
   }
 ]

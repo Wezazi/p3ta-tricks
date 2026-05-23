@@ -42,6 +42,9 @@ const SOURCES = [
   { id: 'rubeus',           label: 'Rubeus',               icon: '🎟️', color: '#ff9e64' },
   { id: 'sliver',           label: 'Sliver C2',            icon: '🐍', color: '#f7768e' },
   { id: 'hacker-recipes',   label: 'The Hacker Recipes',  icon: '🍳', color: '#7dcfff' },
+  { id: 'adaptix',          label: 'Adaptix C2',           icon: '🎯', color: '#bb9af7' },
+  { id: 'linux-privesc',   label: 'Linux PrivEsc',        icon: '🐧', color: '#ff9e64' },
+  { id: 'windows-privesc', label: 'Windows PrivEsc',      icon: '🪟', color: '#7aa2f7' },
 ];
 
 const _isOffline = !!(window.__OFFLINE__ && window.__OFFLINE__.offline);
@@ -121,7 +124,8 @@ function _renderSection(section, sIdx, sourceId, currentPath) {
   const secKey = 'sec_' + sourceId + '_' + sIdx;
   // Auto-expand section if it contains the current page
   const hasCurrent = section.items.some(n => _nodeContainsPath(n, currentPath));
-  const open = hasCurrent;
+  const savedState  = sessionStorage.getItem(_skey(secKey));
+  const open = hasCurrent || (!hasCurrent && savedState === 'open');
 
   const wrap = document.createElement('div');
   wrap.className = 'nt-section';
@@ -413,7 +417,7 @@ async function loadIndex() {
     const r = await fetch('/api/index');
     _index = await r.json();
     _fuse = new Fuse(_index, {
-      keys: [{ name: 'title', weight: 3 }, { name: 'excerpt', weight: 1 }],
+      keys: [{ name: 'title', weight: 3 }, { name: 'tags', weight: 2 }, { name: 'excerpt', weight: 1 }],
       threshold: 0.2,
       ignoreLocation: true,
       minMatchCharLength: 3,
@@ -522,7 +526,7 @@ function _openBlockVarModal(varKeys) {
       const group = meta.group || 'Other';
       (grouped[group] = grouped[group] || []).push({ v, meta });
     });
-    const ORDER = ['Target','Attacker','Network','AD','Auth User','Target User','Hashes','Files','Misc','AWS','Azure','Other'];
+    const ORDER = ['Target','Attacker','Network','AD','Auth User','Target User','Hashes','Files','Tunnel','C2','Cracking','Misc','AWS','Azure','Other'];
     const groupKeys = [...ORDER.filter(g => grouped[g]), ...Object.keys(grouped).filter(g => !ORDER.includes(g))];
     groupKeys.forEach(group => {
       const sec = document.createElement('div');
@@ -674,7 +678,6 @@ const VAR_META = {
   'new-password':     { label: 'New Password',           placeholder: 'NewP@ss123!',          group: 'Auth User'   },
   'admin-username':   { label: 'Admin Username',         placeholder: 'administrator',        group: 'Auth User'   },
   'local-admin':      { label: 'Local Admin Username',   placeholder: 'administrator',        group: 'Auth User'   },
-  'attacker-user':    { label: 'Attacker Username',      placeholder: 'attacker',             group: 'Auth User'   },
   'attacker-computer':{ label: 'Attacker Computer',      placeholder: 'ATTACKER$',            group: 'AD'          },
   'ca-host':          { label: 'CA Hostname',            placeholder: 'ca01.corp.local',      group: 'AD'          },
   'ca-name':          { label: 'CA Display Name',        placeholder: 'corp-CA',              group: 'AD'          },
@@ -826,6 +829,30 @@ const VAR_META = {
   'service-name':     { label: 'Service Name',            placeholder: 'corp-service',         group: 'Misc'        },
   'pod_name':         { label: 'Pod Name',                placeholder: 'corp-pod-abc123',      group: 'AWS'         },
   'queue_name':       { label: 'Queue Name',              placeholder: 'corp-queue',           group: 'AWS'         },
+
+  // ── Tunneling / Pivoting ──────────────────────────────────────────────────
+  'proxy':          { label: 'SOCKS Proxy',             placeholder: 'socks5://127.0.0.1:1080', group: 'Tunnel'    },
+  'socks-port':     { label: 'SOCKS Port',              placeholder: '1080',                    group: 'Tunnel'    },
+  'relay-port':     { label: 'Relay Listener Port',     placeholder: '445',                     group: 'Tunnel'    },
+
+  // ── C2 ────────────────────────────────────────────────────────────────────
+  'c2-host':        { label: 'C2 Server',               placeholder: '10.10.14.1',              group: 'C2'        },
+  'listener-port':  { label: 'Listener Port',           placeholder: '443',                     group: 'C2'        },
+
+  // ── Engagement / Misc ─────────────────────────────────────────────────────
+  'threads':        { label: 'Thread Count',            placeholder: '50',                      group: 'Misc'      },
+  'output-dir':     { label: 'Output Directory',        placeholder: '/tmp/loot',               group: 'Misc'      },
+  'timeout':        { label: 'Timeout (seconds)',        placeholder: '30',                      group: 'Misc'      },
+
+  // ── Cracking ──────────────────────────────────────────────────────────────
+  'hash-mode':      { label: 'Hashcat Mode',            placeholder: '13100',                   group: 'Cracking'  },
+  'rules':          { label: 'Rules File',              placeholder: '/usr/share/hashcat/rules/best64.rule', group: 'Cracking' },
+  'hash-file':      { label: 'Hash File',               placeholder: '/tmp/hashes.txt',         group: 'Cracking'  },
+
+  // ── AD Extended ───────────────────────────────────────────────────────────
+  'forest-domain':  { label: 'Forest Root Domain',     placeholder: 'forest.local',            group: 'AD'        },
+  'ntds-file':      { label: 'NTDS.dit Path',          placeholder: '/tmp/ntds.dit',           group: 'AD'        },
+  'faketime':       { label: 'Faketime Offset',        placeholder: '-10h',                    group: 'AD'        },
 };
 
 // When a var has no value, check if a known alias has been set and suggest it
@@ -870,11 +897,15 @@ const VAR_SUGGEST = {
   'queue_name': 'queue-name',   'pod_name': 'cluster',
   // Execution
   'cmd': 'command',
+  // Tunneling / C2 aliases
+  'socks5':     'proxy',
+  'c2':         'c2-host',
+  'c2-ip':      'c2-host',
+  // Cracking aliases
+  'mode':       'hash-mode',
 };
 
-function _getVars()   { try { return JSON.parse(sessionStorage.getItem('pt_vars') || '{}'); } catch { return {}; } }
-function _saveVars(v) { sessionStorage.setItem('pt_vars', JSON.stringify(v)); }
-function _clearVars() { sessionStorage.removeItem('pt_vars'); }
+// _getVars / _saveVars / _clearVars are defined later (Feature 3) to support localStorage persistence
 
 /* ====== Distro toggle ====== */
 // [exegol-canonical, kali, script]  — longer/more-specific names first
@@ -1445,12 +1476,478 @@ function _initCrossSourceSearch() {
   h1.appendChild(link);
 }
 
+/* ====== FEATURE 1: Recently Visited Pages ====== */
+const PT_RECENT_KEY = 'pt_recent';
+const PT_RECENT_MAX = 10;
+
+function _getRecent() {
+  try { return JSON.parse(localStorage.getItem(PT_RECENT_KEY) || '[]'); } catch { return []; }
+}
+
+function _saveRecent(list) {
+  localStorage.setItem(PT_RECENT_KEY, JSON.stringify(list));
+}
+
+function _pushRecent() {
+  const url   = window.location.pathname;
+  // Only track content pages (not home, search, source index pages)
+  if (url === '/' || url.startsWith('/search') || url.startsWith('/api/')) return;
+  const title  = document.querySelector('.page-body h1')?.innerText?.trim()
+              || document.querySelector('h1')?.innerText?.trim()
+              || document.title.split('—')[0].trim()
+              || url;
+  const source = _activeSource || (window.__SOURCE__ || '');
+  const entry  = { title, url, source };
+  let list = _getRecent();
+  // Deduplicate by URL
+  list = list.filter(e => e.url !== url);
+  list.unshift(entry);
+  if (list.length > PT_RECENT_MAX) list = list.slice(0, PT_RECENT_MAX);
+  _saveRecent(list);
+}
+
+function _buildRecentSection() {
+  const list = _getRecent();
+  // Filter out current page so it's not listed while viewing it
+  const items = list.filter(e => e.url !== window.location.pathname);
+
+  const sKey = 'pt_recent_open';
+  const open = sessionStorage.getItem(sKey) !== 'closed';
+
+  const sec = document.createElement('div');
+  sec.className = 'pt-quick-section';
+  sec.id = 'pt-recent-section';
+
+  const hdr = document.createElement('button');
+  hdr.className = 'pt-quick-hdr';
+  hdr.innerHTML = (open ? ICON_DOWN : ICON_RIGHT) + '<span>Recently Visited</span>';
+
+  const body = document.createElement('div');
+  body.className = 'pt-quick-body';
+  if (!open) body.style.display = 'none';
+
+  function _renderRecentItems() {
+    body.innerHTML = '';
+    const cur = _getRecent().filter(e => e.url !== window.location.pathname);
+    if (!cur.length) {
+      const empty = document.createElement('div');
+      empty.className = 'pt-quick-empty';
+      empty.textContent = 'No recent pages yet.';
+      body.appendChild(empty);
+      return;
+    }
+    cur.forEach(entry => {
+      const row = document.createElement('div');
+      row.className = 'pt-quick-item';
+      const a = document.createElement('a');
+      a.className = 'nt-link nt-leaf';
+      a.href = entry.url;
+      a.textContent = entry.title;
+      a.title = entry.title;
+      row.appendChild(a);
+      body.appendChild(row);
+    });
+  }
+  _renderRecentItems();
+
+  hdr.addEventListener('click', () => {
+    const nowOpen = body.style.display !== 'none';
+    body.style.display = nowOpen ? 'none' : '';
+    hdr.innerHTML = (nowOpen ? ICON_RIGHT : ICON_DOWN) + '<span>Recently Visited</span>';
+    sessionStorage.setItem(sKey, nowOpen ? 'closed' : 'open');
+  });
+
+  sec.appendChild(hdr);
+  sec.appendChild(body);
+  return sec;
+}
+
+/* ====== FEATURE 2: Favorites / Bookmarks ====== */
+const PT_FAV_KEY = 'pt_favorites';
+
+function _getFavs() {
+  try { return JSON.parse(localStorage.getItem(PT_FAV_KEY) || '[]'); } catch { return []; }
+}
+
+function _saveFavs(list) {
+  localStorage.setItem(PT_FAV_KEY, JSON.stringify(list));
+}
+
+function _isFaved(url) {
+  return _getFavs().some(e => e.url === url);
+}
+
+function _toggleFav(url, title, source) {
+  let list = _getFavs();
+  if (_isFaved(url)) {
+    list = list.filter(e => e.url !== url);
+  } else {
+    list.unshift({ title, url, source });
+  }
+  _saveFavs(list);
+  _refreshFavBtn();
+  _refreshFavSection();
+}
+
+function _refreshFavBtn() {
+  const btn = document.getElementById('pt-fav-btn');
+  if (!btn) return;
+  const faved = _isFaved(window.location.pathname);
+  btn.textContent = faved ? '★' : '☆';
+  btn.title = faved ? 'Remove from favorites' : 'Add to favorites';
+  btn.classList.toggle('pt-fav-active', faved);
+}
+
+function _refreshFavSection() {
+  const sec = document.getElementById('pt-fav-section');
+  if (!sec) return;
+  const body = sec.querySelector('.pt-quick-body');
+  if (!body) return;
+  body.innerHTML = '';
+  const list = _getFavs();
+  if (!list.length) {
+    const empty = document.createElement('div');
+    empty.className = 'pt-quick-empty';
+    empty.textContent = 'No favorites yet.';
+    body.appendChild(empty);
+    return;
+  }
+  list.forEach(entry => {
+    const row = document.createElement('div');
+    row.className = 'pt-quick-item';
+    const a = document.createElement('a');
+    a.className = 'nt-link nt-leaf';
+    a.href = entry.url;
+    a.textContent = entry.title;
+    a.title = entry.title;
+    const rmBtn = document.createElement('button');
+    rmBtn.className = 'pt-quick-remove';
+    rmBtn.textContent = '✕';
+    rmBtn.title = 'Remove from favorites';
+    rmBtn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      let favs = _getFavs().filter(f => f.url !== entry.url);
+      _saveFavs(favs);
+      _refreshFavBtn();
+      _refreshFavSection();
+    });
+    row.appendChild(a);
+    row.appendChild(rmBtn);
+    body.appendChild(row);
+  });
+}
+
+function _buildFavSection() {
+  const sKey = 'pt_fav_open';
+  const open = sessionStorage.getItem(sKey) !== 'closed';
+
+  const sec = document.createElement('div');
+  sec.className = 'pt-quick-section';
+  sec.id = 'pt-fav-section';
+
+  const hdr = document.createElement('button');
+  hdr.className = 'pt-quick-hdr';
+  hdr.innerHTML = (open ? ICON_DOWN : ICON_RIGHT) + '<span>Favorites</span>';
+
+  const body = document.createElement('div');
+  body.className = 'pt-quick-body';
+  if (!open) body.style.display = 'none';
+
+  hdr.addEventListener('click', () => {
+    const nowOpen = body.style.display !== 'none';
+    body.style.display = nowOpen ? 'none' : '';
+    hdr.innerHTML = (nowOpen ? ICON_RIGHT : ICON_DOWN) + '<span>Favorites</span>';
+    sessionStorage.setItem(sKey, nowOpen ? 'closed' : 'open');
+  });
+
+  sec.appendChild(hdr);
+  sec.appendChild(body);
+  return sec;
+}
+
+function _initFavButton() {
+  const pageBody = document.querySelector('.page-body');
+  if (!pageBody) return;
+  const h1 = pageBody.querySelector('h1');
+  if (!h1) return;
+
+  const url    = window.location.pathname;
+  // Get clean title before any injected buttons/links are appended
+  const title  = (h1.innerText || h1.textContent || '').trim()
+                   .replace(/Find in all sources/gi, '').replace(/[★☆]/g, '').trim()
+                 || document.title.split('—')[0].trim();
+  const source = _activeSource || '';
+
+  const btn = document.createElement('button');
+  btn.id        = 'pt-fav-btn';
+  btn.className = 'pt-fav-btn';
+  btn.setAttribute('aria-label', 'Toggle favorite');
+  const faved = _isFaved(url);
+  btn.textContent = faved ? '★' : '☆';
+  btn.title = faved ? 'Remove from favorites' : 'Add to favorites';
+  if (faved) btn.classList.add('pt-fav-active');
+
+  btn.addEventListener('click', () => _toggleFav(url, title, source));
+  // Insert button inside h1 at the end so it sits inline with the title text
+  h1.appendChild(btn);
+}
+
+function _initQuickNav() {
+  // Push current page to recents
+  _pushRecent();
+
+  const allNav = document.getElementById('all-sources-nav');
+  if (!allNav) return;
+
+  // Build sections and prepend before all-sources-nav (which is inside sidebar-inner)
+  const sidebarInner = allNav.parentElement;
+  if (!sidebarInner) return;
+
+  const favSec    = _buildFavSection();
+  const recentSec = _buildRecentSection();
+
+  // Insert: Favorites first, then Recently Visited, then existing nav
+  sidebarInner.insertBefore(recentSec, allNav);
+  sidebarInner.insertBefore(favSec, recentSec);
+
+  // Initial render of favs body
+  _refreshFavSection();
+}
+
+/* ====== FEATURE 3: Variable Persistence Toggle ====== */
+// Override _getVars and _saveVars to support localStorage persistence
+function _getVars() {
+  try {
+    // Always try sessionStorage first
+    const sess = JSON.parse(sessionStorage.getItem('pt_vars') || 'null');
+    if (sess !== null) return sess;
+    // Fall back to localStorage if persistence is on
+    if (localStorage.getItem('pt_vars_persist') === '1') {
+      return JSON.parse(localStorage.getItem('pt_vars') || '{}');
+    }
+    return {};
+  } catch { return {}; }
+}
+
+function _saveVars(v) {
+  sessionStorage.setItem('pt_vars', JSON.stringify(v));
+  if (localStorage.getItem('pt_vars_persist') === '1') {
+    localStorage.setItem('pt_vars', JSON.stringify(v));
+  }
+}
+
+function _clearVars() {
+  sessionStorage.removeItem('pt_vars');
+  localStorage.removeItem('pt_vars');
+}
+
+function _initVarPersistToggle() {
+  // If persist is on and sessionStorage is empty, pre-populate from localStorage
+  if (localStorage.getItem('pt_vars_persist') === '1') {
+    const sess = sessionStorage.getItem('pt_vars');
+    if (!sess) {
+      const stored = localStorage.getItem('pt_vars');
+      if (stored) sessionStorage.setItem('pt_vars', stored);
+    }
+  }
+
+  // Inject the toggle row into the modal footer
+  const footer = document.querySelector('.var-modal-footer');
+  if (!footer) return;
+
+  const label = document.createElement('label');
+  label.className = 'var-persist-row';
+  label.title = 'When checked, variables survive tab/browser closes';
+
+  const cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.id = 'var-persist-cb';
+  cb.checked = localStorage.getItem('pt_vars_persist') === '1';
+
+  cb.addEventListener('change', () => {
+    if (cb.checked) {
+      localStorage.setItem('pt_vars_persist', '1');
+      // Sync current vars to localStorage immediately
+      const cur = sessionStorage.getItem('pt_vars');
+      if (cur) localStorage.setItem('pt_vars', cur);
+    } else {
+      localStorage.setItem('pt_vars_persist', '0');
+      localStorage.removeItem('pt_vars');
+    }
+  });
+
+  label.appendChild(cb);
+  label.appendChild(document.createTextNode(' Remember across sessions'));
+
+  // Insert at the start of footer so it's left-aligned with buttons on the right
+  footer.insertBefore(label, footer.firstChild);
+}
+
+/* ====== FEATURE 4: Page Table of Contents ====== */
+function _initPageTOC() {
+  const pageBody = document.querySelector('.page-body');
+  if (!pageBody) return;
+
+  const headings = Array.from(pageBody.querySelectorAll('h2'));
+  if (headings.length < 3) return;
+
+  // Ensure each heading has an id for anchor linking
+  headings.forEach((h, i) => {
+    if (!h.id) {
+      h.id = 'toc-h2-' + i + '-' + h.textContent.trim().toLowerCase()
+               .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+  });
+
+  const tocSKey = 'pt_toc_open';
+  // Default: open on desktop, collapsed on mobile (but we hide via CSS on small screens anyway)
+  const isOpen = sessionStorage.getItem(tocSKey) !== 'closed';
+
+  const toc = document.createElement('div');
+  toc.id = 'page-toc';
+
+  const tocHdr = document.createElement('div');
+  tocHdr.id = 'page-toc-hdr';
+
+  const tocTitle = document.createElement('span');
+  tocTitle.id = 'page-toc-title';
+  tocTitle.textContent = 'Contents';
+
+  const tocToggleBtn = document.createElement('button');
+  tocToggleBtn.id = 'page-toc-toggle';
+  tocToggleBtn.setAttribute('aria-label', 'Toggle table of contents');
+  tocToggleBtn.textContent = isOpen ? '▲' : '▼';
+
+  tocHdr.appendChild(tocTitle);
+  tocHdr.appendChild(tocToggleBtn);
+
+  const tocBody = document.createElement('div');
+  tocBody.id = 'page-toc-body';
+  if (!isOpen) tocBody.style.display = 'none';
+
+  // Build links
+  const linkEls = headings.map(h => {
+    const a = document.createElement('a');
+    a.className = 'toc-link';
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.replace(/\s*#\s*$/, '').trim();
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + h.id);
+    });
+    tocBody.appendChild(a);
+    return { a, h };
+  });
+
+  toc.appendChild(tocHdr);
+  toc.appendChild(tocBody);
+  document.body.appendChild(toc);
+
+  // Toggle expand/collapse
+  function _tocToggle() {
+    const nowOpen = tocBody.style.display !== 'none';
+    tocBody.style.display = nowOpen ? 'none' : '';
+    tocToggleBtn.textContent = nowOpen ? '▼' : '▲';
+    sessionStorage.setItem(tocSKey, nowOpen ? 'closed' : 'open');
+  }
+  tocHdr.addEventListener('click', _tocToggle);
+  tocToggleBtn.addEventListener('click', e => { e.stopPropagation(); _tocToggle(); });
+
+  // IntersectionObserver to highlight current section
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = linkEls.findIndex(l => l.h === entry.target);
+        if (idx !== -1) {
+          linkEls.forEach(l => l.a.classList.remove('toc-active'));
+          linkEls[idx].a.classList.add('toc-active');
+        }
+      }
+    });
+  }, { rootMargin: '-10% 0px -70% 0px', threshold: 0 });
+
+  headings.forEach(h => observer.observe(h));
+}
+
+/* ====== FEATURE 5: Export Code Blocks as Markdown ====== */
+function _initExportButton() {
+  const pageBody = document.querySelector('.page-body');
+  if (!pageBody) return;
+
+  const codeBlocks = pageBody.querySelectorAll('pre code');
+  if (!codeBlocks.length) return;
+
+  const h1 = pageBody.querySelector('h1');
+  if (!h1) return;
+
+  const btn = document.createElement('button');
+  btn.className = 'pt-export-btn';
+  btn.title = 'Export all code blocks as Markdown';
+  btn.innerHTML = '📋 Export';
+
+  btn.addEventListener('click', () => {
+    const pageTitle = (h1.innerText || h1.textContent || '').trim()
+                        .replace(/[★☆]/g, '').replace(/Find in all sources/gi, '').trim()
+                    || document.title.split('—')[0].trim();
+    const lines = [`# ${pageTitle}`, ''];
+
+    // Walk headings and code blocks in document order, grouping under sections
+    const allEls = Array.from(pageBody.querySelectorAll('h2, h3, pre'));
+    let currentSection = null;
+    let emittedSection = null;
+
+    allEls.forEach(el => {
+      if (el.tagName === 'H2' || el.tagName === 'H3') {
+        currentSection = (el.innerText || el.textContent || '').trim();
+        return;
+      }
+      // pre element
+      const code = el.querySelector('code');
+      if (!code) return;
+
+      // Emit section heading before first code block in that section
+      if (currentSection && currentSection !== emittedSection) {
+        lines.push(`## ${currentSection}`, '');
+        emittedSection = currentSection;
+      }
+
+      // Get language from class e.g. language-bash
+      const langMatch = (code.className || '').match(/language-(\S+)/);
+      const lang = langMatch ? langMatch[1] : '';
+
+      // innerText gives substituted text (variables already applied by _renderCode)
+      const content = (code.innerText || code.textContent || '').trimEnd();
+      lines.push('```' + lang, content, '```', '');
+    });
+
+    const md = lines.join('\n');
+    navigator.clipboard.writeText(md).then(() => {
+      btn.innerHTML = '✓ Copied!';
+      btn.classList.add('pt-export-copied');
+      setTimeout(() => {
+        btn.innerHTML = '📋 Export';
+        btn.classList.remove('pt-export-copied');
+      }, 2000);
+    }).catch(() => {
+      btn.innerHTML = '✗ Failed';
+      setTimeout(() => { btn.innerHTML = '📋 Export'; }, 2000);
+    });
+  });
+
+  // Inject after h1
+  h1.insertAdjacentElement('afterend', btn);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   _initKbdShortcutLabel();
+  _initVarPersistToggle();   // Feature 3 — must run before _initVarSystem (overrides _getVars/_saveVars/_clearVars)
   _renderAdmonitions(); // Must run before addCopyButtons (replaces blockquotes)
   _initMermaid();       // Must run before addCopyButtons (replaces mermaid pre blocks)
   addCopyButtons();
   buildAllSourcesNav();
+  _initQuickNav();      // Feature 1 & 2 — after buildAllSourcesNav so all-sources-nav exists
   _initSourceFilter();
   _initDistroToggle();
   _initImplToggle();
@@ -1459,4 +1956,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _initOfflineBadges();
   _initPalette();
   _initCrossSourceSearch();
+  _initFavButton();     // Feature 2 — star button on page h1
+  _initPageTOC();       // Feature 4
+  _initExportButton();  // Feature 5
 });

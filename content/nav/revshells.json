@@ -1,19 +1,19 @@
 [
   {
     "type": "section",
-    "title": "REVERSESHELLS",
+    "title": "REVERSE SHELLS",
     "items": [
       {
-        "title": "ReverseShells",
+        "title": "Reverse Shells",
         "url": "/page/revshells/shells",
         "children": [
           {
-            "title": "ListenerSetup",
+            "title": "Listener Setup",
             "url": "/page/revshells/shells#listener-setup",
             "children": []
           },
           {
-            "title": "TTYUpgrade",
+            "title": "TTY Upgrade",
             "url": "/page/revshells/shells#tty-upgrade",
             "children": []
           },
@@ -73,12 +73,12 @@
             "children": []
           },
           {
-            "title": "PowerShell(Encoded)",
+            "title": "PowerShell (Encoded)",
             "url": "/page/revshells/shells#powershell-encoded",
             "children": []
           },
           {
-            "title": "WindowsCMD",
+            "title": "Windows CMD",
             "url": "/page/revshells/shells#windows-cmd",
             "children": []
           },
@@ -108,27 +108,27 @@
             "children": []
           },
           {
-            "title": "OpenSSL(EncryptedShell)",
+            "title": "OpenSSL (Encrypted Shell)",
             "url": "/page/revshells/shells#openssl-encrypted-shell",
             "children": []
           },
           {
-            "title": "BindShells",
+            "title": "Bind Shells",
             "url": "/page/revshells/shells#bind-shells",
             "children": []
           },
           {
-            "title": "WebShells",
+            "title": "Web Shells",
             "url": "/page/revshells/shells#web-shells",
             "children": []
           },
           {
-            "title": "MSFVenomPayloads",
+            "title": "MSFVenom Payloads",
             "url": "/page/revshells/shells#msfvenom-payloads",
             "children": []
           },
           {
-            "title": "HTA/VBScript/JScript",
+            "title": "HTA / VBScript / JScript",
             "url": "/page/revshells/shells#hta--vbscript--jscript",
             "children": []
           },
@@ -188,47 +188,47 @@
             "children": []
           },
           {
-            "title": "NamedPipe/FIFO",
+            "title": "Named Pipe / FIFO",
             "url": "/page/revshells/shells#named-pipe--fifo",
             "children": []
           },
           {
-            "title": "NcatBrokerMode",
+            "title": "Ncat Broker Mode",
             "url": "/page/revshells/shells#ncat-broker-mode",
             "children": []
           },
           {
-            "title": "DownloadandExecute",
+            "title": "Download and Execute",
             "url": "/page/revshells/shells#download-and-execute",
             "children": []
           },
           {
-            "title": "Filter/WAFEvasion",
+            "title": "Filter / WAF Evasion",
             "url": "/page/revshells/shells#filter--waf-evasion",
             "children": []
           },
           {
-            "title": "ShellcodeExecution",
+            "title": "Shellcode Execution",
             "url": "/page/revshells/shells#shellcode-execution",
             "children": []
           },
           {
-            "title": "LD_PRELOADEscalation",
+            "title": "LD_PRELOAD Escalation",
             "url": "/page/revshells/shells#ld_preload-escalation",
             "children": []
           },
           {
-            "title": "Miscellaneous/Esoteric",
+            "title": "Miscellaneous / Esoteric",
             "url": "/page/revshells/shells#miscellaneous--esoteric",
             "children": []
           },
           {
-            "title": "CommonPortsReference",
+            "title": "Common Ports Reference",
             "url": "/page/revshells/shells#common-ports-reference",
             "children": []
           },
           {
-            "title": "QuickWorkflow",
+            "title": "Quick Workflow",
             "url": "/page/revshells/shells#quick-workflow",
             "children": []
           }

@@ -1,22 +1,22 @@
 [
   {
     "type": "link",
-    "title": "QuickReference",
+    "title": "Quick Reference",
     "url": "/page/msfvenom/quick-reference",
     "children": []
   },
   {
     "type": "link",
-    "title": "WindowsPayloads",
+    "title": "Windows Payloads",
     "url": "/page/msfvenom/payloads/windows",
     "children": [
       {
-        "title": "Reverse&BindShells",
+        "title": "Reverse & Bind Shells",
         "url": "/page/msfvenom/payloads/windows-shells",
         "children": []
       },
       {
-        "title": "Shellcode&Staged",
+        "title": "Shellcode & Staged",
         "url": "/page/msfvenom/payloads/windows-shellcode",
         "children": []
       }
@@ -24,28 +24,28 @@
   },
   {
     "type": "link",
-    "title": "Linux/macOS/Android",
+    "title": "Linux / macOS / Android",
     "url": "/page/msfvenom/payloads/linux-macos",
     "children": []
   },
   {
     "type": "link",
-    "title": "WebShells",
+    "title": "Web Shells",
     "url": "/page/msfvenom/payloads/web-shells",
     "children": []
   },
   {
     "type": "link",
-    "title": "Encoding&Evasion",
+    "title": "Encoding & Evasion",
     "url": "/page/msfvenom/evasion/encoding",
     "children": [
       {
-        "title": "EncoderReference",
+        "title": "Encoder Reference",
         "url": "/page/msfvenom/evasion/encoders",
         "children": []
       },
       {
-        "title": "BadCharacters&NOPSleds",
+        "title": "Bad Characters & NOP Sleds",
         "url": "/page/msfvenom/evasion/bad-chars",
         "children": []
       }
@@ -53,21 +53,21 @@
   },
   {
     "type": "link",
-    "title": "ShellcodeExecution",
+    "title": "Shellcode Execution",
     "url": "/page/msfvenom/execution/shellcode-execution",
     "children": [
       {
-        "title": "C++LocalFile",
+        "title": "C++ Local File",
         "url": "/page/msfvenom/execution/cpp-local",
         "children": []
       },
       {
-        "title": "C++RemoteURL",
+        "title": "C++ Remote URL",
         "url": "/page/msfvenom/execution/cpp-remote",
         "children": []
       },
       {
-        "title": "PythonExecution",
+        "title": "Python Execution",
         "url": "/page/msfvenom/execution/python",
         "children": []
       }
@@ -98,7 +98,7 @@
   },
   {
     "type": "link",
-    "title": "HandlerSetup",
+    "title": "Handler Setup",
     "url": "/page/msfvenom/handler",
     "children": []
   }

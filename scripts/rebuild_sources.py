@@ -42,6 +42,7 @@ SOURCE_LABELS = {
     "bloodhound":       "BloodHound",
     "msfvenom":         "msfvenom",
     "goexec":           "goexec",
+    "adaptix":          "Adaptix C2",
 }
 
 # Source configurations mirroring app.py _NAV_SOURCES
@@ -154,6 +155,12 @@ SOURCES_CFG = {
         "summary":    None,
         "skip_files": set(),
         "skip_dirs":  {"cmd", "internal", "pkg"},
+    },
+    "adaptix": {
+        "root":       SOURCES / "adaptix",
+        "summary":    SOURCES / "adaptix" / "SUMMARY.md",
+        "skip_files": {"README.md", "SUMMARY.md", "blogs.md", "changelog-and-updates.md"},
+        "skip_dirs":  {"development", "changelog-and-updates"},
     },
 }
 
@@ -355,6 +362,7 @@ def build_source(source_id: str, cfg: dict) -> list[dict]:
             "url":     f"/page/{source_id}/{page_path}",
             "path":    page_path,
             "excerpt": page_data["excerpt"],
+            "tags":    page_data["tags"],
         })
 
     print(f"  [{source_id}] {len(entries)} pages rebuilt")

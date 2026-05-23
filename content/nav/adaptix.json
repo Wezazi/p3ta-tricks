@@ -1,0 +1,187 @@
+[
+  {
+    "type": "link",
+    "title": "Welcome / Overview",
+    "url": "/page/adaptix/readme",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Getting Starting",
+    "url": "/page/adaptix/adaptix-c2/getting-starting",
+    "children": [
+      {
+        "title": "Installation Server",
+        "url": "/page/adaptix/adaptix-c2/getting-starting/installation-server",
+        "children": []
+      },
+      {
+        "title": "Installation Client",
+        "url": "/page/adaptix/adaptix-c2/getting-starting/installation-client",
+        "children": []
+      },
+      {
+        "title": "Starting",
+        "url": "/page/adaptix/adaptix-c2/getting-starting/starting",
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "link",
+    "title": "User Interface",
+    "url": "/page/adaptix/adaptix-c2/user-interface",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Listeners and Agents",
+    "url": "/page/adaptix/adaptix-c2/listeners-and-agents",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Agent Browsers",
+    "url": "/page/adaptix/adaptix-c2/agent-browsers",
+    "children": [
+      {
+        "title": "File Browser",
+        "url": "/page/adaptix/adaptix-c2/agent-browsers/file-browser",
+        "children": []
+      },
+      {
+        "title": "Process Browser",
+        "url": "/page/adaptix/adaptix-c2/agent-browsers/process-browser",
+        "children": []
+      },
+      {
+        "title": "Remote Terminal / Shell",
+        "url": "/page/adaptix/adaptix-c2/agent-browsers/remote-terminal-shell",
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "link",
+    "title": "Data management",
+    "url": "/page/adaptix/adaptix-c2/data-management",
+    "children": [
+      {
+        "title": "Tasks manager",
+        "url": "/page/adaptix/adaptix-c2/data-management/tasks-manager",
+        "children": []
+      },
+      {
+        "title": "Downloads Manager",
+        "url": "/page/adaptix/adaptix-c2/data-management/downloads-manager",
+        "children": []
+      },
+      {
+        "title": "Targets Manager",
+        "url": "/page/adaptix/adaptix-c2/data-management/targets-manager",
+        "children": []
+      },
+      {
+        "title": "Credentials Manager",
+        "url": "/page/adaptix/adaptix-c2/data-management/credentials-manager",
+        "children": []
+      },
+      {
+        "title": "Screenshots Manager",
+        "url": "/page/adaptix/adaptix-c2/data-management/screenshots-manager",
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "link",
+    "title": "BOF and Extensions",
+    "url": "/page/adaptix/adaptix-c2/bof-and-extensions",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Tunnels and Forwarding",
+    "url": "/page/adaptix/adaptix-c2/tunnels-and-forwarding",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Linking Agents",
+    "url": "/page/adaptix/adaptix-c2/linking-agents",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Listeners",
+    "url": "/page/adaptix/extenders/listeners",
+    "children": [
+      {
+        "title": "Beacon HTTP",
+        "url": "/page/adaptix/extenders/listeners/beacon-http",
+        "children": []
+      },
+      {
+        "title": "Beacon DNS",
+        "url": "/page/adaptix/extenders/listeners/beacon-dns",
+        "children": []
+      },
+      {
+        "title": "Beacon SMB",
+        "url": "/page/adaptix/extenders/listeners/beacon-smb",
+        "children": []
+      },
+      {
+        "title": "Beacon TCP",
+        "url": "/page/adaptix/extenders/listeners/beacon-tcp",
+        "children": []
+      },
+      {
+        "title": "Gopher TCP",
+        "url": "/page/adaptix/extenders/listeners/gopher-tcp",
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "link",
+    "title": "Agents",
+    "url": "/page/adaptix/extenders/agents",
+    "children": [
+      {
+        "title": "Beacon",
+        "url": "/page/adaptix/extenders/agents/beacon",
+        "children": [
+          {
+            "title": "Beacon BOFs",
+            "url": "/page/adaptix/extenders/agents/beacon/beacon-bofs",
+            "children": []
+          }
+        ]
+      },
+      {
+        "title": "Gopher",
+        "url": "/page/adaptix/extenders/agents/gopher",
+        "children": [
+          {
+            "title": "Gopher BOFs",
+            "url": "/page/adaptix/extenders/agents/gopher/gopher-bofs",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "link",
+    "title": "Adaptix C2",
+    "url": "/page/adaptix/adaptix-c2",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Extenders",
+    "url": "/page/adaptix/extenders",
+    "children": []
+  }
+]

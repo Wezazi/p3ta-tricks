@@ -1,78 +1,86 @@
 [
   {
-    "type": "section",
-    "title": "ACTIVEDIRECTORY",
-    "items": [
-      {
-        "title": "BloodHound",
-        "url": "/page/active-directory/Active-Directory/BloodHound",
-        "children": []
-      },
-      {
-        "title": "DACLAttacksI",
-        "url": "/page/active-directory/Active-Directory/DACL-Attacks-I",
-        "children": []
-      },
-      {
-        "title": "DACLAttacksII",
-        "url": "/page/active-directory/Active-Directory/DACL-Attacks-II",
-        "children": []
-      },
-      {
-        "title": "Enumeration",
-        "url": "/page/active-directory/Active-Directory/Enumeration",
-        "children": []
-      },
-      {
-        "title": "IntroductiontoActiveDirectory",
-        "url": "/page/active-directory/Active-Directory/Introduction-to-Active-Directory",
-        "children": []
-      },
-      {
-        "title": "KerberosAttacks",
-        "url": "/page/active-directory/Active-Directory/Kerberos-Attacks",
-        "children": []
-      },
-      {
-        "title": "LDAP",
-        "url": "/page/active-directory/Active-Directory/LDAP",
-        "children": []
-      },
-      {
-        "title": "LateralMovement",
-        "url": "/page/active-directory/Active-Directory/Lateral-Movement",
-        "children": []
-      },
-      {
-        "title": "MSSQL,Exchange&SCCM",
-        "url": "/page/active-directory/Active-Directory/MSSQL-Exchange-SCCM",
-        "children": []
-      },
-      {
-        "title": "NTLMRelayAttacks",
-        "url": "/page/active-directory/Active-Directory/NTLM-Relay-Attacks",
-        "children": []
-      },
-      {
-        "title": "PowerView",
-        "url": "/page/active-directory/Active-Directory/PowerView",
-        "children": []
-      },
-      {
-        "title": "TrustAttacks",
-        "url": "/page/active-directory/Active-Directory/Trust-Attacks",
-        "children": []
-      },
-      {
-        "title": "WindowsAttacks&Defense",
-        "url": "/page/active-directory/Active-Directory/Windows-Attacks-&-Defense",
-        "children": []
-      },
-      {
-        "title": "WindowsFundamentals",
-        "url": "/page/active-directory/Active-Directory/Windows-Fundamentals",
-        "children": []
-      }
-    ]
+    "type": "link",
+    "title": "BloodHound",
+    "url": "/page/active-directory/Active-Directory/BloodHound",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "DACL Attacks I",
+    "url": "/page/active-directory/Active-Directory/DACL-Attacks-I",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "DACL Attacks II",
+    "url": "/page/active-directory/Active-Directory/DACL-Attacks-II",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Enumeration",
+    "url": "/page/active-directory/Active-Directory/Enumeration",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Introduction to Active Directory",
+    "url": "/page/active-directory/Active-Directory/Introduction-to-Active-Directory",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Kerberos Attacks",
+    "url": "/page/active-directory/Active-Directory/Kerberos-Attacks",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "LDAP",
+    "url": "/page/active-directory/Active-Directory/LDAP",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Lateral Movement",
+    "url": "/page/active-directory/Active-Directory/Lateral-Movement",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "MSSQL, Exchange & SCCM",
+    "url": "/page/active-directory/Active-Directory/MSSQL-Exchange-SCCM",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "NTLM Relay Attacks",
+    "url": "/page/active-directory/Active-Directory/NTLM-Relay-Attacks",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "PowerView",
+    "url": "/page/active-directory/Active-Directory/PowerView",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Trust Attacks",
+    "url": "/page/active-directory/Active-Directory/Trust-Attacks",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Windows Attacks & Defense",
+    "url": "/page/active-directory/Active-Directory/Windows-Attacks-&-Defense",
+    "children": []
+  },
+  {
+    "type": "link",
+    "title": "Windows Fundamentals",
+    "url": "/page/active-directory/Active-Directory/Windows-Fundamentals",
+    "children": []
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "type": "section",
-    "title": "TABLEOFCONTENTS",
+    "title": "Contents",
     "items": [
       {
         "title": "Welcome",
@@ -13,34 +13,34 @@
         "url": "/page/netexec/news",
         "children": [
           {
-            "title": "v1.0.0Release!",
+            "title": "v1.0.0 Release!",
             "url": "/page/netexec/news/v1.0.0-release",
             "children": []
           },
           {
-            "title": "v1.1.0-nxc4u",
+            "title": "v1.1.0 - nxc4u",
             "url": "/page/netexec/news/v1.1.0-nxc4u",
             "children": []
           },
           {
-            "title": "v1.2.0-ItsAlwaysDNS",
+            "title": "v1.2.0 - ItsAlwaysDNS",
             "url": "/page/netexec/news/v1.2.0-ItsAlwaysDNS",
             "children": []
           },
           {
-            "title": "v1.3.0-NeedForSpeed",
+            "title": "v1.3.0 - NeedForSpeed",
             "url": "/page/netexec/news/v1.3.0-NeedForSpeed",
             "children": []
           },
           {
-            "title": "v1.4.0-SmoothOperator",
+            "title": "v1.4.0 - SmoothOperator",
             "url": "/page/netexec/news/v1.4.0-SmoothOperator",
             "children": []
           }
         ]
       },
       {
-        "title": "NetExecLab",
+        "title": "NetExec Lab",
         "url": "/page/netexec/netexec-lab",
         "children": []
       }
@@ -48,96 +48,96 @@
   },
   {
     "type": "section",
-    "title": "GETTINGSTARTED",
+    "title": "GETTING STARTED",
     "items": [
       {
         "title": "Installation",
         "url": "/page/netexec/getting-started/installation",
         "children": [
           {
-            "title": "InstallationforUnix",
+            "title": "Installation for Unix",
             "url": "/page/netexec/getting-started/installation/installation-on-unix",
             "children": []
           },
           {
-            "title": "InstallationforWindows",
+            "title": "Installation for Windows",
             "url": "/page/netexec/getting-started/installation/installation-on-windows",
             "children": []
           },
           {
-            "title": "InstallationforMac",
+            "title": "Installation for Mac",
             "url": "/page/netexec/getting-started/installation/installation-for-mac",
             "children": []
           },
           {
-            "title": "UsingDocker",
+            "title": "Using Docker",
             "url": "/page/netexec/getting-started/installation/using-docker",
             "children": []
           },
           {
-            "title": "Manuallybuildingthebinary",
+            "title": "Manually building the binary",
             "url": "/page/netexec/getting-started/installation/manually-building-the-binary",
             "children": []
           },
           {
-            "title": "PostInstallationSetup",
+            "title": "Post Installation Setup",
             "url": "/page/netexec/getting-started/installation/setting-up-tab-completion",
             "children": []
           }
         ]
       },
       {
-        "title": "Selecting&UsingaProtocol",
+        "title": "Selecting & Using a Protocol",
         "url": "/page/netexec/getting-started/selecting-and-using-a-protocol",
         "children": []
       },
       {
-        "title": "TargetFormats",
+        "title": "Target Formats",
         "url": "/page/netexec/getting-started/target-formats",
         "children": []
       },
       {
-        "title": "UsingCredentials",
+        "title": "Using Credentials",
         "url": "/page/netexec/getting-started/using-credentials",
         "children": []
       },
       {
-        "title": "UsingKerberos",
+        "title": "Using Kerberos",
         "url": "/page/netexec/getting-started/using-kerberos",
         "children": []
       },
       {
-        "title": "UsingCertificates",
+        "title": "Using Certificates",
         "url": "/page/netexec/getting-started/using-certificates",
         "children": []
       },
       {
-        "title": "UsingModules",
+        "title": "Using Modules",
         "url": "/page/netexec/getting-started/using-modules",
         "children": []
       },
       {
-        "title": "DNSoptions",
+        "title": "DNS options",
         "url": "/page/netexec/getting-started/dns-options",
         "children": []
       },
       {
-        "title": "DatabaseGeneralUsage",
+        "title": "Database General Usage",
         "url": "/page/netexec/getting-started/database-general-usage",
         "children": []
       },
       {
-        "title": "BloodHoundIntegration",
+        "title": "BloodHound Integration",
         "url": "/page/netexec/getting-started/bloodhound-integration",
         "children": []
       },
       {
-        "title": "AuditMode",
+        "title": "Audit Mode",
         "url": "/page/netexec/getting-started/audit-mode",
         "children": []
       },
       {
-        "title": "IgnoreOpSecWarnings",
+        "title": "Ignore OpSec Warnings",
         "url": "/page/netexec/getting-started/ignore-opsec-warnings",
         "children": []
       },
@@ -150,25 +150,25 @@
   },
   {
     "type": "section",
-    "title": "SMBPROTOCOL",
+    "title": "SMB PROTOCOL",
     "items": [
       {
-        "title": "Generatehostsfile",
+        "title": "Generate hosts file",
         "url": "/page/netexec/smb-protocol/generate-hosts-file",
         "children": []
       },
       {
-        "title": "Generatekrb5.conffile",
+        "title": "Generate krb5.conf file",
         "url": "/page/netexec/smb-protocol/generate-krb5.conf-file",
         "children": []
       },
       {
-        "title": "GenerateTGT",
+        "title": "Generate TGT",
         "url": "/page/netexec/smb-protocol/generate-tgt",
         "children": []
       },
       {
-        "title": "ScanforVulnerabilities",
+        "title": "Scan for Vulnerabilities",
         "url": "/page/netexec/smb-protocol/scan-for-vulnerabilities",
         "children": []
       },
@@ -177,114 +177,114 @@
         "url": "/page/netexec/smb-protocol/enumeration",
         "children": [
           {
-            "title": "EnumerateHosts",
+            "title": "Enumerate Hosts",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-hosts",
             "children": []
           },
           {
-            "title": "EnumerateNullSessions",
+            "title": "Enumerate Null Sessions",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-null-sessions",
             "children": []
           },
           {
-            "title": "EnumerateGuestLogon",
+            "title": "Enumerate Guest Logon",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-guest-logon",
             "children": []
           },
           {
-            "title": "EnumerateHostswithSMBSigningNotRequired",
+            "title": "Enumerate Hosts with SMB Signing Not Required",
             "url": "/page/netexec/smb-protocol/enumeration/smb-signing-not-required",
             "children": []
           },
           {
-            "title": "EnumerateActiveWindowsSessions",
+            "title": "Enumerate Active Windows Sessions",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-active-windows-sessions",
             "children": []
           },
           {
-            "title": "EnumerateLogged-OnUserswiththeRemoteRegistryService",
+            "title": "Enumerate Logged-On Users with the Remote Registry Service",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-logged-on-users-winreg",
             "children": []
           },
           {
-            "title": "EnumerateLogged-OnUserswiththeWorkstationService",
+            "title": "Enumerate Logged-On Users with the Workstation Service",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-logged-on-users-wkssvc",
             "children": []
           },
           {
-            "title": "EnumerateSharesandAccess",
+            "title": "Enumerate Shares and Access",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-shares-and-access",
             "children": []
           },
           {
-            "title": "EnumerateNetworkInterfaces",
+            "title": "Enumerate Network Interfaces",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-network-interfaces",
             "children": []
           },
           {
-            "title": "EnumerateNTLMv1",
+            "title": "Enumerate NTLMv1",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-ntlmv1",
             "children": []
           },
           {
-            "title": "EnumerateDisks",
+            "title": "Enumerate Disks",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-disks",
             "children": []
           },
           {
-            "title": "EnumerateBitlocker",
+            "title": "Enumerate Bitlocker",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-bitlocker",
             "children": []
           },
           {
-            "title": "EnumerateDomainUsers",
+            "title": "Enumerate Domain Users",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-users",
             "children": []
           },
           {
-            "title": "EnumerateUsersbyBruteforcingRID",
+            "title": "Enumerate Users by Bruteforcing RID",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-users-by-bruteforcing-rid",
             "children": []
           },
           {
-            "title": "EnumerateDomainGroups",
+            "title": "Enumerate Domain Groups",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-groups",
             "children": []
           },
           {
-            "title": "EnumerateLocalGroups",
+            "title": "Enumerate Local Groups",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-local-groups",
             "children": []
           },
           {
-            "title": "EnumerateDomainPasswordPolicy",
+            "title": "Enumerate Domain Password Policy",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-domain-password-policy-1",
             "children": []
           },
           {
-            "title": "EnumerateAnti-Virus&EDR",
+            "title": "Enumerate Anti-Virus & EDR",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-antivirus-edr",
             "children": []
           },
           {
-            "title": "Enumerateremoteprocesses",
+            "title": "Enumerate remote processes",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-remote-processes",
             "children": []
           },
           {
-            "title": "Enumeratechangedlockscreenexecutables",
+            "title": "Enumerate changed lockscreen executables",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-lockscreen-backdoors",
             "children": []
           },
           {
-            "title": "EnumeratePrimarySiteServerandDistributionPointviarecon6",
+            "title": "Enumerate Primary Site Server and Distribution Point via recon6",
             "url": "/page/netexec/smb-protocol/enumeration/enumerate-sccm-primarysiteserver-and-distributionpoint",
             "children": []
           }
         ]
       },
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/smb-protocol/password-spraying",
         "children": []
       },
@@ -293,12 +293,12 @@
         "url": "/page/netexec/smb-protocol/authentication",
         "children": [
           {
-            "title": "CheckingCredentials(Domain)",
+            "title": "Checking Credentials (Domain)",
             "url": "/page/netexec/smb-protocol/authentication/checking-credentials-domain",
             "children": []
           },
           {
-            "title": "CheckingCredentials(Local)",
+            "title": "Checking Credentials (Local)",
             "url": "/page/netexec/smb-protocol/authentication/checking-credentials-local",
             "children": []
           },
@@ -310,170 +310,170 @@
         ]
       },
       {
-        "title": "CommandExecution",
+        "title": "Command Execution",
         "url": "/page/netexec/smb-protocol/command-execution",
         "children": [
           {
-            "title": "ExecutingRemoteCommands",
+            "title": "Executing Remote Commands",
             "url": "/page/netexec/smb-protocol/command-execution/execute-remote-command",
             "children": [
               {
-                "title": "ProcessInjection(pimodule)",
+                "title": "Process Injection (pi module)",
                 "url": "/page/netexec/smb-protocol/command-execution/execute-remote-command/process-injection-pi-module",
                 "children": []
               }
             ]
           },
           {
-            "title": "GettingShells101",
+            "title": "Getting Shells 101",
             "url": "/page/netexec/smb-protocol/command-execution/getting-shells-101",
             "children": []
           }
         ]
       },
       {
-        "title": "SpideringShares",
+        "title": "Spidering Shares",
         "url": "/page/netexec/smb-protocol/spidering-shares",
         "children": []
       },
       {
-        "title": "GetandPutFiles",
+        "title": "Get and Put Files",
         "url": "/page/netexec/smb-protocol/get-and-put-files",
         "children": []
       },
       {
-        "title": "ObtainingCredentials",
+        "title": "Obtaining Credentials",
         "url": "/page/netexec/smb-protocol/obtaining-credentials",
         "children": [
           {
-            "title": "DumpSAM",
+            "title": "Dump SAM",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-sam",
             "children": []
           },
           {
-            "title": "DumpLSA",
+            "title": "Dump LSA",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-lsa",
             "children": []
           },
           {
-            "title": "DumpNTDS.dit",
+            "title": "Dump NTDS.dit",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-ntds.dit",
             "children": []
           },
           {
-            "title": "DumpLSASS",
+            "title": "Dump LSASS",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-lsass",
             "children": []
           },
           {
-            "title": "DumpDPAPI",
+            "title": "Dump DPAPI",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-dpapi",
             "children": []
           },
           {
-            "title": "DumpwithBackupOperatorPriv",
+            "title": "Dump with BackupOperator Priv",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-backupop",
             "children": []
           },
           {
-            "title": "DumpSCCM",
+            "title": "Dump SCCM",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-sccm",
             "children": []
           },
           {
-            "title": "DumpTokenBrokerCache",
+            "title": "Dump Token Broker Cache",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-token-broker-cache",
             "children": []
           },
           {
-            "title": "DumpWIFIpassword",
+            "title": "Dump WIFI password",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-wifi-password",
             "children": []
           },
           {
-            "title": "DumpKeePass",
+            "title": "Dump KeePass",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-keepass",
             "children": []
           },
           {
-            "title": "DumpVeeam",
+            "title": "Dump Veeam",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-veeam",
             "children": []
           },
           {
-            "title": "DumpWinSCP",
+            "title": "Dump WinSCP",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-winscp",
             "children": []
           },
           {
-            "title": "DumpPuTTY",
+            "title": "Dump PuTTY",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-putty",
             "children": []
           },
           {
-            "title": "DumpVNC",
+            "title": "Dump VNC",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-vnc",
             "children": []
           },
           {
-            "title": "DumpmRemoteNG",
+            "title": "Dump mRemoteNG",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-mremoteng",
             "children": []
           },
           {
-            "title": "DumpNotepad",
+            "title": "Dump Notepad",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-notepad",
             "children": []
           },
           {
-            "title": "DumpNotepad++",
+            "title": "Dump Notepad++",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-notepad++",
             "children": []
           },
           {
-            "title": "DumpRemoteDesktopCredentialManager",
+            "title": "Dump Remote Desktop Credential Manager",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/dump-rdcman",
             "children": []
           },
           {
-            "title": "DumpEventLogCreds(4688)",
+            "title": "Dump Event Log Creds(4688)",
             "url": "/page/netexec/smb-protocol/obtaining-credentials/eventlog-creds",
             "children": []
           }
         ]
       },
       {
-        "title": "DefeatingLAPS",
+        "title": "Defeating LAPS",
         "url": "/page/netexec/smb-protocol/defeating-laps",
         "children": []
       },
       {
-        "title": "CheckingforSpooler&WebDav",
+        "title": "Checking for Spooler & WebDav",
         "url": "/page/netexec/smb-protocol/spooler-webdav-running",
         "children": []
       },
       {
-        "title": "StealMicrosoftTeamsCookies",
+        "title": "Steal Microsoft Teams Cookies",
         "url": "/page/netexec/smb-protocol/steal-microsoft-teams-cookies",
         "children": []
       },
       {
-        "title": "Impersonatelogged-onUsers",
+        "title": "Impersonate logged-on Users",
         "url": "/page/netexec/smb-protocol/impersonate-logged-on-users",
         "children": []
       },
       {
-        "title": "ChangeUserPassword",
+        "title": "Change User Password",
         "url": "/page/netexec/smb-protocol/change-user-password",
         "children": []
       },
       {
-        "title": "ModifyGroup",
+        "title": "Modify Group",
         "url": "/page/netexec/smb-protocol/modify-group",
         "children": []
       },
       {
-        "title": "DumpUserLocalSecurityQuestions",
+        "title": "Dump User Local Security Questions",
         "url": "/page/netexec/smb-protocol/dump-user-local-security-questions",
         "children": []
       }
@@ -481,7 +481,7 @@
   },
   {
     "type": "section",
-    "title": "LDAPPROTOCOL",
+    "title": "LDAP PROTOCOL",
     "items": [
       {
         "title": "Authentication",
@@ -489,17 +489,17 @@
         "children": []
       },
       {
-        "title": "EnumerateDomainUsers",
+        "title": "Enumerate Domain Users",
         "url": "/page/netexec/ldap-protocol/enumerate-users",
         "children": []
       },
       {
-        "title": "EnumerateDomainGroups",
+        "title": "Enumerate Domain Groups",
         "url": "/page/netexec/ldap-protocol/enumerate-group-members",
         "children": []
       },
       {
-        "title": "QueryLDAP",
+        "title": "Query LDAP",
         "url": "/page/netexec/ldap-protocol/query-ldap",
         "children": []
       },
@@ -509,7 +509,7 @@
         "children": []
       },
       {
-        "title": "FindDomainSID",
+        "title": "Find Domain SID",
         "url": "/page/netexec/ldap-protocol/find-domain-sid",
         "children": []
       },
@@ -519,107 +519,107 @@
         "children": []
       },
       {
-        "title": "FindMisconfiguredDelegation",
+        "title": "Find Misconfigured Delegation",
         "url": "/page/netexec/ldap-protocol/find-misconfigured-delegation",
         "children": []
       },
       {
-        "title": "UnconstrainedDelegation",
+        "title": "Unconstrained Delegation",
         "url": "/page/netexec/ldap-protocol/unconstrained-delegation",
         "children": []
       },
       {
-        "title": "AdminCount",
+        "title": "Admin Count",
         "url": "/page/netexec/ldap-protocol/admin-count",
         "children": []
       },
       {
-        "title": "MachineAccountQuota",
+        "title": "Machine Account Quota",
         "url": "/page/netexec/ldap-protocol/machine-account-quota",
         "children": []
       },
       {
-        "title": "GetUserDescriptions",
+        "title": "Get User Descriptions",
         "url": "/page/netexec/ldap-protocol/get-user-descriptions",
         "children": []
       },
       {
-        "title": "DumpgMSA",
+        "title": "Dump gMSA",
         "url": "/page/netexec/ldap-protocol/dump-gmsa",
         "children": []
       },
       {
-        "title": "Pre2kComputerAccountAbuse",
+        "title": "Pre2k Computer Account Abuse",
         "url": "/page/netexec/ldap-protocol/pre2k",
         "children": []
       },
       {
-        "title": "ExploitESC8(ADCS)",
+        "title": "Exploit ESC8 (ADCS)",
         "url": "/page/netexec/ldap-protocol/exploit-esc8-adcs",
         "children": []
       },
       {
-        "title": "ExtractSubnet",
+        "title": "Extract Subnet",
         "url": "/page/netexec/ldap-protocol/extract-subnet",
         "children": []
       },
       {
-        "title": "CheckLDAPSigning",
+        "title": "Check LDAP Signing",
         "url": "/page/netexec/ldap-protocol/check-ldap-signing",
         "children": []
       },
       {
-        "title": "ReadDACLRights",
+        "title": "Read DACL Rights",
         "url": "/page/netexec/ldap-protocol/read-dacl-right",
         "children": []
       },
       {
-        "title": "ExtractgMSASecrets",
+        "title": "Extract gMSA Secrets",
         "url": "/page/netexec/ldap-protocol/extract-gmsa-secrets",
         "children": []
       },
       {
-        "title": "BloodhoundIngestor",
+        "title": "Bloodhound Ingestor",
         "url": "/page/netexec/ldap-protocol/bloodhound-ingestor",
         "children": []
       },
       {
-        "title": "ListDCIP/EnumTrust",
+        "title": "List DC IP / Enum Trust",
         "url": "/page/netexec/ldap-protocol/dc-list",
         "children": []
       },
       {
-        "title": "AbuseDomainTrust:Raisechild",
+        "title": "Abuse Domain Trust: Raisechild",
         "url": "/page/netexec/ldap-protocol/raisechild",
         "children": []
       },
       {
-        "title": "EnumerateDomainTrusts",
+        "title": "Enumerate Domain Trusts",
         "url": "/page/netexec/ldap-protocol/enumerate-trusts",
         "children": []
       },
       {
-        "title": "EnumerateSCCM",
+        "title": "Enumerate SCCM",
         "url": "/page/netexec/ldap-protocol/enumerate-sccm",
         "children": []
       },
       {
-        "title": "EnumerateEntraID",
+        "title": "Enumerate Entra ID",
         "url": "/page/netexec/ldap-protocol/enumerate-entra-id",
         "children": []
       },
       {
-        "title": "DumpPSO",
+        "title": "Dump PSO",
         "url": "/page/netexec/dump-pso",
         "children": []
       },
       {
-        "title": "EnumeratescriptPath",
+        "title": "Enumerate scriptPath",
         "url": "/page/netexec/ldap-protocol/get-scriptpath",
         "children": []
       },
       {
-        "title": "EnumerateUnsecureDNSZones",
+        "title": "Enumerate Unsecure DNS Zones",
         "url": "/page/netexec/ldap-protocol/enumerate-unsecure-dns-zones",
         "children": []
       }
@@ -627,10 +627,10 @@
   },
   {
     "type": "section",
-    "title": "WINRMPROTOCOL",
+    "title": "WINRM PROTOCOL",
     "items": [
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/winrm-protocol/password-spraying",
         "children": []
       },
@@ -640,31 +640,31 @@
         "children": []
       },
       {
-        "title": "CommandExecution",
+        "title": "Command Execution",
         "url": "/page/netexec/winrm-protocol/command-execution",
         "children": []
       },
       {
-        "title": "DefeatingLAPS",
+        "title": "Defeating LAPS",
         "url": "/page/netexec/winrm-protocol/defeating-laps",
         "children": []
       },
       {
-        "title": "ObtainingCredentials",
+        "title": "Obtaining Credentials",
         "url": "/page/netexec/winrm-protocol/obtaining-credentials",
         "children": [
           {
-            "title": "DumpSAM",
+            "title": "Dump SAM",
             "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-sam",
             "children": []
           },
           {
-            "title": "DumpLSA",
+            "title": "Dump LSA",
             "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-lsa",
             "children": []
           },
           {
-            "title": "DumpDPAPI",
+            "title": "Dump DPAPI",
             "url": "/page/netexec/winrm-protocol/obtaining-credentials/dump-dpapi",
             "children": []
           }
@@ -674,26 +674,26 @@
   },
   {
     "type": "section",
-    "title": "MSSQLPROTOCOL",
+    "title": "MSSQL PROTOCOL",
     "items": [
       {
         "title": "Enumeration",
         "url": "/page/netexec/mssql-protocol/enumeration",
         "children": [
           {
-            "title": "Enumeratingencryptionsettings",
+            "title": "Enumerating encryption settings",
             "url": "/page/netexec/mssql-protocol/enumeration/enumerating-encryption-settings",
             "children": []
           },
           {
-            "title": "EnumeratingChannelBindingconfiguration",
+            "title": "Enumerating Channel Binding configuration",
             "url": "/page/netexec/mssql-protocol/enumeration/enumerating-channel-binding-configuration",
             "children": []
           }
         ]
       },
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/mssql-protocol/mssql-passwordspray",
         "children": []
       },
@@ -703,32 +703,32 @@
         "children": []
       },
       {
-        "title": "MSSQLPrivEsc",
+        "title": "MSSQL PrivEsc",
         "url": "/page/netexec/mssql-protocol/mssql-privesc",
         "children": []
       },
       {
-        "title": "MSSQLCommandExecution",
+        "title": "MSSQL Command Execution",
         "url": "/page/netexec/mssql-protocol/mssql-command",
         "children": []
       },
       {
-        "title": "MSSQLUpload&Download",
+        "title": "MSSQL Upload & Download",
         "url": "/page/netexec/mssql-protocol/mssql-upload-download",
         "children": []
       },
       {
-        "title": "Executeviaxp\\_cmdshell",
+        "title": "Execute via xp\\_cmdshell",
         "url": "/page/netexec/mssql-protocol/windows-command",
         "children": []
       },
       {
-        "title": "EnumerateUsersbyBruteforcingRID",
+        "title": "Enumerate Users by Bruteforcing RID",
         "url": "/page/netexec/mssql-protocol/enumerate-users-by-bruteforcing-rid",
         "children": []
       },
       {
-        "title": "MSSQLLinkedServers",
+        "title": "MSSQL Linked Servers",
         "url": "/page/netexec/mssql-protocol/mssql-linked-servers",
         "children": []
       }
@@ -736,10 +736,10 @@
   },
   {
     "type": "section",
-    "title": "SSHPROTOCOL",
+    "title": "SSH PROTOCOL",
     "items": [
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/ssh-protocol/password-spraying",
         "children": []
       },
@@ -749,12 +749,12 @@
         "children": []
       },
       {
-        "title": "CommandExecution",
+        "title": "Command Execution",
         "url": "/page/netexec/ssh-protocol/command-execution",
         "children": []
       },
       {
-        "title": "GetandPutFiles",
+        "title": "Get and Put Files",
         "url": "/page/netexec/ssh-protocol/get-and-put-files",
         "children": []
       }
@@ -762,20 +762,20 @@
   },
   {
     "type": "section",
-    "title": "FTPPROTOCOL",
+    "title": "FTP PROTOCOL",
     "items": [
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/ftp-protocol/password-spraying",
         "children": []
       },
       {
-        "title": "FileListing,etc",
+        "title": "File Listing, etc",
         "url": "/page/netexec/ftp-protocol/file-listing-etc",
         "children": []
       },
       {
-        "title": "FileUpload&Download",
+        "title": "File Upload & Download",
         "url": "/page/netexec/ftp-protocol/get-and-put-files",
         "children": []
       }
@@ -783,25 +783,25 @@
   },
   {
     "type": "section",
-    "title": "RDPPROTOCOL",
+    "title": "RDP PROTOCOL",
     "items": [
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/rdp-protocol/password-spraying",
         "children": []
       },
       {
-        "title": "Screenshot(connected)",
+        "title": "Screenshot (connected)",
         "url": "/page/netexec/rdp-protocol/screenshot-connected",
         "children": []
       },
       {
-        "title": "ScreenshotWithoutNLA(notconnected)",
+        "title": "Screenshot Without NLA (not connected)",
         "url": "/page/netexec/rdp-protocol/screenshot-without-nla-not-connected",
         "children": []
       },
       {
-        "title": "CommandExecution",
+        "title": "Command Execution",
         "url": "/page/netexec/rdp-protocol/command-execution",
         "children": []
       }
@@ -809,10 +809,10 @@
   },
   {
     "type": "section",
-    "title": "WMIPROTOCOL",
+    "title": "WMI PROTOCOL",
     "items": [
       {
-        "title": "PasswordSpraying",
+        "title": "Password Spraying",
         "url": "/page/netexec/wmi-protocol/password-spraying",
         "children": []
       },
@@ -822,7 +822,7 @@
         "children": []
       },
       {
-        "title": "CommandExecution",
+        "title": "Command Execution",
         "url": "/page/netexec/wmi-protocol/command-execution",
         "children": []
       }
@@ -830,7 +830,7 @@
   },
   {
     "type": "section",
-    "title": "NFSPROTOCOL",
+    "title": "NFS PROTOCOL",
     "items": [
       {
         "title": "Enumeration",
@@ -838,7 +838,7 @@
         "children": []
       },
       {
-        "title": "DownloadandUploadFiles",
+        "title": "Download and Upload Files",
         "url": "/page/netexec/nfs-protocol/Download-and-Upload-Files",
         "children": []
       },
@@ -848,7 +848,7 @@
         "children": []
       },
       {
-        "title": "Escapetorootfilesystem",
+        "title": "Escape to root file system",
         "url": "/page/netexec/nfs-protocol/escape-to-root-file-system",
         "children": []
       }
@@ -856,7 +856,7 @@
   },
   {
     "type": "section",
-    "title": "VNCPROTOCOL",
+    "title": "VNC PROTOCOL",
     "items": [
       {
         "title": "Authentication",

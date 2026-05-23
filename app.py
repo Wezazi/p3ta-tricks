@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """p3ta-tricks Flask app — unified offline pentest reference."""
 import json, re, os, shutil, yaml
+import urllib.request as _ur
+from collections import OrderedDict
 from pathlib import Path
 from urllib.parse import quote as _url_quote
 from flask import Flask, render_template, request, jsonify, abort, send_from_directory, redirect, Response, stream_with_context
@@ -12,7 +14,7 @@ SOURCES       = ROOT / "sources"
 NAV_CACHE_DIR = ROOT / "content" / "nav"
 
 # Offline mode — set OFFLINE_MODE=1 and TOOLS_DIR=/path/to/tools
-OFFLINE_MODE = os.environ.get("OFFLINE_MODE", os.environ.get("OFFLINE_MODE", "0")) == "1"
+OFFLINE_MODE = os.environ.get("OFFLINE_MODE", "0") == "1"
 TOOLS_DIR    = Path(os.environ.get("TOOLS_DIR", ROOT.parent / "p3ta-tricks-offline" / "tools"))
 BINARIES_DIR = ROOT / "binaries"  # compiled binaries served on online mode too
 SITE_URL     = os.environ.get("SITE_URL", "https://p3ta-tricks.com")
@@ -172,6 +174,15 @@ TOOL_MAP = {
 app = Flask(__name__)
 
 
+@app.after_request
+def _security_headers(response):
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    response.headers['Permissions-Policy'] = 'camera=(), microphone=(), geolocation=()'
+    return response
+
+
 @app.context_processor
 def inject_globals():
     """Inject globals into every template."""
@@ -179,8 +190,7 @@ def inject_globals():
     if not OFFLINE_MODE:
         base.update({"offline_mode": False, "offline_config_json": "null"})
         return base
-    available = {name: True for name in set(TOOL_MAP.values())
-                 if (TOOLS_DIR / name).exists()}
+    available = {name: True for name in _AVAILABLE_TOOLS}
     cfg = {
         "offline": True,
         "tools": available,
@@ -222,6 +232,9 @@ SOURCE_META = {
     "active-directory": {"label": "Active Directory",           "color": "var(--green)",   "icon": "🎓"},
     "exploitdb":        {"label": "Exploit-DB",               "color": "var(--red)",     "icon": "💥"},
     "cyberchef":        {"label": "CyberChef",                "color": "var(--green)",   "icon": "🍳"},
+    "adaptix":         {"label": "Adaptix C2",             "color": "var(--purple)",  "icon": "🎯"},
+    "linux-privesc":   {"label": "Linux PrivEsc",          "color": "var(--orange)",  "icon": "🐧"},
+    "windows-privesc": {"label": "Windows PrivEsc",         "color": "var(--blue)",    "icon": "🪟"},
 }
 
 _NAV_SOURCES = {
@@ -385,6 +398,12 @@ _NAV_SOURCES = {
         "skip_dirs": set(),
         "skip_files": {"SUMMARY.md"},
     },
+    "adaptix": {
+        "root":    SOURCES / "adaptix",
+        "summary": SOURCES / "adaptix" / "SUMMARY.md",
+        "skip_dirs":  {"development", "changelog-and-updates"},
+        "skip_files": {"README.md", "SUMMARY.md", "blogs.md", "changelog-and-updates.md"},
+    },
 }
 
 _EMOJI_RE   = re.compile(r'[\U0001F000-\U0001FFFF‍ -⟿☀-⟿︀-﻿]+\s*')
@@ -392,10 +411,49 @@ _LINK_RE    = re.compile(r'^(\s*)[-*]\s+\[([^\]]+)\]\(([^)]+\.md(?:#[^)]*)?)\)')
 _SECTION_RE = re.compile(r'^#{1,3}\s+(.+)$')
 
 _index_cache = None
-_page_cache  = {}
 _nav_cache   = {}
 
+_PAGE_CACHE_MAX = 300
+_page_cache: OrderedDict = OrderedDict()
+
+def _page_cache_get(key):
+    if key in _page_cache:
+        _page_cache.move_to_end(key)
+        return _page_cache[key]
+    return None
+
+def _page_cache_set(key, value):
+    _page_cache[key] = value
+    _page_cache.move_to_end(key)
+    if len(_page_cache) > _PAGE_CACHE_MAX:
+        _page_cache.popitem(last=False)
+
 _IMG_RE = re.compile(r'(<img\b[^>]*?\bsrc=)(["\'])([^"\']+)\2', re.I | re.S)
+
+
+# Pre-built path→file lookup for O(1) page resolution
+def _build_page_index():
+    idx = {}
+    for p in PROCESSED.rglob('*.json'):
+        rel = p.relative_to(PROCESSED)
+        # Key: source__stem (source dir + __ + path stem with __ separators)
+        parts = list(rel.parts)
+        source_part = parts[0]
+        stem_part   = str(Path(*parts[1:]).with_suffix('')) if len(parts) > 1 else ''
+        stem_key    = stem_part.replace('/', '__').replace('\\', '__')
+        full_key    = f"{source_part}__{stem_key}"
+        idx[full_key] = p
+        # Also index by stem alone for flat single-file sources
+        idx[p.stem] = p
+    return idx
+
+_PAGE_INDEX: dict = _build_page_index()
+
+# Pre-computed at startup for inject_globals
+_AVAILABLE_TOOLS: set = set()
+if OFFLINE_MODE:
+    _AVAILABLE_TOOLS = {name for name in set(TOOL_MAP.values())
+                        if (TOOLS_DIR / name).exists() or (BINARIES_DIR / name).exists()}
 
 
 def _resolve_rel(page_dir: str, src: str) -> str:
@@ -465,8 +523,15 @@ def _load_index():
 
 def _load_page(source: str, page_path: str):
     key = f"{source}/{page_path}"
-    if key not in _page_cache:
-        safe = page_path.replace("/", "__")
+    cached = _page_cache_get(key)
+    if cached is not None:
+        return cached
+    safe = page_path.replace("/", "__")
+    # O(1) lookup via pre-built index; fall back to glob only if not found
+    candidate = (_PAGE_INDEX.get(f"{source}__{safe}")
+                 or _PAGE_INDEX.get(f"{source}__{safe.replace('-', '_')}")
+                 or _PAGE_INDEX.get(f"{source}__{safe.replace('_', '-')}"))
+    if candidate is None:
         candidates = list((PROCESSED / source).glob(f"{safe}.json"))
         if not candidates:
             safe_hyp = safe.replace(" ", "-")
@@ -477,15 +542,16 @@ def _load_page(source: str, page_path: str):
             candidates = list(PROCESSED.rglob(f"{safe.replace(' ', '-')}.json"))
         if not candidates:
             return None
-        try:
-            data = json.loads(candidates[0].read_text(encoding="utf-8"))
-            if 'html' in data:
-                data['html'] = re.sub(r'\{\{#[^}]*\}\}', '', data['html'])
-                data['html'] = _rewrite_images(data['html'], source, page_path)
-            _page_cache[key] = data
-        except Exception:
-            return None
-    return _page_cache.get(key)
+        candidate = candidates[0]
+    try:
+        data = json.loads(candidate.read_text(encoding="utf-8"))
+        if 'html' in data:
+            data['html'] = re.sub(r'\{\{#[^}]*\}\}', '', data['html'])
+            data['html'] = _rewrite_images(data['html'], source, page_path)
+        _page_cache_set(key, data)
+    except Exception:
+        return None
+    return _page_cache_get(key)
 
 
 def _search(q: str, limit: int = 30) -> list:
@@ -976,7 +1042,6 @@ def api_exploitdb_index():
 
 @app.route("/api/exploitdb/code/<int:exploit_id>")
 def api_exploitdb_code(exploit_id):
-    import urllib.request as _ur
     entries = _load_exploitdb()
     entry = next((e for e in entries if e.get("id") == exploit_id), None)
     if not entry:
@@ -1020,7 +1085,6 @@ def api_exploitdb_code(exploit_id):
 
 @app.route("/api/exploitdb/download/<int:exploit_id>")
 def api_exploitdb_download(exploit_id):
-    import urllib.request as _ur
     entries = _load_exploitdb()
     entry = next((e for e in entries if e.get("id") == exploit_id), None)
     if not entry:
