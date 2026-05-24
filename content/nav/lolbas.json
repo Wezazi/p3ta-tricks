@@ -1046,6 +1046,11 @@
         "children": []
       },
       {
+        "title": "Syncappvpublishingserver.vbs",
+        "url": "/page/lolbas/syncappvpublishingserver",
+        "children": []
+      },
+      {
         "title": "Syssetup.dll",
         "url": "/page/lolbas/syssetup",
         "children": []

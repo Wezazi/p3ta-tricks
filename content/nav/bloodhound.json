@@ -10,17 +10,17 @@
     "title": "COLLECTORS",
     "items": [
       {
-        "title": "Bloodhound Python",
+        "title": "Blood Hound Python",
         "url": "/page/bloodhound/collectors/BloodHound-Python",
         "children": []
       },
       {
-        "title": "Rusthound",
+        "title": "Rust Hound",
         "url": "/page/bloodhound/collectors/RustHound",
         "children": []
       },
       {
-        "title": "Sharphound",
+        "title": "Sharp Hound",
         "url": "/page/bloodhound/collectors/SharpHound",
         "children": []
       }
@@ -96,152 +96,152 @@
         "children": []
       },
       {
-        "title": "Azaddmembers",
+        "title": "Az Add Members",
         "url": "/page/bloodhound/edges/AZAddMembers",
         "children": []
       },
       {
-        "title": "Azaddowner",
+        "title": "Az Add Owner",
         "url": "/page/bloodhound/edges/AZAddOwner",
         "children": []
       },
       {
-        "title": "Azcontributor",
+        "title": "Az Contributor",
         "url": "/page/bloodhound/edges/AZContributor",
         "children": []
       },
       {
-        "title": "Azgetsecrets",
+        "title": "Az Get Secrets",
         "url": "/page/bloodhound/edges/AZGetSecrets",
         "children": []
       },
       {
-        "title": "Azglobaladmin",
+        "title": "Az Global Admin",
         "url": "/page/bloodhound/edges/AZGlobalAdmin",
         "children": []
       },
       {
-        "title": "Azgrant",
+        "title": "Az Grant",
         "url": "/page/bloodhound/edges/AZGrant",
         "children": []
       },
       {
-        "title": "Azgrantself",
+        "title": "Az Grant Self",
         "url": "/page/bloodhound/edges/AZGrantSelf",
         "children": []
       },
       {
-        "title": "Azhasrole",
+        "title": "Az Has Role",
         "url": "/page/bloodhound/edges/AZHasRole",
         "children": []
       },
       {
-        "title": "Azmgaddmember",
+        "title": "Azmg Add Member",
         "url": "/page/bloodhound/edges/AZMGAddMember",
         "children": []
       },
       {
-        "title": "Azmgaddowner",
+        "title": "Azmg Add Owner",
         "url": "/page/bloodhound/edges/AZMGAddOwner",
         "children": []
       },
       {
-        "title": "Azmgaddsecret",
+        "title": "Azmg Add Secret",
         "url": "/page/bloodhound/edges/AZMGAddSecret",
         "children": []
       },
       {
-        "title": "Azmggrantapproles",
+        "title": "Azmg Grant App Roles",
         "url": "/page/bloodhound/edges/AZMGGrantAppRoles",
         "children": []
       },
       {
-        "title": "Azmggrantrole",
+        "title": "Azmg Grant Role",
         "url": "/page/bloodhound/edges/AZMGGrantRole",
         "children": []
       },
       {
-        "title": "Azmemberof",
+        "title": "Az Member Of",
         "url": "/page/bloodhound/edges/AZMemberOf",
         "children": []
       },
       {
-        "title": "Azowns",
+        "title": "Az Owns",
         "url": "/page/bloodhound/edges/AZOwns",
         "children": []
       },
       {
-        "title": "Azprivilegedroleadmin",
+        "title": "Az Privileged Role Admin",
         "url": "/page/bloodhound/edges/AZPrivilegedRoleAdmin",
         "children": []
       },
       {
-        "title": "Azresetpassword",
+        "title": "Az Reset Password",
         "url": "/page/bloodhound/edges/AZResetPassword",
         "children": []
       },
       {
-        "title": "Azuseraccessadmin",
+        "title": "Az User Access Admin",
         "url": "/page/bloodhound/edges/AZUserAccessAdmin",
         "children": []
       },
       {
-        "title": "Azvmadminlogin",
+        "title": "Azvm Admin Login",
         "url": "/page/bloodhound/edges/AZVMAdminLogin",
         "children": []
       },
       {
-        "title": "Azvmcontributor",
+        "title": "Azvm Contributor",
         "url": "/page/bloodhound/edges/AZVMContributor",
         "children": []
       },
       {
-        "title": "Addkeycredentiallink",
+        "title": "Add Key Credential Link",
         "url": "/page/bloodhound/edges/AddKeyCredentialLink",
         "children": []
       },
       {
-        "title": "Addmember",
+        "title": "Add Member",
         "url": "/page/bloodhound/edges/AddMember",
         "children": []
       },
       {
-        "title": "Addself",
+        "title": "Add Self",
         "url": "/page/bloodhound/edges/AddSelf",
         "children": []
       },
       {
-        "title": "Adminto",
+        "title": "Admin To",
         "url": "/page/bloodhound/edges/AdminTo",
         "children": []
       },
       {
-        "title": "Allextendedrights",
+        "title": "All Extended Rights",
         "url": "/page/bloodhound/edges/AllExtendedRights",
         "children": []
       },
       {
-        "title": "Allowedtoact",
+        "title": "Allowed To Act",
         "url": "/page/bloodhound/edges/AllowedToAct",
         "children": []
       },
       {
-        "title": "Allowedtodelegate",
+        "title": "Allowed To Delegate",
         "url": "/page/bloodhound/edges/AllowedToDelegate",
         "children": []
       },
       {
-        "title": "Canpsremote",
+        "title": "Can Ps Remote",
         "url": "/page/bloodhound/edges/CanPSRemote",
         "children": []
       },
       {
-        "title": "Canrdp",
+        "title": "Can Rdp",
         "url": "/page/bloodhound/edges/CanRDP",
         "children": []
       },
       {
-        "title": "Coerceandrelayntlmtosmb",
+        "title": "Coerce And Relay Ntlm To Smb",
         "url": "/page/bloodhound/edges/CoerceAndRelayNTLMToSMB",
         "children": []
       },
@@ -251,57 +251,57 @@
         "children": []
       },
       {
-        "title": "Dcsync",
+        "title": "Dc Sync",
         "url": "/page/bloodhound/edges/DCSync",
         "children": []
       },
       {
-        "title": "Executedcom",
+        "title": "Execute Dcom",
         "url": "/page/bloodhound/edges/ExecuteDCOM",
         "children": []
       },
       {
-        "title": "Forcechangepassword",
+        "title": "Force Change Password",
         "url": "/page/bloodhound/edges/ForceChangePassword",
         "children": []
       },
       {
-        "title": "Gplink",
+        "title": "Gp Link",
         "url": "/page/bloodhound/edges/GPLink",
         "children": []
       },
       {
-        "title": "Genericall",
+        "title": "Generic All",
         "url": "/page/bloodhound/edges/GenericAll",
         "children": []
       },
       {
-        "title": "Genericwrite",
+        "title": "Generic Write",
         "url": "/page/bloodhound/edges/GenericWrite",
         "children": []
       },
       {
-        "title": "Getchanges",
+        "title": "Get Changes",
         "url": "/page/bloodhound/edges/GetChanges",
         "children": []
       },
       {
-        "title": "Getchangesall",
+        "title": "Get Changes All",
         "url": "/page/bloodhound/edges/GetChangesAll",
         "children": []
       },
       {
-        "title": "Hassidhistory",
+        "title": "Has Sid History",
         "url": "/page/bloodhound/edges/HasSIDHistory",
         "children": []
       },
       {
-        "title": "Hassession",
+        "title": "Has Session",
         "url": "/page/bloodhound/edges/HasSession",
         "children": []
       },
       {
-        "title": "Memberof",
+        "title": "Member Of",
         "url": "/page/bloodhound/edges/MemberOf",
         "children": []
       },
@@ -311,52 +311,52 @@
         "children": []
       },
       {
-        "title": "Readgmsapassword",
+        "title": "Read Gmsa Password",
         "url": "/page/bloodhound/edges/ReadGMSAPassword",
         "children": []
       },
       {
-        "title": "Readlapspassword",
+        "title": "Read Laps Password",
         "url": "/page/bloodhound/edges/ReadLAPSPassword",
         "children": []
       },
       {
-        "title": "Sqladmin",
+        "title": "Sql Admin",
         "url": "/page/bloodhound/edges/SQLAdmin",
         "children": []
       },
       {
-        "title": "Syncedtoentrauser",
+        "title": "Synced To Entra User",
         "url": "/page/bloodhound/edges/SyncedToEntraUser",
         "children": []
       },
       {
-        "title": "Trustedby",
+        "title": "Trusted By",
         "url": "/page/bloodhound/edges/TrustedBy",
         "children": []
       },
       {
-        "title": "Writeaccountrestrictions",
+        "title": "Write Account Restrictions",
         "url": "/page/bloodhound/edges/WriteAccountRestrictions",
         "children": []
       },
       {
-        "title": "Writedacl",
+        "title": "Write Dacl",
         "url": "/page/bloodhound/edges/WriteDacl",
         "children": []
       },
       {
-        "title": "Writegplink",
+        "title": "Write Gp Link",
         "url": "/page/bloodhound/edges/WriteGPLink",
         "children": []
       },
       {
-        "title": "Writeowner",
+        "title": "Write Owner",
         "url": "/page/bloodhound/edges/WriteOwner",
         "children": []
       },
       {
-        "title": "Writespn",
+        "title": "Write Spn",
         "url": "/page/bloodhound/edges/WriteSPN",
         "children": []
       }

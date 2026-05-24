@@ -765,13 +765,18 @@
     "title": "FTP PROTOCOL",
     "items": [
       {
+        "title": "Authentication",
+        "url": "/page/netexec/ftp-protocol/authentication",
+        "children": []
+      },
+      {
         "title": "Password Spraying",
         "url": "/page/netexec/ftp-protocol/password-spraying",
         "children": []
       },
       {
-        "title": "File Listing, etc",
-        "url": "/page/netexec/ftp-protocol/file-listing-etc",
+        "title": "File Listing",
+        "url": "/page/netexec/ftp-protocol/file-listing",
         "children": []
       },
       {
@@ -861,6 +866,11 @@
       {
         "title": "Authentication",
         "url": "/page/netexec/vnc-protocol/authentication",
+        "children": []
+      },
+      {
+        "title": "Screenshot",
+        "url": "/page/netexec/vnc-protocol/screenshot-screentime",
         "children": []
       }
     ]

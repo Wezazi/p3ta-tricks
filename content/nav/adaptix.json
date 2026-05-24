@@ -1,187 +1,373 @@
 [
   {
-    "type": "link",
-    "title": "Welcome / Overview",
-    "url": "/page/adaptix/readme",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Getting Starting",
-    "url": "/page/adaptix/adaptix-c2/getting-starting",
-    "children": [
+    "type": "section",
+    "title": "ADAPTIX FRAMEWORK DOCS - SUMMARY",
+    "items": [
       {
-        "title": "Installation Server",
-        "url": "/page/adaptix/adaptix-c2/getting-starting/installation-server",
-        "children": []
-      },
-      {
-        "title": "Installation Client",
-        "url": "/page/adaptix/adaptix-c2/getting-starting/installation-client",
-        "children": []
-      },
-      {
-        "title": "Starting",
-        "url": "/page/adaptix/adaptix-c2/getting-starting/starting",
-        "children": []
-      }
-    ]
-  },
-  {
-    "type": "link",
-    "title": "User Interface",
-    "url": "/page/adaptix/adaptix-c2/user-interface",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Listeners and Agents",
-    "url": "/page/adaptix/adaptix-c2/listeners-and-agents",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Agent Browsers",
-    "url": "/page/adaptix/adaptix-c2/agent-browsers",
-    "children": [
-      {
-        "title": "File Browser",
-        "url": "/page/adaptix/adaptix-c2/agent-browsers/file-browser",
-        "children": []
-      },
-      {
-        "title": "Process Browser",
-        "url": "/page/adaptix/adaptix-c2/agent-browsers/process-browser",
-        "children": []
-      },
-      {
-        "title": "Remote Terminal / Shell",
-        "url": "/page/adaptix/adaptix-c2/agent-browsers/remote-terminal-shell",
-        "children": []
-      }
-    ]
-  },
-  {
-    "type": "link",
-    "title": "Data management",
-    "url": "/page/adaptix/adaptix-c2/data-management",
-    "children": [
-      {
-        "title": "Tasks manager",
-        "url": "/page/adaptix/adaptix-c2/data-management/tasks-manager",
-        "children": []
-      },
-      {
-        "title": "Downloads Manager",
-        "url": "/page/adaptix/adaptix-c2/data-management/downloads-manager",
-        "children": []
-      },
-      {
-        "title": "Targets Manager",
-        "url": "/page/adaptix/adaptix-c2/data-management/targets-manager",
-        "children": []
-      },
-      {
-        "title": "Credentials Manager",
-        "url": "/page/adaptix/adaptix-c2/data-management/credentials-manager",
-        "children": []
-      },
-      {
-        "title": "Screenshots Manager",
-        "url": "/page/adaptix/adaptix-c2/data-management/screenshots-manager",
-        "children": []
-      }
-    ]
-  },
-  {
-    "type": "link",
-    "title": "BOF and Extensions",
-    "url": "/page/adaptix/adaptix-c2/bof-and-extensions",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Tunnels and Forwarding",
-    "url": "/page/adaptix/adaptix-c2/tunnels-and-forwarding",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Linking Agents",
-    "url": "/page/adaptix/adaptix-c2/linking-agents",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Listeners",
-    "url": "/page/adaptix/extenders/listeners",
-    "children": [
-      {
-        "title": "Beacon HTTP",
-        "url": "/page/adaptix/extenders/listeners/beacon-http",
-        "children": []
-      },
-      {
-        "title": "Beacon DNS",
-        "url": "/page/adaptix/extenders/listeners/beacon-dns",
-        "children": []
-      },
-      {
-        "title": "Beacon SMB",
-        "url": "/page/adaptix/extenders/listeners/beacon-smb",
-        "children": []
-      },
-      {
-        "title": "Beacon TCP",
-        "url": "/page/adaptix/extenders/listeners/beacon-tcp",
-        "children": []
-      },
-      {
-        "title": "Gopher TCP",
-        "url": "/page/adaptix/extenders/listeners/gopher-tcp",
-        "children": []
-      }
-    ]
-  },
-  {
-    "type": "link",
-    "title": "Agents",
-    "url": "/page/adaptix/extenders/agents",
-    "children": [
-      {
-        "title": "Beacon",
-        "url": "/page/adaptix/extenders/agents/beacon",
+        "title": "Welcome",
+        "url": "/page/adaptix/readme",
         "children": [
           {
-            "title": "Beacon BOFs",
-            "url": "/page/adaptix/extenders/agents/beacon/beacon-bofs",
+            "title": "Version 0.1 -> 1.0",
+            "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0",
+            "children": [
+              {
+                "title": "v0.1 -> v0.2",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.1-greater-than-v0.2",
+                "children": []
+              },
+              {
+                "title": "v0.2 -> v0.3",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.2-greater-than-v0.3",
+                "children": []
+              },
+              {
+                "title": "v0.3 -> v0.4",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.3-greater-than-v0.4",
+                "children": []
+              },
+              {
+                "title": "v0.4 -> v0.5",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.4-greater-than-v0.5",
+                "children": []
+              },
+              {
+                "title": "v0.5 -> v0.6",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.5-greater-than-v0.6",
+                "children": []
+              },
+              {
+                "title": "v0.6 -> v0.7",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.6-greater-than-v0.7",
+                "children": []
+              },
+              {
+                "title": "v0.7 -> v0.8",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.7-greater-than-v0.8",
+                "children": []
+              },
+              {
+                "title": "v0.8 -> v0.9",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.8-greater-than-v0.9",
+                "children": []
+              },
+              {
+                "title": "v0.9 -> v0.10",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.9-greater-than-v0.10",
+                "children": []
+              },
+              {
+                "title": "v0.10 -> v0.11",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/v0.10-greater-than-v0.11",
+                "children": []
+              },
+              {
+                "title": "Version 1.0",
+                "url": "/page/adaptix/changelog-and-updates/version-0.1-greater-than-1.0/version-1.0",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "v1.0 -> v1.1",
+            "url": "/page/adaptix/changelog-and-updates/v1.0-greater-than-v1.1",
             "children": []
+          },
+          {
+            "title": "v1.1 -> v1.2",
+            "url": "/page/adaptix/changelog-and-updates/v1.1-greater-than-v1.2",
+            "children": []
+          },
+          {
+            "title": "Getting Starting",
+            "url": "/page/adaptix/adaptix-c2/getting-starting",
+            "children": [
+              {
+                "title": "Installation Server",
+                "url": "/page/adaptix/adaptix-c2/getting-starting/installation-server",
+                "children": []
+              },
+              {
+                "title": "Installation Client",
+                "url": "/page/adaptix/adaptix-c2/getting-starting/installation-client",
+                "children": []
+              },
+              {
+                "title": "Starting",
+                "url": "/page/adaptix/adaptix-c2/getting-starting/starting",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "User Interface",
+            "url": "/page/adaptix/adaptix-c2/user-interface",
+            "children": []
+          },
+          {
+            "title": "Listeners and Agents",
+            "url": "/page/adaptix/adaptix-c2/listeners-and-agents",
+            "children": []
+          },
+          {
+            "title": "Agent Browsers",
+            "url": "/page/adaptix/adaptix-c2/agent-browsers",
+            "children": [
+              {
+                "title": "File Browser",
+                "url": "/page/adaptix/adaptix-c2/agent-browsers/file-browser",
+                "children": []
+              },
+              {
+                "title": "Process Browser",
+                "url": "/page/adaptix/adaptix-c2/agent-browsers/process-browser",
+                "children": []
+              },
+              {
+                "title": "Remote Terminal / Shell",
+                "url": "/page/adaptix/adaptix-c2/agent-browsers/remote-terminal-shell",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Data management",
+            "url": "/page/adaptix/adaptix-c2/data-management",
+            "children": [
+              {
+                "title": "Tasks manager",
+                "url": "/page/adaptix/adaptix-c2/data-management/tasks-manager",
+                "children": []
+              },
+              {
+                "title": "Downloads Manager",
+                "url": "/page/adaptix/adaptix-c2/data-management/downloads-manager",
+                "children": []
+              },
+              {
+                "title": "Targets Manager",
+                "url": "/page/adaptix/adaptix-c2/data-management/targets-manager",
+                "children": []
+              },
+              {
+                "title": "Credentials Manager",
+                "url": "/page/adaptix/adaptix-c2/data-management/credentials-manager",
+                "children": []
+              },
+              {
+                "title": "Screenshots Manager",
+                "url": "/page/adaptix/adaptix-c2/data-management/screenshots-manager",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "BOF and Extensions",
+            "url": "/page/adaptix/adaptix-c2/bof-and-extensions",
+            "children": []
+          },
+          {
+            "title": "Tunnels and Forwarding",
+            "url": "/page/adaptix/adaptix-c2/tunnels-and-forwarding",
+            "children": []
+          },
+          {
+            "title": "Linking Agents",
+            "url": "/page/adaptix/adaptix-c2/linking-agents",
+            "children": []
+          },
+          {
+            "title": "Listeners",
+            "url": "/page/adaptix/extenders/listeners",
+            "children": [
+              {
+                "title": "Beacon HTTP",
+                "url": "/page/adaptix/extenders/listeners/beacon-http",
+                "children": []
+              },
+              {
+                "title": "Beacon DNS",
+                "url": "/page/adaptix/extenders/listeners/beacon-dns",
+                "children": []
+              },
+              {
+                "title": "Beacon SMB",
+                "url": "/page/adaptix/extenders/listeners/beacon-smb",
+                "children": []
+              },
+              {
+                "title": "Beacon TCP",
+                "url": "/page/adaptix/extenders/listeners/beacon-tcp",
+                "children": []
+              },
+              {
+                "title": "Gopher TCP",
+                "url": "/page/adaptix/extenders/listeners/gopher-tcp",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Agents",
+            "url": "/page/adaptix/extenders/agents",
+            "children": [
+              {
+                "title": "Beacon",
+                "url": "/page/adaptix/extenders/agents/beacon",
+                "children": [
+                  {
+                    "title": "Beacon BOFs",
+                    "url": "/page/adaptix/extenders/agents/beacon/beacon-bofs",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Gopher",
+                "url": "/page/adaptix/extenders/agents/gopher",
+                "children": [
+                  {
+                    "title": "Gopher BOFs",
+                    "url": "/page/adaptix/extenders/agents/gopher/gopher-bofs",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AxScript",
+            "url": "/page/adaptix/development/axscript",
+            "children": [
+              {
+                "title": "How to execute AxScript",
+                "url": "/page/adaptix/development/axscript/how-to-execute-axscript",
+                "children": []
+              },
+              {
+                "title": "Introduction",
+                "url": "/page/adaptix/development/axscript/introduction",
+                "children": []
+              },
+              {
+                "title": "AxFunction",
+                "url": "/page/adaptix/development/axscript/axfunction",
+                "children": []
+              },
+              {
+                "title": "AxCommand type",
+                "url": "/page/adaptix/development/axscript/axcommand-type",
+                "children": [
+                  {
+                    "title": "Commands and Hooks",
+                    "url": "/page/adaptix/development/axscript/axcommand-type/commands-and-hooks",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "AxForm type",
+                "url": "/page/adaptix/development/axscript/axform-type",
+                "children": []
+              },
+              {
+                "title": "AxSelector type",
+                "url": "/page/adaptix/development/axscript/axselector-type",
+                "children": []
+              },
+              {
+                "title": "AxEvent type",
+                "url": "/page/adaptix/development/axscript/axevent-type",
+                "children": []
+              },
+              {
+                "title": "AxMenu type",
+                "url": "/page/adaptix/development/axscript/axmenu-type",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Teamserver Interface",
+            "url": "/page/adaptix/development/teamserver-interface",
+            "children": [
+              {
+                "title": "Web API",
+                "url": "/page/adaptix/development/teamserver-interface/web-api",
+                "children": []
+              },
+              {
+                "title": "TS API",
+                "url": "/page/adaptix/development/teamserver-interface/ts-api",
+                "children": []
+              },
+              {
+                "title": "Events and Hooks",
+                "url": "/page/adaptix/development/teamserver-interface/events-and-hooks",
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Extenders",
+            "url": "/page/adaptix/development/extenders",
+            "children": [
+              {
+                "title": "Register new extenders",
+                "url": "/page/adaptix/development/extenders/register-new-extenders",
+                "children": []
+              },
+              {
+                "title": "Listener extender",
+                "url": "/page/adaptix/development/extenders/listener-extender",
+                "children": [
+                  {
+                    "title": "Internal listener",
+                    "url": "/page/adaptix/development/extenders/listener-extender/internal-listener",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Agent plugin",
+                "url": "/page/adaptix/development/extenders/agent-plugin",
+                "children": [
+                  {
+                    "title": "Tunnels",
+                    "url": "/page/adaptix/development/extenders/agent-plugin/tunnels",
+                    "children": []
+                  },
+                  {
+                    "title": "Terminals",
+                    "url": "/page/adaptix/development/extenders/agent-plugin/terminals",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Service Extender",
+                "url": "/page/adaptix/development/extenders/service-extender",
+                "children": []
+              }
+            ]
           }
         ]
       },
       {
-        "title": "Gopher",
-        "url": "/page/adaptix/extenders/agents/gopher",
-        "children": [
-          {
-            "title": "Gopher BOFs",
-            "url": "/page/adaptix/extenders/agents/gopher/gopher-bofs",
-            "children": []
-          }
-        ]
+        "title": "Adaptix C2",
+        "url": "/page/adaptix/adaptix-c2",
+        "children": []
+      },
+      {
+        "title": "Extenders",
+        "url": "/page/adaptix/extenders",
+        "children": []
+      },
+      {
+        "title": "Development",
+        "url": "/page/adaptix/development",
+        "children": []
       }
     ]
-  },
-  {
-    "type": "link",
-    "title": "Adaptix C2",
-    "url": "/page/adaptix/adaptix-c2",
-    "children": []
-  },
-  {
-    "type": "link",
-    "title": "Extenders",
-    "url": "/page/adaptix/extenders",
-    "children": []
   }
 ]
