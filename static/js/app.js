@@ -219,7 +219,7 @@ async function buildAllSourcesNav() {
 
   btnRow.appendChild(expandBtn);
   btnRow.appendChild(collapseBtn);
-  root.appendChild(btnRow);
+  (document.getElementById('nav-expand-row') || root).appendChild(btnRow);
 
   const savedScroll   = sessionStorage.getItem('pt_nav_scroll');
   const hasSavedScroll = !!savedScroll;
@@ -1514,7 +1514,7 @@ function _buildRecentSection() {
   const items = list.filter(e => e.url !== window.location.pathname);
 
   const sKey = 'pt_recent_open';
-  const open = sessionStorage.getItem(sKey) !== 'closed';
+  const open = sessionStorage.getItem(sKey) === 'open';
 
   const sec = document.createElement('div');
   sec.className = 'pt-quick-section';
@@ -1564,157 +1564,17 @@ function _buildRecentSection() {
   return sec;
 }
 
-/* ====== FEATURE 2: Favorites / Bookmarks ====== */
-const PT_FAV_KEY = 'pt_favorites';
-
-function _getFavs() {
-  try { return JSON.parse(localStorage.getItem(PT_FAV_KEY) || '[]'); } catch { return []; }
-}
-
-function _saveFavs(list) {
-  localStorage.setItem(PT_FAV_KEY, JSON.stringify(list));
-}
-
-function _isFaved(url) {
-  return _getFavs().some(e => e.url === url);
-}
-
-function _toggleFav(url, title, source) {
-  let list = _getFavs();
-  if (_isFaved(url)) {
-    list = list.filter(e => e.url !== url);
-  } else {
-    list.unshift({ title, url, source });
-  }
-  _saveFavs(list);
-  _refreshFavBtn();
-  _refreshFavSection();
-}
-
-function _refreshFavBtn() {
-  const btn = document.getElementById('pt-fav-btn');
-  if (!btn) return;
-  const faved = _isFaved(window.location.pathname);
-  btn.textContent = faved ? '★' : '☆';
-  btn.title = faved ? 'Remove from favorites' : 'Add to favorites';
-  btn.classList.toggle('pt-fav-active', faved);
-}
-
-function _refreshFavSection() {
-  const sec = document.getElementById('pt-fav-section');
-  if (!sec) return;
-  const body = sec.querySelector('.pt-quick-body');
-  if (!body) return;
-  body.innerHTML = '';
-  const list = _getFavs();
-  if (!list.length) {
-    const empty = document.createElement('div');
-    empty.className = 'pt-quick-empty';
-    empty.textContent = 'No favorites yet.';
-    body.appendChild(empty);
-    return;
-  }
-  list.forEach(entry => {
-    const row = document.createElement('div');
-    row.className = 'pt-quick-item';
-    const a = document.createElement('a');
-    a.className = 'nt-link nt-leaf';
-    a.href = entry.url;
-    a.textContent = entry.title;
-    a.title = entry.title;
-    const rmBtn = document.createElement('button');
-    rmBtn.className = 'pt-quick-remove';
-    rmBtn.textContent = '✕';
-    rmBtn.title = 'Remove from favorites';
-    rmBtn.addEventListener('click', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      let favs = _getFavs().filter(f => f.url !== entry.url);
-      _saveFavs(favs);
-      _refreshFavBtn();
-      _refreshFavSection();
-    });
-    row.appendChild(a);
-    row.appendChild(rmBtn);
-    body.appendChild(row);
-  });
-}
-
-function _buildFavSection() {
-  const sKey = 'pt_fav_open';
-  const open = sessionStorage.getItem(sKey) !== 'closed';
-
-  const sec = document.createElement('div');
-  sec.className = 'pt-quick-section';
-  sec.id = 'pt-fav-section';
-
-  const hdr = document.createElement('button');
-  hdr.className = 'pt-quick-hdr';
-  hdr.innerHTML = (open ? ICON_DOWN : ICON_RIGHT) + '<span>Favorites</span>';
-
-  const body = document.createElement('div');
-  body.className = 'pt-quick-body';
-  if (!open) body.style.display = 'none';
-
-  hdr.addEventListener('click', () => {
-    const nowOpen = body.style.display !== 'none';
-    body.style.display = nowOpen ? 'none' : '';
-    hdr.innerHTML = (nowOpen ? ICON_RIGHT : ICON_DOWN) + '<span>Favorites</span>';
-    sessionStorage.setItem(sKey, nowOpen ? 'closed' : 'open');
-  });
-
-  sec.appendChild(hdr);
-  sec.appendChild(body);
-  return sec;
-}
-
-function _initFavButton() {
-  const pageBody = document.querySelector('.page-body');
-  if (!pageBody) return;
-  const h1 = pageBody.querySelector('h1');
-  if (!h1) return;
-
-  const url    = window.location.pathname;
-  // Get clean title before any injected buttons/links are appended
-  const title  = (h1.innerText || h1.textContent || '').trim()
-                   .replace(/Find in all sources/gi, '').replace(/[★☆]/g, '').trim()
-                 || document.title.split('—')[0].trim();
-  const source = _activeSource || '';
-
-  const btn = document.createElement('button');
-  btn.id        = 'pt-fav-btn';
-  btn.className = 'pt-fav-btn';
-  btn.setAttribute('aria-label', 'Toggle favorite');
-  const faved = _isFaved(url);
-  btn.textContent = faved ? '★' : '☆';
-  btn.title = faved ? 'Remove from favorites' : 'Add to favorites';
-  if (faved) btn.classList.add('pt-fav-active');
-
-  btn.addEventListener('click', () => _toggleFav(url, title, source));
-  // Insert button inside h1 at the end so it sits inline with the title text
-  h1.appendChild(btn);
-}
-
 function _initQuickNav() {
-  // Push current page to recents
   _pushRecent();
 
   const allNav = document.getElementById('all-sources-nav');
   if (!allNav) return;
 
-  // Build sections and prepend before all-sources-nav (which is inside sidebar-inner)
   const sidebarInner = allNav.parentElement;
   if (!sidebarInner) return;
 
-  const favSec    = _buildFavSection();
   const recentSec = _buildRecentSection();
-
-  // Insert: Favorites first, then Recently Visited, then existing nav
   sidebarInner.insertBefore(recentSec, allNav);
-  sidebarInner.insertBefore(favSec, recentSec);
-
-  // Initial render of favs body
-  _refreshFavSection();
 }
 
 /* ====== FEATURE 3: Variable Persistence Toggle ====== */
@@ -1949,7 +1809,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _initMermaid();       // Must run before addCopyButtons (replaces mermaid pre blocks)
   addCopyButtons();
   buildAllSourcesNav();
-  _initQuickNav();      // Feature 1 & 2 — after buildAllSourcesNav so all-sources-nav exists
+  _initQuickNav();      // Recently Visited — after buildAllSourcesNav so all-sources-nav exists
   _initSourceFilter();
   _initDistroToggle();
   _initImplToggle();
@@ -1958,7 +1818,6 @@ document.addEventListener('DOMContentLoaded', () => {
   _initOfflineBadges();
   _initPalette();
   _initCrossSourceSearch();
-  _initFavButton();     // Feature 2 — star button on page h1
   _initPageTOC();       // Feature 4
   _initExportButton();  // Feature 5
 });

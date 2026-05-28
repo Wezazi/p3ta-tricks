@@ -2569,7 +2569,7 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 /* ============================================================
-   FEATURE 1 & 2: Recently Visited + Favorites sidebar sections
+   Recently Visited sidebar section
    ============================================================ */
 .pt-quick-section {
   margin-bottom: 4px;
@@ -2631,25 +2631,6 @@ code[class*="language-"], pre[class*="language-"] {
   color: var(--fg-muted);
   font-style: italic;
 }
-
-/* ============================================================
-   FEATURE 2: Favorites star button near page h1
-   ============================================================ */
-.pt-fav-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  line-height: 1;
-  padding: 2px 5px;
-  margin-left: 6px;
-  color: var(--fg-muted);
-  transition: color .15s, transform .1s;
-  vertical-align: middle;
-  border-radius: 4px;
-}
-.pt-fav-btn:hover { color: var(--yellow); transform: scale(1.15); }
-.pt-fav-btn.pt-fav-active { color: var(--yellow); }
 
 /* ============================================================
    FEATURE 3: Variable persistence toggle in modal footer
