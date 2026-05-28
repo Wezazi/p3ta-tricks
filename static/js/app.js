@@ -45,6 +45,8 @@ const SOURCES = [
   { id: 'adaptix',          label: 'Adaptix C2',           icon: '🎯', color: '#bb9af7' },
   { id: 'linux-privesc',   label: 'Linux PrivEsc',        icon: '🐧', color: '#ff9e64' },
   { id: 'windows-privesc', label: 'Windows PrivEsc',      icon: '🪟', color: '#7aa2f7' },
+  { id: 'misc',            label: 'Misc Cheatsheets',     icon: '📋', color: '#2ac3de' },
+  { id: 'churchofmalware', label: 'Church of Malware',    icon: '⛧', color: '#f7768e' },
 ];
 
 const _isOffline = !!(window.__OFFLINE__ && window.__OFFLINE__.offline);
