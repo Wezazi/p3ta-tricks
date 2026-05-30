@@ -1026,6 +1026,9 @@ def page(source_id, page_path):
     data = _load_page(source_id, page_path)
     if data is None:
         abort(404)
+    # Flag stub pages — only a heading, no body content
+    body_text = re.sub(r'<h1[^>]*>.*?</h1>', '', data.get('html', ''), flags=re.S)
+    data['is_stub'] = len(re.sub(r'<[^>]+>', '', body_text).strip()) < 20
     meta = SOURCE_META[source_id]
     return render_template("page.html", page=data, meta=meta, source_meta=SOURCE_META)
 

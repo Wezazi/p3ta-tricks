@@ -14,6 +14,12 @@
 
   <div class="page-body">
     {{ page.html | safe }}
+    {% if page.is_stub %}
+    <div class="stub-notice">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      This page hasn't been written yet in the upstream source (<strong>{{ meta.label }}</strong>) — the placeholder exists but contains no content.
+    </div>
+    {% endif %}
   </div>
 </article>
 {% endblock %}
