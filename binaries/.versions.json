@@ -3,7 +3,7 @@
   "chisel": "v1.11.5",
   "pspy": "v1.2.1",
   "reverse-ssh": "v1.2.0",
-  "PEASS-ng": "20260521-859cab5f",
+  "PEASS-ng": "20260528-82c8c3b6",
   "linux-smart-enumeration": "4.14nw",
   "PrivescCheck": "2026.04.29-1",
   "PrintSpoofer": "v1.0",

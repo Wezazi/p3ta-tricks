@@ -121,6 +121,11 @@
         ]
       },
       {
+        "title": "TeamCity Security",
+        "url": "/page/hacktricks-cloud/pentesting-ci-cd/teamcity-security",
+        "children": []
+      },
+      {
         "title": "Jenkins Security",
         "url": "/page/hacktricks-cloud/pentesting-ci-cd/jenkins-security",
         "children": [
