@@ -18,9 +18,9 @@ import re, json, html, sys
 from pathlib import Path
 
 ROOT        = Path(__file__).parent.parent
-OUT_DIR     = ROOT / "content" / "processed" / "htb-academy"
+OUT_DIR     = ROOT / "content" / "processed" / "htb"
 NAV_DIR     = ROOT / "content" / "nav"
-SOURCE_ID   = "htb-academy"
+SOURCE_ID   = "htb"
 SOURCE_LABEL = "Cheat Sheets"
 
 VAULT_CHEATSHEETS = Path("/home/p3ta/Documents/uWu/HTB/HTB Academy Cheat Sheets")
@@ -504,7 +504,7 @@ def process_academy_sheets() -> list:
 
         title = fpath.stem
         slug  = _slugify(title)
-        out_name = f'academy-{slug}.json'
+        out_name = f'{slug}.json'
         out_path  = OUT_DIR / out_name
 
         md_text = fpath.read_text(encoding='utf-8', errors='replace')
@@ -520,10 +520,10 @@ def process_academy_sheets() -> list:
             'title':        title,
             'source':       SOURCE_ID,
             'source_label': SOURCE_LABEL,
-            'path':         f'{SOURCE_ID}/academy-{slug}',
+            'path':         f'{SOURCE_ID}/{slug}',
             'html':         full_html,
             'excerpt':      _excerpt(full_html),
-            'tags':         ['htb-academy', 'cheatsheet'],
+            'tags':         ['htb', 'cheatsheet'],
         }
         out_path.write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
         print(f'  academy: {title}')
@@ -531,7 +531,7 @@ def process_academy_sheets() -> list:
         nav_items.append({
             'type':  'link',
             'title': title,
-            'url':   f'/page/{SOURCE_ID}/academy-{slug}',
+            'url':   f'/page/{SOURCE_ID}/{slug}',
             'items': [],
         })
 

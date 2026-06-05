@@ -26,7 +26,7 @@ const SOURCES = [
   { id: 'breaking-adcs',   label: 'Breaking ADCS',        icon: '📜', color: '#f7768e' },
   { id: 'bug-bounty',       label: 'Bug Bounty',           icon: '🐛', color: '#e0af68' },
   { id: 'certipy',          label: 'Certipy',              icon: '📜', color: '#f7768e' },
-  { id: 'htb-academy',      label: 'Cheat Sheets',         icon: '📋', color: '#9ece6a' },
+  { id: 'htb',              label: 'Cheat Sheets',         icon: '📋', color: '#9ece6a' },
   { id: 'churchofmalware', label: 'Church of Malware',    icon: '⛧', color: '#f7768e' },
   { id: 'enum',             label: 'Enumeration',          icon: '🔍', color: '#9ece6a' },
   { id: 'gopacket',         label: 'GoPacket',             icon: '🐹', color: '#9ece6a' },

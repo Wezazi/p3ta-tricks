@@ -151,7 +151,7 @@ GROUP_ORDER = [
 
 
 def rebuild():
-    nav_path = NAV_DIR / "htb-academy.json"
+    nav_path = NAV_DIR / "htb.json"
     nav = json.loads(nav_path.read_text())
 
     # Extract academy cheat sheets section
