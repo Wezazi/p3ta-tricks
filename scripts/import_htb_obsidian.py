@@ -4,7 +4,7 @@ Convert HTB Obsidian cheat sheets → p3ta-tricks processed JSON.
 
 Handles two formats:
   1. Academy Cheat Sheets — markdown tables (Command | Description)
-     → two-column HTML table, command cells become <pre><code> blocks
+     → h3(description) + code block per row
   2. Reference notes    — already have fenced ```code``` blocks
      → rendered as standard markdown HTML
 
@@ -21,7 +21,7 @@ ROOT        = Path(__file__).parent.parent
 OUT_DIR     = ROOT / "content" / "processed" / "htb-academy"
 NAV_DIR     = ROOT / "content" / "nav"
 SOURCE_ID   = "htb-academy"
-SOURCE_LABEL = "HTB Academy"
+SOURCE_LABEL = "Cheat Sheets"
 
 VAULT_CHEATSHEETS = Path("/home/p3ta/Documents/uWu/HTB/HTB Academy Cheat Sheets")
 VAULT_REFERENCE   = Path("/home/p3ta/Documents/uWu/HTB/Reference")
@@ -114,45 +114,125 @@ def _excerpt(html_str: str, n: int = 200) -> str:
 
 # ── Academy Cheat Sheet parser (table format) ──────────────────────────────────
 
-def _parse_table_rows(table_text: str) -> list[tuple[str, str]]:
+def _strip_markdown(text: str) -> str:
+    """Remove markdown formatting (bold, italic, links)."""
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)  # strip links
+    text = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', text)  # strip bold/italic
+    text = re.sub(r'`([^`]+)`', r'\1', text)               # strip inline code
+    return text.strip()
+
+
+def _is_header_row(parts: list) -> bool:
+    """Detect header rows: all cells are short title-case labels (may be backtick-wrapped)."""
+    for cell in parts:
+        if not cell.strip():
+            continue
+        # Strip all markdown formatting for the content check
+        clean = _strip_markdown(cell)
+        if len(clean) > 40:
+            return False
+        if not re.match(r'^[A-Z][a-zA-Z0-9\s\-/():?]+$', clean):
+            return False
+    return True
+
+
+def _parse_table_rows(table_text: str) -> list:
     """Extract (command, description) pairs from a markdown table."""
-    rows = []
+    raw_rows = []
+
     for line in table_text.splitlines():
         line = line.strip()
-        if not line or re.match(r'^\|[-\s|]+\|$', line):
+        if not line or re.match(r'^\|[-\s|:]+\|$', line):
             continue
         if not line.startswith('|'):
             continue
-        parts = [p.strip() for p in line.strip('|').split('|')]
-        if len(parts) >= 2:
-            cmd  = parts[0].strip()
-            desc = parts[1].strip()
-            # Skip header rows
-            if re.match(r'^\*{0,2}[Cc]ommand\*{0,2}$', cmd):
-                continue
-            if cmd:
-                rows.append((cmd, desc))
-    return rows
+        # Replace escaped pipes \| before splitting so they don't split columns
+        line_clean = line.replace('\\|', '\x00')
+        parts = [p.strip().replace('\x00', '|') for p in line_clean.strip('|').split('|')]
+        if len(parts) < 2:
+            continue
+
+        col0 = parts[0].strip()
+        col1 = parts[1].strip() if len(parts) > 1 else ''
+        col2 = parts[2].strip() if len(parts) > 2 else ''
+
+        # Skip header rows
+        if _is_header_row(parts[:3]):
+            continue
+        # Also skip the classic Command/Description header
+        if re.match(r'^\*{0,2}[Cc]ommand[/\w]*\*{0,2}$', col0):
+            continue
+
+        if col0 or col1:
+            raw_rows.append((col0, col1, col2))
+
+    if not raw_rows:
+        return []
+
+    # Handle 3-column tables
+    has_3_cols = any(row[2] for row in raw_rows)
+    if has_3_cols:
+        # Detect if col2 is reference URLs → col1 is the code/example, col0 is label
+        col2_link_count = sum(1 for r in raw_rows if re.search(r'\[.+\]\(.+\)', r[2]))
+        if col2_link_count > len(raw_rows) / 2:
+            # col0 = label, col1 = code example, col2 = ref (drop)
+            return [(r[1], r[0]) for r in raw_rows if r[0] or r[1]]
+        else:
+            # col0 = instruction name, col1 = description, col2 = example command
+            return [(r[2], r[1]) for r in raw_rows if r[2] or r[1]]
+
+    # 2-column: detect orientation by backtick frequency
+    col0_bt = sum(1 for r in raw_rows if r[0].startswith('`') and r[0].endswith('`'))
+    col1_bt = sum(1 for r in raw_rows if r[1].startswith('`') and r[1].endswith('`'))
+
+    if col1_bt > col0_bt:
+        # col1 has backtick commands, col0 has descriptions → swap
+        return [(r[1], r[0]) for r in raw_rows if r[0] or r[1]]
+    else:
+        return [(r[0], r[1]) for r in raw_rows if r[0]]
 
 
-def _render_rows(rows: list[tuple[str, str]]) -> str:
+def _render_rows(rows: list) -> str:
     """Render table rows as: description h3 + code block pairs."""
     if not rows:
         return ''
     out = []
     for cmd, desc in rows:
         # Strip surrounding backticks from command
+        cmd = cmd.strip()
         if cmd.startswith('`') and cmd.endswith('`') and cmd.count('`') == 2:
             cmd = cmd[1:-1]
+        # Strip markdown links and formatting from cmd
+        cmd = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', cmd)
+        cmd = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', cmd)
         cmd = cmd.strip()
         if not cmd:
             continue
+
+        # Clean description
+        desc_clean = ''
         if desc:
-            desc_clean = re.sub(r'`([^`]+)`', r'\1', desc)  # strip backtick formatting
-            desc_clean = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', desc_clean)
-            slug = _slugify(desc_clean)[:60]
-            out.append(f'<h3 id="{slug}">{html.escape(desc_clean)}</h3>')
-        out.append(_code_block(cmd))
+            desc_clean = _strip_markdown(desc).strip()
+
+        # Long prose descriptions (> 120 chars) → reference table: h3(name) + p(desc)
+        if len(desc_clean) > 120:
+            slug = _slugify(cmd)[:60]
+            out.append(f'<h3 id="{slug}">{html.escape(cmd)}</h3>')
+            trunc = desc_clean[:400] + ('…' if len(desc_clean) > 400 else '')
+            out.append(f'<p>{html.escape(trunc)}</p>')
+        elif len(cmd) > 120:
+            # Very long cmd that is actually prose (comparison tables etc.) → skip or show as p
+            if desc_clean:
+                slug = _slugify(desc_clean)[:60]
+                out.append(f'<h3 id="{slug}">{html.escape(desc_clean)}</h3>')
+            out.append(f'<p>{html.escape(cmd[:400])}{"…" if len(cmd) > 400 else ""}</p>')
+        else:
+            # Normal: h3 = description, code = command
+            if desc_clean:
+                slug = _slugify(desc_clean)[:60]
+                out.append(f'<h3 id="{slug}">{html.escape(desc_clean)}</h3>')
+            out.append(_code_block(cmd))
+
     return '\n'.join(out)
 
 
@@ -244,8 +324,8 @@ def _convert_fenced_blocks(md_text: str) -> str:
 
 
 def _prose_to_html(text: str) -> str:
-    """Convert plain prose to HTML paragraphs/headings."""
-    lines = text.splitlines()
+    """Convert plain prose to HTML paragraphs/headings/code blocks."""
+    lines = [l.rstrip() for l in text.splitlines()]
     out = []
     para = []
 
@@ -257,23 +337,80 @@ def _prose_to_html(text: str) -> str:
                 out.append(f'<p>{joined}</p>')
             para.clear()
 
-    for line in lines:
-        m2 = re.match(r'^## (.+)$', line)
-        m3 = re.match(r'^### (.+)$', line)
-        m1 = re.match(r'^# (.+)$', line)
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+
+        # Skip Obsidian "Code: lang" labels before fenced blocks
+        if re.match(r'^Code:\s+\w+$', stripped):
+            i += 1
+            continue
+
+        m4 = re.match(r'^#### (.+)$', stripped)
+        m3 = re.match(r'^### (.+)$', stripped)
+        m2 = re.match(r'^## (.+)$', stripped)
+        m1 = re.match(r'^# (.+)$', stripped)
+
         if m1:
             flush_para()
             out.append(f'<h2>{html.escape(m1.group(1))}</h2>')
+            i += 1
         elif m2:
             flush_para()
             out.append(f'<h3>{html.escape(m2.group(1))}</h3>')
+            i += 1
         elif m3:
             flush_para()
             out.append(f'<h4>{html.escape(m3.group(1))}</h4>')
-        elif line.strip() == '' or line.strip() == '---':
+            i += 1
+        elif m4:
             flush_para()
+            out.append(f'<h4>{html.escape(m4.group(1))}</h4>')
+            i += 1
+        elif stripped == '' or stripped == '---' or re.match(r'^-{3,}$', stripped):
+            flush_para()
+            i += 1
         else:
-            para.append(line.strip())
+            # Single backtick code span on its own line → code block
+            m_code = re.match(r'^`([^`]+)`$', stripped)
+            if m_code:
+                flush_para()
+                cmd = m_code.group(1)
+
+                # Look ahead: is next non-blank line a short description?
+                j = i + 1
+                while j < len(lines) and not lines[j].strip():
+                    j += 1
+                next_stripped = lines[j].strip() if j < len(lines) else ''
+                is_desc = bool(
+                    next_stripped and
+                    not re.match(r'^`[^`]+`$', next_stripped) and
+                    not re.match(r'^#{1,4}\s', next_stripped) and
+                    not next_stripped.startswith('|') and
+                    not next_stripped.startswith('```') and
+                    not re.match(r'^Code:\s+\w+$', next_stripped) and
+                    not re.match(r'^-{3,}$', next_stripped)
+                )
+
+                cmd = _apply_vars(cmd)
+                lang = _detect_lang(cmd)
+
+                if is_desc:
+                    # cmd + desc pair → h3(desc) + code(cmd)
+                    desc_text = next_stripped
+                    desc_text = re.sub(r'`([^`]+)`', r'\1', desc_text)
+                    desc_text = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', desc_text)
+                    slug = _slugify(desc_text)[:60]
+                    out.append(f'<h3 id="{slug}">{html.escape(desc_text)}</h3>')
+                    out.append(f'<pre><code class="language-{lang}">{html.escape(cmd)}</code></pre>')
+                    i = j + 1  # consume both lines
+                else:
+                    out.append(f'<pre><code class="language-{lang}">{html.escape(cmd)}</code></pre>')
+                    i += 1
+            else:
+                para.append(stripped)
+                i += 1
 
     flush_para()
     return '\n'.join(out)
@@ -289,7 +426,7 @@ def convert_reference_note(md_text: str, title: str) -> str:
 
 # ── File processors ────────────────────────────────────────────────────────────
 
-def process_academy_sheets() -> list[dict]:
+def process_academy_sheets() -> list:
     """Process all Academy Cheat Sheet .md files."""
     nav_items = []
     for fpath in sorted(VAULT_CHEATSHEETS.glob('*.md')):
@@ -332,9 +469,9 @@ def process_academy_sheets() -> list[dict]:
     return nav_items
 
 
-def process_reference_notes() -> list[dict]:
+def process_reference_notes() -> dict:
     """Process all Reference .md files (recursive)."""
-    nav_sections: dict[str, list] = {}
+    nav_sections: dict = {}
 
     for fpath in sorted(VAULT_REFERENCE.rglob('*.md')):
         if fpath.name.startswith('Reference Index'):
