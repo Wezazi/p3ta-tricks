@@ -23,6 +23,11 @@
         "title": "Sharp Hound",
         "url": "/page/bloodhound/collectors/SharpHound",
         "children": []
+      },
+      {
+        "title": "Bloody Ad",
+        "url": "/page/bloodhound/collectors/bloodyAD",
+        "children": []
       }
     ]
   },
