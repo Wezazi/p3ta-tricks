@@ -119,84 +119,95 @@ def _parse_table_rows(table_text: str) -> list[tuple[str, str]]:
     rows = []
     for line in table_text.splitlines():
         line = line.strip()
-        if not line or line.startswith('|--') or line.startswith('| --') or line.startswith('| Command') or line.startswith('| command'):
+        if not line or re.match(r'^\|[-\s|]+\|$', line):
             continue
         if not line.startswith('|'):
             continue
         parts = [p.strip() for p in line.strip('|').split('|')]
         if len(parts) >= 2:
             cmd  = parts[0].strip()
-            desc = ' | '.join(parts[1:]).strip()
+            desc = parts[1].strip()
+            # Skip header rows
+            if re.match(r'^\*{0,2}[Cc]ommand\*{0,2}$', cmd):
+                continue
             if cmd:
                 rows.append((cmd, desc))
     return rows
 
 
-def _render_table(rows: list[tuple[str, str]]) -> str:
+def _render_rows(rows: list[tuple[str, str]]) -> str:
+    """Render table rows as: description h3 + code block pairs."""
     if not rows:
         return ''
-    out = ['<table class="cheatsheet-table"><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>']
+    out = []
     for cmd, desc in rows:
-        # Strip surrounding backticks if present (single-line inline code)
+        # Strip surrounding backticks from command
         if cmd.startswith('`') and cmd.endswith('`') and cmd.count('`') == 2:
             cmd = cmd[1:-1]
-        desc_html = html.escape(desc)
-        # Re-linkify backtick spans in description
-        desc_html = re.sub(r'`([^`]+)`', r'<code>\1</code>', desc_html)
-        out.append(f'<tr><td>{_code_block(cmd)}</td><td class="cmd-desc">{desc_html}</td></tr>')
-    out.append('</tbody></table>')
+        cmd = cmd.strip()
+        if not cmd:
+            continue
+        if desc:
+            desc_clean = re.sub(r'`([^`]+)`', r'\1', desc)  # strip backtick formatting
+            desc_clean = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', desc_clean)
+            slug = _slugify(desc_clean)[:60]
+            out.append(f'<h3 id="{slug}">{html.escape(desc_clean)}</h3>')
+        out.append(_code_block(cmd))
     return '\n'.join(out)
+
+
+def _process_body(body: str) -> str:
+    """Process a section body: extract tables → rows format + fenced blocks."""
+    chunks = []
+    other_lines = []
+    current_table = []
+
+    for line in body.splitlines():
+        if line.strip().startswith('|'):
+            if other_lines:
+                non_table = _convert_fenced_blocks('\n'.join(other_lines))
+                if non_table:
+                    chunks.append(non_table)
+                other_lines = []
+            current_table.append(line)
+        else:
+            if current_table:
+                rows = _parse_table_rows('\n'.join(current_table))
+                if rows:
+                    chunks.append(_render_rows(rows))
+                current_table = []
+            if line.strip():
+                other_lines.append(line)
+
+    if current_table:
+        rows = _parse_table_rows('\n'.join(current_table))
+        if rows:
+            chunks.append(_render_rows(rows))
+    if other_lines:
+        non_table = _convert_fenced_blocks('\n'.join(other_lines))
+        if non_table:
+            chunks.append(non_table)
+
+    return '\n'.join(chunks)
 
 
 def convert_academy_sheet(md_text: str, title: str) -> str:
     """Convert Academy cheat sheet (table format) to HTML."""
-    # Remove Obsidian front matter if present
     md_text = re.sub(r'^---\n.*?\n---\n', '', md_text, flags=re.S)
 
     chunks = []
-    # Split on H1 sections
     sections = re.split(r'^# (.+)$', md_text, flags=re.M)
-    # sections[0] is preamble (usually empty), then [title, content, title, content ...]
 
+    # Preamble before first H1 — may itself contain tables
     preamble = sections[0].strip()
     if preamble:
-        chunks.append(f'<p>{html.escape(preamble)}</p>')
+        chunks.append(_process_body(preamble))
 
     it = iter(sections[1:])
     for sec_title, sec_body in zip(it, it):
         sec_title = sec_title.strip()
         chunks.append(f'<h2>{html.escape(sec_title)}</h2>')
-
-        # Extract tables from section body
-        # A table is a block of lines starting with |
-        table_block = []
-        other_lines = []
-        current_table = []
-
-        for line in sec_body.splitlines():
-            if line.strip().startswith('|'):
-                current_table.append(line)
-            else:
-                if current_table:
-                    rows = _parse_table_rows('\n'.join(current_table))
-                    if rows:
-                        table_block.append(_render_table(rows))
-                    current_table = []
-                stripped = line.strip()
-                if stripped:
-                    other_lines.append(stripped)
-
-        if current_table:
-            rows = _parse_table_rows('\n'.join(current_table))
-            if rows:
-                table_block.append(_render_table(rows))
-
-        # Non-table text as paragraphs (fenced code blocks, notes, etc.)
-        non_table_html = _convert_fenced_blocks('\n'.join(other_lines))
-        if non_table_html:
-            chunks.append(non_table_html)
-
-        chunks.extend(table_block)
+        chunks.append(_process_body(sec_body))
 
     return '\n'.join(chunks)
 

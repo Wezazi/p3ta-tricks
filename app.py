@@ -13,6 +13,15 @@ INDEX         = ROOT / "static" / "search_index.json"
 SOURCES       = ROOT / "sources"
 NAV_CACHE_DIR = ROOT / "content" / "nav"
 
+# Static file cache-buster — use git short hash if available, else timestamp
+import subprocess as _sp, time as _time
+try:
+    _ver = _sp.check_output(['git','rev-parse','--short','HEAD'],
+                             cwd=ROOT, stderr=_sp.DEVNULL).decode().strip()
+except Exception:
+    _ver = str(int(_time.time()))
+STATIC_VER = _ver
+
 # Offline mode — set OFFLINE_MODE=1 and TOOLS_DIR=/path/to/tools
 OFFLINE_MODE = os.environ.get("OFFLINE_MODE", "0") == "1"
 TOOLS_DIR    = Path(os.environ.get("TOOLS_DIR", ROOT.parent / "p3ta-tricks-offline" / "tools"))
@@ -189,7 +198,7 @@ def _security_headers(response):
 @app.context_processor
 def inject_globals():
     """Inject globals into every template."""
-    base = {"site_url": SITE_URL}
+    base = {"site_url": SITE_URL, "static_ver": STATIC_VER}
     if not OFFLINE_MODE:
         base.update({"offline_mode": False, "offline_config_json": "null"})
         return base

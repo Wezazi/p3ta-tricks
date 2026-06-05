@@ -1019,13 +1019,20 @@ function _renderCode() {
       const safe = v.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
       const display = _QUOTED_VARS.has(k.toLowerCase()) ? `'${safe}'` : safe;
       const ek = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const filled = `<span class="var-filled" title="&lt;${k}&gt;">${safe}</span>`;
+      const filledD = `<span class="var-filled" title="&lt;${k}&gt;">${display}</span>`;
+      // When Pygments wraps '<key>' as a bash single-quoted string: &#39;&lt;key&gt;&#39;
+      // Keep the surrounding &#39; entities so the rendered quote is preserved once,
+      // but use `safe` (no extra quotes) to avoid doubling: ''value''
+      const rePrequoted = new RegExp(`(&#39;)&lt;${ek}&gt;(&#39;)`, 'gi');
+      html = html.replace(rePrequoted, `$1${filled}$2`);
       // Prism bash/powershell tokenizes < and > as operator spans, so we must match
       // BOTH the raw form (&lt;key&gt;) and the Prism-wrapped form (<span...>&lt;</span>key<span...>&gt;</span>)
       const re = new RegExp(
         `<span[^>]*>&lt;<\\/span>${ek}<span[^>]*>&gt;<\\/span>|&lt;${ek}&gt;`,
         'gi'
       );
-      html = html.replace(re, `<span class="var-filled" title="&lt;${k}&gt;">${display}</span>`);
+      html = html.replace(re, filledD);
     });
     el.innerHTML = html;
   });
