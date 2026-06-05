@@ -192,17 +192,46 @@ def _parse_table_rows(table_text: str) -> list:
         return [(r[0], r[1]) for r in raw_rows if r[0]]
 
 
+def _looks_like_code(text: str) -> bool:
+    """Heuristic: does text look like executable code vs natural language prose?"""
+    if len(text) < 200:
+        return True
+    if '\n' in text:
+        return True  # multi-line is always code
+    if re.search(r'\b(SELECT|FROM|WHERE|JOIN|EXEC|INSERT|UPDATE|DELETE|RECONFIGURE|DECLARE)\b', text, re.I):
+        return True
+    if re.search(r'[/\\$@]|\b(python|python3|curl|wget|Get-|Set-|Invoke-|Add-|Remove-)\b', text):
+        return True
+    return False
+
+
 def _render_rows(rows: list) -> str:
     """Render table rows as: description h3 + code block pairs."""
     if not rows:
         return ''
     out = []
     for cmd, desc in rows:
-        # Strip surrounding backticks from command
         cmd = cmd.strip()
-        if cmd.startswith('`') and cmd.endswith('`') and cmd.count('`') == 2:
-            cmd = cmd[1:-1]
-        # Strip markdown links and formatting from cmd
+
+        # Normalize all <br> variants to <br> before splitting
+        cmd = re.sub(r'\s*<br\s*/?>\s*', '<br>', cmd, flags=re.I)
+
+        # Reconstruct <br>-joined multi-line commands (Obsidian table line breaks)
+        if '<br>' in cmd:
+            segments = cmd.split('<br>')
+            lines = []
+            for seg in segments:
+                seg = seg.strip()
+                if seg.startswith('`') and seg.endswith('`') and seg.count('`') == 2:
+                    seg = seg[1:-1]
+                lines.append(seg)
+            cmd = '\n'.join(lines)
+        else:
+            # Strip single surrounding backtick pair
+            if cmd.startswith('`') and cmd.endswith('`') and cmd.count('`') == 2:
+                cmd = cmd[1:-1]
+
+        # Strip markdown links and bold/italic from cmd
         cmd = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', cmd)
         cmd = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', cmd)
         cmd = cmd.strip()
@@ -210,24 +239,22 @@ def _render_rows(rows: list) -> str:
             continue
 
         # Clean description
-        desc_clean = ''
-        if desc:
-            desc_clean = _strip_markdown(desc).strip()
+        desc_clean = _strip_markdown(desc).strip() if desc else ''
 
-        # Long prose descriptions (> 120 chars) → reference table: h3(name) + p(desc)
         if len(desc_clean) > 120:
+            # Reference table (e.g. Tools of the Trade): h3(cmd-label) + p(desc)
             slug = _slugify(cmd)[:60]
             out.append(f'<h3 id="{slug}">{html.escape(cmd)}</h3>')
             trunc = desc_clean[:400] + ('…' if len(desc_clean) > 400 else '')
             out.append(f'<p>{html.escape(trunc)}</p>')
-        elif len(cmd) > 120:
-            # Very long cmd that is actually prose (comparison tables etc.) → skip or show as p
+        elif not _looks_like_code(cmd):
+            # Long natural-language cmd (comparison table) → show as prose
             if desc_clean:
                 slug = _slugify(desc_clean)[:60]
                 out.append(f'<h3 id="{slug}">{html.escape(desc_clean)}</h3>')
             out.append(f'<p>{html.escape(cmd[:400])}{"…" if len(cmd) > 400 else ""}</p>')
         else:
-            # Normal: h3 = description, code = command
+            # Normal: h3 = description, code block = command
             if desc_clean:
                 slug = _slugify(desc_clean)[:60]
                 out.append(f'<h3 id="{slug}">{html.escape(desc_clean)}</h3>')
@@ -241,9 +268,14 @@ def _process_body(body: str) -> str:
     chunks = []
     other_lines = []
     current_table = []
+    in_fence = False
 
     for line in body.splitlines():
-        if line.strip().startswith('|'):
+        # Track fenced block state so blank lines inside fences are preserved
+        if line.strip().startswith('```'):
+            in_fence = not in_fence
+
+        if not in_fence and line.strip().startswith('|'):
             if other_lines:
                 non_table = _convert_fenced_blocks('\n'.join(other_lines))
                 if non_table:
@@ -256,7 +288,8 @@ def _process_body(body: str) -> str:
                 if rows:
                     chunks.append(_render_rows(rows))
                 current_table = []
-            if line.strip():
+            # Preserve blank lines inside fenced blocks; drop outside
+            if line.strip() or in_fence:
                 other_lines.append(line)
 
     if current_table:
@@ -271,12 +304,35 @@ def _process_body(body: str) -> str:
     return '\n'.join(chunks)
 
 
+def _split_on_h1(md_text: str) -> list:
+    """Split markdown on H1 headings that are NOT inside fenced code blocks.
+    Returns [preamble, title1, body1, title2, body2, ...]"""
+    result = []
+    current = []
+    in_fence = False
+
+    for line in md_text.splitlines(keepends=True):
+        stripped = line.strip()
+        # Track fenced code block state
+        if stripped.startswith('```'):
+            in_fence = not in_fence
+        if not in_fence and re.match(r'^# (.+)$', stripped):
+            result.append(''.join(current))
+            result.append(re.match(r'^# (.+)$', stripped).group(1))
+            current = []
+        else:
+            current.append(line)
+
+    result.append(''.join(current))
+    return result
+
+
 def convert_academy_sheet(md_text: str, title: str) -> str:
     """Convert Academy cheat sheet (table format) to HTML."""
     md_text = re.sub(r'^---\n.*?\n---\n', '', md_text, flags=re.S)
 
     chunks = []
-    sections = re.split(r'^# (.+)$', md_text, flags=re.M)
+    sections = _split_on_h1(md_text)
 
     # Preamble before first H1 — may itself contain tables
     preamble = sections[0].strip()
@@ -298,6 +354,11 @@ def _convert_fenced_blocks(md_text: str) -> str:
     """Convert markdown with fenced code blocks to HTML."""
     if not md_text.strip():
         return ''
+
+    # Normalize inline triple-backtick spans (same line, no newline inside)
+    # e.g. ```payload``` → `payload`  Must run before block split to avoid
+    # the regex matching across lines on the closing/opening ``` boundary.
+    md_text = re.sub(r'```([^`\n]+)```', r'`\1`', md_text)
 
     parts = []
     # Split on fenced code blocks
@@ -333,7 +394,11 @@ def _prose_to_html(text: str) -> str:
         if para:
             joined = ' '.join(para).strip()
             if joined:
-                joined = re.sub(r'`([^`]+)`', r'<code>\1</code>', html.escape(joined))
+                joined = html.escape(joined)
+                joined = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', joined)
+                joined = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', joined)
+                joined = re.sub(r'`([^`]+)`', r'<code>\1</code>', joined)
+                joined = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', joined)
                 out.append(f'<p>{joined}</p>')
             para.clear()
 
@@ -341,6 +406,10 @@ def _prose_to_html(text: str) -> str:
     while i < len(lines):
         line = lines[i]
         stripped = line.strip()
+
+        # Normalize triple-backtick inline spans to single-backtick
+        # e.g. ```payload``` → `payload` (on a single line)
+        stripped = re.sub(r'```([^`\n]+)```', r'`\1`', stripped)
 
         # Skip Obsidian "Code: lang" labels before fenced blocks
         if re.match(r'^Code:\s+\w+$', stripped):

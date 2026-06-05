@@ -1759,6 +1759,11 @@ code[class*="language-"], pre[class*="language-"] {
   font-family: var(--font-mono);
   font-size: .82rem;
 }
+/* Prism injects language-* onto <pre> — restore page-body pre styling */
+.page-body pre[class*="language-"] {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+}
 .token.comment, .token.prolog, .token.doctype, .token.cdata { color: #565f89; font-style: italic; }
 .token.punctuation { color: var(--fg-dim); }
 .token.namespace { opacity: .7; }
