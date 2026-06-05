@@ -410,7 +410,7 @@ def main():
     nav = [
         {
             'type':  'section',
-            'title': 'HTB Academy Cheat Sheets',
+            'title': 'Cheat Sheets',
             'items': sorted(academy_nav, key=lambda x: x['title']),
         },
     ]

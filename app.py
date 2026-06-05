@@ -845,13 +845,16 @@ def _parse_revshells_app():
         meta    = entry.get('meta', [])
         tab     = next((_RS_TYPE_TO_TAB[m] for m in meta if m in _RS_TYPE_TO_TAB), 'reverse')
         os_tags = [m for m in meta if m in ('linux', 'mac', 'windows')]
-        shells.append({
+        shell_entry = {
             'id':      uid,
             'name':    entry.get('name', ''),
             'command': entry.get('command', ''),
             'tab':     tab,
             'os':      os_tags,
-        })
+        }
+        if entry.get('b64_source'):
+            shell_entry['b64_source'] = entry['b64_source']
+        shells.append(shell_entry)
     result = {
         'shells':      shells,
         'listeners':   raw.get('listenerCommands', []),

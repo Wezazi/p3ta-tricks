@@ -138,12 +138,31 @@
     });
   });
 
+  // ── UTF-16LE base64 (for PowerShell EncodedCommand) ─────────────────────
+  function toPS64(plaintext) {
+    const bytes = [];
+    for (let i = 0; i < plaintext.length; i++) {
+      const c = plaintext.charCodeAt(i);
+      bytes.push(c & 0xff, (c >> 8) & 0xff);
+    }
+    let bin = '';
+    for (const b of bytes) bin += String.fromCharCode(b);
+    return btoa(bin);
+  }
+
   // ── Substitution ─────────────────────────────────────────────────────────
-  function sub(cmd) {
-    return cmd
+  function sub(cmd, b64Source) {
+    let out = cmd
       .replace(/\{ip\}/g,    ip    || '{ip}')
       .replace(/\{port\}/g,  port  || '{port}')
       .replace(/\{shell\}/g, shell || 'sh');
+    if (b64Source && out.includes('{b64}')) {
+      const plain = b64Source
+        .replace(/\{ip\}/g,   ip   || '{ip}')
+        .replace(/\{port\}/g, port || '{port}');
+      out = out.replace(/\{b64\}/g, toPS64(plain));
+    }
+    return out;
   }
 
   // ── IP / Port ─────────────────────────────────────────────────────────────
@@ -228,7 +247,8 @@
     document.getElementById('rs-preview-name').textContent = s.name;
     const code = document.getElementById('rs-preview-code');
     code.dataset.raw = s.command;
-    code.textContent = sub(s.command);
+    code.dataset.b64Source = s.b64_source || '';
+    code.textContent = sub(s.command, s.b64_source);
     if (window.Prism) Prism.highlightElement(code);
   }
 
@@ -237,7 +257,7 @@
     const s = ALL[selId];
     if (!s) return;
     const code = document.getElementById('rs-preview-code');
-    code.textContent = sub(s.command);
+    code.textContent = sub(s.command, s.b64_source);
     if (window.Prism) Prism.highlightElement(code);
     updateListener();
   }
@@ -245,7 +265,7 @@
   // ── Copy / Raw ────────────────────────────────────────────────────────────
   document.getElementById('rs-btn-copy').addEventListener('click', () => {
     const code = document.getElementById('rs-preview-code');
-    navigator.clipboard.writeText(sub(code.dataset.raw || code.textContent)).then(() => {
+    navigator.clipboard.writeText(sub(code.dataset.raw || code.textContent, code.dataset.b64Source || '')).then(() => {
       const btn = document.getElementById('rs-btn-copy');
       btn.innerHTML = '✓ Copied';
       setTimeout(() => {
@@ -257,7 +277,7 @@
     const code = document.getElementById('rs-preview-code');
     const w = window.open('about:blank','_blank');
     w.document.write('<pre style="font:14px monospace;background:#1a1b26;color:#c0caf5;padding:1rem;white-space:pre-wrap">'
-      + sub(code.dataset.raw || code.textContent).replace(/</g,'&lt;') + '</pre>');
+      + sub(code.dataset.raw || code.textContent, code.dataset.b64Source || '').replace(/</g,'&lt;') + '</pre>');
     w.document.close();
   });
 
