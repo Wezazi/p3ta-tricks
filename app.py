@@ -249,7 +249,7 @@ SOURCE_META = {
     "windows-privesc": {"label": "Windows PrivEsc",         "color": "var(--blue)",    "icon": "🪟"},
     "misc":            {"label": "Misc Cheatsheets",        "color": "var(--cyan)",    "icon": "📋"},
     "churchofmalware": {"label": "Church of Malware",         "color": "var(--red)",     "icon": "⛧"},
-    "htb-academy":     {"label": "HTB Academy",               "color": "var(--green)",   "icon": "🎓"},
+    "htb-academy":     {"label": "Cheat Sheets",               "color": "var(--green)",   "icon": "📋"},
 }
 
 _NAV_SOURCES = {

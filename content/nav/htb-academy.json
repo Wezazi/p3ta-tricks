@@ -1,18 +1,12 @@
 [
   {
     "type": "section",
-    "title": "Cheat Sheets",
+    "title": "Active Directory",
     "items": [
       {
         "type": "link",
-        "title": "Abusing HTTP Misconfigurations",
-        "url": "/page/htb-academy/academy-abusing-http-misconfigurations",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Active Directory BloodHound",
-        "url": "/page/htb-academy/academy-active-directory-bloodhound",
+        "title": "Introduction to Active Directory",
+        "url": "/page/htb-academy/academy-introduction-to-active-directory",
         "items": []
       },
       {
@@ -41,128 +35,26 @@
       },
       {
         "type": "link",
+        "title": "Active Directory BloodHound",
+        "url": "/page/htb-academy/academy-active-directory-bloodhound",
+        "items": []
+      },
+      {
+        "type": "link",
         "title": "Active Directory Trust Attacks",
         "url": "/page/htb-academy/academy-active-directory-trust-attacks",
         "items": []
       },
       {
         "type": "link",
-        "title": "Advanced Deserializations Attacks",
-        "url": "/page/htb-academy/academy-advanced-deserializations-attacks",
+        "title": "Kerberos Attacks",
+        "url": "/page/htb-academy/academy-kerberos-attacks",
         "items": []
       },
       {
         "type": "link",
-        "title": "Advanced SQL Injections",
-        "url": "/page/htb-academy/academy-advanced-sql-injections",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Advanced XSS and CSRF Exploitation",
-        "url": "/page/htb-academy/academy-advanced-xss-and-csrf-exploitation",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Andriod Fundamentals",
-        "url": "/page/htb-academy/academy-andriod-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Android Fundamentals",
-        "url": "/page/htb-academy/academy-android-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Assembly Language",
-        "url": "/page/htb-academy/academy-assembly-language",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking Authentication Mechanisms",
-        "url": "/page/htb-academy/academy-attacking-authentication-mechanisms",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking Common Applications",
-        "url": "/page/htb-academy/academy-attacking-common-applications",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking Common Services",
-        "url": "/page/htb-academy/academy-attacking-common-services",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking GraphQL",
-        "url": "/page/htb-academy/academy-attacking-graphql",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking WPAWPA2 Wi-Fi Networks",
-        "url": "/page/htb-academy/academy-attacking-wpawpa2-wi-fi-networks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking WPA_WPA2 Wi-Fi Networks",
-        "url": "/page/htb-academy/academy-attacking-wpawpa2-wi-fi-networks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking Web Applications with Ffuf",
-        "url": "/page/htb-academy/academy-attacking-web-applications-with-ffuf",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Attacking Wi-Fi Protected Setup (WPS)",
-        "url": "/page/htb-academy/academy-attacking-wi-fi-protected-setup-wps",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Basic Commands",
-        "url": "/page/htb-academy/academy-basic-commands",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Blind SQL Injection",
-        "url": "/page/htb-academy/academy-blind-sql-injection",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Broken Authentication",
-        "url": "/page/htb-academy/academy-broken-authentication",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Command Injections",
-        "url": "/page/htb-academy/academy-command-injections",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Cracking Passwords with Hashcat",
-        "url": "/page/htb-academy/academy-cracking-passwords-with-hashcat",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Cross-Site Scripting (XSS)",
-        "url": "/page/htb-academy/academy-cross-site-scripting-xss",
+        "title": "NTLM Relay Attacks CheatSheet",
+        "url": "/page/htb-academy/academy-ntlm-relay-attacks-cheatsheet",
         "items": []
       },
       {
@@ -179,556 +71,10 @@
       },
       {
         "type": "link",
-        "title": "Detecting Access Token Manipulation Attacks",
-        "url": "/page/htb-academy/academy-detecting-access-token-manipulation-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Evil-WinRM RUNas System",
-        "url": "/page/htb-academy/academy-evil-winrm-runas-system",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "FFUF",
-        "url": "/page/htb-academy/academy-ffuf",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "File Inclusion",
-        "url": "/page/htb-academy/academy-file-inclusion",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "File Transfers",
-        "url": "/page/htb-academy/academy-file-transfers",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "File Upload Attacks",
-        "url": "/page/htb-academy/academy-file-upload-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Footprinting",
-        "url": "/page/htb-academy/academy-footprinting",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Game Hacking Fundamentals",
-        "url": "/page/htb-academy/academy-game-hacking-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Getting Started",
-        "url": "/page/htb-academy/academy-getting-started",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "HTTP Attacks",
-        "url": "/page/htb-academy/academy-http-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "HTTPsTLS Attacks",
-        "url": "/page/htb-academy/academy-httpstls-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Hacking WordPress",
-        "url": "/page/htb-academy/academy-hacking-wordpress",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Information Gathering",
-        "url": "/page/htb-academy/academy-information-gathering",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Information Gathering - Web Edition",
-        "url": "/page/htb-academy/academy-information-gathering-web-edition",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Injection Attacks",
-        "url": "/page/htb-academy/academy-injection-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Intro to Assembly Language",
-        "url": "/page/htb-academy/academy-intro-to-assembly-language",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Intro to C2 Operations with Sliver",
-        "url": "/page/htb-academy/academy-intro-to-c2-operations-with-sliver",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Intro to Whitebox Pentesting",
-        "url": "/page/htb-academy/academy-intro-to-whitebox-pentesting",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to Active Directory",
-        "url": "/page/htb-academy/academy-introduction-to-active-directory",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to C",
-        "url": "/page/htb-academy/academy-introduction-to-c",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to C#",
-        "url": "/page/htb-academy/academy-introduction-to-c",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to Deserialization Attacks",
-        "url": "/page/htb-academy/academy-introduction-to-deserialization-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to NoSQL Injection",
-        "url": "/page/htb-academy/academy-introduction-to-nosql-injection",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to Windows Command Line",
-        "url": "/page/htb-academy/academy-introduction-to-windows-command-line",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Introduction to Windows Evasion Techniques",
-        "url": "/page/htb-academy/academy-introduction-to-windows-evasion-techniques",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "JavaScript Deobfuscation",
-        "url": "/page/htb-academy/academy-javascript-deobfuscation",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Kerberos Attacks",
-        "url": "/page/htb-academy/academy-kerberos-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Linux Fundamentals",
-        "url": "/page/htb-academy/academy-linux-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Login Brute Forcing",
-        "url": "/page/htb-academy/academy-login-brute-forcing",
-        "items": []
-      },
-      {
-        "type": "link",
         "title": "MSSQL, Exchange, and SCCM Attacks",
         "url": "/page/htb-academy/academy-mssql-exchange-and-sccm-attacks",
         "items": []
       },
-      {
-        "type": "link",
-        "title": "MacOS Fundamentals",
-        "url": "/page/htb-academy/academy-macos-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Malicious Document Analysis",
-        "url": "/page/htb-academy/academy-malicious-document-analysis",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Metasploit",
-        "url": "/page/htb-academy/academy-metasploit",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "NTLM Relay Attacks CheatSheet",
-        "url": "/page/htb-academy/academy-ntlm-relay-attacks-cheatsheet",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Network Enumeration Cheat Sheet",
-        "url": "/page/htb-academy/academy-network-enumeration-cheat-sheet",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Network Traffic Analysis",
-        "url": "/page/htb-academy/academy-network-traffic-analysis",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "OSINT_ Corporate Recon",
-        "url": "/page/htb-academy/academy-osint-corporate-recon",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Password Attacks",
-        "url": "/page/htb-academy/academy-password-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Pentest in a Nutshell",
-        "url": "/page/htb-academy/academy-pentest-in-a-nutshell",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Pivoting",
-        "url": "/page/htb-academy/academy-pivoting",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Pivoting, Tunneling, and Port Forwarding",
-        "url": "/page/htb-academy/academy-pivoting-tunneling-and-port-forwarding",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Process Injection Attacks and Detection",
-        "url": "/page/htb-academy/academy-process-injection-attacks-and-detection",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "SQL Injection Fundamentals",
-        "url": "/page/htb-academy/academy-sql-injection-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "SQLMap Essentials",
-        "url": "/page/htb-academy/academy-sqlmap-essentials",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "SQLmap",
-        "url": "/page/htb-academy/academy-sqlmap",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Secure Coding 101_ JavaScript",
-        "url": "/page/htb-academy/academy-secure-coding-101-javascript",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Server-side Attacks",
-        "url": "/page/htb-academy/academy-server-side-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Shells & Payloads",
-        "url": "/page/htb-academy/academy-shells-payloads",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Stack-Based Buffer Overflows on Windows x86",
-        "url": "/page/htb-academy/academy-stack-based-buffer-overflows-on-windows-x86",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Supply Chain Attacks",
-        "url": "/page/htb-academy/academy-supply-chain-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Tools of the Trade",
-        "url": "/page/htb-academy/academy-tools-of-the-trade",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "User Behavior Forensics",
-        "url": "/page/htb-academy/academy-user-behavior-forensics",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Using CrackMapExec",
-        "url": "/page/htb-academy/academy-using-crackmapexec",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Using Web Proxies",
-        "url": "/page/htb-academy/academy-using-web-proxies",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Web Attacks",
-        "url": "/page/htb-academy/academy-web-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Web Fuzzing",
-        "url": "/page/htb-academy/academy-web-fuzzing",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Web Proxies",
-        "url": "/page/htb-academy/academy-web-proxies",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Web Requests",
-        "url": "/page/htb-academy/academy-web-requests",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Whitebox Attacks",
-        "url": "/page/htb-academy/academy-whitebox-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Whitebox Pentesting 101 Command Injection",
-        "url": "/page/htb-academy/academy-whitebox-pentesting-101-command-injection",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Whitebox Pentesting 101_ Command Injection",
-        "url": "/page/htb-academy/academy-whitebox-pentesting-101-command-injection",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Wi-Fi Evil Twin Attacks",
-        "url": "/page/htb-academy/academy-wi-fi-evil-twin-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Wi-Fi Penetration Testing Basics",
-        "url": "/page/htb-academy/academy-wi-fi-penetration-testing-basics",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Windows Attacks & Defense",
-        "url": "/page/htb-academy/academy-windows-attacks-defense",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Windows Fundamentals",
-        "url": "/page/htb-academy/academy-windows-fundamentals",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Windows Lateral Movement",
-        "url": "/page/htb-academy/academy-windows-lateral-movement",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "Wired Equivalent Privacy (WEP) Attacks",
-        "url": "/page/htb-academy/academy-wired-equivalent-privacy-wep-attacks",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "XSS",
-        "url": "/page/htb-academy/academy-xss",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "Enumeration",
-    "items": [
-      {
-        "type": "link",
-        "title": "bloodhound",
-        "url": "/page/htb-academy/ref-enumeration-bloodhound",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "feroxbuster",
-        "url": "/page/htb-academy/ref-enumeration-feroxbuster",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "ffuf",
-        "url": "/page/htb-academy/ref-enumeration-ffuf",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "ldapsearch",
-        "url": "/page/htb-academy/ref-enumeration-ldapsearch",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "netexec",
-        "url": "/page/htb-academy/ref-enumeration-netexec",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "nmap",
-        "url": "/page/htb-academy/ref-enumeration-nmap",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "nuclei",
-        "url": "/page/htb-academy/ref-enumeration-nuclei",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "File Transfers",
-    "items": [
-      {
-        "type": "link",
-        "title": "file-transfers",
-        "url": "/page/htb-academy/ref-file-transfers-file-transfers",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "Linux",
-    "items": [
-      {
-        "type": "link",
-        "title": "linux-enum",
-        "url": "/page/htb-academy/ref-linux-linux-enum",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "linux-privesc-checklist",
-        "url": "/page/htb-academy/ref-linux-linux-privesc-checklist",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "Password Attacks",
-    "items": [
-      {
-        "type": "link",
-        "title": "hashcat",
-        "url": "/page/htb-academy/ref-password-attacks-hashcat",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "responder",
-        "url": "/page/htb-academy/ref-password-attacks-responder",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "Pivoting",
-    "items": [
-      {
-        "type": "link",
-        "title": "chisel",
-        "url": "/page/htb-academy/ref-pivoting-chisel",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "ligolo-ng",
-        "url": "/page/htb-academy/ref-pivoting-ligolo-ng",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "ssh-tunneling",
-        "url": "/page/htb-academy/ref-pivoting-ssh-tunneling",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "Web Attacks",
-    "items": [
-      {
-        "type": "link",
-        "title": "sqli",
-        "url": "/page/htb-academy/ref-web-attacks-sqli",
-        "items": []
-      },
-      {
-        "type": "link",
-        "title": "xss",
-        "url": "/page/htb-academy/ref-web-attacks-xss",
-        "items": []
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "title": "Windows",
-    "items": [
       {
         "type": "link",
         "title": "acl-attacks",
@@ -775,6 +121,672 @@
         "type": "link",
         "title": "secretsdump",
         "url": "/page/htb-academy/ref-windows-secretsdump",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Windows",
+    "items": [
+      {
+        "type": "link",
+        "title": "Windows Fundamentals",
+        "url": "/page/htb-academy/academy-windows-fundamentals",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Windows Attacks & Defense",
+        "url": "/page/htb-academy/academy-windows-attacks-defense",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Windows Lateral Movement",
+        "url": "/page/htb-academy/academy-windows-lateral-movement",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Introduction to Windows Command Line",
+        "url": "/page/htb-academy/academy-introduction-to-windows-command-line",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Introduction to Windows Evasion Techniques",
+        "url": "/page/htb-academy/academy-introduction-to-windows-evasion-techniques",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Evil-WinRM RUNas System",
+        "url": "/page/htb-academy/academy-evil-winrm-runas-system",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Process Injection Attacks and Detection",
+        "url": "/page/htb-academy/academy-process-injection-attacks-and-detection",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Detecting Access Token Manipulation Attacks",
+        "url": "/page/htb-academy/academy-detecting-access-token-manipulation-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Using CrackMapExec",
+        "url": "/page/htb-academy/academy-using-crackmapexec",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Stack-Based Buffer Overflows on Windows x86",
+        "url": "/page/htb-academy/academy-stack-based-buffer-overflows-on-windows-x86",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Linux",
+    "items": [
+      {
+        "type": "link",
+        "title": "Linux Fundamentals",
+        "url": "/page/htb-academy/academy-linux-fundamentals",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Basic Commands",
+        "url": "/page/htb-academy/academy-basic-commands",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "linux-enum",
+        "url": "/page/htb-academy/ref-linux-linux-enum",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "linux-privesc-checklist",
+        "url": "/page/htb-academy/ref-linux-linux-privesc-checklist",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Web Attacks",
+    "items": [
+      {
+        "type": "link",
+        "title": "Web Requests",
+        "url": "/page/htb-academy/academy-web-requests",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Web Attacks",
+        "url": "/page/htb-academy/academy-web-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Web Fuzzing",
+        "url": "/page/htb-academy/academy-web-fuzzing",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Web Proxies",
+        "url": "/page/htb-academy/academy-web-proxies",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Using Web Proxies",
+        "url": "/page/htb-academy/academy-using-web-proxies",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking Web Applications with Ffuf",
+        "url": "/page/htb-academy/academy-attacking-web-applications-with-ffuf",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "FFUF",
+        "url": "/page/htb-academy/academy-ffuf",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Information Gathering - Web Edition",
+        "url": "/page/htb-academy/academy-information-gathering-web-edition",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "SQL Injection Fundamentals",
+        "url": "/page/htb-academy/academy-sql-injection-fundamentals",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Blind SQL Injection",
+        "url": "/page/htb-academy/academy-blind-sql-injection",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Advanced SQL Injections",
+        "url": "/page/htb-academy/academy-advanced-sql-injections",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "SQLmap",
+        "url": "/page/htb-academy/academy-sqlmap",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "SQLMap Essentials",
+        "url": "/page/htb-academy/academy-sqlmap-essentials",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Cross-Site Scripting (XSS)",
+        "url": "/page/htb-academy/academy-cross-site-scripting-xss",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "XSS",
+        "url": "/page/htb-academy/academy-xss",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Advanced XSS and CSRF Exploitation",
+        "url": "/page/htb-academy/academy-advanced-xss-and-csrf-exploitation",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "File Inclusion",
+        "url": "/page/htb-academy/academy-file-inclusion",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "File Upload Attacks",
+        "url": "/page/htb-academy/academy-file-upload-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Command Injections",
+        "url": "/page/htb-academy/academy-command-injections",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Injection Attacks",
+        "url": "/page/htb-academy/academy-injection-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Server-side Attacks",
+        "url": "/page/htb-academy/academy-server-side-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Hacking WordPress",
+        "url": "/page/htb-academy/academy-hacking-wordpress",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking GraphQL",
+        "url": "/page/htb-academy/academy-attacking-graphql",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Introduction to NoSQL Injection",
+        "url": "/page/htb-academy/academy-introduction-to-nosql-injection",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Broken Authentication",
+        "url": "/page/htb-academy/academy-broken-authentication",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking Authentication Mechanisms",
+        "url": "/page/htb-academy/academy-attacking-authentication-mechanisms",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Abusing HTTP Misconfigurations",
+        "url": "/page/htb-academy/academy-abusing-http-misconfigurations",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "HTTP Attacks",
+        "url": "/page/htb-academy/academy-http-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "HTTPsTLS Attacks",
+        "url": "/page/htb-academy/academy-httpstls-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "JavaScript Deobfuscation",
+        "url": "/page/htb-academy/academy-javascript-deobfuscation",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Advanced Deserializations Attacks",
+        "url": "/page/htb-academy/academy-advanced-deserializations-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Introduction to Deserialization Attacks",
+        "url": "/page/htb-academy/academy-introduction-to-deserialization-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Secure Coding 101_ JavaScript",
+        "url": "/page/htb-academy/academy-secure-coding-101-javascript",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Whitebox Attacks",
+        "url": "/page/htb-academy/academy-whitebox-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Whitebox Pentesting 101_ Command Injection",
+        "url": "/page/htb-academy/academy-whitebox-pentesting-101-command-injection",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Intro to Whitebox Pentesting",
+        "url": "/page/htb-academy/academy-intro-to-whitebox-pentesting",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "sqli",
+        "url": "/page/htb-academy/ref-web-attacks-sqli",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "xss",
+        "url": "/page/htb-academy/ref-web-attacks-xss",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Enumeration",
+    "items": [
+      {
+        "type": "link",
+        "title": "Footprinting",
+        "url": "/page/htb-academy/academy-footprinting",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Network Enumeration Cheat Sheet",
+        "url": "/page/htb-academy/academy-network-enumeration-cheat-sheet",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Network Traffic Analysis",
+        "url": "/page/htb-academy/academy-network-traffic-analysis",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Information Gathering",
+        "url": "/page/htb-academy/academy-information-gathering",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Osint Corporate Recon",
+        "url": "/page/htb-academy/academy-osint-corporate-recon",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "nmap",
+        "url": "/page/htb-academy/ref-enumeration-nmap",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "netexec",
+        "url": "/page/htb-academy/ref-enumeration-netexec",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "bloodhound",
+        "url": "/page/htb-academy/ref-enumeration-bloodhound",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "ldapsearch",
+        "url": "/page/htb-academy/ref-enumeration-ldapsearch",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "feroxbuster",
+        "url": "/page/htb-academy/ref-enumeration-feroxbuster",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "ffuf",
+        "url": "/page/htb-academy/ref-enumeration-ffuf",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "nuclei",
+        "url": "/page/htb-academy/ref-enumeration-nuclei",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Password Attacks",
+    "items": [
+      {
+        "type": "link",
+        "title": "Password Attacks",
+        "url": "/page/htb-academy/academy-password-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Login Brute Forcing",
+        "url": "/page/htb-academy/academy-login-brute-forcing",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Cracking Passwords with Hashcat",
+        "url": "/page/htb-academy/academy-cracking-passwords-with-hashcat",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "hashcat",
+        "url": "/page/htb-academy/ref-password-attacks-hashcat",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "responder",
+        "url": "/page/htb-academy/ref-password-attacks-responder",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Pivoting & Tunneling",
+    "items": [
+      {
+        "type": "link",
+        "title": "Pivoting",
+        "url": "/page/htb-academy/academy-pivoting",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Pivoting, Tunneling, and Port Forwarding",
+        "url": "/page/htb-academy/academy-pivoting-tunneling-and-port-forwarding",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "chisel",
+        "url": "/page/htb-academy/ref-pivoting-chisel",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "ligolo-ng",
+        "url": "/page/htb-academy/ref-pivoting-ligolo-ng",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "ssh-tunneling",
+        "url": "/page/htb-academy/ref-pivoting-ssh-tunneling",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "File Transfers",
+    "items": [
+      {
+        "type": "link",
+        "title": "File Transfers",
+        "url": "/page/htb-academy/academy-file-transfers",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "file-transfers",
+        "url": "/page/htb-academy/ref-file-transfers-file-transfers",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Wireless",
+    "items": [
+      {
+        "type": "link",
+        "title": "Wi-Fi Penetration Testing Basics",
+        "url": "/page/htb-academy/academy-wi-fi-penetration-testing-basics",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking WPA_WPA2 Wi-Fi Networks",
+        "url": "/page/htb-academy/academy-attacking-wpawpa2-wi-fi-networks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking Wi-Fi Protected Setup (WPS)",
+        "url": "/page/htb-academy/academy-attacking-wi-fi-protected-setup-wps",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Wi-Fi Evil Twin Attacks",
+        "url": "/page/htb-academy/academy-wi-fi-evil-twin-attacks",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Wired Equivalent Privacy (WEP) Attacks",
+        "url": "/page/htb-academy/academy-wired-equivalent-privacy-wep-attacks",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Android & Mobile",
+    "items": [
+      {
+        "type": "link",
+        "title": "Android Fundamentals",
+        "url": "/page/htb-academy/academy-android-fundamentals",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Andriod Fundamentals",
+        "url": "/page/htb-academy/academy-andriod-fundamentals",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "MacOS Fundamentals",
+        "url": "/page/htb-academy/academy-macos-fundamentals",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Game Hacking Fundamentals",
+        "url": "/page/htb-academy/academy-game-hacking-fundamentals",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Exploitation",
+    "items": [
+      {
+        "type": "link",
+        "title": "Metasploit",
+        "url": "/page/htb-academy/academy-metasploit",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Shells & Payloads",
+        "url": "/page/htb-academy/academy-shells-payloads",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking Common Applications",
+        "url": "/page/htb-academy/academy-attacking-common-applications",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Attacking Common Services",
+        "url": "/page/htb-academy/academy-attacking-common-services",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Intro to C2 Operations with Sliver",
+        "url": "/page/htb-academy/academy-intro-to-c2-operations-with-sliver",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Forensics & Malware",
+    "items": [
+      {
+        "type": "link",
+        "title": "Malicious Document Analysis",
+        "url": "/page/htb-academy/academy-malicious-document-analysis",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "User Behavior Forensics",
+        "url": "/page/htb-academy/academy-user-behavior-forensics",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Supply Chain Attacks",
+        "url": "/page/htb-academy/academy-supply-chain-attacks",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "title": "Getting Started",
+    "items": [
+      {
+        "type": "link",
+        "title": "Getting Started",
+        "url": "/page/htb-academy/academy-getting-started",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Pentest in a Nutshell",
+        "url": "/page/htb-academy/academy-pentest-in-a-nutshell",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Tools of the Trade",
+        "url": "/page/htb-academy/academy-tools-of-the-trade",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Assembly Language",
+        "url": "/page/htb-academy/academy-assembly-language",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Intro to Assembly Language",
+        "url": "/page/htb-academy/academy-intro-to-assembly-language",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "Introduction to C#",
+        "url": "/page/htb-academy/academy-introduction-to-c",
         "items": []
       }
     ]
