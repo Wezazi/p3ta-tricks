@@ -18,9 +18,9 @@ import re, json, html, sys
 from pathlib import Path
 
 ROOT        = Path(__file__).parent.parent
-OUT_DIR     = ROOT / "content" / "processed" / "htb"
+OUT_DIR     = ROOT / "content" / "processed" / "cheatsheet"
 NAV_DIR     = ROOT / "content" / "nav"
-SOURCE_ID   = "htb"
+SOURCE_ID   = "cheatsheet"
 SOURCE_LABEL = "Cheat Sheets"
 
 VAULT_CHEATSHEETS = Path("/home/p3ta/Documents/uWu/HTB/HTB Academy Cheat Sheets")
