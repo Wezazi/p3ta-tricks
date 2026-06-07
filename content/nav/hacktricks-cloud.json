@@ -84,6 +84,11 @@
         ]
       },
       {
+        "title": "Gogs Security",
+        "url": "/page/hacktricks-cloud/pentesting-ci-cd/gogs-security",
+        "children": []
+      },
+      {
         "title": "Concourse Security",
         "url": "/page/hacktricks-cloud/pentesting-ci-cd/concourse-security",
         "children": [

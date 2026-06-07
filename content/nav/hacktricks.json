@@ -233,6 +233,11 @@
             "children": []
           },
           {
+            "title": "Android Malware Post-Exploitation",
+            "url": "/page/hacktricks/generic-methodologies-and-resources/basic-forensic-methodology/android-malware-post-exploitation",
+            "children": []
+          },
+          {
             "title": "Memory dump analysis",
             "url": "/page/hacktricks/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis",
             "children": [
@@ -3124,6 +3129,11 @@
         ]
       },
       {
+        "title": "12346/udp - Pentesting Cisco Catalyst SD-WAN Control Plane",
+        "url": "/page/hacktricks/network-services-pentesting/12346-udp-pentesting-cisco-sd-wan-control-plane",
+        "children": []
+      },
+      {
         "title": "15672 - Pentesting RabbitMQ Management",
         "url": "/page/hacktricks/network-services-pentesting/15672-pentesting-rabbitmq-management",
         "children": []
@@ -4525,6 +4535,11 @@
           {
             "title": "WWW2Exec - \\_\\_malloc_hook & \\_\\_free_hook",
             "url": "/page/hacktricks/binary-exploitation/arbitrary-write-2-exec/aw2exec-__malloc_hook",
+            "children": []
+          },
+          {
+            "title": "WWW2Exec - \\_\\_printf_arginfo_table",
+            "url": "/page/hacktricks/binary-exploitation/arbitrary-write-2-exec/aw2exec-__printf_arginfo_table",
             "children": []
           },
           {
