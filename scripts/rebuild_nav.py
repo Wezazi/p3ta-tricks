@@ -130,6 +130,10 @@ TITLE_TO_GROUP = {
     "Pentest in a Nutshell":                "Getting Started",
     "Tools of the Trade":                   "Getting Started",
     "Using CrackMapExec":                   "Getting Started",
+
+    # NVIM
+    "NVIM Basics":                          "NVIM",
+    "NVIM Advanced":                        "NVIM",
 }
 
 GROUP_ORDER = [
@@ -146,6 +150,7 @@ GROUP_ORDER = [
     "Exploitation",
     "Forensics & Malware",
     "Getting Started",
+    "NVIM",
     "Other",
 ]
 

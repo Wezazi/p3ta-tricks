@@ -655,6 +655,24 @@
   },
   {
     "type": "section",
+    "title": "NVIM",
+    "items": [
+      {
+        "type": "link",
+        "title": "NVIM Advanced",
+        "url": "/page/cheatsheet/nvim-advanced",
+        "items": []
+      },
+      {
+        "type": "link",
+        "title": "NVIM Basics",
+        "url": "/page/cheatsheet/nvim-basics",
+        "items": []
+      }
+    ]
+  },
+  {
+    "type": "section",
     "title": "Reference — Enumeration",
     "items": [
       {
