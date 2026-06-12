@@ -1066,6 +1066,12 @@ def jwt_decoder():
     return render_template("jwt_decoder.html", source_meta=SOURCE_META)
 
 
+@app.route("/lolol")
+@app.route("/lolol/")
+def lolol_farm():
+    return render_template("lolol_farm.html", source_meta=SOURCE_META)
+
+
 @app.route("/api/exploitdb/index")
 def api_exploitdb_index():
     data = _load_exploitdb()

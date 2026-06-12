@@ -1,0 +1,911 @@
+{% extends "base.html" %}
+{% block title %}lolol.farm — Living Off the Land Index{% endblock %}
+
+{% block head_extra %}
+<style>
+  /* ── lolol.farm integration ── */
+  .lolol-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* Hero */
+  .lolol-hero {
+    padding: 2.5rem 0 1.5rem;
+  }
+  .lolol-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono, monospace);
+    font-size: 11px;
+    color: #3ee07a;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 5px 10px;
+    border: 1px solid rgba(62,224,122,0.2);
+    border-radius: 999px;
+    background: rgba(62,224,122,0.04);
+    margin-bottom: 1rem;
+  }
+  .lolol-eyebrow::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #3ee07a;
+    box-shadow: 0 0 6px #3ee07a;
+    animation: lolol-pulse 2s ease-in-out infinite;
+  }
+  @keyframes lolol-pulse { 50% { opacity: .4; } }
+
+  .lolol-title {
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 700;
+    margin: 0 0 .75rem;
+    line-height: 1.15;
+    color: var(--fg, #e8efe8);
+  }
+  .lolol-title .accent { color: #3ee07a; }
+  .lolol-lede {
+    color: var(--fg-dim, #9aa59d);
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0 0 1.25rem;
+  }
+
+  /* Stats bar */
+  .lolol-stats {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: var(--mono, monospace);
+    font-size: 12px;
+    color: var(--fg-dim, #9aa59d);
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border, rgba(255,255,255,0.08));
+    margin-top: 1.25rem;
+  }
+  .lolol-stats .stat { display: flex; gap: 8px; align-items: baseline; }
+  .lolol-stats b { color: var(--fg, #e8efe8); font-weight: 700; font-size: 15px; }
+
+  /* Search bar */
+  .lolol-search-wrap {
+    margin: 1rem 0 .75rem;
+  }
+  .lolol-cmd {
+    display: flex; align-items: stretch;
+    background: var(--bg-raised, #121514);
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color .15s;
+  }
+  .lolol-cmd:focus-within {
+    border-color: rgba(62,224,122,0.4);
+    box-shadow: 0 0 0 3px rgba(62,224,122,0.07);
+  }
+  .lolol-cmd .prompt {
+    display: flex; align-items: center; gap: 8px;
+    padding: 0 14px;
+    font-family: var(--mono, monospace);
+    font-size: 13px;
+    color: #3ee07a;
+    border-right: 1px solid var(--border, rgba(255,255,255,0.08));
+    user-select: none;
+    white-space: nowrap;
+  }
+  .lolol-cmd input {
+    flex: 1; border: 0; outline: 0;
+    background: transparent;
+    color: var(--fg, #e8efe8);
+    font-family: var(--mono, monospace);
+    font-size: 13.5px;
+    padding: 12px 16px;
+  }
+  .lolol-cmd input::placeholder { color: var(--fg-dim, #9aa59d); }
+
+  /* Toolbar */
+  .lolol-toolbar {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-family: var(--mono, monospace);
+    font-size: 11.5px;
+    color: var(--fg-dim, #9aa59d);
+    margin-bottom: 1rem;
+  }
+  .lolol-count { color: #3ee07a; font-weight: 500; }
+  .lolol-btn {
+    appearance: none;
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    background: transparent;
+    color: var(--fg-dim, #9aa59d);
+    font-family: var(--mono, monospace);
+    font-size: 11.5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color .12s, color .12s;
+  }
+  .lolol-btn:hover {
+    border-color: rgba(62,224,122,0.3);
+    color: var(--fg, #e8efe8);
+  }
+  .lolol-btn.flash { border-color: #3ee07a; color: #3ee07a; }
+
+  /* Filter chips */
+  .lolol-filters {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  .lolol-filter-dd { position: relative; }
+  .lolol-dd-trigger {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    background: var(--bg-raised, #121514);
+    color: var(--fg-dim, #9aa59d);
+    font-family: var(--mono, monospace);
+    font-size: 11.5px;
+    padding: 6px 10px 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color .12s, color .12s;
+  }
+  .lolol-dd-trigger:hover, .lolol-dd-trigger[aria-expanded="true"] {
+    border-color: rgba(62,224,122,0.25);
+    color: var(--fg, #e8efe8);
+  }
+  .lolol-dd-label { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10.5px; color: var(--fg-dim, #9aa59d); }
+  .lolol-dd-count {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 18px; height: 16px; padding: 0 5px;
+    border-radius: 999px;
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    color: var(--fg-dim, #9aa59d);
+    font-size: 10px; font-weight: 600;
+  }
+  .lolol-dd-count.has-active { background: #3ee07a; border-color: #3ee07a; color: #000; }
+  .lolol-dd-caret { font-size: 9px; transition: transform .15s; }
+  .lolol-dd-trigger[aria-expanded="true"] .lolol-dd-caret { transform: rotate(180deg); }
+  .lolol-dd-popover {
+    position: absolute;
+    top: calc(100% + 6px); left: 0;
+    z-index: 40;
+    min-width: 260px; max-width: 420px;
+    padding: 10px;
+    background: var(--bg-raised, #121514);
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    display: none; flex-wrap: wrap; gap: 6px;
+  }
+  .lolol-dd-popover.open { display: flex; }
+  .lolol-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    background: transparent;
+    color: var(--fg-dim, #9aa59d);
+    font-family: var(--mono, monospace);
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color .12s, color .12s, background .12s;
+  }
+  .lolol-chip:hover { border-color: rgba(62,224,122,0.25); color: var(--fg, #e8efe8); }
+  .lolol-chip[aria-pressed="true"] { border-color: #3ee07a; color: #3ee07a; background: rgba(62,224,122,0.06); }
+  .lolol-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .7; }
+
+  /* Grid */
+  .lolol-results-head {
+    display: flex; align-items: baseline;
+    font-family: var(--mono, monospace);
+    font-size: 11px;
+    color: var(--fg-dim, #9aa59d);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: .75rem;
+  }
+  .lolol-results-head .line { flex: 1; height: 1px; background: var(--border, rgba(255,255,255,0.08)); margin: 0 14px; }
+
+  .lolol-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 960px) { .lolol-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 620px) { .lolol-grid { grid-template-columns: 1fr; } }
+
+  /* Cards */
+  .lolol-card {
+    position: relative;
+    background: var(--bg-raised, #121514);
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    border-radius: 12px;
+    padding: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color .15s, transform .15s, background .15s;
+    display: flex; flex-direction: column;
+    min-height: 148px;
+  }
+  .lolol-card::before {
+    content: "";
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 8px; height: 8px;
+    border-top: 1px solid rgba(62,224,122,0.18);
+    border-right: 1px solid rgba(62,224,122,0.18);
+    opacity: .6;
+    transition: opacity .15s, border-color .15s;
+  }
+  .lolol-card:hover {
+    border-color: rgba(62,224,122,0.30);
+    background: #0f1312;
+    transform: translateY(-1px);
+  }
+  .lolol-card:hover::before { border-color: #3ee07a; opacity: 1; }
+
+  .lolol-card-row { display: flex; gap: 14px; align-items: flex-start; }
+  .lolol-logo {
+    flex: 0 0 auto;
+    width: 52px; height: 52px;
+    border-radius: 10px;
+    background: var(--bg, #070807);
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    transition: border-color .15s;
+  }
+  .lolol-logo img { width: 100%; height: 100%; object-fit: contain; padding: 8px; display: block; }
+  .lolol-card:hover .lolol-logo { border-color: rgba(62,224,122,0.35); }
+
+  .lolol-card-body { min-width: 0; flex: 1; display: flex; flex-direction: column; }
+  .lolol-card-title {
+    margin: 0 0 2px;
+    font-family: var(--mono, monospace);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg, #e8efe8);
+    display: inline-flex; align-items: center; gap: 8px;
+    line-height: 1.2;
+  }
+  .lolol-card-title a { color: inherit; }
+  .lolol-card-title a:hover { color: #3ee07a; }
+  .lolol-card-title .ext { font-size: 11px; color: var(--fg-dim, #9aa59d); transition: color .15s, transform .15s; }
+  .lolol-card:hover .lolol-card-title .ext { color: #3ee07a; transform: translate(2px,-2px); }
+
+  .lolol-card-url {
+    font-family: var(--mono, monospace);
+    font-size: 11px;
+    color: var(--fg-dim, #9aa59d);
+    margin: 2px 0 10px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .lolol-card-desc {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--fg-dim, #9aa59d);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .lolol-card.expanded .lolol-card-desc { -webkit-line-clamp: unset; display: block; }
+
+  .lolol-card-meta {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border, rgba(255,255,255,0.08));
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .lolol-tag {
+    font-family: var(--mono, monospace);
+    font-size: 10px;
+    color: var(--fg-dim, #9aa59d);
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid var(--border, rgba(255,255,255,0.08));
+  }
+  .lolol-tag.platform { color: #3ee07a; border-color: rgba(62,224,122,0.2); background: rgba(62,224,122,0.05); }
+
+  .lolol-empty { display: none; padding: 40px; text-align: center; font-family: var(--mono, monospace); color: var(--fg-dim, #9aa59d); font-size: 13px; }
+  .lolol-empty.show { display: block; }
+
+  /* Credit note */
+  .lolol-credit {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px dashed var(--border, rgba(255,255,255,0.08));
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--fg-dim, #9aa59d);
+    font-family: var(--mono, monospace);
+  }
+  .lolol-credit a { color: #3ee07a; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="lolol-wrap">
+
+  <!-- Hero -->
+  <div class="lolol-hero">
+    <span class="lolol-eyebrow">A curated index · Cached offline · v2026.04</span>
+    <h1 class="lolol-title">Living Off the <span class="accent">Living Off the Land</span></h1>
+    <p class="lolol-lede">A single, searchable directory of the community's Living-Off-the-Land security research — every LOLBin, LOLDriver, and adjacent project, indexed and cross-referenced by platform and focus area.</p>
+    <div class="lolol-stats">
+      <div class="stat"><b id="lStatProjects">31</b>&nbsp;<span>Projects</span></div>
+      <div class="stat"><b id="lStatTags">—</b>&nbsp;<span>Tags</span></div>
+      <div class="stat"><b id="lStatPlatforms">—</b>&nbsp;<span>Platforms</span></div>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="lolol-search-wrap">
+    <div class="lolol-cmd">
+      <div class="prompt">λ search</div>
+      <input id="lQ" type="search" placeholder="filter by name, url, description, or tag…" autocomplete="off" spellcheck="false">
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="lolol-toolbar">
+    <span>→</span>
+    <span class="lolol-count" id="lCount">31 results</span>
+    <span>·</span>
+    <button class="lolol-btn" id="lToggleExpand">expand all</button>
+    <button class="lolol-btn" id="lCopyMd">copy as markdown</button>
+    <button class="lolol-btn" id="lClearFilters">clear filters</button>
+  </div>
+
+  <!-- Filters -->
+  <div class="lolol-filters" id="lFilterBar">
+    <div class="lolol-filter-dd" data-group="platform">
+      <button class="lolol-dd-trigger" aria-expanded="false" aria-controls="lDdPlatform">
+        <span class="lolol-dd-label">Platform</span>
+        <span class="lolol-dd-count" id="lDdPlatCount">0</span>
+        <span class="lolol-dd-caret">▼</span>
+      </button>
+      <div class="lolol-dd-popover" id="lDdPlatform"></div>
+    </div>
+    <div class="lolol-filter-dd" data-group="tags">
+      <button class="lolol-dd-trigger" aria-expanded="false" aria-controls="lDdTags">
+        <span class="lolol-dd-label">Tags</span>
+        <span class="lolol-dd-count" id="lDdTagCount">0</span>
+        <span class="lolol-dd-caret">▼</span>
+      </button>
+      <div class="lolol-dd-popover" id="lDdTags"></div>
+    </div>
+  </div>
+
+  <!-- Results header -->
+  <div class="lolol-results-head">
+    <span>// projects</span>
+    <div class="line"></div>
+    <span>sorted by relevance</span>
+  </div>
+
+  <!-- Grid -->
+  <section class="lolol-grid" id="lGrid">
+
+    <article class="lolol-card" data-tags="cross-platform,detection" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://br0k3nlab.com/LoFP/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lofp-logo.png" alt="LoFP"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://br0k3nlab.com/LoFP/" target="_blank" rel="noopener noreferrer">LoFP<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">br0k3nlab.com/LoFP</div>
+          <p class="lolol-card-desc">Living off the False Positive — an autogenerated collection of false positives sourced from popular rule sets, categorized by ATT&amp;CK techniques, rule source, and data source.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,drivers" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://loldrivers.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/loldrivers.png" alt="LOLDrivers"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://loldrivers.io" target="_blank" rel="noopener noreferrer">LOLDrivers<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">loldrivers.io</div>
+          <p class="lolol-card-desc">Living Off The Land Drivers — a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="linux,binaries" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://gtfobins.github.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/gtfobins.png" alt="GTFOBins"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://gtfobins.github.io" target="_blank" rel="noopener noreferrer">GTFOBins<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">gtfobins.github.io</div>
+          <p class="lolol-card-desc">A curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,binaries" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolbas-project.github.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolbas.png" alt="LOLBAS"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolbas-project.github.io" target="_blank" rel="noopener noreferrer">LOLBAS<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolbas-project.github.io</div>
+          <p class="lolol-card-desc">The goal of the LOLBAS project is to document every binary, script, and library that can be used for Living Off The Land techniques.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,C2,exfiltration" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lots-project.com" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lots.png" alt="LOTS Project"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lots-project.com" target="_blank" rel="noopener noreferrer">LOTS Project<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lots-project.com</div>
+          <p class="lolol-card-desc">Attackers use popular legitimate domains for phishing, C&amp;C, exfiltration and tool downloads to evade detection. This list catalogs domains that allow user-controlled subdomains.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,file-extensions" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://filesec.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/filesec.png" alt="FileSec"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://filesec.io" target="_blank" rel="noopener noreferrer">FileSec<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">filesec.io</div>
+          <p class="lolol-card-desc">File extensions being used by attackers — a reference for defenders tracking evolving delivery techniques.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,APIs" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://malapi.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/malapi.png" alt="MalAPI.io"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://malapi.io" target="_blank" rel="noopener noreferrer">MalAPI.io<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">malapi.io</div>
+          <p class="lolol-card-desc">Maps Windows APIs to common techniques used by malware.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,DLL-hijacking" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://hijacklibs.net" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/hijacklibs.png" alt="HijackLibs"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://hijacklibs.net" target="_blank" rel="noopener noreferrer">HijackLibs<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">hijacklibs.net</div>
+          <p class="lolol-card-desc">A curated list of DLL Hijacking candidates for Windows environments.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,active-directory,red-team" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://wadcoms.github.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/wadcoms.png" alt="WADComs"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://wadcoms.github.io" target="_blank" rel="noopener noreferrer">WADComs<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">wadcoms.github.io</div>
+          <p class="lolol-card-desc">An interactive cheat sheet of offensive security tools and commands for Windows/AD environments.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="macos,binaries" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://www.loobins.io" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/loobins.png" alt="LOOBins"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://www.loobins.io" target="_blank" rel="noopener noreferrer">LOOBins<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">loobins.io</div>
+          <p class="lolol-card-desc">Living Off the Orchard: macOS Binaries — detailed information on built-in macOS binaries and how threat actors abuse them.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,applications" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolapps-project.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolapps-logo.png" alt="LOLApps"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolapps-project.github.io/" target="_blank" rel="noopener noreferrer">LOLApps<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolapps-project.github.io</div>
+          <p class="lolol-card-desc">Exploitation isn't limited to command-line binaries — built-in and third-party applications get abused too. This project catalogs those techniques.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,bootloaders" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://www.bootloaders.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/bootloaders-logo.png" alt="Bootloaders"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://www.bootloaders.io/" target="_blank" rel="noopener noreferrer">Bootloaders<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">bootloaders.io</div>
+          <p class="lolol-card-desc">A curated list of known malicious bootloaders across operating systems, helping defenders stay informed on bootloader-based threats.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,red-team" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://www.mandiant.com/resources/blog/bring-your-own-land-novel-red-teaming-technique" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/mandiant.png" alt="Bring Your Own Land"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://www.mandiant.com/resources/blog/bring-your-own-land-novel-red-teaming-technique" target="_blank" rel="noopener noreferrer">Bring Your Own Land<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">mandiant.com</div>
+          <p class="lolol-card-desc">BYOL — a red-teaming technique where operators carry their own tools instead of relying on what's present on the target.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="hardware" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lothardware.com.tr/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lothardware.svg" alt="Living Off The Hardware"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lothardware.com.tr/" target="_blank" rel="noopener noreferrer">Living Off The Hardware<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lothardware.com.tr</div>
+          <p class="lolol-card-desc">A resource collection for identifying and utilizing malicious hardware and devices.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,binaries" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://wtfbins.wtf/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/wtfbins.png" alt="WTFBins"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://wtfbins.wtf/" target="_blank" rel="noopener noreferrer">WTFBins<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">wtfbins.wtf</div>
+          <p class="lolol-card-desc">A WTFBin is a binary that behaves exactly like malware — except, somehow, it's not.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,binaries" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lofl-project.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/loflcab.png" alt="LOFL Project"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lofl-project.github.io/" target="_blank" rel="noopener noreferrer">LOFL Project<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lofl-project.github.io</div>
+          <p class="lolol-card-desc">Living Off the Foreign Land — Cmdlets and Binaries (LOFLCABs) that perform activities from the local Windows system against a remote system.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,persistence" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://persistence-info.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/tractor.webp" alt="Persistence Info"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://persistence-info.github.io/" target="_blank" rel="noopener noreferrer">Persistence Info<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">persistence-info.github.io</div>
+          <p class="lolol-card-desc">Information on Windows persistence mechanisms, organized to make protection and detection more efficient.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,certificates" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://github.com/WithSecureLabs/lolcerts" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/github.png" alt="lolcerts"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://github.com/WithSecureLabs/lolcerts" target="_blank" rel="noopener noreferrer">lolcerts<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">github.com/WithSecureLabs/lolcerts</div>
+          <p class="lolol-card-desc">Details of code-signing certificates known to be abused in the wild — stolen or legally-acquired, then used to sign malware.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,CI/CD" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://boostsecurityio.github.io/lotp/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/github.png" alt="LOTP"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://boostsecurityio.github.io/lotp/" target="_blank" rel="noopener noreferrer">LOTP<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">boostsecurityio.github.io/lotp</div>
+          <p class="lolol-card-desc">Catalogs CI/CD tools with lesser-known RCE-by-design features ("foot guns") that enable arbitrary code execution through untrusted changes or workflow injection.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,binaries,threat-intel" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolbins-ctidriven.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolbins-cti.png" alt="lolbins-cti driven"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolbins-ctidriven.vercel.app/" target="_blank" rel="noopener noreferrer">lolbins-cti driven<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolbins-ctidriven.vercel.app</div>
+          <p class="lolol-card-desc">Helps cyber defenders understand how LOLBin binaries are used by threat actors during an intrusion, in a graphical and digestible format.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="esxi,binaries" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolesxi-project.github.io/LOLESXi/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolesxi-logo.png" alt="LOLESXi"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolesxi-project.github.io/LOLESXi/" target="_blank" rel="noopener noreferrer">LOLESXi<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolesxi-project.github.io</div>
+          <p class="lolol-card-desc">A comprehensive list of binaries and scripts natively available in VMware ESXi that adversaries have used in their operations.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,RMM" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolrmm.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolrmm-logo.png" alt="LOLRMM"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolrmm.io/" target="_blank" rel="noopener noreferrer">LOLRMM<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolrmm.io</div>
+          <p class="lolol-card-desc">A curated list of Remote Monitoring and Management (RMM) tools that could potentially be abused by threat actors.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,webhooks,C2,exfiltration" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lotwebhooks.github.io/index.html" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lol-webhooks-logo.jpg" alt="LOT Webhooks"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lotwebhooks.github.io/index.html" target="_blank" rel="noopener noreferrer">LOT Webhooks<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lotwebhooks.github.io</div>
+          <p class="lolol-card-desc">A community-driven project documenting webhooks that may be exploited for data exfiltration and C2 communications.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,security-tools" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://0xanalyst.github.io/Project-Lost/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/github.png" alt="Project-Lost"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://0xanalyst.github.io/Project-Lost/" target="_blank" rel="noopener noreferrer">Project-Lost<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">0xanalyst.github.io/Project-Lost</div>
+          <p class="lolol-card-desc">A curated list of security tools used by adversaries to bypass security controls and carry out attacks.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,tunnels,exfiltration" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lottunnels.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lol-tunnels-logo.png" alt="LOT Tunnels"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lottunnels.github.io/" target="_blank" rel="noopener noreferrer">LOT Tunnels<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lottunnels.github.io</div>
+          <p class="lolol-card-desc">Documents digital tunnels that can be abused by threat actors or insiders for data exfiltration, persistence, and shell access.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,active-directory,red-team" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolad-project.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lol-ad-logo.jpg" alt="LOLAD"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolad-project.github.io/" target="_blank" rel="noopener noreferrer">LOLAD<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolad-project.github.io</div>
+          <p class="lolol-card-desc">A comprehensive collection of Active Directory techniques, commands, and functions usable natively for offensive security operations and red team exercises.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,C2" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolc2.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lol-c2-logo.png" alt="LOLC2"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolc2.github.io/" target="_blank" rel="noopener noreferrer">LOLC2<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolc2.github.io</div>
+          <p class="lolol-card-desc">A collection of C2 frameworks that leverage legitimate services to evade detection.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="windows,cloud,APIs" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://themagicclaw.github.io/LOLAPI/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/magicclaw.png" alt="LOLAPI"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://themagicclaw.github.io/LOLAPI/" target="_blank" rel="noopener noreferrer">LOLAPI<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">themagicclaw.github.io/LOLAPI</div>
+          <p class="lolol-card-desc">Real-world abused APIs across Windows, cloud, and browser platforms — with detection strategies, mitigation guidance, and red-team POCs.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,exfiltration" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolexfil.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolexfil-logo.png" alt="LOLEXFIL"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolexfil.github.io/" target="_blank" rel="noopener noreferrer">LOLEXFIL<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolexfil.github.io</div>
+          <p class="lolol-card-desc">A comprehensive catalog of data exfiltration methods with detection patterns, simulation examples, IOC artifacts, and ATT&amp;CK mappings.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,SaaS,C2,exfiltration" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lolfsaas.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lolfsaas-logo.png" alt="LOLFSaaS"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lolfsaas.github.io/" target="_blank" rel="noopener noreferrer">LOLFSaaS<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lolfsaas.github.io</div>
+          <p class="lolol-card-desc">Living Off Free SaaS — a directory of free SaaS platforms used for C2, exfiltration, and adversary tooling, with ATT&amp;CK mappings and detection logic.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="lolol-card" data-tags="cross-platform,phishing" data-lsearch>
+      <div class="lolol-card-row">
+        <a class="lolol-logo" href="https://lote-project.github.io/" target="_blank" rel="noopener noreferrer"><img src="/static/lolol/assets/lote-logo.png" alt="LOTE"></a>
+        <div class="lolol-card-body">
+          <h3 class="lolol-card-title"><a href="https://lote-project.github.io/" target="_blank" rel="noopener noreferrer">LOTE<span class="ext">↗</span></a></h3>
+          <div class="lolol-card-url">lote-project.github.io</div>
+          <p class="lolol-card-desc">Living Off Trusted Email — a quick-reference for leveraging trusted platforms' email features to deliver phishing during social engineering campaigns.</p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="lolol-empty" id="lEmpty">no projects match your filters</div>
+
+  <!-- Credit -->
+  <div class="lolol-credit">
+    // Cached offline from <a href="https://lolol.farm/" target="_blank" rel="noopener">lolol.farm</a> — maintained by <a href="https://br0k3nlab.com" target="_blank" rel="noopener">br0k3nlab</a> · v2026.04 · 31 projects · All assets served locally for offline use.
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const PLATFORMS = new Set(["windows","linux","macos","esxi","cloud","active-directory","cross-platform","hardware"]);
+  const cards = Array.from(document.querySelectorAll("[data-lsearch]"));
+  const searchEl = document.getElementById("lQ");
+  const countEl  = document.getElementById("lCount");
+  const emptyEl  = document.getElementById("lEmpty");
+  const filterBar = document.getElementById("lFilterBar");
+  const activeFilters = new Set();
+
+  // Collect all tags & build card metas
+  const allTags = new Set();
+  for (const c of cards) {
+    const tags = (c.dataset.tags || "").split(",").map(t => t.trim()).filter(Boolean);
+    tags.forEach(t => allTags.add(t));
+    const meta = document.createElement("div");
+    meta.className = "lolol-card-meta";
+    tags.filter(t => PLATFORMS.has(t)).forEach(t => {
+      const s = document.createElement("span");
+      s.className = "lolol-tag platform";
+      s.textContent = t;
+      meta.appendChild(s);
+    });
+    tags.filter(t => !PLATFORMS.has(t)).forEach(t => {
+      const s = document.createElement("span");
+      s.className = "lolol-tag";
+      s.textContent = t;
+      meta.appendChild(s);
+    });
+    c.querySelector(".lolol-card-body").appendChild(meta);
+  }
+
+  // Stats
+  const platformsInUse = [...allTags].filter(t => PLATFORMS.has(t));
+  document.getElementById("lStatTags").textContent = [...allTags].filter(t => !PLATFORMS.has(t)).length.toString().padStart(2,"0");
+  document.getElementById("lStatPlatforms").textContent = platformsInUse.length.toString().padStart(2,"0");
+
+  // Build filter chips
+  const platformOrder = ["cross-platform","windows","linux","macos","esxi","cloud","active-directory","hardware"];
+  const platformTags = [...allTags].filter(t => PLATFORMS.has(t)).sort((a,b) => {
+    const ai = platformOrder.indexOf(a), bi = platformOrder.indexOf(b);
+    return (ai===-1?99:ai)-(bi===-1?99:bi);
+  });
+  const focusTags = [...allTags].filter(t => !PLATFORMS.has(t)).sort();
+
+  function addChip(tag, container) {
+    const btn = document.createElement("button");
+    btn.className = "lolol-chip"; btn.setAttribute("aria-pressed","false"); btn.dataset.tag = tag;
+    btn.innerHTML = `<span class="dot"></span>${tag}`;
+    btn.addEventListener("click", () => {
+      if (activeFilters.has(tag)) activeFilters.delete(tag); else activeFilters.add(tag);
+      btn.setAttribute("aria-pressed", activeFilters.has(tag) ? "true" : "false");
+      update();
+    });
+    container.appendChild(btn);
+  }
+  platformTags.forEach(t => addChip(t, document.getElementById("lDdPlatform")));
+  focusTags.forEach(t => addChip(t, document.getElementById("lDdTags")));
+
+  // Dropdown open/close
+  document.querySelectorAll(".lolol-filter-dd").forEach(dd => {
+    const trigger = dd.querySelector(".lolol-dd-trigger");
+    const pop = dd.querySelector(".lolol-dd-popover");
+    trigger.addEventListener("click", e => {
+      e.stopPropagation();
+      const open = pop.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+      document.querySelectorAll(".lolol-filter-dd").forEach(other => {
+        if (other !== dd) {
+          other.querySelector(".lolol-dd-popover").classList.remove("open");
+          other.querySelector(".lolol-dd-trigger").setAttribute("aria-expanded","false");
+        }
+      });
+    });
+  });
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".lolol-filter-dd")) {
+      document.querySelectorAll(".lolol-dd-popover").forEach(p => p.classList.remove("open"));
+      document.querySelectorAll(".lolol-dd-trigger").forEach(t => t.setAttribute("aria-expanded","false"));
+    }
+  });
+
+  function updateCounts() {
+    const platActive = document.querySelectorAll("#lDdPlatform .lolol-chip[aria-pressed='true']").length;
+    const platTotal  = document.querySelectorAll("#lDdPlatform .lolol-chip").length;
+    const tagActive  = document.querySelectorAll("#lDdTags .lolol-chip[aria-pressed='true']").length;
+    const tagTotal   = document.querySelectorAll("#lDdTags .lolol-chip").length;
+    const platEl = document.getElementById("lDdPlatCount");
+    const tagEl  = document.getElementById("lDdTagCount");
+    platEl.textContent = platActive > 0 ? `${platActive}/${platTotal}` : platTotal;
+    platEl.classList.toggle("has-active", platActive > 0);
+    tagEl.textContent = tagActive > 0 ? `${tagActive}/${tagTotal}` : tagTotal;
+    tagEl.classList.toggle("has-active", tagActive > 0);
+  }
+  updateCounts();
+
+  function update() {
+    const term = searchEl.value.trim().toLowerCase();
+    let shown = 0;
+    for (const c of cards) {
+      const text = c.innerText.toLowerCase();
+      const textMatch = term === "" || text.includes(term);
+      let tagMatch = true;
+      if (activeFilters.size > 0) {
+        const cardTags = (c.dataset.tags || "").split(",").map(t => t.trim()).filter(Boolean);
+        tagMatch = [...activeFilters].every(f => cardTags.includes(f));
+      }
+      const match = textMatch && tagMatch;
+      c.classList.toggle("hidden", !match);
+      if (match) shown++;
+    }
+    countEl.textContent = `${shown.toString().padStart(2,"0")} result${shown === 1 ? "" : "s"}`;
+    emptyEl.classList.toggle("show", shown === 0);
+    updateCounts();
+  }
+
+  // Expand all
+  let allExpanded = false;
+  document.getElementById("lToggleExpand").addEventListener("click", function() {
+    allExpanded = !allExpanded;
+    cards.forEach(c => { if (!c.classList.contains("hidden")) c.classList.toggle("expanded", allExpanded); });
+    this.textContent = allExpanded ? "collapse all" : "expand all";
+  });
+
+  // Click card to expand
+  cards.forEach(c => {
+    c.addEventListener("click", e => {
+      if (e.target.closest("a")) return;
+      c.classList.toggle("expanded");
+    });
+  });
+
+  // Clear filters
+  document.getElementById("lClearFilters").addEventListener("click", () => {
+    activeFilters.clear();
+    searchEl.value = "";
+    filterBar.querySelectorAll(".lolol-chip").forEach(b => b.setAttribute("aria-pressed","false"));
+    update();
+  });
+
+  // Copy as markdown
+  document.getElementById("lCopyMd").addEventListener("click", function() {
+    const visible = cards.filter(c => !c.classList.contains("hidden"));
+    const lines = visible.map(c => {
+      const a = c.querySelector(".lolol-card-title a");
+      const name = a.childNodes[0].textContent.trim();
+      const url = a.href;
+      const desc = c.querySelector(".lolol-card-desc").textContent.trim();
+      return `- [${name}](${url}) — ${desc}`;
+    });
+    navigator.clipboard.writeText(lines.join("\n")).then(() => {
+      this.textContent = "copied!";
+      this.classList.add("flash");
+      setTimeout(() => { this.textContent = "copy as markdown"; this.classList.remove("flash"); }, 1500);
+    });
+  });
+
+  // "/" to focus
+  searchEl.addEventListener("input", update);
+  searchEl.addEventListener("keydown", e => { if (e.key === "Escape") { searchEl.value = ""; update(); searchEl.blur(); } });
+  window.addEventListener("keydown", e => {
+    if (e.key === "/" && document.activeElement !== searchEl && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault(); searchEl.focus();
+    }
+  });
+
+  update();
+})();
+</script>
+{% endblock %}

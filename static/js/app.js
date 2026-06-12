@@ -18,6 +18,7 @@ const SOURCES = [
   { id: 'lolbas',           label: 'LOLBAS',               icon: '🪟', color: '#e0af68', noNav: true },
   { id: 'wadcoms',          label: 'WADComs',              icon: '🏴', color: '#7aa2f7', noNav: true },
   { id: 'exploitdb',        label: 'Exploit-DB',           icon: '💥', color: '#f7768e', noNav: true },
+  { id: 'lolol-farm',       label: 'lolol.farm',           icon: '🌾', color: '#3ee07a', noNav: true, url: '/lolol/' },
   // ── Reference sources (alphabetical by label) ───────────────────────────
   { id: 'adaptix',          label: 'Adaptix C2',           icon: '🎯', color: '#bb9af7' },
   { id: 'active-directory', label: 'Active Directory',     icon: '🎓', color: '#9ece6a' },
