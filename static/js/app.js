@@ -420,11 +420,17 @@ async function loadIndex() {
     const r = await fetch('/api/index');
     _index = await r.json();
     _fuse = new Fuse(_index, {
-      keys: [{ name: 'title', weight: 3 }, { name: 'tags', weight: 2 }, { name: 'excerpt', weight: 1 }],
-      threshold: 0.2,
+      keys: [
+        { name: 'title',    weight: 4 },
+        { name: 'headings', weight: 3 },
+        { name: 'tags',     weight: 2 },
+        { name: 'excerpt',  weight: 1 },
+      ],
+      threshold: 0.3,
       ignoreLocation: true,
       minMatchCharLength: 3,
       includeScore: true,
+      useExtendedSearch: true,
     });
   } catch(e) {}
 }

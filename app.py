@@ -578,16 +578,20 @@ def _load_page(source: str, page_path: str):
 def _search(q: str, limit: int = 30) -> list:
     if not q or len(q) < 2:
         return []
-    idx = _load_index()
-    ql  = q.lower()
+    idx  = _load_index()
+    ql   = q.lower()
     hits = []
     for entry in idx:
-        title   = entry.get("title", "").lower()
-        excerpt = entry.get("excerpt", "").lower()
-        score   = 0
-        if ql in title:          score += 10
-        if title.startswith(ql): score += 5
-        if ql in excerpt:        score += 2
+        title    = entry.get("title",    "").lower()
+        excerpt  = entry.get("excerpt",  "").lower()
+        headings = entry.get("headings", "").lower()
+        tags     = " ".join(entry.get("tags", [])).lower()
+        score    = 0
+        if ql in title:           score += 10
+        if title.startswith(ql):  score += 5
+        if ql in headings:        score += 4
+        if ql in excerpt:         score += 2
+        if ql in tags:            score += 3
         if score:
             hits.append((score, entry))
     hits.sort(key=lambda x: -x[0])
