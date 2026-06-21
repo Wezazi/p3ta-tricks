@@ -13090,7 +13090,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/deserialization/basic-.net-deserialization-objectdataprovider-gadgets-expandedwrapper-and-json.net",
     "path": "pentesting-web/deserialization/basic-.net-deserialization-objectdataprovider-gadgets-expandedwrapper-and-json.net",
-    "excerpt": "Basic .Net deserialization (ObjectDataProvider gadget, ExpandedWrapper, and Json.Net) This post is dedicated to understand how the gadget ObjectDataProvider is exploited to obtain RCE and how the Seri",
+    "excerpt": "Basic .Net deserialization (ObjectDataProvider gadget, ExpandedWrapper, and Json.Net) This post is dedicated to understand how the gadget ObjectDataProvider is exploited to obtain RCE and how the seri",
     "tags": []
   },
   {
@@ -13114,7 +13114,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/deserialization/python-yaml-deserialization",
     "path": "pentesting-web/deserialization/python-yaml-deserialization",
-    "excerpt": "Python Yaml Deserialization Yaml Deserialization Yaml python libraries is also capable to serialize python objects and not just raw data: print(yaml.dump(str(&quot;lol&quot;))) lol ... print(yaml.dump",
+    "excerpt": "Python Yaml Deserialization Yaml Deserialization Python YAML libraries can serialize Python objects , not just raw data structures. That is the dangerous part: when the loader is allowed to resolve Py",
     "tags": []
   },
   {
@@ -13730,7 +13730,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/ssrf-server-side-request-forgery/ssrf-vulnerable-platforms",
     "path": "pentesting-web/ssrf-server-side-request-forgery/ssrf-vulnerable-platforms",
-    "excerpt": "SSRF Vulnerable Platforms Check https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/",
+    "excerpt": "SSRF Vulnerable Platforms This page is focused on platforms and features that frequently turn a blind SSRF into a useful pivot . For generic SSRF basics, gopher payloads and protocol abuse, check the ",
     "tags": []
   },
   {
@@ -14106,7 +14106,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/pentesting-web/iframe-traps",
     "path": "pentesting-web/iframe-traps",
-    "excerpt": "Iframe Traps Basic Information This form of abusing XSS via iframes to steal information from the user moving across the web page was originally published in these 2 post from trustedsec.com: here and",
+    "excerpt": "Iframe Traps Basic Information This technique abuses same-origin XSS to keep code execution alive while the victim keeps browsing the application. The classic write-ups were published by TrustedSec he",
     "tags": []
   },
   {
@@ -15026,7 +15026,7 @@
     "source": "hacktricks",
     "url": "/page/hacktricks/AI/AI-MCP-Servers",
     "path": "AI/AI-MCP-Servers",
-    "excerpt": "MCP Servers What is MPC - Model Context Protocol The Model Context Protocol (MCP) is an open standard that allows AI models (LLMs) to connect with external tools and data sources in a plug-and-play fa",
+    "excerpt": "MCP Servers What is MCP - Model Context Protocol The Model Context Protocol (MCP) is an open standard that allows AI models (LLMs) to connect with external tools and data sources in a plug-and-play fa",
     "tags": []
   },
   {
@@ -20650,7 +20650,7 @@
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/movement/dacl/readgmsapassword",
     "path": "ad/movement/dacl/readgmsapassword",
-    "excerpt": "ReadGMSAPassword This abuse stands out a bit from other abuse cases. It can be carried out when controlling an object that has enough permissions listed in the target gMSA account's msDS-GroupMSAMembe",
+    "excerpt": "ReadGMSAPassword This abuse stands out a bit from other abuse cases. It can be carried out when controlling an object that is listed as a principal in the target gMSA account's msDS-GroupMSAMembership",
     "tags": []
   },
   {
@@ -20710,22 +20710,6 @@
     "tags": []
   },
   {
-    "title": "Asreproast",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/asreproast",
-    "path": "ad/movement/kerberos/asreproast",
-    "excerpt": "ASREProast Theory The Kerberos authentication protocol works with tickets in order to grant access. A ST (Service Ticket) can be obtained by presenting a TGT (Ticket Granting Ticket). That prior TGT c",
-    "tags": []
-  },
-  {
-    "title": "Asreqroast",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/asreqroast",
-    "path": "ad/movement/kerberos/asreqroast",
-    "excerpt": "ASREQroast Theory The Kerberos authentication protocol works with tickets in order to grant access. A ST (Service Ticket) can be obtained by presenting a TGT (Ticket Granting Ticket). That prior TGT c",
-    "tags": []
-  },
-  {
     "title": "Bronze Bit",
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/bronze-bit",
@@ -20762,7 +20746,7 @@
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/unconstrained",
     "path": "ad/movement/kerberos/delegations/unconstrained",
-    "excerpt": "(KUD) Unconstrained Theory If an account (user or computer), with unconstrained delegations privileges, is compromised, an attacker must wait for a privileged user to authenticate on it (or force it )",
+    "excerpt": "(KUD) Unconstrained Theory If an account (user or computer) with unconstrained delegation is compromised, an attacker must wait for a privileged user to authenticate to it via Kerberos (or force it ).",
     "tags": []
   },
   {
@@ -20814,27 +20798,43 @@
     "tags": []
   },
   {
-    "title": "Kerberoast",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/kerberoast",
-    "path": "ad/movement/kerberos/kerberoast",
-    "excerpt": "Kerberoast Theory When asking the KDC (Key Distribution Center) for a Service Ticket (ST), the requesting user needs to send a valid TGT (Ticket Granting Ticket) and the service name ( sname ) of the ",
-    "tags": []
-  },
-  {
     "title": "Opth",
     "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/opth",
-    "path": "ad/movement/kerberos/opth",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/opth",
+    "path": "ad/movement/kerberos/pass-the/opth",
     "excerpt": "Overpass the hash This technique is a form of pass the key . Kerberos offers 4 different key types: DES, RC4, AES-128 and AES-256. When attackers know the RC4 key (which is in fact the user's NT hash)",
     "tags": []
   },
   {
     "title": "Pass The Certificate",
     "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the-certificate",
-    "path": "ad/movement/kerberos/pass-the-certificate",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/pass-the-certificate",
+    "path": "ad/movement/kerberos/pass-the/pass-the-certificate",
     "excerpt": "Pass the Certificate Theory The Kerberos authentication protocol works with tickets in order to grant access. An ST (Service Ticket) can be obtained by presenting a TGT (Ticket Granting Ticket). That ",
+    "tags": []
+  },
+  {
+    "title": "Ptc",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/ptc",
+    "path": "ad/movement/kerberos/pass-the/ptc",
+    "excerpt": "Pass the cache This technique is equivalent to pass the ticket. Instead of using Kerberos tickets from, or found on, Windows systems, it's based of UNIX-like formatted tickets that serve the exact sam",
+    "tags": []
+  },
+  {
+    "title": "Ptk",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/ptk",
+    "path": "ad/movement/kerberos/pass-the/ptk",
+    "excerpt": "Pass the key Theory The Kerberos authentication protocol works with tickets in order to grant access. A Service Ticket (ST) can be obtained by presenting a TGT (Ticket Granting Ticket). That prior TGT",
+    "tags": []
+  },
+  {
+    "title": "Ptt",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/ptt",
+    "path": "ad/movement/kerberos/pass-the/ptt",
+    "excerpt": "Pass the ticket Theory There are ways to come across ( cached Kerberos tickets ) or forge ( overpass the hash , silver ticket and golden ticket attacks) Kerberos tickets. A ticket can then be used to ",
     "tags": []
   },
   {
@@ -20846,27 +20846,19 @@
     "tags": []
   },
   {
-    "title": "Ptc",
+    "title": "Dollar Ticket",
     "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/ptc",
-    "path": "ad/movement/kerberos/ptc",
-    "excerpt": "Pass the cache This technique is equivalent to pass the ticket. Instead of using Kerberos tickets from, or found on, Windows systems, it's based of UNIX-like formatted tickets that serve the exact sam",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/principal-confusion/dollar-ticket",
+    "path": "ad/movement/kerberos/principal-confusion/dollar-ticket",
+    "excerpt": "Dollar ticket Theory The Dollar ticket attack exploits name confusion vulnerabilities in Kerberos authentication within Active Directory environments. The attack leverages the behavior of machine acco",
     "tags": []
   },
   {
-    "title": "Ptk",
+    "title": "Samaccountname Spoofing",
     "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/ptk",
-    "path": "ad/movement/kerberos/ptk",
-    "excerpt": "Pass the key Theory The Kerberos authentication protocol works with tickets in order to grant access. A Service Ticket (ST) can be obtained by presenting a TGT (Ticket Granting Ticket). That prior TGT",
-    "tags": []
-  },
-  {
-    "title": "Ptt",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/ptt",
-    "path": "ad/movement/kerberos/ptt",
-    "excerpt": "Pass the ticket Theory There are ways to come across ( cached Kerberos tickets ) or forge ( overpass the hash , silver ticket and golden ticket attacks) Kerberos tickets. A ticket can then be used to ",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/principal-confusion/samaccountname-spoofing",
+    "path": "ad/movement/kerberos/principal-confusion/samaccountname-spoofing",
+    "excerpt": "sAMAccountName spoofing Theory In November 2021, two vulnerabilities caught the attention of many security researchers as they could allow domain escalation from a standard user. Relationship with oth",
     "tags": []
   },
   {
@@ -20878,11 +20870,35 @@
     "tags": []
   },
   {
-    "title": "Samaccountname Spoofing",
+    "title": "Asreproast",
     "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/samaccountname-spoofing",
-    "path": "ad/movement/kerberos/samaccountname-spoofing",
-    "excerpt": "sAMAccountName spoofing Theory In November 2021, two vulnerabilities caught the attention of many security researchers as they could allow domain escalation from a standard user. CVE-2021-42278 - Name",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/asreproast",
+    "path": "ad/movement/kerberos/roasting/asreproast",
+    "excerpt": "ASREProast Theory The Kerberos authentication protocol works with tickets in order to grant access. A ST (Service Ticket) can be obtained by presenting a TGT (Ticket Granting Ticket). That prior TGT c",
+    "tags": []
+  },
+  {
+    "title": "Asreqroast",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/asreqroast",
+    "path": "ad/movement/kerberos/roasting/asreqroast",
+    "excerpt": "ASREQroast Theory The Kerberos authentication protocol works with tickets in order to grant access. A ST (Service Ticket) can be obtained by presenting a TGT (Ticket Granting Ticket). That prior TGT c",
+    "tags": []
+  },
+  {
+    "title": "Kerberoast",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/kerberoast",
+    "path": "ad/movement/kerberos/roasting/kerberoast",
+    "excerpt": "Kerberoast Theory When asking the KDC (Key Distribution Center) for a Service Ticket (ST), the requesting user needs to send a valid TGT (Ticket Granting Ticket) and the service name ( sname ) of the ",
+    "tags": []
+  },
+  {
+    "title": "Timeroast",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/timeroast",
+    "path": "ad/movement/kerberos/roasting/timeroast",
+    "excerpt": "Timeroasting Theory Timeroasting is an attack technique that abuses Microsoft's proprietary NTP extension to extract password-equivalent hashes for computer and trust accounts from domain controllers ",
     "tags": []
   },
   {
@@ -20899,14 +20915,6 @@
     "url": "/page/hacker-recipes/ad/movement/kerberos/spn-jacking",
     "path": "ad/movement/kerberos/spn-jacking",
     "excerpt": "SPN-jacking Theory This attack combines Kerberos Constrained delegation abuse and DACL abuse . A service configured for Kerberos Constrained Delegation (KCD) can impersonate users on a set of services",
-    "tags": []
-  },
-  {
-    "title": "Timeroast",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/kerberos/timeroast",
-    "path": "ad/movement/kerberos/timeroast",
-    "excerpt": "Timeroasting Theory Timeroasting is an attack technique that abuses Microsoft's proprietary NTP extension to extract password-equivalent hashes for computer and trust accounts from domain controllers ",
     "tags": []
   },
   {
@@ -20962,7 +20970,7 @@
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/icmp-redirect",
     "path": "ad/movement/mitm-and-coerced-authentications/icmp-redirect",
-    "excerpt": "🛠️ ICMP Redirect python3 tools/Icmp-Redirect.py --interface eth0 --ip $my_ip --gateway $gateway --target $target --route $dnsserver1 --secondaryroute $dnsserver2 need iptable https://www.cisco.com/c/e",
+    "excerpt": "🛠️ ICMP Redirect python3 tools/Icmp-Redirect.py --interface $INTERFACE --ip $my_ip --gateway $gateway --target $target --route $dnsserver1 --secondaryroute $dnsserver2 need iptable https://www.cisco.c",
     "tags": []
   },
   {
@@ -20978,39 +20986,7 @@
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/llmnr-nbtns-mdns-spoofing",
     "path": "ad/movement/mitm-and-coerced-authentications/llmnr-nbtns-mdns-spoofing",
-    "excerpt": "LLMNR, NBT-NS, mDNS spoofing In some environments (like Windows ones), multicast name resolution protocols are enabled by default, such as LLMNR (Local-Link Multicast Name Resolution), NBT-NS (NetBIOS",
-    "tags": []
-  },
-  {
-    "title": "Ms Dfsnm",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-dfsnm",
-    "path": "ad/movement/mitm-and-coerced-authentications/ms-dfsnm",
-    "excerpt": "MS-DFSNM abuse (DFSCoerce) Theory MS-DFSNM is Microsoft's Distributed File System Namespace Management protocol. It provides an RPC interface for administering DFS configurations ( docs.microsoft.com ",
-    "tags": []
-  },
-  {
-    "title": "Ms Efsr",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-efsr",
-    "path": "ad/movement/mitm-and-coerced-authentications/ms-efsr",
-    "excerpt": "MS-EFSR abuse (PetitPotam) Theory MS-EFSR is Microsoft's Encrypting File System Remote protocol. It performs maintenance and management operations on encrypted data that is stored remotely and accesse",
-    "tags": []
-  },
-  {
-    "title": "Ms Fsrvp",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-fsrvp",
-    "path": "ad/movement/mitm-and-coerced-authentications/ms-fsrvp",
-    "excerpt": "MS-FSRVP abuse (ShadowCoerce) Theory MS-FSRVP is Microsoft's File Server Remote VSS Protocol. It's used for creating shadow copies of file shares on a remote computer, and for facilitating backup appl",
-    "tags": []
-  },
-  {
-    "title": "Ms Rprn",
-    "source": "hacker-recipes",
-    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-rprn",
-    "path": "ad/movement/mitm-and-coerced-authentications/ms-rprn",
-    "excerpt": "MS-RPRN abuse (PrinterBug) Theory Microsoft’s Print Spooler is a service handling the print jobs and other various tasks related to printing. An attacker controling a domain user/computer can, with a ",
+    "excerpt": "LLMNR, NBT-NS, mDNS spoofing In some environments (like Windows ones), multicast name resolution protocols are enabled by default, such as LLMNR (Link-Local Multicast Name Resolution), NBT-NS (NetBIOS",
     "tags": []
   },
   {
@@ -21027,6 +21003,38 @@
     "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/pushsubscription-abuse",
     "path": "ad/movement/mitm-and-coerced-authentications/pushsubscription-abuse",
     "excerpt": "PushSubscription abuse Theory \"PushSubscription\" is an API on Exchange Web Services that allows to subscribe to push notifications. Attackers abuse it to make Exchange servers authenticate to a target",
+    "tags": []
+  },
+  {
+    "title": "Ms Dfsnm",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-dfsnm",
+    "path": "ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-dfsnm",
+    "excerpt": "MS-DFSNM abuse (DFSCoerce) Theory MS-DFSNM is Microsoft's Distributed File System Namespace Management protocol. It provides an RPC interface for administering DFS configurations ( docs.microsoft.com ",
+    "tags": []
+  },
+  {
+    "title": "Ms Efsr",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-efsr",
+    "path": "ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-efsr",
+    "excerpt": "MS-EFSR abuse (PetitPotam) Theory MS-EFSR is Microsoft's Encrypting File System Remote protocol. It performs maintenance and management operations on encrypted data that is stored remotely and accesse",
+    "tags": []
+  },
+  {
+    "title": "Ms Fsrvp",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-fsrvp",
+    "path": "ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-fsrvp",
+    "excerpt": "MS-FSRVP abuse (ShadowCoerce) Theory MS-FSRVP is Microsoft's File Server Remote VSS Protocol. It's used for creating shadow copies of file shares on a remote computer, and for facilitating backup appl",
+    "tags": []
+  },
+  {
+    "title": "Ms Rprn",
+    "source": "hacker-recipes",
+    "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-rprn",
+    "path": "ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-rprn",
+    "excerpt": "MS-RPRN abuse (PrinterBug) Theory Microsoft’s Print Spooler is a service handling the print jobs and other various tasks related to printing. An attacker controling a domain user/computer can, with a ",
     "tags": []
   },
   {
@@ -21066,7 +21074,7 @@
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/movement/ntlm/capture",
     "path": "ad/movement/ntlm/capture",
-    "excerpt": "Capture Theory After successfully forcing a victim to authenticate with LM or NTLM to an attacker's server, the attacker can try to recover credentials by capturing and cracking the hash (LM or NTLM h",
+    "excerpt": "Capture Theory After successfully forcing a victim to authenticate with LM or NTLM to an attacker's server, the attacker can try to recover credentials by capturing and cracking the NTLM responses (\"h",
     "tags": []
   },
   {
@@ -21298,7 +21306,7 @@
     "source": "hacker-recipes",
     "url": "/page/hacker-recipes/ad/recon/nbt-ns",
     "path": "ad/recon/nbt-ns",
-    "excerpt": "NBT-NS Just like DNS, the NTB-NS (NetBIOS name service) protocol is used to translate names to IP addresses. By default, it's used as a fallback in AD-DS. The tools nbtscan and nmblookup can be used f",
+    "excerpt": "NBT-NS Just like DNS, the NBT-NS (NetBIOS name service) protocol is used to translate names to IP addresses. By default, it's used as a fallback in AD-DS. The tools nbtscan and nmblookup can be used f",
     "tags": []
   },
   {
@@ -32049,6 +32057,16 @@
     ]
   },
   {
+    "title": "msoxmled.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/msoxmled",
+    "path": "msoxmled",
+    "excerpt": "msoxmled.exe Microsoft Office XML Editor, used to handle XML documents in Microsoft Office. Paths C:\\Program Files\\Microsoft Office\\root\\vfs\\ProgramFilesCommonX64\\Microsoft Shared\\Office16\\msoxmled.ex",
+    "tags": [
+      "Download"
+    ]
+  },
+  {
     "title": "Netsh.exe",
     "source": "lolbas",
     "url": "/page/lolbas/netsh",
@@ -32388,6 +32406,16 @@
     ]
   },
   {
+    "title": "scp.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/scp",
+    "path": "scp",
+    "excerpt": "scp.exe Used for uploading or downloading files over SSH. Paths C:\\Windows\\System32\\OpenSSH\\scp.exe Commands Execute Spawns specified command from `scp.exe` -&gt; `ssh.exe`, even if no SSH server is r",
+    "tags": [
+      "Execute"
+    ]
+  },
+  {
     "title": "Scriptrunner.exe",
     "source": "lolbas",
     "url": "/page/lolbas/scriptrunner",
@@ -32673,6 +32701,16 @@
     "excerpt": "odbcad32.exe ODBC Data Source Administrator to manage User/System DSNs and ODBC drivers. Paths c:\\windows\\system32\\odbcad32.exe c:\\windows\\syswow64\\odbcad32.exe Commands UAC Bypass Launch odbcad32.exe",
     "tags": [
       "UAC Bypass"
+    ]
+  },
+  {
+    "title": "setupugc.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/setupugc",
+    "path": "setupugc",
+    "excerpt": "setupugc.exe Setup Unattend Generic Command Processor used during Windows deployment. Paths C:\\Windows\\System32\\setupugc.exe C:\\Windows\\SysWOW64\\setupugc.exe Commands Execute By first setting a comman",
+    "tags": [
+      "Execute"
     ]
   },
   {
@@ -33401,6 +33439,16 @@
     ]
   },
   {
+    "title": "Outlook.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/outlook",
+    "path": "outlook",
+    "excerpt": "Outlook.exe Microsoft Office component Paths C:\\Program Files (x86)\\Microsoft Office 16\\ClientX86\\Root\\Office16\\Outlook.exe C:\\Program Files\\Microsoft Office 16\\ClientX64\\Root\\Office16\\Outlook.exe C:\\",
+    "tags": [
+      "Download"
+    ]
+  },
+  {
     "title": "Pixtool.exe",
     "source": "lolbas",
     "url": "/page/lolbas/pixtool",
@@ -33676,6 +33724,16 @@
     "excerpt": "Winword.exe Microsoft Office binary Paths C:\\Program Files\\Microsoft Office\\root\\Office16\\winword.exe C:\\Program Files (x86)\\Microsoft Office 16\\ClientX86\\Root\\Office16\\winword.exe C:\\Program Files\\Mi",
     "tags": [
       "Download"
+    ]
+  },
+  {
+    "title": "wsb.exe",
+    "source": "lolbas",
+    "url": "/page/lolbas/wsb",
+    "path": "wsb",
+    "excerpt": "wsb.exe Windows Sandbox command-line interface. Creates, lists, controls, and executes commands inside Windows Sandbox sessions from the host CLI. Paths C:\\Users\\&lt;user&gt;\\AppData\\Local\\Microsoft\\W",
+    "tags": [
+      "Execute"
     ]
   },
   {

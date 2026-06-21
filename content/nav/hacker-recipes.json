@@ -220,115 +220,126 @@
         "url": "/page/hacker-recipes/ad/movement/group-policies",
         "children": [
           {
-            "title": "Asreproast",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/asreproast",
+            "title": "Bronze Bit",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/bronze-bit",
             "children": []
           },
           {
-            "title": "Asreqroast",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/asreqroast",
-            "children": [
-              {
-                "title": "Bronze Bit",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/bronze-bit",
-                "children": []
-              },
-              {
-                "title": "Constrained",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/constrained",
-                "children": []
-              },
-              {
-                "title": "Rbcd",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/rbcd",
-                "children": []
-              },
-              {
-                "title": "S4U2Self Abuse",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/s4u2self-abuse",
-                "children": []
-              },
-              {
-                "title": "Unconstrained",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/unconstrained",
-                "children": []
-              },
-              {
-                "title": "Diamond",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/diamond",
-                "children": []
-              },
-              {
-                "title": "Golden",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/golden",
-                "children": []
-              },
-              {
-                "title": "Ms14 068",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/ms14-068",
-                "children": []
-              },
-              {
-                "title": "Rodc Golden Tickets",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/rodc-golden-tickets",
-                "children": []
-              },
-              {
-                "title": "Sapphire",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/sapphire",
-                "children": []
-              },
-              {
-                "title": "Silver",
-                "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/silver",
-                "children": []
-              }
-            ]
+            "title": "Constrained",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/constrained",
+            "children": []
           },
           {
-            "title": "Kerberoast",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/kerberoast",
+            "title": "Rbcd",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/rbcd",
+            "children": []
+          },
+          {
+            "title": "S4U2Self Abuse",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/s4u2self-abuse",
+            "children": []
+          },
+          {
+            "title": "Unconstrained",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/delegations/unconstrained",
+            "children": []
+          },
+          {
+            "title": "Diamond",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/diamond",
+            "children": []
+          },
+          {
+            "title": "Golden",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/golden",
+            "children": []
+          },
+          {
+            "title": "Ms14 068",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/ms14-068",
+            "children": []
+          },
+          {
+            "title": "Rodc Golden Tickets",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/rodc-golden-tickets",
+            "children": []
+          },
+          {
+            "title": "Sapphire",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/sapphire",
+            "children": []
+          },
+          {
+            "title": "Silver",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/forged-tickets/silver",
             "children": []
           },
           {
             "title": "Opth",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/opth",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/opth",
             "children": []
           },
           {
             "title": "Pass The Certificate",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the-certificate",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/pass-the-certificate",
+            "children": []
+          },
+          {
+            "title": "Ptc",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/ptc",
+            "children": []
+          },
+          {
+            "title": "Ptk",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/ptk",
+            "children": []
+          },
+          {
+            "title": "Ptt",
+            "url": "/page/hacker-recipes/ad/movement/kerberos/pass-the/ptt",
             "children": []
           },
           {
             "title": "Pre Auth Bruteforce",
             "url": "/page/hacker-recipes/ad/movement/kerberos/pre-auth-bruteforce",
-            "children": []
-          },
-          {
-            "title": "Ptc",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/ptc",
-            "children": []
-          },
-          {
-            "title": "Ptk",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/ptk",
-            "children": []
-          },
-          {
-            "title": "Ptt",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/ptt",
-            "children": []
+            "children": [
+              {
+                "title": "Dollar Ticket",
+                "url": "/page/hacker-recipes/ad/movement/kerberos/principal-confusion/dollar-ticket",
+                "children": []
+              },
+              {
+                "title": "Samaccountname Spoofing",
+                "url": "/page/hacker-recipes/ad/movement/kerberos/principal-confusion/samaccountname-spoofing",
+                "children": []
+              }
+            ]
           },
           {
             "title": "Relay",
             "url": "/page/hacker-recipes/ad/movement/kerberos/relay",
-            "children": []
-          },
-          {
-            "title": "Samaccountname Spoofing",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/samaccountname-spoofing",
-            "children": []
+            "children": [
+              {
+                "title": "Asreproast",
+                "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/asreproast",
+                "children": []
+              },
+              {
+                "title": "Asreqroast",
+                "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/asreqroast",
+                "children": []
+              },
+              {
+                "title": "Kerberoast",
+                "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/kerberoast",
+                "children": []
+              },
+              {
+                "title": "Timeroast",
+                "url": "/page/hacker-recipes/ad/movement/kerberos/roasting/timeroast",
+                "children": []
+              }
+            ]
           },
           {
             "title": "Shadow Credentials",
@@ -338,11 +349,6 @@
           {
             "title": "Spn Jacking",
             "url": "/page/hacker-recipes/ad/movement/kerberos/spn-jacking",
-            "children": []
-          },
-          {
-            "title": "Timeroast",
-            "url": "/page/hacker-recipes/ad/movement/kerberos/timeroast",
             "children": []
           },
           {
@@ -391,26 +397,6 @@
             "children": []
           },
           {
-            "title": "Ms Dfsnm",
-            "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-dfsnm",
-            "children": []
-          },
-          {
-            "title": "Ms Efsr",
-            "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-efsr",
-            "children": []
-          },
-          {
-            "title": "Ms Fsrvp",
-            "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-fsrvp",
-            "children": []
-          },
-          {
-            "title": "Ms Rprn",
-            "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/ms-rprn",
-            "children": []
-          },
-          {
             "title": "Nbt Name Overwrite",
             "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/nbt-name-overwrite",
             "children": []
@@ -418,7 +404,28 @@
           {
             "title": "Pushsubscription Abuse",
             "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/pushsubscription-abuse",
-            "children": []
+            "children": [
+              {
+                "title": "Ms Dfsnm",
+                "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-dfsnm",
+                "children": []
+              },
+              {
+                "title": "Ms Efsr",
+                "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-efsr",
+                "children": []
+              },
+              {
+                "title": "Ms Fsrvp",
+                "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-fsrvp",
+                "children": []
+              },
+              {
+                "title": "Ms Rprn",
+                "url": "/page/hacker-recipes/ad/movement/mitm-and-coerced-authentications/rpc-coercions/ms-rprn",
+                "children": []
+              }
+            ]
           },
           {
             "title": "Webclient",

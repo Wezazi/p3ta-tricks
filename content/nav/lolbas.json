@@ -670,6 +670,11 @@
         "children": []
       },
       {
+        "title": "msoxmled.exe",
+        "url": "/page/lolbas/msoxmled",
+        "children": []
+      },
+      {
         "title": "Mspub.exe",
         "url": "/page/lolbas/mspub",
         "children": []
@@ -739,6 +744,11 @@
       {
         "title": "OpenConsole.exe",
         "url": "/page/lolbas/openconsole",
+        "children": []
+      },
+      {
+        "title": "Outlook.exe",
+        "url": "/page/lolbas/outlook",
         "children": []
       }
     ]
@@ -961,6 +971,11 @@
         "children": []
       },
       {
+        "title": "scp.exe",
+        "url": "/page/lolbas/scp",
+        "children": []
+      },
+      {
         "title": "Scriptrunner.exe",
         "url": "/page/lolbas/scriptrunner",
         "children": []
@@ -983,6 +998,11 @@
       {
         "title": "Setupapi.dll",
         "url": "/page/lolbas/setupapi",
+        "children": []
+      },
+      {
+        "title": "setupugc.exe",
+        "url": "/page/lolbas/setupugc",
         "children": []
       },
       {
@@ -1262,6 +1282,11 @@
       {
         "title": "write.exe",
         "url": "/page/lolbas/write",
+        "children": []
+      },
+      {
+        "title": "wsb.exe",
+        "url": "/page/lolbas/wsb",
         "children": []
       },
       {
